@@ -214,10 +214,6 @@
                         <a class="trait" href="ImplDef.html" title=""></a>
                         <a href="ImplDef.html" title="">ImplDef</a>
                       </li><li class="current-entities indented7">
-                        <span class="separator"></span>
-                        <a class="object" href="MagicDSL$.html" title=""></a>
-                        <a href="MagicDSL$.html" title="">MagicDSL</a>
-                      </li><li class="current-entities indented7">
                         <a class="object" href="ModuleBase$.html" title=""></a>
                         <a class="trait" href="ModuleBase.html" title=""></a>
                         <a href="ModuleBase.html" title="">ModuleBase</a>
@@ -231,8 +227,12 @@
                         <a href="SimpleModuleDef.html" title="">SimpleModuleDef</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="object" href="TypeLevelDSL$.html" title=""></a>
-                        <a href="TypeLevelDSL$.html" title="">TypeLevelDSL</a>
+                        <a class="object" href="StaticDSL$.html" title=""></a>
+                        <a href="StaticDSL$.html" title="">StaticDSL</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="object" href="TypeLevelDSL$.html" title="Sketch of a DSL that exposes rich type information that can then be picked up and used by a macro to do planning &amp; checks at compile time."></a>
+                        <a href="TypeLevelDSL$.html" title="Sketch of a DSL that exposes rich type information that can then be picked up and used by a macro to do planning &amp; checks at compile time.">TypeLevelDSL</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="With.html" title=""></a>
@@ -616,22 +616,6 @@
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.distage.model.definition.MagicDSL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MagicDSL"></a><a id="MagicDSL:MagicDSL"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/index.html#MagicDSL" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="MagicDSL$.html"><span class="name">MagicDSL</span></a>
-      </span>
-      
-      
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ModuleBase"></a><a id="ModuleBase:ModuleBase"></a>
       <span class="permalink">
@@ -680,7 +664,23 @@
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.distage.model.definition.TypeLevelDSL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.StaticDSL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StaticDSL"></a><a id="StaticDSL:StaticDSL"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/index.html#StaticDSL" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="StaticDSL$.html"><span class="name">StaticDSL</span></a>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.TypeLevelDSL" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TypeLevelDSL"></a><a id="TypeLevelDSL:TypeLevelDSL"></a>
       <span class="permalink">
       <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/index.html#TypeLevelDSL" title="Permalink">
@@ -692,10 +692,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="TypeLevelDSL$.html"><span class="name">TypeLevelDSL</span></a>
+        <a title="Sketch of a DSL that exposes rich type information that can then be picked up and used by a macro to do planning &amp; checks at compile time." href="TypeLevelDSL$.html"><span class="name">TypeLevelDSL</span></a>
       </span>
       
-      
+      <p class="shortcomment cmt">Sketch of a DSL that exposes rich type information that can then be picked up and used by a macro to do planning &amp; checks
+at compile time.</p><div class="fullcomment"><div class="comment cmt"><p>Sketch of a DSL that exposes rich type information that can then be picked up and used by a macro to do planning &amp; checks
+at compile time. Note that the DSL is, by necessity, immutable, which is a mismatch with standard ModuleDef.</p><p>A macro analysing syntax trees may instead be employed, to not burden the user with a different version of the syntax.
+Esp. that ModuleDef syntax is quite simple (but macro will lose user extensions)</p></div></div>
     </li>
               </ol>
             </div>
