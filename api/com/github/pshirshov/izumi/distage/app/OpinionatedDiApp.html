@@ -208,7 +208,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">OpinionatedDiApp</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">OpinionatedDiApp</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
@@ -264,9 +264,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():com.github.pshirshov.izumi.distage.app.OpinionatedDiApp"></a><a id="&lt;init&gt;:OpinionatedDiApp"></a>
+      <a id="&lt;init&gt;():com.github.pshirshov.izumi.distage.app.OpinionatedDiApp[T]"></a><a id="&lt;init&gt;:OpinionatedDiApp[T]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#&lt;init&gt;():com.github.pshirshov.izumi.distage.app.OpinionatedDiApp" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#&lt;init&gt;():com.github.pshirshov.izumi.distage.app.OpinionatedDiApp[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -287,25 +287,9 @@
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#appConfig" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="appConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="appConfig:PluginConfig"></a>
+      <a id="appConfig(args:T):com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="appConfig(T):PluginConfig"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#appConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">appConfig</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#bootstrapConfig" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="bootstrapConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="bootstrapConfig:PluginConfig"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#bootstrapConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#appConfig(args:T):com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -314,7 +298,39 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bootstrapConfig</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
+        <span class="name">appConfig</span><span class="params">(<span name="args">args: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>)</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#argumentParser" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="argumentParser(args:Array[String]):T"></a><a id="argumentParser(Array[String]):T"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#argumentParser(args:Array[String]):T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">argumentParser</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#bootstrapConfig" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="bootstrapConfig(args:T):com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="bootstrapConfig(T):PluginConfig"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#bootstrapConfig(args:T):com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bootstrapConfig</span><span class="params">(<span name="args">args: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>)</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -335,9 +351,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#router" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="router:com.github.pshirshov.izumi.logstage.api.logger.LogRouter"></a><a id="router:LogRouter"></a>
+      <a id="router(args:T):com.github.pshirshov.izumi.logstage.api.logger.LogRouter"></a><a id="router(T):LogRouter"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#router:com.github.pshirshov.izumi.logstage.api.logger.LogRouter" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#router(args:T):com.github.pshirshov.izumi.logstage.api.logger.LogRouter" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -346,14 +362,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">router</span><span class="result">: <a href="../../logstage/api/logger/LogRouter.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.logger.LogRouter">LogRouter</a></span>
+        <span class="name">router</span><span class="params">(<span name="args">args: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>)</span><span class="result">: <a href="../../logstage/api/logger/LogRouter.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.logger.LogRouter">LogRouter</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#start" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="start(context:com.github.pshirshov.izumi.distage.model.Locator):Unit"></a><a id="start(Locator):Unit"></a>
+      <a id="start(context:com.github.pshirshov.izumi.distage.model.Locator,args:T):Unit"></a><a id="start(Locator,T):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#start(context:com.github.pshirshov.izumi.distage.model.Locator):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#start(context:com.github.pshirshov.izumi.distage.model.Locator,args:T):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -362,7 +378,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">start</span><span class="params">(<span name="context">context: <a href="../model/Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">Locator</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">start</span><span class="params">(<span name="context">context: <a href="../model/Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">Locator</a></span>, <span name="args">args: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -437,9 +453,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#bootstrapModules" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="bootstrapModules:Seq[com.github.pshirshov.izumi.distage.model.definition.ModuleBase]"></a><a id="bootstrapModules:Seq[ModuleBase]"></a>
+      <a id="bootstrapModules(args:T):Seq[com.github.pshirshov.izumi.distage.model.definition.ModuleBase]"></a><a id="bootstrapModules(T):Seq[ModuleBase]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#bootstrapModules:Seq[com.github.pshirshov.izumi.distage.model.definition.ModuleBase]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#bootstrapModules(args:T):Seq[com.github.pshirshov.izumi.distage.model.definition.ModuleBase]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -448,7 +464,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bootstrapModules</span><span class="result">: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a>]</span>
+        <span class="name">bootstrapModules</span><span class="params">(<span name="args">args: <span class="extype" name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp.T">T</span></span>)</span><span class="result">: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -479,9 +495,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.app.OpinionatedDiApp#doMain" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="doMain():Unit"></a>
+      <a id="doMain(args:Array[String]):Unit"></a><a id="doMain(Array[String]):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#doMain():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/OpinionatedDiApp.html#doMain(args:Array[String]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -490,7 +506,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">doMain</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">doMain</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
