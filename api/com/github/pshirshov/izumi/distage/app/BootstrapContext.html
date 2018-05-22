@@ -167,8 +167,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage">distage</a></dd></dl></div>
     </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="trait" href="" title=""></a>
-                        <a href="" title="">AppFailureHandler</a>
+                        <a class="trait" href="AppFailureHandler.html" title=""></a>
+                        <a href="AppFailureHandler.html" title="">AppFailureHandler</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="trait" href="ApplicationBootstrapStrategy.html" title=""></a>
@@ -179,8 +179,8 @@
                         <a href="ApplicationBootstrapStrategyBaseImpl.html" title="">ApplicationBootstrapStrategyBaseImpl</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="trait" href="BootstrapContext.html" title=""></a>
-                        <a href="BootstrapContext.html" title="">BootstrapContext</a>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">BootstrapContext</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="BootstrapContextDefaultImpl.html" title=""></a>
@@ -210,8 +210,8 @@
       <div id="definition">
         <div class="big-circle trait">t</div>
         <p id="owner"><a href="../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage">distage</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.distage.app">app</a></p>
-        <h1>AppFailureHandler<span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html" title="Permalink">
+        <h1>BootstrapContext<span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -224,7 +224,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">AppFailureHandler</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">BootstrapContext</span><span class="tparams">[<span name="CommandlineConfig">CommandlineConfig &lt;: <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>]</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
@@ -238,7 +238,7 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="NullHandler$.html" class="extype" name="com.github.pshirshov.izumi.distage.app.NullHandler">NullHandler</a>, <a href="PrintingHandler$.html" class="extype" name="com.github.pshirshov.izumi.distage.app.PrintingHandler">PrintingHandler</a>, <a href="TerminatingHandler$.html" class="extype" name="com.github.pshirshov.izumi.distage.app.TerminatingHandler">TerminatingHandler</a></div>
+            <div class="subClasses hiddenContent"><a href="BootstrapContextDefaultImpl.html" class="extype" name="com.github.pshirshov.izumi.distage.app.BootstrapContextDefaultImpl">BootstrapContextDefaultImpl</a></div>
           </div></div>
         
 
@@ -264,7 +264,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.distage.app.AppFailureHandler"><span>AppFailureHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.distage.app.BootstrapContext"><span>BootstrapContext</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -288,10 +288,10 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.distage.app.AppFailureHandler#onError" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="onError(t:Throwable):Unit"></a><a id="onError(Throwable):Unit"></a>
+              <ol><li name="com.github.pshirshov.izumi.distage.app.BootstrapContext#appConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="appConfig:com.github.pshirshov.izumi.distage.config.model.AppConfig"></a><a id="appConfig:AppConfig"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#onError(t:Throwable):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#appConfig:com.github.pshirshov.izumi.distage.config.model.AppConfig" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -300,7 +300,55 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onError</span><span class="params">(<span name="t">t: <a href="../../../../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">appConfig</span><span class="result">: <a href="../config/model/AppConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.config.model.AppConfig">AppConfig</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.app.BootstrapContext#bootstrapConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="bootstrapConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="bootstrapConfig:PluginConfig"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#bootstrapConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bootstrapConfig</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.app.BootstrapContext#cliConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="cliConfig:CommandlineConfig"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#cliConfig:CommandlineConfig" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cliConfig</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.app.BootstrapContext.CommandlineConfig">CommandlineConfig</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.app.BootstrapContext#pluginConfig" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="pluginConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig"></a><a id="pluginConfig:PluginConfig"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#pluginConfig:com.github.pshirshov.izumi.distage.plugins.PluginConfig" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pluginConfig</span><span class="result">: <a href="../plugins/PluginConfig.html" class="extype" name="com.github.pshirshov.izumi.distage.plugins.PluginConfig">PluginConfig</a></span>
       </span>
       
       
@@ -313,7 +361,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -329,7 +377,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html###():Int" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -345,7 +393,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -361,7 +409,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -377,7 +425,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#clone():Object" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -403,7 +451,7 @@
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -419,7 +467,7 @@
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -435,7 +483,7 @@
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -456,7 +504,7 @@
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -477,7 +525,7 @@
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -493,7 +541,7 @@
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -509,7 +557,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -530,7 +578,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -551,7 +599,7 @@
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -567,7 +615,7 @@
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#toString():String" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -583,7 +631,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -605,7 +653,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -627,7 +675,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -659,7 +707,7 @@
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/AppFailureHandler.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/app/BootstrapContext.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
