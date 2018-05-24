@@ -488,9 +488,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a> → AnyRef → Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef#freeze" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="freeze(state:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]):Set[com.github.pshirshov.izumi.distage.model.definition.Binding]"></a><a id="freeze(Set[Binding]):Set[Binding]"></a>
+      <a id="freeze(mutState:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]):Set[com.github.pshirshov.izumi.distage.model.definition.Binding]"></a><a id="freeze(Set[Binding]):Set[Binding]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html#freeze(state:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]):Set[com.github.pshirshov.izumi.distage.model.definition.Binding]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html#freeze(mutState:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]):Set[com.github.pshirshov.izumi.distage.model.definition.Binding]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -499,7 +499,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">freeze</span><span class="params">(<span name="state">state: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a>]</span>
+        <span class="name">freeze</span><span class="params">(<span name="mutState">mutState: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -556,6 +556,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef#initialTags" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initialTags:scala.collection.mutable.Set[String]"></a><a id="initialTags:Set[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html#initialTags:scala.collection.mutable.Set[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initialTags</span><span class="result">: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -584,7 +600,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">make</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../reflection/universe/RuntimeDIUniverse$.html#Tag[T]=DIUniverseBase.this.u.TypeTag[T]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag">reflection.universe.RuntimeDIUniverse.Tag</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.make.T">T</span>]</span>)</span><span class="result">: <a href="ModuleDef$$BindDSL.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSL">BindDSL</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.make.T">T</span>]</span>
+        <span class="name">make</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../reflection/universe/RuntimeDIUniverse$.html#Tag[T]=DIUniverseBase.this.u.TypeTag[T]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag">reflection.universe.RuntimeDIUniverse.Tag</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.make.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSL">BindDSL</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.make.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -600,7 +616,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">many</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../reflection/universe/RuntimeDIUniverse$.html#Tag[T]=DIUniverseBase.this.u.TypeTag[T]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag">reflection.universe.RuntimeDIUniverse.Tag</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.many.T">T</span>]</span>)</span><span class="result">: <a href="ModuleDef$$SetDSL.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SetDSL">SetDSL</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.many.T">T</span>]</span>
+        <span class="name">many</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../reflection/universe/RuntimeDIUniverse$.html#Tag[T]=DIUniverseBase.this.u.TypeTag[T]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag">reflection.universe.RuntimeDIUniverse.Tag</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.many.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SetDSL">SetDSL</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.many.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -678,6 +694,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef#tag" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tag(tags:String*):Unit"></a><a id="tag(String*):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html#tag(tags:String*):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tag</span><span class="params">(<span name="tags">tags: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
