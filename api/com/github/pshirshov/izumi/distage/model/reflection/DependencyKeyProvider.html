@@ -181,22 +181,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model">model</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.macros" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="macros"></a><a id="macros:macros"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/index.html#macros" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="macros/index.html"><span class="name">macros</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection">reflection</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe" visbl="pub" class="indented8 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="universe"></a><a id="universe:universe"></a>
       <span class="permalink">
@@ -314,10 +298,10 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#associationFromParameter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="associationFromParameter(parameterSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.Association.Parameter"></a><a id="associationFromParameter(universe.DIUniverse.SymbolInfo):Parameter"></a>
+              <ol><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#keyFromMethod" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="keyFromMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodContext,methodSymbol:DependencyKeyProvider.this.u.MethodSymb):DependencyKeyProvider.this.u.DIKey"></a><a id="keyFromMethod(MethodContext,universe.DIUniverse.MethodSymb):universe.DIUniverse.DIKey"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#associationFromParameter(parameterSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.Association.Parameter" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#keyFromMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodContext,methodSymbol:DependencyKeyProvider.this.u.MethodSymb):DependencyKeyProvider.this.u.DIKey" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -326,30 +310,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">associationFromParameter</span><span class="params">(<span name="parameterSymbol">parameterSymbol: <a href="universe/DIUniverse.html#SymbolInfoextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISymbolInfo.SymbolInfo">universe.DIUniverse.SymbolInfo</a></span>)</span><span class="result">: <a href="../plan/WithDIAssociation$Association$$Parameter.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIAssociation.Association.Parameter">Parameter</a></span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#keyFromMethod" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="keyFromMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodContext,methodSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.DIKey"></a><a id="keyFromMethod(MethodContext,universe.DIUniverse.SymbolInfo):universe.DIUniverse.DIKey"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#keyFromMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodContext,methodSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.DIKey" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">keyFromMethod</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$MethodContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.MethodContext">MethodContext</a></span>, <span name="methodSymbol">methodSymbol: <a href="universe/DIUniverse.html#SymbolInfoextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISymbolInfo.SymbolInfo">universe.DIUniverse.SymbolInfo</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">universe.DIUniverse.DIKey</a></span>
+        <span class="name">keyFromMethod</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$MethodContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.MethodContext">MethodContext</a></span>, <span name="methodSymbol">methodSymbol: <a href="universe/DIUniverse.html#MethodSymb=DIUniverseBase.this.u.MethodSymbol" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.MethodSymb">universe.DIUniverse.MethodSymb</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">universe.DIUniverse.DIKey</a></span>
       </span>
       
       
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#keyFromParameter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="keyFromParameter(context:DependencyKeyProvider.this.u.DependencyContext.ParameterContext,parameterSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.DIKey"></a><a id="keyFromParameter(ParameterContext,universe.DIUniverse.SymbolInfo):universe.DIUniverse.DIKey"></a>
+      <a id="keyFromParameter(context:DependencyKeyProvider.this.u.DependencyContext.ParameterContext,parameterSymbol:DependencyKeyProvider.this.u.Symb):DependencyKeyProvider.this.u.DIKey"></a><a id="keyFromParameter(ParameterContext,universe.DIUniverse.Symb):universe.DIUniverse.DIKey"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#keyFromParameter(context:DependencyKeyProvider.this.u.DependencyContext.ParameterContext,parameterSymbol:DependencyKeyProvider.this.u.SymbolInfo):DependencyKeyProvider.this.u.DIKey" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#keyFromParameter(context:DependencyKeyProvider.this.u.DependencyContext.ParameterContext,parameterSymbol:DependencyKeyProvider.this.u.Symb):DependencyKeyProvider.this.u.DIKey" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -358,14 +326,30 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">keyFromParameter</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$ParameterContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.ParameterContext">ParameterContext</a></span>, <span name="parameterSymbol">parameterSymbol: <a href="universe/DIUniverse.html#SymbolInfoextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISymbolInfo.SymbolInfo">universe.DIUniverse.SymbolInfo</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">universe.DIUniverse.DIKey</a></span>
+        <span class="name">keyFromParameter</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$ParameterContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.ParameterContext">ParameterContext</a></span>, <span name="parameterSymbol">parameterSymbol: <a href="universe/DIUniverse.html#Symb=DIUniverseBase.this.u.Symbol" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.Symb">universe.DIUniverse.Symb</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">universe.DIUniverse.DIKey</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#keyFromParameterType" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="keyFromParameterType(parameterType:DependencyKeyProvider.this.u.TypeFull):DependencyKeyProvider.this.u.DIKey"></a><a id="keyFromParameterType(universe.DIUniverse.TypeFull):universe.DIUniverse.DIKey"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#keyFromParameterType(parameterType:DependencyKeyProvider.this.u.TypeFull):DependencyKeyProvider.this.u.DIKey" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keyFromParameterType</span><span class="params">(<span name="parameterType">parameterType: <a href="universe/DIUniverse.html#TypeFull=WithDISafeType.this.SafeType" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.TypeFull">universe.DIUniverse.TypeFull</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">universe.DIUniverse.DIKey</a></span>
       </span>
       
       
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#resultOfFactoryMethod" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="resultOfFactoryMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodParameterContext):DependencyKeyProvider.this.u.TypeFull"></a><a id="resultOfFactoryMethod(MethodParameterContext):universe.DIUniverse.TypeFull"></a>
+      <a id="resultOfFactoryMethod(context:DependencyKeyProvider.this.u.DependencyContext.FactoryMethodContext,factoryMethod:DependencyKeyProvider.this.u.MethodSymb):DependencyKeyProvider.this.u.SafeType"></a><a id="resultOfFactoryMethod(FactoryMethodContext,universe.DIUniverse.MethodSymb):universe.DIUniverse.SafeType"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#resultOfFactoryMethod(context:DependencyKeyProvider.this.u.DependencyContext.MethodParameterContext):DependencyKeyProvider.this.u.TypeFull" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#resultOfFactoryMethod(context:DependencyKeyProvider.this.u.DependencyContext.FactoryMethodContext,factoryMethod:DependencyKeyProvider.this.u.MethodSymb):DependencyKeyProvider.this.u.SafeType" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -374,7 +358,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resultOfFactoryMethod</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$MethodParameterContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.MethodParameterContext">MethodParameterContext</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#TypeFull=WithDISafeType.this.SafeType" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.TypeFull">universe.DIUniverse.TypeFull</a></span>
+        <span class="name">resultOfFactoryMethod</span><span class="params">(<span name="context">context: <a href="../plan/WithDIDependencyContext$DependencyContext$$FactoryMethodContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIDependencyContext.DependencyContext.FactoryMethodContext">FactoryMethodContext</a></span>, <span name="factoryMethod">factoryMethod: <a href="universe/DIUniverse.html#MethodSymb=DIUniverseBase.this.u.MethodSymbol" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.MethodSymb">universe.DIUniverse.MethodSymb</a></span>)</span><span class="result">: <a href="universe/DIUniverse.html#SafeTypeextendsProductwithSerializable" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISafeType.SafeType">universe.DIUniverse.SafeType</a></span>
       </span>
       
       
@@ -464,22 +448,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.DependencyKeyProvider#associationFromParameter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="associationFromParameter(symb:DependencyKeyProvider.this.u.Symb,definingClass:DependencyKeyProvider.this.u.TypeFull):DependencyKeyProvider.this.u.Association.Parameter"></a><a id="associationFromParameter(universe.DIUniverse.Symb,universe.DIUniverse.TypeFull):Parameter"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/DependencyKeyProvider.html#associationFromParameter(symb:DependencyKeyProvider.this.u.Symb,definingClass:DependencyKeyProvider.this.u.TypeFull):DependencyKeyProvider.this.u.Association.Parameter" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">associationFromParameter</span><span class="params">(<span name="symb">symb: <a href="universe/DIUniverse.html#Symb=DIUniverseBase.this.u.Symbol" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.Symb">universe.DIUniverse.Symb</a></span>, <span name="definingClass">definingClass: <a href="universe/DIUniverse.html#TypeFull=WithDISafeType.this.SafeType" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.DIUniverse.TypeFull">universe.DIUniverse.TypeFull</a></span>)</span><span class="result">: <a href="../plan/WithDIAssociation$Association$$Parameter.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.WithDIAssociation.Association.Parameter">Parameter</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
