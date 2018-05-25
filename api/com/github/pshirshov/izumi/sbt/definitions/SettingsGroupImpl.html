@@ -167,40 +167,24 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.sbt">sbt</a></dd></dl></div>
     </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="trait" href="Extender.html" title=""></a>
-                        <a href="Extender.html" title="">Extender</a>
+                        <a class="trait" href="AbstractSettingsGroup.html" title=""></a>
+                        <a href="AbstractSettingsGroup.html" title="">AbstractSettingsGroup</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="GlobalExclusionsExtender.html" title=""></a>
-                        <a href="GlobalExclusionsExtender.html" title="">GlobalExclusionsExtender</a>
+                        <a class="object" href="DefaultItSettingsGroup$.html" title=""></a>
+                        <a href="DefaultItSettingsGroup$.html" title="">DefaultItSettingsGroup</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="trait" href="GlobalSettings.html" title=""></a>
-                        <a href="GlobalSettings.html" title="">GlobalSettings</a>
+                        <a class="trait" href="SettingsGroup.html" title=""></a>
+                        <a href="SettingsGroup.html" title="">SettingsGroup</a>
                       </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="GlobalSettingsExtender.html" title=""></a>
-                        <a href="GlobalSettingsExtender.html" title="">GlobalSettingsExtender</a>
+                        <a class="object" href="SettingsGroupId$.html" title=""></a>
+                        <a class="trait" href="SettingsGroupId.html" title=""></a>
+                        <a href="SettingsGroupId.html" title="">SettingsGroupId</a>
                       </li><li class="current-entities indented6">
-                        <a class="object" href="IzumiDsl$.html" title=""></a>
-                        <a class="trait" href="IzumiDsl.html" title=""></a>
-                        <a href="IzumiDsl.html" title="">IzumiDsl</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
+                        <a class="object" href="SettingsGroupImpl$.html" title=""></a>
                         <a class="class" href="" title=""></a>
-                        <a href="" title="">PluginsExtender</a>
-                      </li><li class="current-entities indented6">
-                        <a class="object" href="ProjectSettings$.html" title=""></a>
-                        <a class="class" href="ProjectSettings.html" title=""></a>
-                        <a href="ProjectSettings.html" title="">ProjectSettings</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="SharedDepsExtender.html" title=""></a>
-                        <a href="SharedDepsExtender.html" title="">SharedDepsExtender</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="class" href="SharedModulesExtender.html" title=""></a>
-                        <a href="SharedModulesExtender.html" title="">SharedModulesExtender</a>
+                        <a href="" title="">SettingsGroupImpl</a>
                       </li>
               </ul>
             </div>
@@ -208,23 +192,25 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="SettingsGroupImpl$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.sbt">sbt</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions">definitions</a></p>
-        <h1>PluginsExtender<span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html" title="Permalink">
+        <h1><a href="SettingsGroupImpl$.html" title="See companion object">SettingsGroupImpl</a><span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="SettingsGroupImpl$.html" title="See companion object">object SettingsGroupImpl</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">PluginsExtender</span><span class="result"> extends <a href="Extender.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.Extender">Extender</a></span>
+        <span class="name">SettingsGroupImpl</span><span class="params">(<span name="id">id: <a href="SettingsGroupId.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId">SettingsGroupId</a></span>, <span name="settings">settings: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../../../../../sbt/index.html#Setting[T]=sbt.Def.Setting[T]" class="extmbr" name="sbt.Setting">sbt.Setting</a>[_]] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Seq.empty</a></span></span></span>, <span name="sharedDeps">sharedDeps: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.ModuleID">ModuleID</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="exclusions">exclusions: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.InclExclRule">InclExclRule</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="plugins">plugins: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.Plugins">Plugins</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="disabledPlugins">disabledPlugins: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.AutoPlugin">AutoPlugin</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="sharedLibs">sharedLibs: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../IzumiScopesPlugin$$autoImport$.html#ProjectReferenceEx=com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.ProjectReferenceEx" class="extmbr" name="com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx">ProjectReferenceEx</a>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Seq.empty</a></span></span></span>)</span><span class="result"> extends <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -233,7 +219,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Extender.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.Extender">Extender</a>, <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a>, <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -259,7 +245,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.sbt.definitions.PluginsExtender"><span>PluginsExtender</span></li><li class="in" name="com.github.pshirshov.izumi.sbt.definitions.Extender"><span>Extender</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl"><span>SettingsGroupImpl</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup"><span>AbstractSettingsGroup</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -279,10 +265,10 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.github.pshirshov.izumi.sbt.definitions.PluginsExtender#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(settings:com.github.pshirshov.izumi.sbt.definitions.ProjectSettings):com.github.pshirshov.izumi.sbt.definitions.PluginsExtender"></a><a id="&lt;init&gt;:PluginsExtender"></a>
+              <ol><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(id:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId,settings:Seq[sbt.Setting[_]],sharedDeps:Set[sbt.librarymanagement.ModuleID],exclusions:Set[sbt.librarymanagement.InclExclRule],plugins:Set[sbt.Plugins],disabledPlugins:Set[sbt.AutoPlugin],sharedLibs:Seq[com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx]):com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl"></a><a id="&lt;init&gt;:SettingsGroupImpl"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#&lt;init&gt;(settings:com.github.pshirshov.izumi.sbt.definitions.ProjectSettings):com.github.pshirshov.izumi.sbt.definitions.PluginsExtender" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#&lt;init&gt;(id:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId,settings:Seq[sbt.Setting[_]],sharedDeps:Set[sbt.librarymanagement.ModuleID],exclusions:Set[sbt.librarymanagement.InclExclRule],plugins:Set[sbt.Plugins],disabledPlugins:Set[sbt.AutoPlugin],sharedLibs:Seq[com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx]):com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -291,7 +277,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PluginsExtender</span><span class="params">(<span name="settings">settings: <a href="ProjectSettings.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.ProjectSettings">ProjectSettings</a></span>)</span>
+        <span class="name">SettingsGroupImpl</span><span class="params">(<span name="id">id: <a href="SettingsGroupId.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId">SettingsGroupId</a></span>, <span name="settings">settings: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../../../../../sbt/index.html#Setting[T]=sbt.Def.Setting[T]" class="extmbr" name="sbt.Setting">sbt.Setting</a>[_]] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Seq.empty</a></span></span></span>, <span name="sharedDeps">sharedDeps: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.ModuleID">ModuleID</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="exclusions">exclusions: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.InclExclRule">InclExclRule</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="plugins">plugins: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.Plugins">Plugins</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="disabledPlugins">disabledPlugins: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.AutoPlugin">AutoPlugin</span>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Set.empty</a></span></span></span>, <span name="sharedLibs">sharedLibs: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../IzumiScopesPlugin$$autoImport$.html#ProjectReferenceEx=com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.ProjectReferenceEx" class="extmbr" name="com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx">ProjectReferenceEx</a>] = <span class="symbol"><span class="name"><a href="../../../../../../scala/index.html">Seq.empty</a></span></span></span>)</span>
       </span>
       
       
@@ -308,7 +294,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -324,7 +310,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html###():Int" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -340,7 +326,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -353,10 +339,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup#applyTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="applyTo(p:sbt.Project):sbt.Project"></a><a id="applyTo(Project):Project"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#applyTo(p:sbt.Project):sbt.Project" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">applyTo</span><span class="params">(<span name="p">p: <span class="extype" name="sbt.Project">Project</span></span>)</span><span class="result">: <span class="extype" name="sbt.Project">Project</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -372,7 +374,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#clone():Object" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -395,10 +397,26 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#disabledPlugins" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="disabledPlugins:Set[sbt.AutoPlugin]"></a><a id="disabledPlugins:Set[AutoPlugin]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#disabledPlugins:Set[sbt.AutoPlugin]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">disabledPlugins</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.AutoPlugin">AutoPlugin</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -411,42 +429,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#exclusions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exclusions:Set[sbt.librarymanagement.InclExclRule]"></a><a id="exclusions:Set[InclExclRule]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#exclusions:Set[sbt.librarymanagement.InclExclRule]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">exclusions</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.InclExclRule">InclExclRule</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.sbt.definitions.PluginsExtender#extend" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="extend(p:sbt.Project):sbt.Project"></a><a id="extend(Project):Project"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#extend(p:sbt.Project):sbt.Project" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">extend</span><span class="params">(<span name="p">p: <span class="extype" name="sbt.Project">Project</span></span>)</span><span class="result">: <span class="extype" name="sbt.Project">Project</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.PluginsExtender">PluginsExtender</a> → <a href="Extender.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.Extender">Extender</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -464,31 +466,26 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId"></a><a id="id:SettingsGroupId"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#id:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">id</span><span class="result">: <a href="SettingsGroupId.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupId">SettingsGroupId</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -501,26 +498,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.sbt.definitions.Extender#logger" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logger:sbt.internal.util.ConsoleLogger"></a><a id="logger:ConsoleLogger"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#logger:sbt.internal.util.ConsoleLogger" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logger</span><span class="result">: <span class="extype" name="sbt.internal.util.ConsoleLogger">ConsoleLogger</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="Extender.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.Extender">Extender</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -536,7 +517,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -557,7 +538,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -575,10 +556,74 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#plugins" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="plugins:Set[sbt.Plugins]"></a><a id="plugins:Set[Plugins]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#plugins:Set[sbt.Plugins]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plugins</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.Plugins">Plugins</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#settings" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="settings:Seq[sbt.Setting[_]]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#settings:Seq[sbt.Setting[_]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">settings</span><span class="result">: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../../../../../sbt/index.html#Setting[T]=sbt.Def.Setting[T]" class="extmbr" name="sbt.Setting">sbt.Setting</a>[_]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#sharedDeps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sharedDeps:Set[sbt.librarymanagement.ModuleID]"></a><a id="sharedDeps:Set[ModuleID]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#sharedDeps:Set[sbt.librarymanagement.ModuleID]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sharedDeps</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="sbt.librarymanagement.ModuleID">ModuleID</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl#sharedLibs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sharedLibs:Seq[com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx]"></a><a id="sharedLibs:Seq[ProjectReferenceEx]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#sharedLibs:Seq[com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sharedLibs</span><span class="result">: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../IzumiScopesPlugin$$autoImport$.html#ProjectReferenceEx=com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.ProjectReferenceEx" class="extmbr" name="com.github.pshirshov.izumi.sbt.IzumiScopesPlugin.autoImport.ProjectReferenceEx">ProjectReferenceEx</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a> → <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -591,10 +636,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
+    </li><li name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup#toImpl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toImpl:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl"></a><a id="toImpl:SettingsGroupImpl"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#toString():String" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#toImpl:com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -603,14 +648,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toImpl</span><span class="result">: <a href="" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.SettingsGroupImpl">SettingsGroupImpl</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -632,7 +677,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -654,7 +699,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -686,7 +731,7 @@
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/PluginsExtender.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/sbt/definitions/SettingsGroupImpl.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -714,8 +759,16 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.github.pshirshov.izumi.sbt.definitions.Extender">
-              <h3>Inherited from <a href="Extender.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.Extender">Extender</a></h3>
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">
+              <h3>Inherited from <a href="AbstractSettingsGroup.html" class="extype" name="com.github.pshirshov.izumi.sbt.definitions.AbstractSettingsGroup">AbstractSettingsGroup</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
