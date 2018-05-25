@@ -149,10 +149,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GitStampPlugin"></a><a id="GitStampPlugin:GitStampPlugin"></a>
+    </li><li name="com.github.pshirshov.izumi.sbt.PublishingPlugin" visbl="pub" class="indented6 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PublishingPlugin"></a><a id="PublishingPlugin:PublishingPlugin"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/index.html#GitStampPlugin" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/index.html#PublishingPlugin" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -161,29 +161,33 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GitStampPlugin$.html"><span class="name">GitStampPlugin</span></a><span class="result"> extends <span class="extype" name="sbt.AutoPlugin">AutoPlugin</span></span>
+        <a title="" href="PublishingPlugin$.html"><span class="name">PublishingPlugin</span></a><span class="result"> extends <span class="extype" name="sbt.AutoPlugin">AutoPlugin</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.sbt">sbt</a></dd></dl></div>
     </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">Keys</a>
+                        <a class="object" href="PublishingPlugin$$Keys$.html" title=""></a>
+                        <a href="PublishingPlugin$$Keys$.html" title="">Keys</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="object" href="GitStampPlugin$$autoImport$.html" title=""></a>
-                        <a href="GitStampPlugin$$autoImport$.html" title="">autoImport</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">MavenTarget</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
+                        <a class="object" href="PublishingPlugin$$autoImport$.html" title=""></a>
+                        <a href="PublishingPlugin$$autoImport$.html" title="">autoImport</a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle object">o</div>
-        <p id="owner"><a href="../../../../index.html" class="extype" name="com">com</a>.<a href="../../../index.html" class="extype" name="com.github">github</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.sbt">sbt</a>.<a href="GitStampPlugin$.html" class="extype" name="com.github.pshirshov.izumi.sbt.GitStampPlugin">GitStampPlugin</a></p>
-        <h1>Keys<span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html" title="Permalink">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../../index.html" class="extype" name="com">com</a>.<a href="../../../index.html" class="extype" name="com.github">github</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.sbt">sbt</a>.<a href="PublishingPlugin$.html" class="extype" name="com.github.pshirshov.izumi.sbt.PublishingPlugin">PublishingPlugin</a></p>
+        <h1>MavenTarget<span class="permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -193,10 +197,10 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Keys</span>
+        <span class="name">MavenTarget</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="credentials">credentials: <a href="../../../../../sbt/index.html#Credentials=sbt.librarymanagement.ivy.Credentials" class="extmbr" name="sbt.Credentials">sbt.Credentials</a></span>, <span name="repo">repo: <a href="../../../../../sbt/index.html#MavenRepository=sbt.librarymanagement.MavenRepository" class="extmbr" name="sbt.MavenRepository">sbt.MavenRepository</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -205,7 +209,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -231,7 +235,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys"><span>Keys</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget"><span>MavenTarget</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -249,7 +253,26 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(id:String,credentials:sbt.Credentials,repo:sbt.MavenRepository):com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget"></a><a id="&lt;init&gt;:MavenTarget"></a>
+      <span class="permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#&lt;init&gt;(id:String,credentials:sbt.Credentials,repo:sbt.MavenRepository):com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MavenTarget</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="credentials">credentials: <a href="../../../../../sbt/index.html#Credentials=sbt.librarymanagement.ivy.Credentials" class="extmbr" name="sbt.Credentials">sbt.Credentials</a></span>, <span name="repo">repo: <a href="../../../../../sbt/index.html#MavenRepository=sbt.librarymanagement.MavenRepository" class="extmbr" name="sbt.MavenRepository">sbt.MavenRepository</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -261,7 +284,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -277,7 +300,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html###():Int" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -293,7 +316,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -309,7 +332,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -325,7 +348,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#clone():Object" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -348,10 +371,26 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget#credentials" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="credentials:sbt.Credentials"></a>
+      <span class="permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#credentials:sbt.Credentials" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">credentials</span><span class="result">: <a href="../../../../../sbt/index.html#Credentials=sbt.librarymanagement.ivy.Credentials" class="extmbr" name="sbt.Credentials">sbt.Credentials</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -364,26 +403,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#equals(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -401,31 +424,26 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
+    </li><li name="com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="id:String"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#id:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">id</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,90 +456,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys#izGitBranch" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="izGitBranch:sbt.SettingKey[String]"></a><a id="izGitBranch:SettingKey[String]"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#izGitBranch:sbt.SettingKey[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">izGitBranch</span><span class="result">: <span class="extype" name="sbt.SettingKey">SettingKey</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys#izGitIsClean" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="izGitIsClean:sbt.SettingKey[Boolean]"></a><a id="izGitIsClean:SettingKey[Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#izGitIsClean:sbt.SettingKey[Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">izGitIsClean</span><span class="result">: <span class="extype" name="sbt.SettingKey">SettingKey</span>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys#izGitObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="izGitObject:sbt.SettingKey[org.eclipse.jgit.api.Git]"></a><a id="izGitObject:SettingKey[Git]"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#izGitObject:sbt.SettingKey[org.eclipse.jgit.api.Git]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">izGitObject</span><span class="result">: <span class="extype" name="sbt.SettingKey">SettingKey</span>[<span class="extype" name="org.eclipse.jgit.api.Git">Git</span>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys#izGitRepositoryObject" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="izGitRepositoryObject:sbt.SettingKey[org.eclipse.jgit.lib.Repository]"></a><a id="izGitRepositoryObject:SettingKey[Repository]"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#izGitRepositoryObject:sbt.SettingKey[org.eclipse.jgit.lib.Repository]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">izGitRepositoryObject</span><span class="result">: <span class="extype" name="sbt.SettingKey">SettingKey</span>[<span class="extype" name="org.eclipse.jgit.lib.Repository">Repository</span>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.sbt.GitStampPlugin.Keys#izGitRevision" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="izGitRevision:sbt.SettingKey[String]"></a><a id="izGitRevision:SettingKey[String]"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#izGitRevision:sbt.SettingKey[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">izGitRevision</span><span class="result">: <span class="extype" name="sbt.SettingKey">SettingKey</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -537,7 +475,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#notify():Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -558,7 +496,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -576,10 +514,26 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.sbt.PublishingPlugin.MavenTarget#repo" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="repo:sbt.MavenRepository"></a>
+      <span class="permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#repo:sbt.MavenRepository" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repo</span><span class="result">: <a href="../../../../../sbt/index.html#MavenRepository=sbt.librarymanagement.MavenRepository" class="extmbr" name="sbt.MavenRepository">sbt.MavenRepository</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -592,26 +546,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#toString():String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#wait():Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -633,7 +571,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -655,7 +593,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -687,7 +625,7 @@
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/sbt/GitStampPlugin$$Keys$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/sbt/PublishingPlugin$$MavenTarget.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -715,7 +653,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
