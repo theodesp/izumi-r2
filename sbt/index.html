@@ -218,7 +218,12 @@ lazy val myProject = (...).depends(myLibrary)
 <h3><a href="#setting-groups" name="setting-groups" class="anchor"><span class="anchor-link"></span></a>Setting Groups</h3>
 <h4><a href="#global-setting-group" name="global-setting-group" class="anchor"><span class="anchor-link"></span></a>Global Setting Group</h4>
 <h3><a href="#automatic-aggregation" name="automatic-aggregation" class="anchor"><span class="anchor-link"></span></a>Automatic Aggregation</h3>
+<p>When you use <code>.as.project</code> or <code>.as.module</code> syntax to define a project, that project is stored in a global singleton.</p>
+<p>You may use <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> methods instead of standard <code>aggregate</code>, in that case all the transitive dependencies of the projects provided will be also added into aggregation list. This allows you to simplify your definitions by avoiding specifing all the modules in <code>.aggregate</code>.</p>
+<p>In case you don&rsquo;t want your project to be recorded, you shoud use <code>.as.just</code> syntax.</p>
 <h3><a href="#aggregation-safety-check" name="aggregation-safety-check" class="anchor"><span class="anchor-link"></span></a>Aggregation Safety Check</h3>
+<p>When you invoke <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> on your root project it checks if the accumulated set of known project is the same as the set of project loaded by sbt.</p>
+<p>In case of discrepancies you will get a warning. So in case you use automatic aggregation it&rsquo;s unlikely that you may accidentally forget to aggregate a module of a multi-module project.</p>
 <h2><a href="#build-descriptors" name="build-descriptors" class="anchor"><span class="anchor-link"></span></a>Build Descriptors</h2>
 <h3><a href="#bills-of-materials" name="bills-of-materials" class="anchor"><span class="anchor-link"></span></a>Bills of Materials</h3>
 <h3><a href="#git-manifests" name="git-manifests" class="anchor"><span class="anchor-link"></span></a>Git Manifests</h3>
@@ -310,8 +315,11 @@ sys.props.asInt(&quot;my.property&quot;, default = 123)
 <p>You may activate this plugin with the following statement in root project:</p>
 <h2><a href="#optional-settings" name="optional-settings" class="anchor"><span class="anchor-link"></span></a>Optional settings</h2>
 <h3><a href="#publishing" name="publishing" class="anchor"><span class="anchor-link"></span></a>Publishing</h3>
+<p>TODO</p>
 <h4><a href="#publishing-settings" name="publishing-settings" class="anchor"><span class="anchor-link"></span></a>Publishing settings</h4>
+<p>TODO</p>
 <h4><a href="#publishing-credentials-and-targets" name="publishing-credentials-and-targets" class="anchor"><span class="anchor-link"></span></a>Publishing credentials and targets</h4>
+<p>TODO</p>
 <h3><a href="#compiler-options" name="compiler-options" class="anchor"><span class="anchor-link"></span></a>Compiler options</h3>
 <p><code>CompilerOptionsPlugin</code> provides you some sane compiler option presets (linting, optimizations).</p>
 <p>You should explicitly enable this plugin in each project you want to use it. When you want to enable it globally, use a settings group:</p>
