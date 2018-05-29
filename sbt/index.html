@@ -118,6 +118,11 @@ Izumi Toolkit
 <ul>
   <li><a href="../sbt/index.html#sbt-toolkit" class="header">SBT Toolkit</a>
   <ul>
+    <li><a href="../sbt/index.html#global-plugins" class="header">Global plugins</a></li>
+    <li><a href="../sbt/index.html#environmental-plugins" class="header">Environmental plugins</a></li>
+    <li><a href="../sbt/index.html#presets" class="header">Presets</a></li>
+    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional Plugins</a></li>
+    <li><a href="../sbt/index.html#installation" class="header">Installation</a></li>
     <li><a href="../sbt/index.html#inherited-test-scopes" class="header">Inherited Test Scopes</a></li>
     <li><a href="../sbt/index.html#settings-dsl" class="header">Settings DSL</a></li>
     <li><a href="../sbt/index.html#build-descriptors" class="header">Build Descriptors</a></li>
@@ -143,6 +148,11 @@ Izumi Toolkit
 <ul>
   <li><a href="../sbt/index.html#sbt-toolkit" class="header">SBT Toolkit</a>
   <ul>
+    <li><a href="../sbt/index.html#global-plugins" class="header">Global plugins</a></li>
+    <li><a href="../sbt/index.html#environmental-plugins" class="header">Environmental plugins</a></li>
+    <li><a href="../sbt/index.html#presets" class="header">Presets</a></li>
+    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional Plugins</a></li>
+    <li><a href="../sbt/index.html#installation" class="header">Installation</a></li>
     <li><a href="../sbt/index.html#inherited-test-scopes" class="header">Inherited Test Scopes</a></li>
     <li><a href="../sbt/index.html#settings-dsl" class="header">Settings DSL</a></li>
     <li><a href="../sbt/index.html#build-descriptors" class="header">Build Descriptors</a></li>
@@ -158,29 +168,315 @@ Izumi Toolkit
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#sbt-toolkit" name="sbt-toolkit" class="anchor"><span class="anchor-link"></span></a>SBT Toolkit</h1><div class="callout warning "><div class="callout-title">TODO</div>
-<p>Sorry, this page is not ready yet</p></div>
+<h1><a href="#sbt-toolkit" name="sbt-toolkit" class="anchor"><span class="anchor-link"></span></a>SBT Toolkit</h1>
+<p>Izumi provides you a bunch of sbt plugins allowing you to significantly reduce size and increase clarity of huge multi-module builds.</p>
+<p>To start using Izumi plugins add the following into your <code>project/plugins.sbt</code>:</p>
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
+addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi&quot; % izumi_version)
+// This is a Izumi&#39;s Bill of Materials, see below
+addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&quot; % izumi_version)
+</code></pre>
+<p>We provide you the following kinds of plugins:</p>
+<ol>
+  <li><em>Global Plugin</em>: adds some convenience helpers, activated automatically,</li>
+  <li><em>Environmental Plugin</em>: changes some aspects of sbt behavior in opinioneted way, intended to be activated within root project,</li>
+  <li><em>Preset</em> - an opinionated set of environmental plugins,</li>
+  <li><em>Optional plugin</em>: provides you some convenience tasks, intended to be activated manually, per-project.</li>
+</ol>
+<p>Important notes:</p>
+<ol>
+  <li>Please keep in mind no plugins are being activated automatically,</li>
+  <li>The rest of Izumi plugins are optional. You may use a preset to activate them or combine them manually as you wish (using settings groups),</li>
+  <li>Some plugins requires to be installed for each project so cannot be activated via preset due to sbt limitations. You should use Settings Groups in order to activate them.</li>
+</ol>
+<h3><a href="#global-plugins" name="global-plugins" class="anchor"><span class="anchor-link"></span></a>Global plugins</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Plugin </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IzumiImportsPlugin </td>
+      <td>Makes all the Izumi imports visible by default </td>
+    </tr>
+  </tbody>
+</table>
+<h3><a href="#environmental-plugins" name="environmental-plugins" class="anchor"><span class="anchor-link"></span></a>Environmental plugins</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Plugin </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IzumiBuildManifestPlugin </td>
+      <td>Adds build info into jar manifests </td>
+    </tr>
+    <tr>
+      <td>IzumiConvenienceTasksPlugin </td>
+      <td>Devops/workflow helpers </td>
+    </tr>
+    <tr>
+      <td>IzumiDslPlugin </td>
+      <td>Compact build definitions </td>
+    </tr>
+    <tr>
+      <td>IzumiGitStampPlugin </td>
+      <td>Adds GIT status into jar manifests </td>
+    </tr>
+    <tr>
+      <td>IzumiPropertiesPlugin </td>
+      <td>Convenience helpers for <code>sys.props</code> </td>
+    </tr>
+    <tr>
+      <td>IzumiResolverPlugin </td>
+      <td>Better defaults for artifact resolution </td>
+    </tr>
+    <tr>
+      <td>IzumiInheritedTestScopesPlugin </td>
+      <td>Convenience helpers for test scope inheritance </td>
+    </tr>
+  </tbody>
+</table>
+<h3><a href="#presets" name="presets" class="anchor"><span class="anchor-link"></span></a>Presets</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Plugin </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IzumiEnvironment </td>
+      <td>All the environmental plugins except of GIT one </td>
+    </tr>
+    <tr>
+      <td>IzumiGitEnvironment </td>
+      <td>All the environmental plugins with GIT one </td>
+    </tr>
+  </tbody>
+</table>
+<h3><a href="#optional-plugins" name="optional-plugins" class="anchor"><span class="anchor-link"></span></a>Optional Plugins</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Plugin </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IzumiExposedTestScopesPlugin </td>
+      <td>Maintains test scope separation </td>
+    </tr>
+    <tr>
+      <td>IzumiCompilerOptionsPlugin </td>
+      <td>Some linting/optimization presets for scalac/javac </td>
+    </tr>
+    <tr>
+      <td>IzumiFetchPlugin </td>
+      <td>Allows you to transitively download artifacts from remote repositories</td>
+    </tr>
+    <tr>
+      <td>IzumiPublishingPlugin </td>
+      <td>Some convenience helpers and improvements for artifact publishing </td>
+    </tr>
+    <tr>
+      <td>IzumiBuildInfoPlugin </td>
+      <td>Generates Bills of Materials </td>
+    </tr>
+  </tbody>
+</table>
+<h3><a href="#installation" name="installation" class="anchor"><span class="anchor-link"></span></a>Installation</h3>
+<p>To activate all the plugins add the following statements into your root project:</p>
+<pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiGitEnvironmentPlugin)
+</code></pre>
+<p>In case you don&rsquo;t use GIT, use this preset:</p>
+<pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiEnvironmentPlugin)
+</code></pre>
+<p>Also most likely you would like to activate the following plugins with your global Settings Group:</p>
+<pre class="prettyprint"><code class="language-scala">val GlobalSettings = new DefaultSettingsGroup {
+  // ...
+}
+</code></pre>
 <h2><a href="#inherited-test-scopes" name="inherited-test-scopes" class="anchor"><span class="anchor-link"></span></a>Inherited Test Scopes</h2>
+<h3><a href="#test-scope-inheritance" name="test-scope-inheritance" class="anchor"><span class="anchor-link"></span></a>Test Scope Inheritance</h3>
+<p><code>IzumiScopesPlugin</code> extends SBT <code>Project</code> with several implicit methods:</p>
+<ul>
+  <li><code>testOnlyRef</code> - provides you a project reference which is equivalent to <code>% &quot;test&quot;</code> dependency,</li>
+  <li><code>dependsSeq</code> and <code>depends</code> - allow you to add dependencies to your project the way test scopes of your dependencies are visible within test scopes of your project. So, essentially when you use these methods your dependencies are added into your projects with the following qualifier: <code>&quot;test-&gt;compile,test;it-&gt;compile,test,it&quot;</code></li>
+</ul>
+<p>You need to activate <code>DefaultItSettingsGroup</code> on your projects (see &ldquo;Setting Groups&rdquo; below) in order to make this working on <code>it</code> scope.</p>
+<p>Example: </p>
+<pre class="prettyprint"><code class="language-scala">lazy val myLibrary = ...
+
+lazy val myProject = (...).depends(myLibrary)
+</code></pre>
+<p>So, now you may use classes from the test scope of <code>myLibrary</code> within test scope of <code>myProject</code></p>
 <h3><a href="#test-scope-separation" name="test-scope-separation" class="anchor"><span class="anchor-link"></span></a>Test Scope Separation</h3>
+<p><code>InheritedTestScopesPlugin</code> works in pair with <code>IzumiScopesPlugin</code> and provides you an unique feature: only the classes you marked with <code>@ExposedTestScope</code> are being exposed to dependant artifacts.</p>
+<p>So, let&rsquo;s assume that: - you have two artifacts, <code>Library</code> and <code>App</code>, - <code>App</code> depends on <code>Library</code>, - In the test scope of <code>Library</code> you have a class named <code>TestSuite</code>, - In the test scope of <code>Library</code> you have another class named <code>TestUtil</code>, - <code>TestUtil</code> is marked with <code>@ExposedTestScope</code> anotation,</p>
+<p>in that case you may use <code>@TestUtil</code> in the test scope of <code>App</code>, but <code>TestSuite</code> would not be visible.</p>
+<p>A diagram:</p>
+<pre class="prettyprint"><code class="nocode">+-----------------------------------------+     +-----------------------------------------+
+| Library                                 |     | App                                     |
+|-----------------------------------------|     |-----------------------------------------|
+| Main scope                              |     | Main scope                              |
+|                                     &lt;---+-----+--                                       |
+| UtilityClass                            |     | AppMain                                 |
+|-----------------------------------------|     |-----------------------------------------+
+| Private Test Scope | Exposed test scope |     | Test scope                              |
+|                    |                &lt;---+-----+--                                       |
+| TestSuite          | TestUtil           |     | Private Test Scope | Exposed test scope |
++-----------------------------------------+     +-----------------------------------------+
+</code></pre>
+<p>Notes:</p>
+<ul>
+  <li>IDEA doesn&rsquo;t support overriden classpaths so when you run your tests under IDEA the whole test scopes are visible in dependencies,</li>
+  <li>At the moment the implementation of <code>@ExposedTestScope</code> (substring presence check) is imperfect and has to be improved,</li>
+  <li><strong>Transitive dependencies are not checked</strong>, so in case you expose a class but didn&rsquo;t expose it&rsquo;s dependencies your build would work under IDEA but you will get a weird and obscure classloading exception running your tests under IDEA. This is going to <a href="https://github.com/pshirshov/izumi-r2/issues/6">improved</a> in future.</li>
+</ul>
 <h3><a href="#test-scope-publishing" name="test-scope-publishing" class="anchor"><span class="anchor-link"></span></a>Test Scope Publishing</h3>
+<p>The whole content of test scopes is being published by default with <code>test</code> qualifier. Test scope separation has no effect on test scope publishing.</p>
 <h2><a href="#settings-dsl" name="settings-dsl" class="anchor"><span class="anchor-link"></span></a>Settings DSL</h2>
+<p><code>IzumiDslPlugin</code> provides you a DSL inteded to simplify definitions of complex project layouts.</p>
+<p>To activate the plugin add the following statement into your root project:</p>
+<pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiDslPlugin)
+</code></pre>
 <h3><a href="#simplified-identifiers" name="simplified-identifiers" class="anchor"><span class="anchor-link"></span></a>Simplified Identifiers</h3>
 <h3><a href="#setting-groups" name="setting-groups" class="anchor"><span class="anchor-link"></span></a>Setting Groups</h3>
 <h4><a href="#global-setting-group" name="global-setting-group" class="anchor"><span class="anchor-link"></span></a>Global Setting Group</h4>
 <h3><a href="#automatic-aggregation" name="automatic-aggregation" class="anchor"><span class="anchor-link"></span></a>Automatic Aggregation</h3>
+<p>When you use <code>.as.project</code> or <code>.as.module</code> syntax to define a project, that project is stored in a global singleton.</p>
+<p>You may use <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> methods instead of standard <code>aggregate</code>, in that case all the transitive dependencies of the projects provided will be also added into aggregation list. This allows you to simplify your definitions by avoiding specifing all the modules in <code>.aggregate</code>.</p>
+<p>In case you don&rsquo;t want your project to be recorded, you shoud use <code>.as.just</code> syntax.</p><div class="callout warning "><div class="callout-title">Important note: sbt is lazy!</div>
+<p>We just store project reference in a singleton list, we don&rsquo;t analyze dependency graph. Though sbt relies on <code>lazy val</code> declarations. <em>So, in fact the singleton initializes at the moment you invoke aggregation.</em> In case you don&rsquo;t add a project into aggregation list such a project still will be initialized by sbt and added into the singleton, but it would happen <em>later</em> than evaluation of aggregation list so the project will not be aggregated.</p></div>
 <h3><a href="#aggregation-safety-check" name="aggregation-safety-check" class="anchor"><span class="anchor-link"></span></a>Aggregation Safety Check</h3>
+<p>When you invoke <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> on your root project it checks if the accumulated set of known project is the same as the set of project loaded by sbt.</p>
+<p>In case of discrepancies you will get a warning. So in case you use automatic aggregation it&rsquo;s unlikely that you may accidentally forget to aggregate a module of a multi-module project.</p>
 <h2><a href="#build-descriptors" name="build-descriptors" class="anchor"><span class="anchor-link"></span></a>Build Descriptors</h2>
 <h3><a href="#bills-of-materials" name="bills-of-materials" class="anchor"><span class="anchor-link"></span></a>Bills of Materials</h3>
-<h3><a href="#git-manifests" name="git-manifests" class="anchor"><span class="anchor-link"></span></a>Git Manifests</h3>
+<h3><a href="#build-manifest-entries" name="build-manifest-entries" class="anchor"><span class="anchor-link"></span></a>Build Manifest entries</h3>
+<h3><a href="#git-manifest-entries" name="git-manifest-entries" class="anchor"><span class="anchor-link"></span></a>Git Manifest entries</h3>
+<p><code>GitStampPlugin</code> adds the following values into <code>MANIFEST.MF</code> of each <code>jar</code> artifact produced:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Manifest Key </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>X-Git-Branch</code> </td>
+      <td>The name of branch sbt was invoked on </td>
+    </tr>
+    <tr>
+      <td><code>X-Git-Repo-Is-Clean</code> </td>
+      <td><code>true</code> or <code>false</code>, indicates if GIT repo was in clean state when the build was invoked </td>
+    </tr>
+    <tr>
+      <td><code>X-Git-Head-Rev</code> </td>
+      <td>GIT revision on which sbt was invoked </td>
+    </tr>
+  </tbody>
+</table>
+<p>To activate the plugin add the following statement into your root project:</p>
+<pre class="prettyprint"><code class="language-scala">enablePlugins(GitStampPlugin)
+</code></pre>
 <h2><a href="#convenience-helpers" name="convenience-helpers" class="anchor"><span class="anchor-link"></span></a>Convenience Helpers</h2>
 <h3><a href="#stub-generators" name="stub-generators" class="anchor"><span class="anchor-link"></span></a>Stub Generators</h3>
+<p><code>ConvenienceTasksPlugin</code> provides you the following commands:</p>
+<ul>
+  <li><code>newModule &lt;module_path/module_name&gt; [package.suffix]</code>: creates empty project layout at <code>/module_path/module_name</code>. Optional <code>package.suffix</code> may be specified.</li>
+  <li><code>newStub &lt;module_path/module_name&gt; [stub_name:default]</code>: copies <code>/stubs/${stub_name}</code> into <code>/module_path/module_name</code>. <code>stub_name</code> may be omitted, default value is <code>default</code></li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Setting </th>
+      <th>Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ConvenienceTasksPlugin.Keys.mkJavaDirs </td>
+      <td>Adds <code>src/*/java</code> paths into generated stubs </td>
+    </tr>
+    <tr>
+      <td>ConvenienceTasksPlugin.Keys.defaultStubPackage </td>
+      <td>Default stub package <code>(sbt.Keys.organization in ThisBuild).value</code></td>
+    </tr>
+  </tbody>
+</table>
 <h3><a href="#version-suffixes" name="version-suffixes" class="anchor"><span class="anchor-link"></span></a>Version Suffixes</h3>
+<p><code>ConvenienceTasksPlugin</code> provides you command</p>
+<pre><code>addVersionSuffix SUFFIX
+</code></pre>
+<p>This command updates project version defined in <code>version.sbt</code> with qualifier <code>SUFFIX-SNAPSHOT</code></p>
+<ul>
+  <li>Existing qualifiers will be removed.</li>
+  <li><code>1.0.0</code> would become <code>1.0.0-SUFFIX-SNAPSHOT</code></li>
+  <li><code>1.0.0-SNAPSHOT</code> would become <code>1.0.0-SUFFIX-SNAPSHOT</code></li>
+</ul>
+<p>You may need this command while setting up a build for feature branches and wish to avoid situation when different branches publishes artifacts with the same names. </p>
 <h3><a href="#target-preservation" name="target-preservation" class="anchor"><span class="anchor-link"></span></a><code>target</code> preservation</h3>
+<p><code>ConvenienceTasksPlugin</code> provides you command</p>
+<pre><code>preserveTargets SUFFIX
+</code></pre>
+<p>This command recursively enumerates all the directories named <code>target</code> and recursively copies them using name <code>target.SUFFIX</code>.</p>
+<p>You may need this command while setting up a build where you wish to perform <code>clean</code> several times but want to preserve intermediate build artifacts stored in <code>target</code> directories. The most frequent case is coverage build followed by tests and then by production build. In this case you would like to use a command sequence like</p>
+<pre><code>;clean;coverage;test;coverageOff;coverageReport;preserveTargets coverage;clean;publish
+</code></pre>
+<h3><a href="#directory-cleanups" name="directory-cleanups" class="anchor"><span class="anchor-link"></span></a>Directory cleanups</h3>
+<p><code>ConvenienceTasksPlugin</code> provides you command</p>
+<pre><code>rmDirs target.coverage
+</code></pre>
+<p>This command recursively removes all the directories named <code>target.coverage</code> across the project.</p>
+<p>You may need this command to cleanup preserved target directories, or destroy some build artifacts, like <code>rmDirs scala-2.11</code></p>
 <h3><a href="#property-readers" name="property-readers" class="anchor"><span class="anchor-link"></span></a>Property Readers</h3>
+<p><code>IzumiPropertiesPlugin</code> provides you implicit classes allowing you to convert Strings into Integers or Booleans exceptions-safe and do the same for system properties: </p>
+<pre class="prettyprint"><code class="language-scala">&quot;true&quot;.asBoolean(default = false) // true
+&quot;junk&quot;.asBoolean(default = false) // false
+&quot;123&quot;.asInt(default = 265) // 123
+&quot;junk&quot;.asInt(default = 265) // 265
+sys.props.asBoolean(&quot;my.property&quot;, default = false)
+sys.props.asInt(&quot;my.property&quot;, default = 123)
+</code></pre>
+<p>You may activate this plugin with the following statement in root project:</p>
+<h3><a href="#transitive-artifact-downloader" name="transitive-artifact-downloader" class="anchor"><span class="anchor-link"></span></a>Transitive Artifact Downloader</h3>
+<p>TODO</p>
 <h2><a href="#optional-settings" name="optional-settings" class="anchor"><span class="anchor-link"></span></a>Optional settings</h2>
-<h3><a href="#compiler-options" name="compiler-options" class="anchor"><span class="anchor-link"></span></a>Compiler options</h3>
 <h3><a href="#publishing" name="publishing" class="anchor"><span class="anchor-link"></span></a>Publishing</h3>
+<p>TODO</p>
+<h4><a href="#publishing-settings" name="publishing-settings" class="anchor"><span class="anchor-link"></span></a>Publishing settings</h4>
+<p>TODO</p>
+<h4><a href="#publishing-credentials-and-targets" name="publishing-credentials-and-targets" class="anchor"><span class="anchor-link"></span></a>Publishing credentials and targets</h4>
+<p>TODO</p>
+<h3><a href="#compiler-options" name="compiler-options" class="anchor"><span class="anchor-link"></span></a>Compiler options</h3>
+<p><code>CompilerOptionsPlugin</code> provides you some sane compiler option presets (linting, optimizations).</p>
+<p>You should explicitly enable this plugin in each project you want to use it. When you want to enable it globally, use a settings group:</p>
+<pre class="prettyprint"><code class="language-scala">val GlobalSettings = new SettingsGroup {
+  override val plugins = Set(
+      CompilerOptionsPlugin,
+      // ...
+  )
+  // ...
+}
+</code></pre>
 <h3><a href="#resolvers" name="resolvers" class="anchor"><span class="anchor-link"></span></a>Resolvers</h3>
+<p><code>ResolverPlugin</code> turns on the following settings which should speedup your dependency resolution:</p>
+<pre class="prettyprint"><code class="language-scala">    updateOptions := updateOptions
+      .value
+      .withCachedResolution(true)
+      .withGigahorse(true)
+</code></pre>
 </div>
 <div>
 <a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/sbt/00_sbt.md" title="Edit this page" class="md-source-file md-edit">
