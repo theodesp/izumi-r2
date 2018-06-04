@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>Logstage · Izumi Toolkit</title>
+<title>JSON Wire Format · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,7 +54,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
-Logstage
+JSON Wire Format
 </span>
 </div>
 </div>
@@ -111,11 +111,11 @@ Izumi Toolkit
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
-    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
+    <li><a href="../idealingua/json.html" class="active page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="active page">Logstage</a>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
   <ul>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
     <li><a href="../logstage/sample.html" class="page">Examples</a></li>
@@ -125,13 +125,15 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/index.html#logstage" class="header">Logstage</a>
+  <li><a href="../idealingua/json.html#json-wire-format" class="header">JSON Wire Format</a>
   <ul>
-    <li><a href="../logstage/index.html#" class="header"><a href="contexts.md">Logging contexts</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sinks.md">Available sink backends</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="policy.md">Rendering policy</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="config.md">Configuration</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sample.md">Examples</a></a></li>
+    <li><a href="../idealingua/json.html#data-data-class" class="header"><code>data</code>: Data Class</a></li>
+    <li><a href="../idealingua/json.html#mixin-mixin" class="header"><code>mixin</code>: Mixin</a></li>
+    <li><a href="../idealingua/json.html#adt-algebraic-data-type" class="header"><code>adt</code>: Algebraic Data Type</a></li>
+    <li><a href="../idealingua/json.html#id-identifier" class="header"><code>id</code>: Identifier</a></li>
+    <li><a href="../idealingua/json.html#alias-type-alias" class="header"><code>alias</code>: Type Alias</a></li>
+    <li><a href="../idealingua/json.html#enum-enumeration" class="header"><code>enum</code>: Enumeration</a></li>
+    <li><a href="../idealingua/json.html#service" class="header">Service</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -150,13 +152,15 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/index.html#logstage" class="header">Logstage</a>
+  <li><a href="../idealingua/json.html#json-wire-format" class="header">JSON Wire Format</a>
   <ul>
-    <li><a href="../logstage/index.html#" class="header"><a href="contexts.md">Logging contexts</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sinks.md">Available sink backends</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="policy.md">Rendering policy</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="config.md">Configuration</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sample.md">Examples</a></a></li>
+    <li><a href="../idealingua/json.html#data-data-class" class="header"><code>data</code>: Data Class</a></li>
+    <li><a href="../idealingua/json.html#mixin-mixin" class="header"><code>mixin</code>: Mixin</a></li>
+    <li><a href="../idealingua/json.html#adt-algebraic-data-type" class="header"><code>adt</code>: Algebraic Data Type</a></li>
+    <li><a href="../idealingua/json.html#id-identifier" class="header"><code>id</code>: Identifier</a></li>
+    <li><a href="../idealingua/json.html#alias-type-alias" class="header"><code>alias</code>: Type Alias</a></li>
+    <li><a href="../idealingua/json.html#enum-enumeration" class="header"><code>enum</code>: Enumeration</a></li>
+    <li><a href="../idealingua/json.html#service" class="header">Service</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -167,15 +171,128 @@ Izumi Toolkit
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#logstage" name="logstage" class="anchor"><span class="anchor-link"></span></a>Logstage</h1>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="contexts.md">Logging contexts</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="sinks.md">Available sink backends</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="policy.md">Rendering policy</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="config.md">Configuration</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="sample.md">Examples</a></h2>
+<h1><a href="#json-wire-format" name="json-wire-format" class="anchor"><span class="anchor-link"></span></a>JSON Wire Format</h1>
+<p>IdeaLingua employs a simple JSON-based wire format. To interoperate, all the language translators should implement this spec.</p>
+<h2><a href="#data-data-class" name="data-data-class" class="anchor"><span class="anchor-link"></span></a><code>data</code>: Data Class</h2>
+<p><code>data</code> defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+data User {
+  name: str
+  surname: str
+  id: uuid
+}
+</code></pre>
+<p>Should be rendered as:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;name&quot;: &quot;Lorem&quot;,
+  &quot;surname&quot;: &quot;Ipsum&quot;,
+  &quot;id&quot;: &quot;13bee602-521b-47c2-ad81-30527f8b2398&quot;
+}
+</code></pre>
+<h2><a href="#mixin-mixin" name="mixin-mixin" class="anchor"><span class="anchor-link"></span></a><code>mixin</code>: Mixin</h2>
+<p>When sent over the wire, mixins include a fully qualified name of their implementation.</p>
+<p><code>mixin</code>s defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+mixin IntPair {
+  x: i32
+  y: i32
+}
+
+data NamedIntPair {
+  &amp; IntPair
+  name: str
+}
+</code></pre>
+<p>Should be rendered as:</p>
+<pre class="prettyprint"><code class="language-json">{ 
+  &quot;example.IntPair#Struct&quot;: {
+    &quot;x&quot;: 256,
+    &quot;y&quot;: 512
+  }
+}
+</code></pre>
+<p>for the default implementation, and:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;example#NamedIntPair&quot;: {
+    &quot;x&quot;: 256,
+    &quot;y&quot;: 512,
+    &quot;name&quot;: &quot;Vertex&quot;
+  }
+}
+</code></pre>
+<p>for the <code>NamedIntPair</code> implementation.</p>
+<h2><a href="#adt-algebraic-data-type" name="adt-algebraic-data-type" class="anchor"><span class="anchor-link"></span></a><code>adt</code>: Algebraic Data Type</h2>
+<p><code>adt</code>&rsquo;s include an unqualified name of their variant.</p>
+<p><code>adt</code> defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+adt AB = A | Z as B
+
+data A {
+  value: i32
+}
+
+data Z {
+  value: str
+}
+</code></pre>
+<p>Should be rendered as:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;A&quot;: { 
+    &quot;value&quot;: 1
+  }
+}
+</code></pre>
+<p>for the <code>A</code> variant, and:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;B&quot;: {
+    &quot;value&quot;: &quot;abc&quot;
+  }
+}
+</code></pre>
+<p>for the <code>Z as B</code> variant</p>
+<h2><a href="#id-identifier" name="id-identifier" class="anchor"><span class="anchor-link"></span></a><code>id</code>: Identifier</h2>
+<p>Ids are rendered as strings prefixed by type name and separated by <code>:</code> symbol. Field order is preserved.</p>
+<p><code>id</code> defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+id UserId {
+  userId: uuid
+  companyName: str
+}
+</code></pre>
+<p>Should be rendered as:</p>
+<pre class="prettyprint"><code class="language-json">&quot;UserId#837006c8-d070-4cde-a2dd-8999c186ef02:Lightbend&quot;
+</code></pre>
+<h2><a href="#alias-type-alias" name="alias-type-alias" class="anchor"><span class="anchor-link"></span></a><code>alias</code>: Type Alias</h2>
+<p>Type Aliases should be rendered directly as their aliased types and should never impact serialization.</p>
+<h2><a href="#enum-enumeration" name="enum-enumeration" class="anchor"><span class="anchor-link"></span></a><code>enum</code>: Enumeration</h2>
+<p>Enums are rendered as strings.</p>
+<p><code>enum</code> defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+enum Gender = MALE | FEMALE
+</code></pre>
+<p>Should be rendered as:</p>
+<pre class="prettyprint"><code class="language-json">&quot;FEMALE&quot;
+</code></pre>
+<h2><a href="#service" name="service" class="anchor"><span class="anchor-link"></span></a>Service</h2>
+<p>Service outputs are always wrapped into a JSON object with one field <code>&quot;value&quot;</code>.</p>
+<p>For <code>service</code> defined as:</p>
+<pre class="prettyprint"><code class="language-idealingua">package example
+
+service SayHello {
+  def sayHello(): str
+}
+</code></pre>
+<p><code>sayHello</code> method will return a result rendered as:</p>
+<pre class="prettyprint"><code class="language-json">{ &quot;value&quot;: &quot;hello&quot; }
+</code></pre>
 </div>
 <div>
-<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/00_logstage.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/idealingua/json.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -191,7 +308,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../idealingua/cogen-circe.html" title="Circe serialization reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../idealingua/language-reference.html" title="Idealingua Language Reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -200,17 +317,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-Circe serialization reference
+Idealingua Language Reference
 </span>
 </div>
 </a>
-<a href="../logstage/policy.html" title="Rendering policy" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../idealingua/cogen.html" title="Code generator reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Rendering policy
+Code generator reference
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

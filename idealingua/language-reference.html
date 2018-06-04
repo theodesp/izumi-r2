@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>Rendering policy · Izumi Toolkit</title>
+<title>Idealingua Language Reference · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,7 +54,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
-Rendering policy
+Idealingua Language Reference
 </span>
 </div>
 </div>
@@ -110,14 +110,14 @@ Izumi Toolkit
   </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
-    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/language-reference.html" class="active page">Idealingua Language Reference</a></li>
     <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
   <li><a href="../logstage/index.html" class="page">Logstage</a>
   <ul>
-    <li><a href="../logstage/policy.html" class="active page">Rendering policy</a></li>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
     <li><a href="../logstage/sample.html" class="page">Examples</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
@@ -125,9 +125,10 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/policy.html#rendering-policy" class="header">Rendering policy</a>
+  <li><a href="../idealingua/language-reference.html#idealingua-language-reference" class="header">Idealingua Language Reference</a>
   <ul>
-    <li><a href="../logstage/policy.html#log-units-specification" class="header">Log units specification</a></li>
+    <li><a href="../idealingua/language-reference.html#keywords-and-aliases" class="header">Keywords and aliases</a></li>
+    <li><a href="../idealingua/language-reference.html#built-in-types" class="header">Built-in types</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -146,9 +147,10 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/policy.html#rendering-policy" class="header">Rendering policy</a>
+  <li><a href="../idealingua/language-reference.html#idealingua-language-reference" class="header">Idealingua Language Reference</a>
   <ul>
-    <li><a href="../logstage/policy.html#log-units-specification" class="header">Log units specification</a></li>
+    <li><a href="../idealingua/language-reference.html#keywords-and-aliases" class="header">Keywords and aliases</a></li>
+    <li><a href="../idealingua/language-reference.html#built-in-types" class="header">Built-in types</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -159,95 +161,237 @@ Izumi Toolkit
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#rendering-policy" name="rendering-policy" class="anchor"><span class="anchor-link"></span></a>Rendering policy</h1>
-<p>Rendering policy defines how incoming log event will be transformed into a string. Rendering layout defines in a <a href="config.md">logstage</a> config section. Rendering policy has string interpolator-like format. Each component (named as <em>Log Unit</em>) defines like ${log_unit_label} in string.</p>
-<h2><a href="#log-units-specification" name="log-units-specification" class="anchor"><span class="anchor-link"></span></a>Log units specification</h2>
+<h1><a href="#idealingua-language-reference" name="idealingua-language-reference" class="anchor"><span class="anchor-link"></span></a>Idealingua Language Reference</h1>
+<h1><a href="#keywords-and-aliases" name="keywords-and-aliases" class="anchor"><span class="anchor-link"></span></a>Keywords and aliases</h1>
 <table>
   <thead>
     <tr>
-      <th>Unit </th>
+      <th>Keyword </th>
       <th>Aliases </th>
       <th>Explanation </th>
-      <th>Syntax </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>timestamp</code> </td>
-      <td><code>ts</code> </td>
-      <td>Timestamp </td>
-      <td><code>${timestamp}</code> </td>
+      <td><code>domain</code> </td>
+      <td><code>package</code>, <code>namespace</code> </td>
+      <td>Namespace containing collection of entities </td>
     </tr>
     <tr>
-      <td><code>thread</code> </td>
-      <td><code>t</code> </td>
-      <td>Thread data (contains thread <code>name</code> and <code>id</code>) </td>
-      <td><code>${thread}</code> </td>
+      <td><code>import</code> </td>
+      <td> </td>
+      <td>References a domain by id </td>
     </tr>
     <tr>
-      <td><code>level</code> </td>
-      <td><code>lvl</code> </td>
-      <td>Logging level </td>
-      <td><code>${lvl}</code> </td>
+      <td><code>include</code> </td>
+      <td> </td>
+      <td>Includes <code>*.model</code> file by name </td>
     </tr>
     <tr>
-      <td><code>location</code> </td>
-      <td><code>loc</code> </td>
-      <td>Log message location (hyperlink to filename it&rsquo;s line number) </td>
-      <td><code>${location}</code> </td>
+      <td><code>alias</code> </td>
+      <td><code>type</code>, <code>using</code> </td>
+      <td>Type alias </td>
     </tr>
     <tr>
-      <td><code>message</code> </td>
-      <td><code>msg</code> </td>
-      <td>Application-supplied message associated with the logging event </td>
-      <td><code>${message}</code> </td>
+      <td><code>enum</code> </td>
+      <td> </td>
+      <td>Enumeration </td>
     </tr>
     <tr>
-      <td><code>custom-ctx</code></td>
-      <td><code>context</code>, <code>ctx</code> </td>
-      <td>User&rsquo;s context (more info <a href="custom_ctx.md">here</a>)</td>
-      <td><code>${custom-ctx}</code> </td>
+      <td><code>mixin</code> </td>
+      <td><code>interface</code> </td>
+      <td>Mixin, named collection of fields </td>
     </tr>
     <tr>
-      <td><code>exception</code> </td>
-      <td><code>ex</code> </td>
-      <td>Outputs the stack trace of the exception associated with the logging event, if any. By default the full stack trace will be output. </td>
-      <td><code>${ex}</code> </td>
+      <td><code>data</code> </td>
+      <td><code>dto</code>, <code>struct</code> </td>
+      <td>Data </td>
+    </tr>
+    <tr>
+      <td><code>adt</code> </td>
+      <td><code>choice</code> </td>
+      <td>Algebraic Data Type </td>
+    </tr>
+    <tr>
+      <td><code>id</code> </td>
+      <td> </td>
+      <td>Identifier, named collection of scalars </td>
+    </tr>
+    <tr>
+      <td><code>service</code> </td>
+      <td> </td>
+      <td>Service interface </td>
+    </tr>
+    <tr>
+      <td><code>def</code> </td>
+      <td><code>fn</code>, <code>func</code>, <code>fun</code> </td>
+      <td>Method </td>
     </tr>
   </tbody>
 </table>
-<h3><a href="#parameters" name="parameters" class="anchor"><span class="anchor-link"></span></a>Parameters</h3>
-<ul>
-  <li>Each log unit has parameters. (example, padding, margins, etc). There are common parameters for all log units and specific for each one.</li>
-  <li>NOTE! Currently there are only common parameters (padding). Parameters enumerates in <code>[</code> <code>]</code> braces. For example, <code>${message[15]}</code></li>
-</ul>
+<h2><a href="#inheritance-operators" name="inheritance-operators" class="anchor"><span class="anchor-link"></span></a>Inheritance operators</h2>
 <table>
   <thead>
     <tr>
-      <th>Log unit </th>
-      <th>Features </th>
+      <th>Keyword </th>
+      <th>Aliases </th>
       <th>Explanation </th>
       <th>Example </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>common</code> </td>
-      <td><code>padding</code> </td>
-      <td>padding for log unit in result string. It maybe default padding or ellipsed (<code>[:..14]</code>) </td>
-      <td><code>${timestamp}[14]</code> </td>
+      <td><code>+</code> </td>
+      <td><code>+++</code>, <code>...</code> </td>
+      <td>Inherit structure (copy fields) </td>
+      <td><code>+ Mixin</code> </td>
+    </tr>
+    <tr>
+      <td><code>&amp;</code> </td>
+      <td><code>&amp;&amp;&amp;</code> </td>
+      <td>Inherit interface </td>
+      <td><code>&amp; Mixin</code> </td>
+    </tr>
+    <tr>
+      <td><code>-</code> </td>
+      <td><code>---</code> </td>
+      <td>Drop structure or field (doesn&rsquo;t work for interfaces) </td>
+      <td><code>- Mixin</code>, <code>- field: str</code> </td>
     </tr>
   </tbody>
 </table>
-<h3><a href="#todo-" name="todo-" class="anchor"><span class="anchor-link"></span></a>TODO:</h3>
-<ul>
-  <li>define params for each log unit</li>
-  <li>provide intuitive syntax for their definition</li>
-  <li>tests!</li>
-</ul>
+<h1><a href="#built-in-types" name="built-in-types" class="anchor"><span class="anchor-link"></span></a>Built-in types</h1>
+<h2><a href="#scalars" name="scalars" class="anchor"><span class="anchor-link"></span></a>Scalars</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Type name </th>
+      <th>Aliases </th>
+      <th>Explanation </th>
+      <th>Scala type </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>str</code> </td>
+      <td><code>string</code> </td>
+      <td>String </td>
+      <td><code>String</code> </td>
+    </tr>
+    <tr>
+      <td><code>bool</code> </td>
+      <td><code>boolean</code>, <code>bit</code> </td>
+      <td>Boolean </td>
+      <td><code>Boolean</code> </td>
+    </tr>
+    <tr>
+      <td><code>i08</code> </td>
+      <td><code>byte</code>, <code>int8</code> </td>
+      <td>8-bit integer </td>
+      <td><code>Byte</code> </td>
+    </tr>
+    <tr>
+      <td><code>i16</code> </td>
+      <td><code>short</code>, <code>int16</code> </td>
+      <td>16-bit integer </td>
+      <td><code>Short</code> </td>
+    </tr>
+    <tr>
+      <td><code>i32</code> </td>
+      <td><code>int</code>, <code>int32</code> </td>
+      <td>32-bit integer </td>
+      <td><code>Int</code> </td>
+    </tr>
+    <tr>
+      <td><code>i64</code> </td>
+      <td><code>long</code>, <code>int64</code> </td>
+      <td>64-bit integer </td>
+      <td><code>Long</code> </td>
+    </tr>
+    <tr>
+      <td><code>f32</code> </td>
+      <td><code>float</code>, <code>flt</code> </td>
+      <td>Single precision floating point </td>
+      <td><code>Float</code> </td>
+    </tr>
+    <tr>
+      <td><code>f64</code> </td>
+      <td><code>double</code>, <code>dbl</code> </td>
+      <td>Double precision floating point </td>
+      <td><code>Double</code> </td>
+    </tr>
+    <tr>
+      <td><code>uid</code> </td>
+      <td><code>uuid</code> </td>
+      <td>UUID </td>
+      <td><code>java.util.UUID</code> </td>
+    </tr>
+    <tr>
+      <td><code>tsz</code> </td>
+      <td><code>dtl</code>, <code>datetimel</code> </td>
+      <td>Timestamp with timezone </td>
+      <td><code>java.time.ZonedDateTime</code> </td>
+    </tr>
+    <tr>
+      <td><code>tsl</code> </td>
+      <td><code>dtz</code>, <code>datetimez</code> </td>
+      <td>Local timestamp </td>
+      <td><code>java.time.LocalDateTime</code> </td>
+    </tr>
+    <tr>
+      <td><code>time</code> </td>
+      <td><code>time</code> </td>
+      <td>Time </td>
+      <td><code>java.time.LocalTime</code> </td>
+    </tr>
+    <tr>
+      <td><code>date</code> </td>
+      <td><code>date</code> </td>
+      <td>Date </td>
+      <td><code>java.time.LocalDate</code> </td>
+    </tr>
+  </tbody>
+</table>
+<p><em>Notes:</em></p>
+<ol>
+  <li>When the target language lacks a corresponding numeric type, we use the smallest type available that includes the required type. i.e. in TypeScript <code>i08</code> is <code>number</code></li>
+  <li>When the target language lacks types for <code>time</code></li>
+</ol>
+<h2><a href="#collections" name="collections" class="anchor"><span class="anchor-link"></span></a>Collections</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Type name </th>
+      <th>Explanation </th>
+      <th>Scala mapping </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>list[T]</code> </td>
+      <td>List </td>
+      <td><code>List</code> </td>
+    </tr>
+    <tr>
+      <td><code>map[K, V]</code> </td>
+      <td>Map (only scalar and <code>id</code> keys are supported) </td>
+      <td><code>Map</code> </td>
+    </tr>
+    <tr>
+      <td><code>opt[T]</code> </td>
+      <td>Optional value </td>
+      <td><code>Option</code> </td>
+    </tr>
+    <tr>
+      <td><code>set[T]</code> </td>
+      <td>Set (unordered) </td>
+      <td><code>Set</code> </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 <div>
-<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/policy.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/idealingua/language-reference.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -263,7 +407,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../logstage/index.html" title="Logstage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../idealingua/index.html" title="Idealingua DML/IDL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -272,17 +416,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-Logstage
+Idealingua DML/IDL
 </span>
 </div>
 </a>
-<a href="../logstage/sample.html" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../idealingua/json.html" title="JSON Wire Format" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Examples
+JSON Wire Format
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

@@ -104,13 +104,22 @@ Izumi Toolkit
 <ul>
   <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage DI</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage DI</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DIStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
+    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="active page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a></li>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
@@ -156,7 +165,10 @@ Izumi Toolkit
 <div class="md-content__searchable">
 <h1><a href="#circe-serialization-reference" name="circe-serialization-reference" class="anchor"><span class="anchor-link"></span></a>Circe serialization reference</h1>
 <h2><a href="#polymorphism-and-time" name="polymorphism-and-time" class="anchor"><span class="anchor-link"></span></a>Polymorphism and time</h2>
-<p>Notes: 1. Data classes cannot be polymorphic </p>
+<p>Notes:</p>
+<ol>
+  <li>Data classes cannot be polymorphic</li>
+</ol>
 <p>The following example demonstrates how polymorphism and time values are handled:</p>
 <pre class="prettyprint"><code class="language-scala">import java.time._
 
@@ -258,7 +270,12 @@ Restored:
 Right(Right(AnotherPayload(hi)))
 </code></pre>
 <h2><a href="#algebraic-types" name="algebraic-types" class="anchor"><span class="anchor-link"></span></a>Algebraic types</h2>
-<p>Notes: 1. Works same way as polymorphic types 2. Use short names instead of fully qualified names 3. You may introduce a local alias for an algebraic type member: <code>adt MyAdt { domain1.A as A1 | A}</code>. This allows you to resolve name conflicts </p>
+<p>Notes:</p>
+<ol>
+  <li>Works same way as polymorphic types</li>
+  <li>Use short names instead of fully qualified names</li>
+  <li>You may introduce a local alias for an algebraic type member: <code>adt MyAdt { domain1.A as A1 | A}</code>. This allows you to resolve name conflicts</li>
+</ol>
 <p>Cogen example for ADTs:</p>
 <pre class="prettyprint"><code class="language-scala">import java.time._
 

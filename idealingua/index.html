@@ -104,13 +104,22 @@ Izumi Toolkit
 <ul>
   <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage DI</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage DI</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DIStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="active page">Idealingua DML/IDL</a>
   <ul>
+    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a></li>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
@@ -118,7 +127,9 @@ Izumi Toolkit
 <ul>
   <li><a href="../idealingua/index.html#idealingua-dml-idl" class="header">Idealingua DML/IDL</a>
   <ul>
-    <li><a href="../idealingua/index.html#language-reference" class="header">Language Reference</a></li>
+    <li><a href="../idealingua/index.html#pet-store" class="header">Pet Store</a></li>
+    <li><a href="../idealingua/index.html#user-service" class="header">User Service</a></li>
+    <li><a href="../idealingua/index.html#installation" class="header">Installation</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -139,7 +150,9 @@ Izumi Toolkit
 <ul>
   <li><a href="../idealingua/index.html#idealingua-dml-idl" class="header">Idealingua DML/IDL</a>
   <ul>
-    <li><a href="../idealingua/index.html#language-reference" class="header">Language Reference</a></li>
+    <li><a href="../idealingua/index.html#pet-store" class="header">Pet Store</a></li>
+    <li><a href="../idealingua/index.html#user-service" class="header">User Service</a></li>
+    <li><a href="../idealingua/index.html#installation" class="header">Installation</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -151,256 +164,96 @@ Izumi Toolkit
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#idealingua-dml-idl" name="idealingua-dml-idl" class="anchor"><span class="anchor-link"></span></a>Idealingua DML/IDL</h1>
-<p>The following examples will show what IdeaLingua looks like and how to use.</p>
-<h1><a href="#language-reference" name="language-reference" class="anchor"><span class="anchor-link"></span></a>Language Reference</h1>
-<h2><a href="#keywords-and-aliases" name="keywords-and-aliases" class="anchor"><span class="anchor-link"></span></a>Keywords and aliases</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Keyword </th>
-      <th>Aliases </th>
-      <th>Explanation </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>domain</code> </td>
-      <td><code>package</code>, <code>namespace</code> </td>
-      <td>Namespace containing collection of entities </td>
-    </tr>
-    <tr>
-      <td><code>import</code> </td>
-      <td> </td>
-      <td>References a domain by id </td>
-    </tr>
-    <tr>
-      <td><code>include</code> </td>
-      <td> </td>
-      <td>Includes <code>*.model</code> file by name </td>
-    </tr>
-    <tr>
-      <td><code>alias</code> </td>
-      <td><code>type</code>, <code>using</code> </td>
-      <td>Type alias </td>
-    </tr>
-    <tr>
-      <td><code>enum</code> </td>
-      <td> </td>
-      <td>Enumeration </td>
-    </tr>
-    <tr>
-      <td><code>mixin</code> </td>
-      <td><code>interface</code> </td>
-      <td>Mixin, named collection of fields </td>
-    </tr>
-    <tr>
-      <td><code>data</code> </td>
-      <td><code>dto</code>, <code>struct</code> </td>
-      <td>Data </td>
-    </tr>
-    <tr>
-      <td><code>adt</code> </td>
-      <td><code>choice</code> </td>
-      <td>Algebraic Data Type </td>
-    </tr>
-    <tr>
-      <td><code>id</code> </td>
-      <td> </td>
-      <td>Identifier, named collection of scalars </td>
-    </tr>
-    <tr>
-      <td><code>service</code> </td>
-      <td> </td>
-      <td>Service interface </td>
-    </tr>
-    <tr>
-      <td><code>def</code> </td>
-      <td><code>fn</code>, <code>func</code>, <code>fun</code> </td>
-      <td>Method </td>
-    </tr>
-  </tbody>
-</table>
-<h2><a href="#inheritance-operators" name="inheritance-operators" class="anchor"><span class="anchor-link"></span></a>Inheritance operators</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Keyword </th>
-      <th>Aliases </th>
-      <th>Explanation </th>
-      <th>Example </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>+</code> </td>
-      <td><code>+++</code>, <code>...</code> </td>
-      <td>Inherit structure (copy fields) </td>
-      <td><code>+ Mixin</code> </td>
-    </tr>
-    <tr>
-      <td><code>&amp;</code> </td>
-      <td><code>&amp;&amp;&amp;</code> </td>
-      <td>Inherit interface </td>
-      <td><code>&amp; Mixin</code> </td>
-    </tr>
-    <tr>
-      <td><code>-</code> </td>
-      <td><code>---</code> </td>
-      <td>Drop structure (doesn&rsquo;t work for interfaces) </td>
-      <td><code>- Mixin</code>, <code>- field: str</code> </td>
-    </tr>
-  </tbody>
-</table>
-<h2><a href="#embedded-data-types" name="embedded-data-types" class="anchor"><span class="anchor-link"></span></a>Embedded data types</h2>
-<p>Notes</p>
-<ol>
-  <li>When it&rsquo;s impossible to represent a numeric type with target language we use minimal numeric type with bigger range</li>
-  <li>When it&rsquo;s not possible to represent time type or UUID with target language we use string representation</li>
-</ol>
-<h3><a href="#scalar-types" name="scalar-types" class="anchor"><span class="anchor-link"></span></a>Scalar types</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Type name </th>
-      <th>Aliases </th>
-      <th>Explanation </th>
-      <th>Scala mapping </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>str</code> </td>
-      <td><code>string</code> </td>
-      <td>String </td>
-      <td><code>String</code> </td>
-    </tr>
-    <tr>
-      <td><code>bool</code> </td>
-      <td><code>boolean</code>, <code>bit</code> </td>
-      <td>Boolean </td>
-      <td><code>Boolean</code> </td>
-    </tr>
-    <tr>
-      <td><code>i08</code> </td>
-      <td><code>byte</code>, <code>int8</code> </td>
-      <td>8-bit integer </td>
-      <td><code>Byte</code> </td>
-    </tr>
-    <tr>
-      <td><code>i16</code> </td>
-      <td><code>short</code>, <code>int16</code> </td>
-      <td>16-bit integer </td>
-      <td><code>Short</code> </td>
-    </tr>
-    <tr>
-      <td><code>i32</code> </td>
-      <td><code>int</code>, <code>int32</code> </td>
-      <td>32-bit integer </td>
-      <td><code>Int</code> </td>
-    </tr>
-    <tr>
-      <td><code>i64</code> </td>
-      <td><code>long</code>, <code>int64</code> </td>
-      <td>64-bit integer </td>
-      <td><code>Long</code> </td>
-    </tr>
-    <tr>
-      <td><code>f32</code> </td>
-      <td><code>float</code>, <code>flt</code> </td>
-      <td>Single precision floating point </td>
-      <td><code>Float</code> </td>
-    </tr>
-    <tr>
-      <td><code>f64</code> </td>
-      <td><code>double</code>, <code>dbl</code> </td>
-      <td>Double precision floating point </td>
-      <td><code>Double</code> </td>
-    </tr>
-    <tr>
-      <td><code>uid</code> </td>
-      <td><code>uuid</code> </td>
-      <td>UUID </td>
-      <td><code>java.util.UUID</code> </td>
-    </tr>
-    <tr>
-      <td><code>tsz</code> </td>
-      <td><code>dtl</code>, <code>datetimel</code> </td>
-      <td>Timestamp with timezone </td>
-      <td><code>java.time.ZonedDateTime</code> </td>
-    </tr>
-    <tr>
-      <td><code>tsl</code> </td>
-      <td><code>dtz</code>, <code>datetimez</code> </td>
-      <td>Local timestamp </td>
-      <td><code>java.time.LocalDateTime</code> </td>
-    </tr>
-    <tr>
-      <td><code>time</code> </td>
-      <td><code>time</code> </td>
-      <td>Time </td>
-      <td><code>java.time.LocalTime</code> </td>
-    </tr>
-    <tr>
-      <td><code>date</code> </td>
-      <td><code>date</code> </td>
-      <td>Date </td>
-      <td><code>java.time.LocalDate</code> </td>
-    </tr>
-  </tbody>
-</table>
-<h3><a href="#generics" name="generics" class="anchor"><span class="anchor-link"></span></a>Generics</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Type name </th>
-      <th>Explanation </th>
-      <th>Scala mapping </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>list[T]</code> </td>
-      <td>List </td>
-      <td><code>List</code> </td>
-    </tr>
-    <tr>
-      <td><code>map[K, V]</code> </td>
-      <td>Map (only scalar keys supported) </td>
-      <td><code>Map</code> </td>
-    </tr>
-    <tr>
-      <td><code>opt[T]</code> </td>
-      <td>Optional value </td>
-      <td><code>Option</code> </td>
-    </tr>
-    <tr>
-      <td><code>set[T]</code> </td>
-      <td>Set (no guarantees for traversal ordering) </td>
-      <td><code>Set</code> </td>
-    </tr>
-  </tbody>
-</table>
-<h2><a href="#standalone-compiler" name="standalone-compiler" class="anchor"><span class="anchor-link"></span></a>Standalone compiler</h2>
-<p>The compiler is built as an uberjar and published onto central.</p>
-<p>You may use <a href="Coursier">https://github.com/coursier/coursier</a> to run it:</p>
-<pre class="prettyprint"><code class="language-bash"># release
-coursier launch com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.5.0 -- --help
+<p>The following examples will show what IdeaLingua looks like and how to use it to connect your distributed application.</p>
+<h2><a href="#pet-store" name="pet-store" class="anchor"><span class="anchor-link"></span></a>Pet Store</h2>
+<p>See <a href="https://github.com/kaishh/izumi-petstore">izumi-petstore</a> project for complete samples in Scala, TypeScript and other languages.</p>
+<h2><a href="#user-service" name="user-service" class="anchor"><span class="anchor-link"></span></a>User Service</h2>
+<p>Example definition of a user database service:</p>
+<pre><code>package user.api
 
-# snapshot
-coursier launch -r https://oss.sonatype.org/content/repositories/snapshots/ com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.5.0-SNAPSHOT -- --help
+enum Gender = Male | Female
+
+id EntityID {
+  uuid: uuid
+}
+
+mixin Entity {
+  id: EntityID
+}
+
+mixin Person {
+  name: str
+  surname: str
+  gender: Gender
+}
+
+data User {
+  &amp; Entity
+  + Person
+  password: str
+}
+
+data PublicUser {
+  + User
+  - password: str
+}
+
+adt Result = Success | Failure
+
+data Success {
+  message: str
+}
+
+data Failure {
+  code: int8
+}
+
+service UserService {
+  def saveUser(user: User): Result
+  def findUserByName(name: str): list[PublicUser] | Failure
+}
+</code></pre>
+<h1><a href="#installation" name="installation" class="anchor"><span class="anchor-link"></span></a>Installation</h1>
+<h2><a href="#using-the-standalone-compiler" name="using-the-standalone-compiler" class="anchor"><span class="anchor-link"></span></a>Using the standalone compiler</h2>
+<p>The compiler executable is built as an uberjar and published on <a href="https://search.maven.org/">Maven Central</a>.</p>
+<p>The preferred way to install the compiler is with <a href="https://github.com/coursier/coursier#command-line">coursier</a></p>
+<pre class="prettyprint"><code class="language-bash"># install release executable
+coursier bootstrap com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.6.0-SNAPSHOT -o idlc
+
+./idlc --help
+</code></pre>
+<p>To install snapshot:</p>
+<pre class="prettyprint"><code class="language-bash"># install snapshot
+coursier launch -r https://oss.sonatype.org/content/repositories/snapshots/ com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.6.0-SNAPSHOT -o idlc
+
+./idlc --help
 </code></pre>
 <p>Commandline examples:</p>
-<pre><code>coursier launch com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.5.0 -- -s src -t target -L scala=* -L typescript=*
+<pre><code>./idlc -s src -t target -L scala=* -L typescript=*
 </code></pre>
-<pre><code>coursier launch com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.5.0 -- -s src -t target -L scala=-AnyvalExtension -L typescript=*
+<pre><code>./idlc -s src -t target -L scala=-AnyvalExtension -L typescript=*
 </code></pre>
-<h2><a href="#http4s-transport" name="http4s-transport" class="anchor"><span class="anchor-link"></span></a>Http4s Transport</h2>
-<p>Most likely you would need to use <a href="https://github.com/non/kind-projector">Kind Projector</a> compiler plugin and partial unification enabled:</p>
+<h2><a href="#using-sbt-plugin" name="using-sbt-plugin" class="anchor"><span class="anchor-link"></span></a>Using SBT Plugin</h2>
+<p>Add the following to your <code>project/plugins.sbt</code> file:</p>
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
+addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&quot; % izumi_version)
+</code></pre>
+<p>Place your domain definitions into <code>/src/main/izumi</code> directory, then enable the plugin for that project: </p>
+<pre class="prettyprint"><code class="language-scala">izumiProject.enablePlugins(IdealinguaPlugin)
+</code></pre>
+<p>You can depend on the code generated by Idealinguain in your other Scala projects:</p>
+<pre class="prettyprint"><code class="language-scala">project.dependsOn(izumiProject)
+</code></pre>
+<h2><a href="#scala-http4s-transport" name="scala-http4s-transport" class="anchor"><span class="anchor-link"></span></a>Scala http4s Transport</h2>
+<p>Most likely you will need to use <a href="https://github.com/non/kind-projector">Kind Projector</a> compiler plugin and enable partial unification:</p>
 <pre class="prettyprint"><code class="language-scala">scalacOptions += &quot;-Ypartial-unification&quot;
+
 resolvers += Resolver.sonatypeRepo(&quot;releases&quot;)
+
 addCompilerPlugin(&quot;org.spire-math&quot; % &quot;kind-projector&quot; % &quot;0.9.6&quot; cross CrossVersion.binary)
 </code></pre>
-<p>You may find a test for the whole http4s pipeline <a href="blob/develop/idealingua/idealingua-runtime-rpc-http4s/src/test/scala/com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sServer.scala">here</a>. Please note that service definitons for that test are implemented manually, you may find them <a href="https://github.com/pshirshov/izumi-r2/tree/develop/idealingua/idealingua-test-defs/src/main/scala/com/github/pshirshov/izumi/r2/idealingua/test">here</a>.</p>
+<p>You may find a test suite for the whole http4s pipeline <a href="blob/develop/idealingua/idealingua-runtime-rpc-http4s/src/test/scala/com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sServer.scala">here</a>.</p>
+<p>Please note that service definitons for the test suite are <em>not</em> generated from Idealingua definitions, you can find the Scala sources <a href="https://github.com/pshirshov/izumi-r2/tree/develop/idealingua/idealingua-test-defs/src/main/scala/com/github/pshirshov/izumi/r2/idealingua/test">here</a>.</p>
 </div>
 <div>
 <a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/idealingua/00_idealingua.md" title="Edit this page" class="md-source-file md-edit">
@@ -419,7 +272,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../distage/index.html" title="DiStage DI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../distage/tutorial.html" title="Tutorial: DIStage By Example" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -428,17 +281,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-DiStage DI
+Tutorial: DIStage By Example
 </span>
 </div>
 </a>
-<a href="../idealingua/cogen.html" title="Code generator reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../idealingua/language-reference.html" title="Idealingua Language Reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Code generator reference
+Idealingua Language Reference
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

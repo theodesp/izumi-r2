@@ -104,13 +104,22 @@ Izumi Toolkit
 <ul>
   <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage DI</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage DI</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DIStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
+    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="active page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a></li>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
@@ -119,13 +128,7 @@ Izumi Toolkit
   <li><a href="../idealingua/cogen.html#code-generator-reference" class="header">Code generator reference</a>
   <ul>
     <li><a href="../idealingua/cogen.html#inheritance" class="header">Inheritance</a></li>
-    <li><a href="../idealingua/cogen.html#mixin-mixin" class="header"><code>mixin</code>: Mixin</a></li>
-    <li><a href="../idealingua/cogen.html#data-data-class" class="header"><code>data</code>: Data Class</a></li>
-    <li><a href="../idealingua/cogen.html#adt-algebraic-data-type" class="header"><code>adt</code>: Algebraic Data Type</a></li>
-    <li><a href="../idealingua/cogen.html#alias-type-alias" class="header"><code>alias</code>: Type Alias</a></li>
-    <li><a href="../idealingua/cogen.html#enum-enumeration" class="header"><code>enum</code>: Enumeration</a></li>
-    <li><a href="../idealingua/cogen.html#id-identifier" class="header"><code>id</code>: Identifier</a></li>
-    <li><a href="../idealingua/cogen.html#service-service" class="header"><code>service</code>: Service</a></li>
+    <li><a href="../idealingua/cogen.html#constructs" class="header">Constructs</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -147,13 +150,7 @@ Izumi Toolkit
   <li><a href="../idealingua/cogen.html#code-generator-reference" class="header">Code generator reference</a>
   <ul>
     <li><a href="../idealingua/cogen.html#inheritance" class="header">Inheritance</a></li>
-    <li><a href="../idealingua/cogen.html#mixin-mixin" class="header"><code>mixin</code>: Mixin</a></li>
-    <li><a href="../idealingua/cogen.html#data-data-class" class="header"><code>data</code>: Data Class</a></li>
-    <li><a href="../idealingua/cogen.html#adt-algebraic-data-type" class="header"><code>adt</code>: Algebraic Data Type</a></li>
-    <li><a href="../idealingua/cogen.html#alias-type-alias" class="header"><code>alias</code>: Type Alias</a></li>
-    <li><a href="../idealingua/cogen.html#enum-enumeration" class="header"><code>enum</code>: Enumeration</a></li>
-    <li><a href="../idealingua/cogen.html#id-identifier" class="header"><code>id</code>: Identifier</a></li>
-    <li><a href="../idealingua/cogen.html#service-service" class="header"><code>service</code>: Service</a></li>
+    <li><a href="../idealingua/cogen.html#constructs" class="header">Constructs</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -165,11 +162,6 @@ Izumi Toolkit
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#code-generator-reference" name="code-generator-reference" class="anchor"><span class="anchor-link"></span></a>Code generator reference</h1>
-<p>Notes:</p>
-<ol>
-  <li>All the examples are given in minimal form</li>
-  <li>Omitted things: marshallers, implicit conversions, type info</li>
-</ol>
 <p>We support the following concepts: </p>
 <ol>
   <li>Enumerations</li>
@@ -229,6 +221,12 @@ trait PointLike extends Metadata {
   def id: String
 }      
 </code></pre>
+<h1><a href="#constructs" name="constructs" class="anchor"><span class="anchor-link"></span></a>Constructs</h1>
+<p><em>Notes:</em></p>
+<ol>
+  <li>All the examples of generated code are given in minimal form</li>
+  <li>Generated code for codecs, implicit conversions and type info is omitted</li>
+</ol>
 <h2><a href="#mixin-mixin" name="mixin-mixin" class="anchor"><span class="anchor-link"></span></a><code>mixin</code>: Mixin</h2>
 <pre class="prettyprint"><code class="language-idealingua"> mixin Person {
    name: str
@@ -244,9 +242,8 @@ trait PointLike extends Metadata {
 <h2><a href="#data-data-class" name="data-data-class" class="anchor"><span class="anchor-link"></span></a><code>data</code>: Data Class</h2>
 <p>Differences between Mixins and Data Classes:</p>
 <ol>
-  <li>Data class cannot define fields</li>
-  <li>Data class cannot be subclassed</li>
-  <li>Data class is always redered as DTO/case class, Mixin is always rendered as pair of an Interface and an Implementation</li>
+  <li>Data classes cannot be subclassed</li>
+  <li>Data classes are always rendered as case classes, Mixins are always rendered as pair of Interface and Implementation</li>
 </ol>
 <pre class="prettyprint"><code class="language-idealingua"> data HumanUser {
    + IdentifiedUser
@@ -314,7 +311,13 @@ object Gender {
 }     
 </code></pre>
 <h2><a href="#id-identifier" name="id-identifier" class="anchor"><span class="anchor-link"></span></a><code>id</code>: Identifier</h2>
-<p>Notes: 1. You can use only scalar builtin types for identifier fields 2. We provide both parser and sane <code>.toString</code> implementation 3. <code>.toString</code> uses the following format: <code>Name#urlencoded(part1):urlencoded(part2):...</code> 4. Fields are sorted by name before using in parser and <code>.toString</code></p>
+<p>Notes:</p>
+<ol>
+  <li>You can use only scalar builtin types for identifier fields</li>
+  <li>We provide both parser and sane <code>.toString</code> implementation</li>
+  <li><code>.toString</code> uses the following format: <code>Name#urlencoded(part1):urlencoded(part2):...</code></li>
+  <li>Fields are sorted by name before using in parser and <code>.toString</code></li>
+</ol>
 <pre class="prettyprint"><code class="language-idealingua">id UserId {
   value: uid
   company: uid
@@ -356,7 +359,7 @@ mixin UserData {
 }
 
 mixin PrivateUserData {
-  balance: dbl
+  balance: f64
 }
 
 service UserService {
@@ -365,7 +368,15 @@ service UserService {
 }
 
 </code></pre>
-<p>Notes: 1. Service signature cannot accept anything except of Mixins (improvements planned) 2. <code>ServerDispatcher</code> allows you to route wrapped result type to an appropriate method of an abstract implementation 3. <code>ClientDispatcher</code> just passes input to an abstract receiver 4. <code>ClientWrapper</code> allows you to transform unwrapped method signatures into wrapping instances 5. <code>ServerWrapped</code> provides you an unwrapping service implementation 6. <code>ServiceUnwrapped</code> provides you a way to implement services with signatures unwrapped</p>
+<p>Notes: </p>
+<ol>
+  <li>Service signature cannot accept anything except of Mixins (improvements planned)</li>
+  <li><code>ServerDispatcher</code> allows you to route wrapped result type to an appropriate method of an abstract implementation</li>
+  <li><code>ClientDispatcher</code> just passes input to an abstract receiver</li>
+  <li><code>ClientWrapper</code> allows you to transform unwrapped method signatures into wrapping instances</li>
+  <li><code>ServerWrapped</code> provides you an unwrapping service implementation</li>
+  <li><code>ServiceUnwrapped</code> provides you a way to implement services with signatures unwrapped</li>
+</ol>
 <h3><a href="#scala-output" name="scala-output" class="anchor"><span class="anchor-link"></span></a>Scala output</h3>
 <pre class="prettyprint"><code class="language-scala">import _root_.com.github.pshirshov.izumi.idealingua.model._
 import _root_.com.github.pshirshov.izumi.idealingua.runtime._
@@ -449,7 +460,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../idealingua/index.html" title="Idealingua DML/IDL" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../idealingua/json.html" title="JSON Wire Format" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -458,7 +469,7 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-Idealingua DML/IDL
+JSON Wire Format
 </span>
 </div>
 </a>

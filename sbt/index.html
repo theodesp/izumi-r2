@@ -104,13 +104,22 @@ Izumi Toolkit
 <ul>
   <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage DI</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage DI</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DIStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
+    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a></li>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
   <li><a href="../sbt/index.html" class="active page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
@@ -121,7 +130,7 @@ Izumi Toolkit
     <li><a href="../sbt/index.html#global-plugins" class="header">Global plugins</a></li>
     <li><a href="../sbt/index.html#environmental-plugins" class="header">Environmental plugins</a></li>
     <li><a href="../sbt/index.html#presets" class="header">Presets</a></li>
-    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional Plugins</a></li>
+    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional plugins</a></li>
     <li><a href="../sbt/index.html#installation" class="header">Installation</a></li>
     <li><a href="../sbt/index.html#inherited-test-scopes" class="header">Inherited Test Scopes</a></li>
     <li><a href="../sbt/index.html#settings-dsl" class="header">Settings DSL</a></li>
@@ -151,7 +160,7 @@ Izumi Toolkit
     <li><a href="../sbt/index.html#global-plugins" class="header">Global plugins</a></li>
     <li><a href="../sbt/index.html#environmental-plugins" class="header">Environmental plugins</a></li>
     <li><a href="../sbt/index.html#presets" class="header">Presets</a></li>
-    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional Plugins</a></li>
+    <li><a href="../sbt/index.html#optional-plugins" class="header">Optional plugins</a></li>
     <li><a href="../sbt/index.html#installation" class="header">Installation</a></li>
     <li><a href="../sbt/index.html#inherited-test-scopes" class="header">Inherited Test Scopes</a></li>
     <li><a href="../sbt/index.html#settings-dsl" class="header">Settings DSL</a></li>
@@ -178,16 +187,16 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&qu
 </code></pre>
 <p>We provide you the following kinds of plugins:</p>
 <ol>
-  <li><em>Global Plugin</em>: adds some convenience helpers, activated automatically,</li>
-  <li><em>Environmental Plugin</em>: changes some aspects of sbt behavior in opinioneted way, intended to be activated within root project,</li>
-  <li><em>Preset</em> - an opinionated set of environmental plugins,</li>
-  <li><em>Optional plugin</em>: provides you some convenience tasks, intended to be activated manually, per-project.</li>
+  <li><em>Global plugins</em>: they add some helper sbt tasks, enabled automatically,</li>
+  <li><em>Environmental plugins</em>: they change some aspects of sbt behavior in an opinionated way, intended to be enabled in the root project,</li>
+  <li><em>Presets</em> - opinionated sets of environmental plugins,</li>
+  <li><em>Optional plugins</em>: they provide some convenience sbt tasks, intended to be enabled manually, per-project.</li>
 </ol>
 <p>Important notes:</p>
 <ol>
-  <li>Please keep in mind no plugins are being activated automatically,</li>
+  <li>Please keep in mind no plugins are being enabled automatically,</li>
   <li>The rest of Izumi plugins are optional. You may use a preset to activate them or combine them manually as you wish (using settings groups),</li>
-  <li>Some plugins requires to be installed for each project so cannot be activated via preset due to sbt limitations. You should use Settings Groups in order to activate them.</li>
+  <li>Some plugins can&rsquo;t be enabled globally due to sbt limitations – they have to be enabled per-project. You should use Settings Groups in order to enable them.</li>
 </ol>
 <h3><a href="#global-plugins" name="global-plugins" class="anchor"><span class="anchor-link"></span></a>Global plugins</h3>
 <table>
@@ -262,7 +271,7 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&qu
     </tr>
   </tbody>
 </table>
-<h3><a href="#optional-plugins" name="optional-plugins" class="anchor"><span class="anchor-link"></span></a>Optional Plugins</h3>
+<h3><a href="#optional-plugins" name="optional-plugins" class="anchor"><span class="anchor-link"></span></a>Optional plugins</h3>
 <table>
   <thead>
     <tr>
@@ -289,7 +298,7 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&qu
     </tr>
     <tr>
       <td>IzumiBuildInfoPlugin </td>
-      <td>Generates Bills of Materials </td>
+      <td>Generates sbt-compatible BOMs – <a href="#bills-of-materials">Bills of Materials</a> </td>
     </tr>
   </tbody>
 </table>
@@ -297,12 +306,12 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&qu
 <p>To activate all the plugins add the following statements into your root project:</p>
 <pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiGitEnvironmentPlugin)
 </code></pre>
-<p>In case you don&rsquo;t use GIT, use this preset:</p>
+<p>If you don&rsquo;t use <code>git</code> in your project, use this preset instead:</p>
 <pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiEnvironmentPlugin)
 </code></pre>
-<p>Also most likely you would like to activate the following plugins with your global Settings Group:</p>
-<pre class="prettyprint"><code class="language-scala">val GlobalSettings = new DefaultSettingsGroup {
-  // ...
+<p>To activate Comp</p>
+<pre class="prettyprint"><code class="language-scala">val GlobalSettings = new DefaultGlobalSettingsGroup {
+  override val plugins = Set(IzumiCompilerOptionsPlugin, IzumiExposedTestScopesPlugin)
 }
 </code></pre>
 <h2><a href="#inherited-test-scopes" name="inherited-test-scopes" class="anchor"><span class="anchor-link"></span></a>Inherited Test Scopes</h2>
@@ -321,8 +330,15 @@ lazy val myProject = (...).depends(myLibrary)
 <p>So, now you may use classes from the test scope of <code>myLibrary</code> within test scope of <code>myProject</code></p>
 <h3><a href="#test-scope-separation" name="test-scope-separation" class="anchor"><span class="anchor-link"></span></a>Test Scope Separation</h3>
 <p><code>InheritedTestScopesPlugin</code> works in pair with <code>IzumiScopesPlugin</code> and provides you an unique feature: only the classes you marked with <code>@ExposedTestScope</code> are being exposed to dependant artifacts.</p>
-<p>So, let&rsquo;s assume that: - you have two artifacts, <code>Library</code> and <code>App</code>, - <code>App</code> depends on <code>Library</code>, - In the test scope of <code>Library</code> you have a class named <code>TestSuite</code>, - In the test scope of <code>Library</code> you have another class named <code>TestUtil</code>, - <code>TestUtil</code> is marked with <code>@ExposedTestScope</code> anotation,</p>
-<p>in that case you may use <code>@TestUtil</code> in the test scope of <code>App</code>, but <code>TestSuite</code> would not be visible.</p>
+<p>So, let&rsquo;s assume that:</p>
+<ul>
+  <li>you have two artifacts, <code>Library</code> and <code>App</code>,</li>
+  <li><code>App</code> depends on <code>Library</code>,</li>
+  <li>In the test scope of <code>Library</code> you have a class named <code>TestSuite</code>,</li>
+  <li>In the test scope of <code>Library</code> you have another class named <code>TestUtil</code>,</li>
+  <li><code>TestUtil</code> is annotated with <code>@ExposedTestScope</code>,</li>
+</ul>
+<p>in that case <code>TestUtil</code> will be visible in <code>App</code>&rsquo;s test scope, but <code>TestSuite</code> will not be visible.</p>
 <p>A diagram:</p>
 <pre class="prettyprint"><code class="nocode">+-----------------------------------------+     +-----------------------------------------+
 | Library                                 |     | App                                     |
@@ -338,18 +354,34 @@ lazy val myProject = (...).depends(myLibrary)
 </code></pre>
 <p>Notes:</p>
 <ul>
-  <li>IDEA doesn&rsquo;t support overriden classpaths so when you run your tests under IDEA the whole test scopes are visible in dependencies,</li>
+  <li>Intellij IDEA doesn&rsquo;t support overriden classpaths so when you run your tests under IDEA the whole test scopes are visible in dependencies,</li>
   <li>At the moment the implementation of <code>@ExposedTestScope</code> (substring presence check) is imperfect and has to be improved,</li>
-  <li><strong>Transitive dependencies are not checked</strong>, so in case you expose a class but didn&rsquo;t expose it&rsquo;s dependencies your build would work under IDEA but you will get a weird and obscure classloading exception running your tests under IDEA. This is going to <a href="https://github.com/pshirshov/izumi-r2/issues/6">improved</a> in future.</li>
+  <li><strong>Transitive dependencies are not checked</strong>, so in case you expose a class but do not expose it&rsquo;s dependencies your build will  work under IDEA, but you will a classloading exception under sbt.  This is going to be <a href="https://github.com/pshirshov/izumi-r2/issues/6">improved</a> in the future.</li>
 </ul>
 <h3><a href="#test-scope-publishing" name="test-scope-publishing" class="anchor"><span class="anchor-link"></span></a>Test Scope Publishing</h3>
 <p>The whole content of test scopes is being published by default with <code>test</code> qualifier. Test scope separation has no effect on test scope publishing.</p>
 <h2><a href="#settings-dsl" name="settings-dsl" class="anchor"><span class="anchor-link"></span></a>Settings DSL</h2>
-<p><code>IzumiDslPlugin</code> provides you a DSL inteded to simplify definitions of complex project layouts.</p>
+<p><code>IzumiDslPlugin</code> comes with a DSL intended to simplify definition of complex project layouts.</p>
 <p>To activate the plugin add the following statement into your root project:</p>
 <pre class="prettyprint"><code class="language-scala">enablePlugins(IzumiDslPlugin)
 </code></pre>
 <h3><a href="#simplified-identifiers" name="simplified-identifiers" class="anchor"><span class="anchor-link"></span></a>Simplified Identifiers</h3>
+<p>DSL provides syntax to simplify project definitions. A definition such as this:</p>
+<pre class="prettyprint"><code class="language-scala">lazy val petstoreApp = In(&quot;app&quot;).as.module
+</code></pre>
+<p>expands to</p>
+<pre><code>lazy val petstoreApp = project.in(&quot;app/petstore-app&quot;)
+</code></pre>
+<p>You can attach settings and dependencies to the <code>In</code> part, that way you can apply common settings to all the projects in a directory:</p>
+<pre class="prettyprint"><code class="language-scala">val ApiSettings: SettingsGroup = new SettingsGroup {
+  override val plugins = Set(IdealinguaPlugin)
+}
+
+lazy val inApi = In(&quot;api&quot;)
+
+lazy val petstoreApi = inApi.as.module
+lazy val todomvcApi = inApi.as.module
+</code></pre>
 <h3><a href="#setting-groups" name="setting-groups" class="anchor"><span class="anchor-link"></span></a>Setting Groups</h3>
 <h4><a href="#global-setting-group" name="global-setting-group" class="anchor"><span class="anchor-link"></span></a>Global Setting Group</h4>
 <h3><a href="#automatic-aggregation" name="automatic-aggregation" class="anchor"><span class="anchor-link"></span></a>Automatic Aggregation</h3>
@@ -358,8 +390,8 @@ lazy val myProject = (...).depends(myLibrary)
 <p>In case you don&rsquo;t want your project to be recorded, you shoud use <code>.as.just</code> syntax.</p><div class="callout warning "><div class="callout-title">Important note: sbt is lazy!</div>
 <p>We just store project reference in a singleton list, we don&rsquo;t analyze dependency graph. Though sbt relies on <code>lazy val</code> declarations. <em>So, in fact the singleton initializes at the moment you invoke aggregation.</em> In case you don&rsquo;t add a project into aggregation list such a project still will be initialized by sbt and added into the singleton, but it would happen <em>later</em> than evaluation of aggregation list so the project will not be aggregated.</p></div>
 <h3><a href="#aggregation-safety-check" name="aggregation-safety-check" class="anchor"><span class="anchor-link"></span></a>Aggregation Safety Check</h3>
-<p>When you invoke <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> on your root project it checks if the accumulated set of known project is the same as the set of project loaded by sbt.</p>
-<p>In case of discrepancies you will get a warning. So in case you use automatic aggregation it&rsquo;s unlikely that you may accidentally forget to aggregate a module of a multi-module project.</p>
+<p>When you invoke <code>transitiveAggregate</code> or <code>transitiveAggregateSeq</code> on your root project it checks if the accumulated set of known project is the same as the set of all projects loaded by sbt.</p>
+<p>In case module is missing you&rsquo;ll get a warning. This makes it unlikely for you to accidentally forget to aggregate a module in multi-module project.</p>
 <h2><a href="#build-descriptors" name="build-descriptors" class="anchor"><span class="anchor-link"></span></a>Build Descriptors</h2>
 <h3><a href="#bills-of-materials" name="bills-of-materials" class="anchor"><span class="anchor-link"></span></a>Bills of Materials</h3>
 <h3><a href="#build-manifest-entries" name="build-manifest-entries" class="anchor"><span class="anchor-link"></span></a>Build Manifest entries</h3>
@@ -407,11 +439,11 @@ lazy val myProject = (...).depends(myLibrary)
   <tbody>
     <tr>
       <td>ConvenienceTasksPlugin.Keys.mkJavaDirs </td>
-      <td>Adds <code>src/*/java</code> paths into generated stubs </td>
+      <td>Also adds <code>src/*/java</code> directories into generated stubs </td>
     </tr>
     <tr>
       <td>ConvenienceTasksPlugin.Keys.defaultStubPackage </td>
-      <td>Default stub package <code>(sbt.Keys.organization in ThisBuild).value</code></td>
+      <td>Default stub package. By default same as project&rsquo;s <code>organization</code> </td>
     </tr>
   </tbody>
 </table>
@@ -464,7 +496,7 @@ sys.props.asInt(&quot;my.property&quot;, default = 123)
 <p>You should explicitly enable this plugin in each project you want to use it. When you want to enable it globally, use a settings group:</p>
 <pre class="prettyprint"><code class="language-scala">val GlobalSettings = new SettingsGroup {
   override val plugins = Set(
-      CompilerOptionsPlugin,
+      IzumiCompilerOptionsPlugin,
       // ...
   )
   // ...
@@ -495,7 +527,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../logstage/index.html" title="Logstage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../logstage/sample.html" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -504,7 +536,7 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-Logstage
+Examples
 </span>
 </div>
 </a>
