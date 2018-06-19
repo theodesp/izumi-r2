@@ -237,6 +237,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="WithDITypeTags$TagKInstances.html" title=""></a>
                         <a href="WithDITypeTags$TagKInstances.html" title="">TagKInstances</a>
+                      </li><li class="current-entities indented9">
+                        <span class="separator"></span>
+                        <a class="class" href="WithDITypeTags$WeakTypeTagExtensions.html" title=""></a>
+                        <a href="WithDITypeTags$WeakTypeTagExtensions.html" title="">WeakTypeTagExtensions</a>
                       </li>
               </ul>
             </div>
@@ -395,21 +399,21 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T](implicittag:WithDITypeTags.this.u.TypeTag[T]):WithDITypeTags.this.u.TypeTag[K[T]]"></a><a id="apply[T](scala.reflect.api.Universe.TypeTag[T]):scala.reflect.api.Universe.TypeTag[K[T]]"></a>
+      <a id="apply[T](implicittag:WithDITypeTags.this.Tag[T]):WithDITypeTags.this.Tag[K[T]]"></a><a id="apply[T]((WithDITypeTags.this)#Tag[T]):(WithDITypeTags.this)#Tag[K[T]]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$TagK.html#apply[T](implicittag:WithDITypeTags.this.u.TypeTag[T]):WithDITypeTags.this.u.TypeTag[K[T]]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$TagK.html#apply[T](implicittag:WithDITypeTags.this.Tag[T]):WithDITypeTags.this.Tag[K[T]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="tag">tag: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.Universe.TypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.Universe.TypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.K">K</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="tag">tag: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]</span>)</span><span class="result">: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.K">K</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><div class="fullcomment"><div class="comment cmt"><p>Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><p>Use:
+      <p class="shortcomment cmt">Create a <span class="extype" name="scala.reflect.api.TypyeTags#TypeTag">scala.reflect.api.TypyeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><div class="fullcomment"><div class="comment cmt"><p>Create a <span class="extype" name="scala.reflect.api.TypyeTags#TypeTag">scala.reflect.api.TypyeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><p>Use:
     TagK[List].apply[Int]</p><p>    &gt; typeTag[List[Int]]
 </p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -602,25 +606,6 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK#replaceIn" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="replaceIn[T[_[_]],F[_]](tag:WithDITypeTags.this.u.WeakTypeTag[T[F]]):WithDITypeTags.this.u.TypeTag[T[K]]"></a><a id="replaceIn[T[_[_]],F[_]](scala.reflect.api.Universe.WeakTypeTag[T[F]]):scala.reflect.api.Universe.TypeTag[T[K]]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$TagK.html#replaceIn[T[_[_]],F[_]](tag:WithDITypeTags.this.u.WeakTypeTag[T[F]]):WithDITypeTags.this.u.TypeTag[T[K]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replaceIn</span><span class="tparams">[<span name="T">T<span class="tparams">[<span name="_">_<span class="tparams">[<span name="_">_</span>]</span></span>]</span></span>, <span name="F">F<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="tag">tag: <span class="extype" name="scala.reflect.api.TypeTags.WeakTypeTag">scala.reflect.api.Universe.WeakTypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.replaceIn.T">T</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.replaceIn.F">F</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.Universe.TypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.replaceIn.T">T</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.K">K</span>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Replace a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for T[F] wit a <code>TypeTag</code> for T[K]</p><div class="fullcomment"><div class="comment cmt"><p>Replace a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for T[F] wit a <code>TypeTag</code> for T[K]</p><p>This is the main mechanism by which <code>TagK</code> works.
-First we retrieve a TypeTag for T[Nothing], then we replace the <code>Nothing</code> with <code>K</code></p><p>Use:
-    TagK[List].replaceIn(weakTypeTag[OptionT[Try]])</p><p>    &gt; typeTag[OptionT[List]]
-</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -645,7 +630,7 @@ First we retrieve a TypeTag for T[Nothing], then we replace the <code>Nothing</c
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
