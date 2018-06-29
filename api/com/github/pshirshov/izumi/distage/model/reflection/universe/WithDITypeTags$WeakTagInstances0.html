@@ -215,8 +215,8 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe">universe</a></dd></dl></div>
     </li><li class="current-entities indented9">
                         <a class="object" href="WithDITypeTags$Tag$.html" title=""></a>
-                        <a class="trait" href="" title="Like scala.reflect.api.TypeTags#TypeTag, but supports higher-kinded type tags via TagK type class."></a>
-                        <a href="" title="Like scala.reflect.api.TypeTags#TypeTag, but supports higher-kinded type tags via TagK type class.">Tag</a>
+                        <a class="trait" href="WithDITypeTags$Tag.html" title="Like scala.reflect.api.TypeTags#TypeTag, but supports higher-kinded type tags via TagK type class."></a>
+                        <a href="WithDITypeTags$Tag.html" title="Like scala.reflect.api.TypeTags#TypeTag, but supports higher-kinded type tags via TagK type class.">Tag</a>
                       </li><li class="current-entities indented9">
                         <span class="separator"></span>
                         <a class="trait" href="WithDITypeTags$TagInstances0.html" title=""></a>
@@ -251,8 +251,8 @@
                         <a href="WithDITypeTags$WeakTag.html" title="">WeakTag</a>
                       </li><li class="current-entities indented9">
                         <span class="separator"></span>
-                        <a class="trait" href="WithDITypeTags$WeakTagInstances0.html" title=""></a>
-                        <a href="WithDITypeTags$WeakTagInstances0.html" title="">WeakTagInstances0</a>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">WeakTagInstances0</a>
                       </li><li class="current-entities indented9">
                         <span class="separator"></span>
                         <a class="trait" href="WithDITypeTags$WeakTagInstances1.html" title=""></a>
@@ -268,16 +268,14 @@
           <div id="content">
             <body class="trait type">
       <div id="definition">
-        <a href="WithDITypeTags$Tag$.html" title="See companion object"><div class="big-circle trait-companion-object">t</div></a>
+        <div class="big-circle trait">t</div>
         <p id="owner"><a href="../../../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov.izumi.distage">distage</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model">model</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection">reflection</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe">universe</a>.<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a></p>
-        <h1><a href="WithDITypeTags$Tag$.html" title="See companion object">Tag</a><span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html" title="Permalink">
+        <h1>WeakTagInstances0<span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="WithDITypeTags$Tag$.html" title="See companion object">object Tag</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -286,22 +284,22 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Tag</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">WeakTagInstances0</span><span class="result"> extends (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1">WeakTagInstances1</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Like <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span>, but supports higher-kinded type tags via <code>TagK</code> type class.</p><p>In context of DI this allows you to define a module parameterized by a generic higher-kinded type parameter.
-This is especially helpful when coding in a <a href="https://www.beyondthelines.net/programming/introduction-to-tagless-final/" target="_blank"><code>tagless final</code> style</a></p><p>Example:</p><p>    class MyModule[F[_]: Monad: TagK] {
-      make[MyService[F]]
-      make[F[Unit]].named(&quot;empty&quot;).from(Monad[F].pure())
-    }</p><p>Without a <code>TagK</code> constraint above, this example would fail with <code>no TypeTag available for MyService[F]</code>
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+          <div class="superTypes hiddenContent">(<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1">WeakTagInstances1</span>, <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="WithDITypeTags$WeakTag$.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTag">WeakTag</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -326,7 +324,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag"><span>Tag</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances0"><span>WeakTagInstances0</span></li><li class="in" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1"><span>WeakTagInstances1</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -348,34 +346,15 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
 
         
 
-        <div class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag#tag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="tag:WithDITypeTags.this.u.TypeTag[T]"></a><a id="tag:scala.reflect.api.Universe.TypeTag[T]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#tag:WithDITypeTags.this.u.TypeTag[T]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tag</span><span class="result">: <span class="extype" name="scala.reflect.api.TypeTags.TypeTag">scala.reflect.api.Universe.TypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag.T">T</span>]</span>
-      </span>
-      
-      
-    </li></ol>
-            </div>
+        
 
         <div class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -391,7 +370,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html###():Int" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -407,7 +386,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -423,7 +402,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -439,7 +418,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#clone():Object" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -465,7 +444,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -481,7 +460,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -497,7 +476,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -518,7 +497,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -539,7 +518,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -555,7 +534,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -571,7 +550,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -592,7 +571,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -613,7 +592,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -626,10 +605,10 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#toString():String" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -638,14 +617,14 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -667,7 +646,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -689,7 +668,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -710,6 +689,38 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances0#weakTagFromTag" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="weakTagFromTag[T](implicitevidence$47:WithDITypeTags.this.Tag[T]):WithDITypeTags.this.WeakTag[T]"></a><a id="weakTagFromTag[T]((WithDITypeTags.this)#Tag[T]):(WithDITypeTags.this)#WeakTag[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#weakTagFromTag[T](implicitevidence$47:WithDITypeTags.this.Tag[T]):WithDITypeTags.this.WeakTag[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">weakTagFromTag</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances0.weakTagFromTag.T">T</span>]</span>)</span><span class="result">: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTag">WeakTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances0.weakTagFromTag.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1#weakTagFromWeakTypeTag" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="weakTagFromWeakTypeTag[T](implicitt:WithDITypeTags.this.u.WeakTypeTag[T]):WithDITypeTags.this.WeakTag[T]"></a><a id="weakTagFromWeakTypeTag[T](scala.reflect.api.Universe.WeakTypeTag[T]):(WithDITypeTags.this)#WeakTag[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#weakTagFromWeakTypeTag[T](implicitt:WithDITypeTags.this.u.WeakTypeTag[T]):WithDITypeTags.this.WeakTag[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">weakTagFromWeakTypeTag</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="t">t: <span class="extype" name="scala.reflect.api.TypeTags.WeakTypeTag">scala.reflect.api.Universe.WeakTypeTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1.weakTagFromWeakTypeTag.T">T</span>]</span>)</span><span class="result">: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTag">WeakTag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1.weakTagFromWeakTypeTag.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="WithDITypeTags$WeakTagInstances1.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1">WeakTagInstances1</a></dd></dl></div>
     </li>
               </ol>
             </div>
@@ -721,7 +732,7 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$Tag.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags$WeakTagInstances0.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -749,7 +760,9 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1">
+              <h3>Inherited from (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.WeakTagInstances1">WeakTagInstances1</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
