@@ -135,7 +135,7 @@ Izumi Toolkit
 </nav>
 
 <div class="md-nav__title--site md-version" title="Version">
-<i class="md-icon">label_outline</i> 0.5.24*
+<i class="md-icon">label_outline</i> 0.6.0*
 </div>
 </nav>
 
@@ -218,7 +218,7 @@ service UserService {
 <p>The compiler executable is built as an uberjar and published on <a href="https://search.maven.org/">Maven Central</a>.</p>
 <p>The preferred way to install the compiler is with <a href="https://github.com/coursier/coursier#command-line">coursier</a></p>
 <pre class="prettyprint"><code class="language-bash"># install release executable
-coursier bootstrap com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.5.24-SNAPSHOT -o idlc
+coursier bootstrap com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.6.0-SNAPSHOT -o idlc
 
 ./idlc --help
 </code></pre>
@@ -235,7 +235,7 @@ coursier bootstrap -r https://oss.sonatype.org/content/repositories/snapshots/ c
 </code></pre>
 <h2><a href="#using-sbt-plugin" name="using-sbt-plugin" class="anchor"><span class="anchor-link"></span></a>Using SBT Plugin</h2>
 <p>Add the following to your <code>project/plugins.sbt</code> file:</p>
-<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.5.24-SNAPSHOT&quot;
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&quot; % izumi_version)
 </code></pre>
 <p>Place your domain definitions into <code>/src/main/izumi</code> directory, then enable the plugin for that project: </p>
@@ -262,7 +262,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.5.24*
+0.6.0*
 </span>
 </div>
 </article>
