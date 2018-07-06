@@ -183,12 +183,24 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform">platform</a></dd></dl></div>
     </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="AppVersion.html" title=""></a>
-                        <a href="AppVersion.html" title="">AppVersion</a>
+                        <a class="class" href="ArtifactVersion.html" title=""></a>
+                        <a href="ArtifactVersion.html" title="">ArtifactVersion</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="BuildStatus.html" title=""></a>
+                        <a href="BuildStatus.html" title="">BuildStatus</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="GitStatus.html" title=""></a>
                         <a href="GitStatus.html" title="">GitStatus</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="IzArtifact.html" title=""></a>
+                        <a href="IzArtifact.html" title="">IzArtifact</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="IzArtifactId.html" title=""></a>
+                        <a href="IzArtifactId.html" title="">IzArtifactId</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="object" href="IzResources$.html" title=""></a>
@@ -197,6 +209,10 @@
                         <span class="separator"></span>
                         <a class="object" href="" title=""></a>
                         <a href="" title="">IzumiManifest</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ManifestData.html" title=""></a>
+                        <a href="ManifestData.html" title="">ManifestData</a>
                       </li>
               </ul>
             </div>
@@ -426,6 +442,22 @@
       </span>
       
       
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#ManifestName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ManifestName:String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#ManifestName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ManifestName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      
     </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#TsFormat" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TsFormat:java.time.format.DateTimeFormatter"></a><a id="TsFormat:DateTimeFormatter"></a>
       <span class="permalink">
@@ -458,10 +490,10 @@
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#appVersion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="appVersion(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.AppVersion]"></a><a id="appVersion(Manifest):Option[AppVersion]"></a>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#appBuild" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="appBuild(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus]"></a><a id="appBuild(Manifest):Option[BuildStatus]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#appVersion(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.AppVersion]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#appBuild(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -470,7 +502,23 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">appVersion</span><span class="params">(<span name="mf">mf: <span class="extype" name="java.util.jar.Manifest">Manifest</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="AppVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.AppVersion">AppVersion</a>]</span>
+        <span class="name">appBuild</span><span class="params">(<span name="mf">mf: <span class="extype" name="java.util.jar.Manifest">Manifest</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#appVersion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="appVersion(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion]"></a><a id="appVersion(Manifest):Option[ArtifactVersion]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#appVersion(mf:java.util.jar.Manifest):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">appVersion</span><span class="params">(<span name="mf">mf: <span class="extype" name="java.util.jar.Manifest">Manifest</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a>]</span>
       </span>
       
       
@@ -623,6 +671,22 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#manifest" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="manifest(name:String):Option[java.util.jar.Manifest]"></a><a id="manifest(String):Option[Manifest]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#manifest(name:String):Option[java.util.jar.Manifest]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">manifest</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.util.jar.Manifest">Manifest</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#manifest" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="manifest():Option[java.util.jar.Manifest]"></a><a id="manifest():Option[Manifest]"></a>
       <span class="permalink">
       <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#manifest():Option[java.util.jar.Manifest]" title="Permalink">
@@ -696,6 +760,38 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#read" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="read(name:String):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData]"></a><a id="read(String):Option[ManifestData]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#read(name:String):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">read</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ManifestData.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData">ManifestData</a>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzumiManifest#read" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="read():Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData]"></a><a id="read():Option[ManifestData]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzumiManifest$.html#read():Option[com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">read</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="ManifestData.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData">ManifestData</a>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

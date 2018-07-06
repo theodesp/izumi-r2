@@ -245,6 +245,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform">platform</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.jvm" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jvm"></a><a id="jvm:jvm"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/fundamentals/platform/index.html#jvm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../jvm/index.html"><span class="name">jvm</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform">platform</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.fundamentals.platform.language" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="language"></a><a id="language:language"></a>
       <span class="permalink">
@@ -311,12 +327,24 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform">platform</a></dd></dl></div>
     </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="AppVersion.html" title=""></a>
-                        <a href="AppVersion.html" title="">AppVersion</a>
+                        <a class="class" href="ArtifactVersion.html" title=""></a>
+                        <a href="ArtifactVersion.html" title="">ArtifactVersion</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="BuildStatus.html" title=""></a>
+                        <a href="BuildStatus.html" title="">BuildStatus</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="GitStatus.html" title=""></a>
                         <a href="GitStatus.html" title="">GitStatus</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="IzArtifact.html" title=""></a>
+                        <a href="IzArtifact.html" title="">IzArtifact</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="IzArtifactId.html" title=""></a>
+                        <a href="IzArtifactId.html" title="">IzArtifactId</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="object" href="IzResources$.html" title=""></a>
@@ -325,6 +353,10 @@
                         <span class="separator"></span>
                         <a class="object" href="IzumiManifest$.html" title=""></a>
                         <a href="IzumiManifest$.html" title="">IzumiManifest</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ManifestData.html" title=""></a>
+                        <a href="ManifestData.html" title="">ManifestData</a>
                       </li><li name="com.github.pshirshov.izumi.fundamentals.platform.serialization" visbl="pub" class="indented7 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="serialization"></a><a id="serialization:serialization"></a>
       <span class="permalink">
@@ -452,10 +484,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.AppVersion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="AppVersionextendsProductwithSerializable"></a><a id="AppVersion:AppVersion"></a>
+              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ArtifactVersionextendsProductwithSerializable"></a><a id="ArtifactVersion:ArtifactVersion"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#AppVersionextendsProductwithSerializable" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#ArtifactVersionextendsProductwithSerializable" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -464,7 +496,23 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="AppVersion.html"><span class="name">AppVersion</span></a><span class="params">(<span name="version">version: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="buildBy">buildBy: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="buildJdk">buildJdk: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="buildTimestamp">buildTimestamp: <span class="extype" name="java.time.ZonedDateTime">ZonedDateTime</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="ArtifactVersion.html"><span class="name">ArtifactVersion</span></a><span class="params">(<span name="version">version: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BuildStatusextendsProductwithSerializable"></a><a id="BuildStatus:BuildStatus"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#BuildStatusextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BuildStatus.html"><span class="name">BuildStatus</span></a><span class="params">(<span name="buildBy">buildBy: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="buildJdk">buildJdk: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="buildTimestamp">buildTimestamp: <span class="extype" name="java.time.ZonedDateTime">ZonedDateTime</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -480,7 +528,55 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="GitStatus.html"><span class="name">GitStatus</span></a><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="GitStatus.html"><span class="name">GitStatus</span></a><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IzArtifactextendsProductwithSerializable"></a><a id="IzArtifact:IzArtifact"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#IzArtifactextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IzArtifact.html"><span class="name">IzArtifact</span></a><span class="params">(<span name="id">id: <a href="IzArtifactId.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId">IzArtifactId</a></span>, <span name="version">version: <a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a></span>, <span name="build">build: <a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a></span>, <span name="gitStatus">gitStatus: <a href="GitStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus">GitStatus</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IzArtifactIdextendsProductwithSerializable"></a><a id="IzArtifactId:IzArtifactId"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#IzArtifactIdextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IzArtifactId.html"><span class="name">IzArtifactId</span></a><span class="params">(<span name="groupId">groupId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="artifactId">artifactId: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.ManifestData" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ManifestDataextendsProductwithSerializable"></a><a id="ManifestData:ManifestData"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/index.html#ManifestDataextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ManifestData.html"><span class="name">ManifestData</span></a><span class="params">(<span name="git">git: <span class="extype" name="scala.Option">Option</span>[<a href="GitStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus">GitStatus</a>]</span>, <span name="app">app: <span class="extype" name="scala.Option">Option</span>[<a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a>]</span>, <span name="buildStatus">buildStatus: <span class="extype" name="scala.Option">Option</span>[<a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       

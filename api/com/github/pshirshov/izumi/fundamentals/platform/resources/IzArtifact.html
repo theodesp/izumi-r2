@@ -195,16 +195,16 @@
                         <a href="GitStatus.html" title="">GitStatus</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="IzArtifact.html" title=""></a>
-                        <a href="IzArtifact.html" title="">IzArtifact</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">IzArtifact</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="IzArtifactId.html" title=""></a>
                         <a href="IzArtifactId.html" title="">IzArtifactId</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">IzResources</a>
+                        <a class="object" href="IzResources$.html" title=""></a>
+                        <a href="IzResources$.html" title="">IzResources</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="object" href="IzumiManifest$.html" title=""></a>
@@ -218,12 +218,12 @@
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle object">o</div>
+        <div class="big-circle class">c</div>
         <p id="owner"><a href="../../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals">fundamentals</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform">platform</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources">resources</a></p>
-        <h1>IzResources<span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html" title="Permalink">
+        <h1>IzArtifact<span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -233,10 +233,10 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">IzResources</span>
+        <span class="name">IzArtifact</span><span class="params">(<span name="id">id: <a href="IzArtifactId.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId">IzArtifactId</a></span>, <span name="version">version: <a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a></span>, <span name="build">build: <a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a></span>, <span name="gitStatus">gitStatus: <a href="GitStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus">GitStatus</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -245,7 +245,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -271,7 +271,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources"><span>IzResources</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact"><span>IzArtifact</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -289,44 +289,28 @@
 
       <div id="template">
         <div id="allMembers">
-        
-
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PathReferenceextendsAutoCloseable"></a><a id="PathReference:PathReference"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(id:com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId,version:com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion,build:com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus,gitStatus:com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus):com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact"></a><a id="&lt;init&gt;:IzArtifact"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#PathReferenceextendsAutoCloseable" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#&lt;init&gt;(id:com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId,version:com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion,build:com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus,gitStatus:com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus):com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <a title="" href="IzResources$$PathReference.html"><span class="name">PathReference</span></a><span class="result"> extends <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RecursiveCopyOutputextendsProductwithSerializable"></a><a id="RecursiveCopyOutput:RecursiveCopyOutput"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#RecursiveCopyOutputextendsProductwithSerializable" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="IzResources$$RecursiveCopyOutput.html"><span class="name">RecursiveCopyOutput</span></a><span class="params">(<span name="files">files: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="java.nio.file.Path">Path</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">IzArtifact</span><span class="params">(<span name="id">id: <a href="IzArtifactId.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId">IzArtifactId</a></span>, <span name="version">version: <a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a></span>, <span name="build">build: <a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a></span>, <span name="gitStatus">gitStatus: <a href="GitStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus">GitStatus</a></span>)</span>
       </span>
       
       
     </li></ol>
             </div>
+
+        
 
         
 
@@ -336,7 +320,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -352,7 +336,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html###():Int" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -368,7 +352,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -384,7 +368,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -397,10 +381,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#build" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="build:com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus"></a><a id="build:BuildStatus"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#build:com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">build</span><span class="result">: <a href="BuildStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.BuildStatus">BuildStatus</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#clone():Object" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -423,26 +423,10 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources#copyFromClasspath" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="copyFromClasspath(sourcePath:String,targetDir:java.nio.file.Path):com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput"></a><a id="copyFromClasspath(String,Path):RecursiveCopyOutput"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#copyFromClasspath(sourcePath:String,targetDir:java.nio.file.Path):com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">copyFromClasspath</span><span class="params">(<span name="sourcePath">sourcePath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="targetDir">targetDir: <span class="extype" name="java.nio.file.Path">Path</span></span>)</span><span class="result">: <a href="IzResources$$RecursiveCopyOutput.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput">RecursiveCopyOutput</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -455,26 +439,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#equals(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -492,47 +460,42 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources#getPath" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getPath(resPath:String):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference]"></a><a id="getPath(String):Option[PathReference]"></a>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#gitStatus" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gitStatus:com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus"></a><a id="gitStatus:GitStatus"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#getPath(resPath:String):Option[com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#gitStatus:com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">getPath</span><span class="params">(<span name="resPath">resPath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="IzResources$$PathReference.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference">PathReference</a>]</span>
+        <span class="name">gitStatus</span><span class="result">: <a href="GitStatus.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus">GitStatus</a></span>
       </span>
       
       
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="id:com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId"></a><a id="id:IzArtifactId"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#hashCode():Int" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#id:com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">id</span><span class="result">: <a href="IzArtifactId.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifactId">IzArtifactId</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -548,7 +511,7 @@
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -564,7 +527,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -585,7 +548,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -603,10 +566,10 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources#read" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="read(fileName:String):Option[java.io.InputStream]"></a><a id="read(String):Option[InputStream]"></a>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#shortInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="shortInfo:String"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#read(fileName:String):Option[java.io.InputStream]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#shortInfo:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -615,30 +578,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.InputStream">InputStream</span>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources#readAsString" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="readAsString(fileName:String):Option[String]"></a><a id="readAsString(String):Option[String]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#readAsString(fileName:String):Option[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">readAsString</span><span class="params">(<span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">shortInfo</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -651,26 +598,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzArtifact#version" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="version:com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion"></a><a id="version:ArtifactVersion"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#toString():String" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#version:com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">version</span><span class="result">: <a href="ArtifactVersion.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.ArtifactVersion">ArtifactVersion</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -692,7 +639,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -714,7 +661,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -735,22 +682,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RecursiveCopyOutput"></a><a id="RecursiveCopyOutput:RecursiveCopyOutput"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#RecursiveCopyOutput" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="IzResources$$RecursiveCopyOutput$.html"><span class="name">RecursiveCopyOutput</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      
-      
     </li>
               </ol>
             </div>
@@ -762,7 +693,7 @@
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzArtifact.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -790,7 +721,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
