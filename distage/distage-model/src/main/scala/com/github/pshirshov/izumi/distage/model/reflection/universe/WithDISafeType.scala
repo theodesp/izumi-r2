@@ -35,6 +35,7 @@ trait WithDISafeType {
   }
 
   implicit final class Deannotate(typ: TypeNative) {
+    @inline
     def deannotate: TypeNative =
       typ match {
         case t: u.AnnotatedTypeApi =>

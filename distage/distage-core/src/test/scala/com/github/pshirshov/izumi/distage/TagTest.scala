@@ -5,6 +5,8 @@ import com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUni
 import com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.u._
 import org.scalatest.WordSpec
 
+import scala.language.higherKinds
+
 class TagTest extends WordSpec {
 
   "Tag" should {
@@ -31,6 +33,27 @@ class TagTest extends WordSpec {
       def testTag[T: TypeTag] = TagMacro.get[T]
 
       assert(testTag[String].tpe == safe[String])
+    }
+
+    "Work for any abstract type with available Tag" in {
+      def testTag[T: Tag] = TagMacro.get[T]
+
+      assert(testTag[String].tpe == safe[String])
+    }
+
+    "Work for any abstract type with available TagK" in {
+      def testTagK[F[_]: TagK, T: Tag] = TagMacro.get[F[T]]
+      // TODO add strange shapes
+
+      assert(testTagK[Set, Int].tpe == safe[Set[Int]])
+    }
+
+    "Not work for any abstract type without available TypeTag or Tag or TagK" in {
+      def testTag[T] = TagMacro.get[T]
+      def testTagK[F[_], T] = TagMacro.get[F[T]]
+
+      assert(testTag[String].tpe == safe[String])
+      assert(testTagK[Set, Int].tpe == safe[Set[Int]])
     }
   }
 

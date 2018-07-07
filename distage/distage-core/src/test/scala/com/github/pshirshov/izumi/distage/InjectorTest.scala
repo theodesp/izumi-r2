@@ -2,12 +2,15 @@ package com.github.pshirshov.izumi.distage
 
 import com.github.pshirshov.izumi.distage.Fixtures.Case16.TestProviderModule
 import com.github.pshirshov.izumi.distage.Fixtures._
-import com.github.pshirshov.izumi.distage.model.Injector
-import com.github.pshirshov.izumi.distage.model.definition.Binding.SingletonBinding
+import com.github.pshirshov.izumi.distage.model.{Injector, Locator, reflection}
+import com.github.pshirshov.izumi.distage.model.definition.Binding.{ImplBinding, SetBinding, SetElementBinding, SingletonBinding}
+import com.github.pshirshov.izumi.distage.model.definition.ImplDef._
 import com.github.pshirshov.izumi.distage.model.definition._
 import com.github.pshirshov.izumi.distage.model.exceptions._
 import com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.{ImportDependency, InstantiationOp, WiringOp}
 import com.github.pshirshov.izumi.distage.model.plan.PlanningFailure.ConflictingOperation
+import com.github.pshirshov.izumi.distage.model.references.IdentifiedRef
+import com.github.pshirshov.izumi.distage.model.reflection.universe
 import com.github.pshirshov.izumi.distage.model.provisioning.strategies.ProxyDispatcher
 import com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse
 import com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag
