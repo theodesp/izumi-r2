@@ -202,17 +202,17 @@
                         <a class="class" href="IzArtifactId.html" title=""></a>
                         <a href="IzArtifactId.html" title="">IzArtifactId</a>
                       </li><li class="current-entities indented7">
+                        <a class="object" href="IzManifest$.html" title=""></a>
+                        <a class="trait" href="IzManifest.html" title=""></a>
+                        <a href="IzManifest.html" title="">IzManifest</a>
+                      </li><li class="current-entities indented7">
                         <a class="object" href="IzResources$.html" title=""></a>
                         <a class="class" href="IzResources.html" title=""></a>
                         <a href="IzResources.html" title="">IzResources</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="object" href="IzumiManifest$.html" title=""></a>
-                        <a href="IzumiManifest$.html" title="">IzumiManifest</a>
-                      </li><li class="current-entities indented7">
-                        <span class="separator"></span>
-                        <a class="class" href="ManifestData.html" title=""></a>
-                        <a href="ManifestData.html" title="">ManifestData</a>
+                        <a class="trait" href="ResourceLocation.html" title=""></a>
+                        <a href="ResourceLocation.html" title="">ResourceLocation</a>
                       </li>
               </ul>
             </div>
@@ -236,7 +236,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">GitStatus</span><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">GitStatus</span><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -292,9 +292,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(branch:Option[String],repoClean:Boolean,revision:Option[String]):com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus"></a><a id="&lt;init&gt;:GitStatus"></a>
+      <a id="&lt;init&gt;(branch:String,repoClean:Boolean,revision:String):com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus"></a><a id="&lt;init&gt;:GitStatus"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#&lt;init&gt;(branch:Option[String],repoClean:Boolean,revision:Option[String]):com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#&lt;init&gt;(branch:String,repoClean:Boolean,revision:String):com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -303,7 +303,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">GitStatus</span><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">GitStatus</span><span class="params">(<span name="branch">branch: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="repoClean">repoClean: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="revision">revision: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
       </span>
       
       
@@ -382,9 +382,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus#branch" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="branch:Option[String]"></a>
+      <a id="branch:String"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#branch:Option[String]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#branch:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -393,7 +393,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">branch</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">branch</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
@@ -551,9 +551,9 @@
       
       
     </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.GitStatus#revision" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="revision:Option[String]"></a>
+      <a id="revision:String"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#revision:Option[String]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/GitStatus.html#revision:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -562,7 +562,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">revision</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">revision</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
