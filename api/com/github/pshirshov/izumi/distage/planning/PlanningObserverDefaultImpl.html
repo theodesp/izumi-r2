@@ -203,10 +203,6 @@
                         <a href="PlanMergingPolicyDefaultImpl.html" title="">PlanMergingPolicyDefaultImpl</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
-                        <a class="class" href="PlanResolverDefaultImpl.html" title=""></a>
-                        <a href="PlanResolverDefaultImpl.html" title="">PlanResolverDefaultImpl</a>
-                      </li><li class="current-entities indented6">
-                        <span class="separator"></span>
                         <a class="class" href="PlannerDefaultImpl.html" title=""></a>
                         <a href="PlannerDefaultImpl.html" title="">PlannerDefaultImpl</a>
                       </li><li class="current-entities indented6">
@@ -567,10 +563,10 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onFinalPlan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onFinalPlan(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit"></a><a id="onFinalPlan(FinalPlan):Unit"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onPhase00PlanCompleted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onPhase00PlanCompleted(plan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):Unit"></a><a id="onPhase00PlanCompleted(DodgyPlan):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onFinalPlan(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onPhase00PlanCompleted(plan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -579,14 +575,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onFinalPlan</span><span class="params">(<span name="finalPlan">finalPlan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">onPhase00PlanCompleted</span><span class="params">(<span name="plan">plan: <a href="../model/plan/DodgyPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan">DodgyPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl">PlanningObserverDefaultImpl</a> → <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onReferencesResolved" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onReferencesResolved(plan:com.github.pshirshov.izumi.distage.model.plan.ResolvedCyclesPlan):Unit"></a><a id="onReferencesResolved(ResolvedCyclesPlan):Unit"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onPhase10PostOrdering" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onPhase10PostOrdering(plan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit"></a><a id="onPhase10PostOrdering(FinalPlan):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onReferencesResolved(plan:com.github.pshirshov.izumi.distage.model.plan.ResolvedCyclesPlan):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onPhase10PostOrdering(plan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -595,14 +591,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onReferencesResolved</span><span class="params">(<span name="plan">plan: <a href="../model/plan/ResolvedCyclesPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ResolvedCyclesPlan">ResolvedCyclesPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">onPhase10PostOrdering</span><span class="params">(<span name="plan">plan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl">PlanningObserverDefaultImpl</a> → <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onResolvingFinished" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onResolvingFinished(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit"></a><a id="onResolvingFinished(FinalPlan):Unit"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onPhase20PreForwarding" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onPhase20PreForwarding(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit"></a><a id="onPhase20PreForwarding(FinalPlan):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onResolvingFinished(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onPhase20PreForwarding(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -611,7 +607,23 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onResolvingFinished</span><span class="params">(<span name="finalPlan">finalPlan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">onPhase20PreForwarding</span><span class="params">(<span name="finalPlan">finalPlan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl">PlanningObserverDefaultImpl</a> → <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl#onPhase30AfterForwarding" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onPhase30AfterForwarding(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit"></a><a id="onPhase30AfterForwarding(FinalPlan):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanningObserverDefaultImpl.html#onPhase30AfterForwarding(finalPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onPhase30AfterForwarding</span><span class="params">(<span name="finalPlan">finalPlan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanningObserverDefaultImpl">PlanningObserverDefaultImpl</a> → <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></dd></dl></div>
