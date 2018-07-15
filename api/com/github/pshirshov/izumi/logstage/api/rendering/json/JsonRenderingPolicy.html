@@ -280,9 +280,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy"></a><a id="&lt;init&gt;:JsonRenderingPolicy"></a>
+      <a id="&lt;init&gt;(prettyPrint:Boolean):com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy"></a><a id="&lt;init&gt;:JsonRenderingPolicy"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/logstage/api/rendering/json/JsonRenderingPolicy.html#&lt;init&gt;():com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/logstage/api/rendering/json/JsonRenderingPolicy.html#&lt;init&gt;(prettyPrint:Boolean):com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -291,7 +291,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">JsonRenderingPolicy</span><span class="params">()</span>
+        <span class="name">JsonRenderingPolicy</span><span class="params">(<span name="prettyPrint">prettyPrint: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       
       
@@ -497,7 +497,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mkMap</span><span class="params">(<span name="values">values: <a href="../../Log$.html#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">mkMap</span><span class="params">(<span name="values">values: <a href="../../Log$.html#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogArg]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -517,6 +517,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.logstage.api.rendering.json.JsonRenderingPolicy#normalizeName" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="normalizeName(s:String):String"></a><a id="normalizeName(String):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/logstage/api/rendering/json/JsonRenderingPolicy.html#normalizeName(s:String):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">normalizeName</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
