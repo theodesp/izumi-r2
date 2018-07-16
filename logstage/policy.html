@@ -112,13 +112,11 @@ Izumi Toolkit
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <li><a href="../logstage/index.html" class="page">LogStage</a>
   <ul>
-    <li><a href="../logstage/contexts.html" class="page">logstage/contexts.html</a></li>
-    <li><a href="../logstage/sinks.html" class="page">logstage/sinks.html</a></li>
     <li><a href="../logstage/policy.html" class="active page">Rendering policy</a></li>
     <li><a href="../logstage/config.html" class="page">logstage/config.html</a></li>
-    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+    <li><a href="../logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
@@ -161,6 +159,7 @@ Izumi Toolkit
 <div class="md-content__searchable">
 <h1><a href="#rendering-policy" name="rendering-policy" class="anchor"><span class="anchor-link"></span></a>Rendering policy</h1>
 <p>Rendering policy defines how incoming log event will be transformed into a string. Rendering layout defines in a <a href="config.html">logstage</a> config section. Rendering policy has string interpolator-like format. Each component (named as <em>Log Unit</em>) defines like ${log_unit_label} in string.</p>
+<p>Default template: <code>${level}:${ts} ${thread}${location} ${custom-ctx} ${msg}</code></p>
 <h2><a href="#log-units-specification" name="log-units-specification" class="anchor"><span class="anchor-link"></span></a>Log units specification</h2>
 <table>
   <thead>
@@ -263,7 +262,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../logstage/sinks.html" title="" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../logstage/index.html" title="LogStage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -272,6 +271,7 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
+LogStage
 </span>
 </div>
 </a>
