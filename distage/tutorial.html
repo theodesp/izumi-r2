@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="izumi-r2">
+<meta name="generator" content="Paradox, paradox-material-theme=0.4.0, mkdocs-material=2.2.2">
+
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="izumi-r2">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>Tutorial: DiStage By Example · Izumi Toolkit</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../lib/modernizr/modernizr.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+</head>
+<body
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+<label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../index.html" title="Izumi Toolkit" class="md-header-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
+Izumi Toolkit
+</span>
+<span class="md-header-nav__topic">
+Tutorial: DiStage By Example
+</span>
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="search"></label>
+<div class="md-search__inner">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+<label class="md-icon md-search__icon" for="search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<span class="md-nav__button md-logo">
+<i class="md-icon">local_library</i>
+</span>
+<a href="../index.html" title="Izumi Toolkit">
+Izumi Toolkit
+</a>
+</label>
+<ul>
+  <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
+  <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage Dependency Injection Framework</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="active page">Tutorial: DiStage By Example</a></li>
+  </ul></li>
+  <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
+  <ul>
+    <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
+    <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
+    <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
+  </ul></li>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
+  <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../distage/tutorial.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a>
+  <ul>
+    <li><a href="../distage/tutorial.html#defining-simple-modules" class="header">Defining simple modules</a></li>
+    <li><a href="../distage/tutorial.html#using-multiple-bindings-multibindings-set-bindings-" class="header">Using Multiple Bindings (Multibindings, Set Bindings)</a></li>
+    <li><a href="../distage/tutorial.html#tagless-final-style-with-distage" class="header">Tagless Final Style with DiStage</a></li>
+    <li><a href="../distage/tutorial.html#plugins-and-configurations" class="header">Plugins and Configurations</a></li>
+    <li><a href="../distage/tutorial.html#patterns" class="header">Patterns</a></li>
+    <li><a href="../distage/tutorial.html#test-kit" class="header">Test Kit</a></li>
+    <li><a href="../distage/tutorial.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+<div class="md-nav__title--site md-version" title="Version">
+<i class="md-icon">label_outline</i> 0.6.0*
+</div>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../distage/tutorial.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a>
+  <ul>
+    <li><a href="../distage/tutorial.html#defining-simple-modules" class="header">Defining simple modules</a></li>
+    <li><a href="../distage/tutorial.html#using-multiple-bindings-multibindings-set-bindings-" class="header">Using Multiple Bindings (Multibindings, Set Bindings)</a></li>
+    <li><a href="../distage/tutorial.html#tagless-final-style-with-distage" class="header">Tagless Final Style with DiStage</a></li>
+    <li><a href="../distage/tutorial.html#plugins-and-configurations" class="header">Plugins and Configurations</a></li>
+    <li><a href="../distage/tutorial.html#patterns" class="header">Patterns</a></li>
+    <li><a href="../distage/tutorial.html#test-kit" class="header">Test Kit</a></li>
+    <li><a href="../distage/tutorial.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#tutorial-distage-by-example" name="tutorial-distage-by-example" class="anchor"><span class="anchor-link"></span></a>Tutorial: DiStage By Example</h1>
+<p>DiStage is a modern dependency injection framework for modern Scala, like Scala itself, DiStage seeks to combine the best practices of FP with the best practices of OOP, to form its own, unique paradigm of development.</p>
+<p>Taking pervasive type safety, composition and separation of declaration and execution from FP, and modularity, scalability and late binding from OOP, DiStage brings together a fusion that retains safety and clarity of pure FP without sacrificing full runtime flexibility and configurability of traditional runtime dependency injection frameworks such as Guice.</p>
+<p>This tutorial will teach you how to build applications quickly and efficiently using DiStage!</br> DiStage is <em>staged</em>, meaning that it&rsquo;s split into several distinct <em>stages</em>, like a multi-pass compiler. DiStage lets you add custom functionality between stages should you require it, yet it keeps a simple surface API.</p>
+<p>We&rsquo;ll start off with basic examples and by the end of this tutorial you&rsquo;ll make a fully-fledged Pet Store application, complete with tests and configuration.</p>
+<h3><a href="#defining-simple-modules" name="defining-simple-modules" class="anchor"><span class="anchor-link"></span></a>Defining simple modules</h3>
+<p>This is what Hello World looks like in DiStage:</p>
+<pre class="prettyprint"><code class="language-scala">import com.github.pshirshov.izumi.distage.Injectors
+import com.github.pshirshov.izumi.distage.model.definition.ModuleDef
+
+class Hello {
+  def helloWorld() = println(&quot;Hello World!&quot;)
+}
+
+object HelloModule extends ModuleDef {
+  make[Hello]
+}
+
+object Main extends App {
+  val injector = Injectors.bootstrap()
+  
+  val plan = injector.plan(HelloModule)
+  
+  val classes = injector.produce(plan)
+
+  classes.get[Hello].helloWorld()
+}
+</code></pre>
+<p>Let&rsquo;s review the new concepts line by line:</p>
+<pre class="prettyprint"><code class="language-scala">object HelloModules extends ModuleDef {
+  make[Hello]
+}
+</code></pre>
+<p>We define a <em>Module</em> for our application. A module specifies <em>what</em> classes to instantiate and <em>how</em> to instantiate them.</p>
+<p>In this case we are using the default instantiation strategy - just calling the constructor, so we don&rsquo;t have to specify anything.</p>
+<p>The default way to instantiate a class is to call its constructor. If the constructor accepts arguments, DiStage will first instantiate the arguments, then call the constructor. All the classes in DiStage are instantiated exactly once,  even if multiple classes depend on them, in other words they are <code>Singletons</code>.</p>
+<p>Modules can be combined using <code>++</code> operator. In DiStage, you&rsquo;ll combine all the modules in your application into one one large module representing your application. Don&rsquo;t worry, you won&rsquo;t have to do that manually, if you don&rsquo;t want to: DiStage comes with a mechanism to discover all the (specially marked) Modules on the classpath at boot-up time. See <a href="#plugins-and-configurations">Plugins</a> for details.</p>
+<p>However, If you choose to combine your modules manually, DiStage can offer compile-time checks to ensure that all the dependencies have been wired and that your app will run. See <a href="#testing-and-using-static-configurations">Static Configurations</a> for details. Whether you prefer the flexibility of runtime DI or the stability of compile-time DI, DiStage lets you mix and match different modes within one application.</p>
+<p>Next line:</p>
+<pre class="prettyprint"><code class="language-scala">object Main extends App {
+  val injector = Injectors.bootstrap()
+</code></pre>
+<p>Injector is the entity responsible for wiring our app together. We create an <code>injector</code> using default configuration.</p>
+<pre class="prettyprint"><code class="language-scala">  val plan = injector.plan(HelloModule)
+</code></pre>
+<p>We create an instantation <code>plan</code> from the module definition. Remember that DiStage is <em>staged</em>, instead of instantiating our definitions right away, DiStage first builds a pure representation of all the operations it will do and returns it back to us. This allows us to easily implement additional functionality on top of DiStage without modifying the library. In fact, DiStage&rsquo;s built-in functionality such as <a href="#plugins-and-configurations">Plugins</a> and <a href="#plugins-and-configurations">Configurations</a> is not hard-wired, but is built on this framework of manipulating the <code>plan</code>. Plan rewriting also enables the <a href="#import-injection-pattern">Import Injection Pattern</a> that will be especially interesting for the Scalazzi adepts seeking to free their programs of side effects.</p>
+<pre class="prettyprint"><code class="language-scala">  val classes = injector.produce(plan)
+
+  classes.get[Hello].helloWorld()
+</code></pre>
+<p>After we execute the plan we&rsquo;re left a <code>Locator</code> that holds all of our app&rsquo;s classes. We can retrieve the class by type using <code>.get</code></p>
+<p>This concludes the first chapter. Next, we&rsquo;ll learn how to use multiple and named bindings:</p>
+<h3><a href="#using-multiple-bindings-multibindings-set-bindings-" name="using-multiple-bindings-multibindings-set-bindings-" class="anchor"><span class="anchor-link"></span></a>Using Multiple Bindings (Multibindings, Set Bindings)</h3>
+<p>&hellip;</p>
+<h3><a href="#tagless-final-style-with-distage" name="tagless-final-style-with-distage" class="anchor"><span class="anchor-link"></span></a>Tagless Final Style with DiStage</h3>
+<p>&hellip;</p>
+<h3><a href="#plugins-and-configurations" name="plugins-and-configurations" class="anchor"><span class="anchor-link"></span></a>Plugins and Configurations</h3>
+<p>&hellip;</p>
+<h2><a href="#patterns" name="patterns" class="anchor"><span class="anchor-link"></span></a>Patterns</h2>
+<h3><a href="#ensuring-service-boundaries-using-api-modules" name="ensuring-service-boundaries-using-api-modules" class="anchor"><span class="anchor-link"></span></a>Ensuring service boundaries using API modules</h3>
+<p>&hellip;</p>
+<h3><a href="#roles-not-microservices" name="roles-not-microservices" class="anchor"><span class="anchor-link"></span></a>Roles, not microservices</h3>
+<p>&hellip;</p>
+<h3><a href="#import-injection-pattern" name="import-injection-pattern" class="anchor"><span class="anchor-link"></span></a>Import Injection Pattern</h3>
+<p>&hellip;</p>
+<h2><a href="#test-kit" name="test-kit" class="anchor"><span class="anchor-link"></span></a>Test Kit</h2>
+<h3><a href="#fixtures-and-utilities" name="fixtures-and-utilities" class="anchor"><span class="anchor-link"></span></a>Fixtures and utilities</h3>
+<p>&hellip;</p>
+<h3><a href="#static-configurations" name="static-configurations" class="anchor"><span class="anchor-link"></span></a>Static Configurations</h3>
+<p>&hellip;</p>
+<h3><a href="#using-garbage-collector-to-instantiate-only-classes-required-for-the-test" name="using-garbage-collector-to-instantiate-only-classes-required-for-the-test" class="anchor"><span class="anchor-link"></span></a>Using Garbage Collector to instantiate only classes required for the test</h3>
+<p>&hellip;</p>
+<h2><a href="#detailed-feature-overview" name="detailed-feature-overview" class="anchor"><span class="anchor-link"></span></a>Detailed Feature Overview</h2>
+<h3><a href="#circular-dependencies-support" name="circular-dependencies-support" class="anchor"><span class="anchor-link"></span></a>Circular Dependencies support</h3>
+<p>&hellip;</p>
+<h3><a href="#pper" name="pper" class="anchor"><span class="anchor-link"></span></a>PPER</h3>
+<p>See <a href="../pper/00_pper.md">PPER Overview</a></p>
+<h3><a href="#spi-hooks-and-plan-rewriting-writing-our-first-distage-extension" name="spi-hooks-and-plan-rewriting-writing-our-first-distage-extension" class="anchor"><span class="anchor-link"></span></a>SPI, Hooks and Plan Rewriting – writing our first DiStage extension</h3>
+<p>&hellip;</p>
+</div>
+<div>
+<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/distage/tutorial.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.6.0*
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../distage/index.html" title="DiStage Dependency Injection Framework" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+DiStage Dependency Injection Framework
+</span>
+</div>
+</a>
+<a href="../idealingua/index.html" title="Idealingua DML/IDL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Idealingua DML/IDL
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
+
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.5165553b.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
+</html>

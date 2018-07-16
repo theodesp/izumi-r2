@@ -102,9 +102,12 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage Dependency Injection Framework</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DiStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
@@ -114,10 +117,7 @@ Izumi Toolkit
   </ul></li>
   <li><a href="../logstage/index.html" class="page">Logstage</a>
   <ul>
-    <li><a href="../logstage/contexts.html" class="page">logstage/contexts.html</a></li>
-    <li><a href="../logstage/sinks.html" class="page">logstage/sinks.html</a></li>
     <li><a href="../logstage/policy.html" class="active page">Rendering policy</a></li>
-    <li><a href="../logstage/config.html" class="page">logstage/config.html</a></li>
     <li><a href="../logstage/sample.html" class="page">Examples</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
@@ -160,7 +160,7 @@ Izumi Toolkit
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#rendering-policy" name="rendering-policy" class="anchor"><span class="anchor-link"></span></a>Rendering policy</h1>
-<p>Rendering policy defines how incoming log event will be transformed into a string. Rendering layout defines in a <a href="config.html">logstage</a> config section. Rendering policy has string interpolator-like format. Each component (named as <em>Log Unit</em>) defines like ${log_unit_label} in string.</p>
+<p>Rendering policy defines how incoming log event will be transformed into a string. Rendering layout defines in a <a href="config.md">logstage</a> config section. Rendering policy has string interpolator-like format. Each component (named as <em>Log Unit</em>) defines like ${log_unit_label} in string.</p>
 <h2><a href="#log-units-specification" name="log-units-specification" class="anchor"><span class="anchor-link"></span></a>Log units specification</h2>
 <table>
   <thead>
@@ -205,7 +205,7 @@ Izumi Toolkit
     <tr>
       <td><code>custom-ctx</code></td>
       <td><code>context</code>, <code>ctx</code> </td>
-      <td>User&rsquo;s context (more info <a href="custom_ctx.html">here</a>)</td>
+      <td>User&rsquo;s context (more info <a href="custom_ctx.md">here</a>)</td>
       <td><code>${custom-ctx}</code> </td>
     </tr>
     <tr>
@@ -263,7 +263,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../logstage/sinks.html" title="" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../logstage/index.html" title="Logstage" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -272,15 +272,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
+Logstage
 </span>
 </div>
 </a>
-<a href="../logstage/config.html" title="" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../logstage/sample.html" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
+Examples
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
