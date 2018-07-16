@@ -97,12 +97,9 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="manifesto/index.html" class="page">Our approach to productivity</a></li>
+  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
   <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="distage/index.html" class="page">DiStage Dependency Injection Framework</a>
-  <ul>
-    <li><a href="distage/tutorial.html" class="page">Tutorial: DiStage By Example</a></li>
-  </ul></li>
+  <li><a href="distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
   <li><a href="idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
@@ -112,7 +109,10 @@ Izumi Toolkit
   </ul></li>
   <li><a href="logstage/index.html" class="page">Logstage</a>
   <ul>
+    <li><a href="logstage/contexts.html" class="page">logstage/contexts.html</a></li>
+    <li><a href="logstage/sinks.html" class="page">logstage/sinks.html</a></li>
     <li><a href="logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="logstage/config.html" class="page">logstage/config.html</a></li>
     <li><a href="logstage/sample.html" class="page">Examples</a></li>
   </ul></li>
   <li><a href="sbt/index.html" class="page">SBT Toolkit</a></li>
@@ -157,19 +157,67 @@ Izumi Toolkit
 <h1><a href="#izumi-toolkit" name="izumi-toolkit" class="anchor"><span class="anchor-link"></span></a>Izumi Toolkit</h1><div class="callout warning "><div class="callout-title">TODO</div>
 <p>Sorry, this page is not ready yet</p></div>
 <h2><a href="#dependencies" name="dependencies" class="anchor"><span class="anchor-link"></span></a>Dependencies</h2>
-<p>To use <a href="sbt/00_sbt.md">Izumi SBT Toolkit</a> add the follwing into <code>project/build.sbt</code>:</p>
+<p>To use <a href="sbt/index.html">Izumi SBT Toolkit</a> add the follwing into <code>project/build.sbt</code>:</p>
 <pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
 // sbt toolkit
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi&quot; % izumi_version)
 
-// This is a Izumi&#39;s BOM (Bill of Materials), see below
+// This is Izumi&#39;s BOM (Bill of Materials), see below
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&quot; % izumi_version)
 
-// idealingua compiler
+// idealingua compiler (optional)
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&quot; % izumi_version)
 </code></pre><div class="callout warning "><div class="callout-title">TODO</div>
 <p>Put list of modules here</p></div>
 <p>You may find ScalaDoc API docs <a href="/api/com/github/pshirshov/izumi/index.html">here</a></p>
+<div class="toc ">
+<ul>
+  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
+  <li><a href="distage/index.html" class="page">DiStage Staged Dependency Injection</a>
+  <ul>
+    <li><a href="distage/index.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a></li>
+    <li><a href="distage/index.html#patterns" class="header">Patterns</a></li>
+    <li><a href="distage/index.html#test-kit" class="header">Test Kit</a></li>
+    <li><a href="distage/index.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
+    <li><a href="distage/index.html#migrating-from-guice" class="header">Migrating from Guice</a></li>
+    <li><a href="distage/index.html#migrating-from-macwire" class="header">Migrating from MacWire</a></li>
+    <li><a href="distage/index.html#integrations" class="header">Integrations</a></li>
+    <li><a href="distage/index.html#pper" class="header">PPER</a></li>
+  </ul></li>
+  <li><a href="idealingua/index.html" class="page">Idealingua DML/IDL</a>
+  <ul>
+    <li><a href="idealingua/index.html#pet-store" class="header">Pet Store</a></li>
+    <li><a href="idealingua/index.html#user-service" class="header">User Service</a></li>
+    <li><a href="idealingua/index.html#installation" class="header">Installation</a></li>
+    <li><a href="idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="idealingua/json.html" class="page">JSON Wire Format</a></li>
+    <li><a href="idealingua/cogen.html" class="page">Code generator reference</a></li>
+    <li><a href="idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
+  </ul></li>
+  <li><a href="logstage/index.html" class="page">Logstage</a>
+  <ul>
+    <li><a href="logstage/contexts.html" class="page">logstage/contexts.html</a></li>
+    <li><a href="logstage/sinks.html" class="page">logstage/sinks.html</a></li>
+    <li><a href="logstage/policy.html" class="page">Rendering policy</a></li>
+    <li><a href="logstage/config.html" class="page">logstage/config.html</a></li>
+    <li><a href="logstage/sample.html" class="page">Examples</a></li>
+  </ul></li>
+  <li><a href="sbt/index.html" class="page">SBT Toolkit</a>
+  <ul>
+    <li><a href="sbt/index.html#global-plugins" class="header">Global plugins</a></li>
+    <li><a href="sbt/index.html#environmental-plugins" class="header">Environmental plugins</a></li>
+    <li><a href="sbt/index.html#presets" class="header">Presets</a></li>
+    <li><a href="sbt/index.html#optional-plugins" class="header">Optional plugins</a></li>
+    <li><a href="sbt/index.html#installation" class="header">Installation</a></li>
+    <li><a href="sbt/index.html#inherited-test-scopes" class="header">Inherited Test Scopes</a></li>
+    <li><a href="sbt/index.html#settings-dsl" class="header">Settings DSL</a></li>
+    <li><a href="sbt/index.html#build-descriptors" class="header">Build Descriptors</a></li>
+    <li><a href="sbt/index.html#convenience-helpers" class="header">Convenience Helpers</a></li>
+    <li><a href="sbt/index.html#optional-settings" class="header">Optional settings</a></li>
+  </ul></li>
+</ul>
+</div>
 </div>
 <div>
 <a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/izumi.md" title="Edit this page" class="md-source-file md-edit">
@@ -188,13 +236,13 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="manifesto/index.html" title="Our approach to productivity" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="manifesto/index.html" title="Productivity and challenges" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Our approach to productivity
+Productivity and challenges
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

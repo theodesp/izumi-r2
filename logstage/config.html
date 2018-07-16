@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>Idealingua DML/IDL · Izumi Toolkit</title>
+<title> · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,7 +54,6 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
-Idealingua DML/IDL
 </span>
 </div>
 </div>
@@ -105,7 +104,7 @@ Izumi Toolkit
   <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
   <li><a href="../distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
-  <li><a href="../idealingua/index.html" class="active page">Idealingua DML/IDL</a>
+  <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
     <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
@@ -117,21 +116,12 @@ Izumi Toolkit
     <li><a href="../logstage/contexts.html" class="page">logstage/contexts.html</a></li>
     <li><a href="../logstage/sinks.html" class="page">logstage/sinks.html</a></li>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
-    <li><a href="../logstage/config.html" class="page">logstage/config.html</a></li>
+    <li><a href="../logstage/config.html" class="active page">logstage/config.html</a></li>
     <li><a href="../logstage/sample.html" class="page">Examples</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="toc">Table of contents</label>
-<ul>
-  <li><a href="../idealingua/index.html#idealingua-dml-idl" class="header">Idealingua DML/IDL</a>
-  <ul>
-    <li><a href="../idealingua/index.html#pet-store" class="header">Pet Store</a></li>
-    <li><a href="../idealingua/index.html#user-service" class="header">User Service</a></li>
-    <li><a href="../idealingua/index.html#installation" class="header">Installation</a></li>
-  </ul></li>
-</ul>
 </nav>
 
 <div class="md-nav__title--site md-version" title="Version">
@@ -142,121 +132,12 @@ Izumi Toolkit
 </div>
 </div>
 </div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="toc">Table of contents</label>
-<ul>
-  <li><a href="../idealingua/index.html#idealingua-dml-idl" class="header">Idealingua DML/IDL</a>
-  <ul>
-    <li><a href="../idealingua/index.html#pet-store" class="header">Pet Store</a></li>
-    <li><a href="../idealingua/index.html#user-service" class="header">User Service</a></li>
-    <li><a href="../idealingua/index.html#installation" class="header">Installation</a></li>
-  </ul></li>
-</ul>
-</nav>
-
-</div>
-</div>
-</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#idealingua-dml-idl" name="idealingua-dml-idl" class="anchor"><span class="anchor-link"></span></a>Idealingua DML/IDL</h1>
-<p>The following examples will show what IdeaLingua looks like and how to use it to connect your distributed application.</p>
-<h2><a href="#pet-store" name="pet-store" class="anchor"><span class="anchor-link"></span></a>Pet Store</h2>
-<p>See <a href="https://github.com/kaishh/izumi-petstore">izumi-petstore</a> project for complete samples in Scala, TypeScript and other languages.</p>
-<h2><a href="#user-service" name="user-service" class="anchor"><span class="anchor-link"></span></a>User Service</h2>
-<p>Example definition of a user database service:</p>
-<pre><code>package user.api
-
-enum Gender = Male | Female
-
-id EntityID {
-  uuid: uuid
-}
-
-mixin Entity {
-  id: EntityID
-}
-
-mixin Person {
-  name: str
-  surname: str
-  gender: Gender
-}
-
-data User {
-  &amp; Entity
-  + Person
-  password: str
-}
-
-data PublicUser {
-  + User
-  - password: str
-}
-
-adt Result = Success | Failure
-
-data Success {
-  message: str
-}
-
-data Failure {
-  code: int8
-}
-
-service UserService {
-  def saveUser(user: User): Result
-  def findUserByName(name: str): list[PublicUser] | Failure
-}
-</code></pre>
-<h1><a href="#installation" name="installation" class="anchor"><span class="anchor-link"></span></a>Installation</h1>
-<h2><a href="#using-the-standalone-compiler" name="using-the-standalone-compiler" class="anchor"><span class="anchor-link"></span></a>Using the standalone compiler</h2>
-<p>The compiler executable is built as an uberjar and published on <a href="https://search.maven.org/">Maven Central</a>.</p>
-<p>The preferred way to install the compiler is with <a href="https://github.com/coursier/coursier#command-line">coursier</a></p>
-<pre class="prettyprint"><code class="language-bash"># install release executable
-coursier bootstrap com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.6.0-SNAPSHOT -o idlc
-
-./idlc --help
-</code></pre>
-<p>To install snapshot:</p>
-<pre class="prettyprint"><code class="language-bash"># install snapshot
-coursier bootstrap -r https://oss.sonatype.org/content/repositories/snapshots/ com.github.pshirshov.izumi.r2:idealingua-compiler_2.12:0.6.0-SNAPSHOT -o idlc
-
-./idlc --help
-</code></pre>
-<p>Commandline examples:</p>
-<pre><code>./idlc -s src -t target -L scala=* -L typescript=*
-</code></pre>
-<pre><code>./idlc -s src -t target -L scala=-AnyvalExtension -L typescript=*
-</code></pre>
-<h2><a href="#using-sbt-plugin" name="using-sbt-plugin" class="anchor"><span class="anchor-link"></span></a>Using SBT Plugin</h2>
-<p>Add the following to your <code>project/plugins.sbt</code> file:</p>
-<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
-addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&quot; % izumi_version)
-</code></pre>
-<p>Place your domain definitions into <code>/src/main/izumi</code> directory, then enable the plugin for that project: </p>
-<pre class="prettyprint"><code class="language-scala">izumiProject.enablePlugins(IdealinguaPlugin)
-</code></pre>
-<p>You can depend on the code generated by Idealinguain in your other Scala projects:</p>
-<pre class="prettyprint"><code class="language-scala">project.dependsOn(izumiProject)
-</code></pre>
-<h2><a href="#scala-http4s-transport" name="scala-http4s-transport" class="anchor"><span class="anchor-link"></span></a>Scala http4s Transport</h2>
-<p>Most likely you will need to use <a href="https://github.com/non/kind-projector">Kind Projector</a> compiler plugin and enable partial unification:</p>
-<pre class="prettyprint"><code class="language-scala">scalacOptions += &quot;-Ypartial-unification&quot;
-
-resolvers += Resolver.sonatypeRepo(&quot;releases&quot;)
-
-addCompilerPlugin(&quot;org.spire-math&quot; % &quot;kind-projector&quot; % &quot;0.9.6&quot; cross CrossVersion.binary)
-</code></pre>
-<p>You may find a test suite for the whole http4s pipeline <a href="blob/develop/idealingua/idealingua-runtime-rpc-http4s/src/test/scala/com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sServer.scala">here</a>.</p>
-<p>Please note that service definitons for the test suite are <em>not</em> generated from Idealingua definitions, you can find the Scala sources <a href="https://github.com/pshirshov/izumi-r2/tree/develop/idealingua/idealingua-test-defs/src/main/scala/com/github/pshirshov/izumi/r2/idealingua/test">here</a>.</p>
 </div>
 <div>
-<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/idealingua/00_idealingua.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/config.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -272,7 +153,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../distage/index.html" title="DiStage Staged Dependency Injection" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../logstage/policy.html" title="Rendering policy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -281,17 +162,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-DiStage Staged Dependency Injection
+Rendering policy
 </span>
 </div>
 </a>
-<a href="../idealingua/language-reference.html" title="Idealingua Language Reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../logstage/sample.html" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Idealingua Language Reference
+Examples
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
