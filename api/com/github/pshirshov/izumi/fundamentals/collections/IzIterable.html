@@ -208,7 +208,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IzIterable</span><span class="tparams">[<span name="A">A</span>, <span name="Repr">Repr<span class="tparams">[<span name="_">_</span>]</span> &lt;: <a href="../../../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[_]</span>]</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">IzIterable</span><span class="tparams">[<span name="A">A</span>, <span name="Repr">Repr</span>]</span><span class="result"> extends <a href="../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
@@ -264,9 +264,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(xs:Repr[A]):com.github.pshirshov.izumi.fundamentals.collections.IzIterable[A,Repr]"></a><a id="&lt;init&gt;:IzIterable[A,Repr]"></a>
+      <a id="&lt;init&gt;(xs:scala.collection.IterableLike[A,Repr]):com.github.pshirshov.izumi.fundamentals.collections.IzIterable[A,Repr]"></a><a id="&lt;init&gt;:IzIterable[A,Repr]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/fundamentals/collections/IzIterable.html#&lt;init&gt;(xs:Repr[A]):com.github.pshirshov.izumi.fundamentals.collections.IzIterable[A,Repr]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/fundamentals/collections/IzIterable.html#&lt;init&gt;(xs:scala.collection.IterableLike[A,Repr]):com.github.pshirshov.izumi.fundamentals.collections.IzIterable[A,Repr]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -275,7 +275,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IzIterable</span><span class="params">(<span name="xs">xs: <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.Repr">Repr</span>[<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>]</span>)</span>
+        <span class="name">IzIterable</span><span class="params">(<span name="xs">xs: <span class="extype" name="scala.collection.IterableLike">IterableLike</span>[<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>, <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.Repr">Repr</span>]</span>)</span>
       </span>
       
       
@@ -380,9 +380,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable#distinctBy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="distinctBy[B,That](f:A=&gt;B)(implicitcbf:scala.collection.compat.BuildFrom[Repr[A],A,That]):That"></a><a id="distinctBy[B,That]((A)⇒B)(BuildFrom[Repr[A],A,That]):That"></a>
+      <a id="distinctBy[B,That](f:A=&gt;B)(implicitcbf:scala.collection.generic.CanBuildFrom[Repr,A,That]):That"></a><a id="distinctBy[B,That]((A)⇒B)(CanBuildFrom[Repr,A,That]):That"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/fundamentals/collections/IzIterable.html#distinctBy[B,That](f:A=&gt;B)(implicitcbf:scala.collection.compat.BuildFrom[Repr[A],A,That]):That" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/fundamentals/collections/IzIterable.html#distinctBy[B,That](f:A=&gt;B)(implicitcbf:scala.collection.generic.CanBuildFrom[Repr,A,That]):That" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -391,7 +391,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">distinctBy</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cbf">cbf: <span class="extype" name="scala.collection.compat.BuildFrom">BuildFrom</span>[<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.Repr">Repr</span>[<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>], <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>, <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.That">That</span></span>
+        <span class="name">distinctBy</span><span class="tparams">[<span name="B">B</span>, <span name="That">That</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cbf">cbf: <span class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</span>[<span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.Repr">Repr</span>, <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.A">A</span>, <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.That">That</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.fundamentals.collections.IzIterable.distinctBy.That">That</span></span>
       </span>
       
       
