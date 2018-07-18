@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>Logstage · Izumi Toolkit</title>
+<title>LogStage · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,7 +54,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
-Logstage
+LogStage
 </span>
 </div>
 </div>
@@ -102,12 +102,9 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
+  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage Dependency Injection Framework</a>
-  <ul>
-    <li><a href="../distage/tutorial.html" class="page">Tutorial: DiStage By Example</a></li>
-  </ul></li>
+  <li><a href="../distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
@@ -115,23 +112,22 @@ Izumi Toolkit
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="active page">Logstage</a>
+  <li><a href="../logstage/index.html" class="active page">LogStage</a>
   <ul>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
-    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+    <li><a href="../logstage/config.html" class="page">logstage/config.html</a></li>
+    <li><a href="../logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/index.html#logstage" class="header">Logstage</a>
+  <li><a href="../logstage/index.html#logstage" class="header">LogStage</a>
   <ul>
-    <li><a href="../logstage/index.html#" class="header"><a href="contexts.md">Logging contexts</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sinks.md">Available sink backends</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="policy.md">Rendering policy</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="config.md">Configuration</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sample.md">Examples</a></a></li>
+    <li><a href="../logstage/index.html#the-essence" class="header">The essence</a></li>
+    <li><a href="../logstage/index.html#dependencies" class="header">Dependencies</a></li>
+    <li><a href="../logstage/index.html#basic-setup" class="header">Basic setup</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -150,13 +146,11 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../logstage/index.html#logstage" class="header">Logstage</a>
+  <li><a href="../logstage/index.html#logstage" class="header">LogStage</a>
   <ul>
-    <li><a href="../logstage/index.html#" class="header"><a href="contexts.md">Logging contexts</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sinks.md">Available sink backends</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="policy.md">Rendering policy</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="config.md">Configuration</a></a></li>
-    <li><a href="../logstage/index.html#" class="header"><a href="sample.md">Examples</a></a></li>
+    <li><a href="../logstage/index.html#the-essence" class="header">The essence</a></li>
+    <li><a href="../logstage/index.html#dependencies" class="header">Dependencies</a></li>
+    <li><a href="../logstage/index.html#basic-setup" class="header">Basic setup</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -167,12 +161,82 @@ Izumi Toolkit
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#logstage" name="logstage" class="anchor"><span class="anchor-link"></span></a>Logstage</h1>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="contexts.md">Logging contexts</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="sinks.md">Available sink backends</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="policy.md">Rendering policy</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="config.md">Configuration</a></h2>
-<h2><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><a href="sample.md">Examples</a></h2>
+<h1><a href="#logstage" name="logstage" class="anchor"><span class="anchor-link"></span></a>LogStage</h1>
+<p>LogStage is a free structural logging framework.</p>
+<p>Key features:</p>
+<ol>
+  <li>LogStage extracts structure out of your log messages. In compile time. For free.  So, you may write usual logging expressions but they may be automatically converted into meaningful JSON,</li>
+  <li>LogStage uses macro code generation to extract logging context so it does not depend on reflection and is cheaper than a typical framework in runtime,</li>
+  <li>Log contexts</li>
+  <li>Console and File sinks included, File sink supports log rotation,</li>
+  <li>Human-readable and JSON formatting included,</li>
+  <li>Method-level logging granularity. You may configure <code>com.mycompany.Service.start</code> and <code>com.mycompany.Service.doSomething</code> independently,</li>
+  <li>Slf4J adapters: you may stream all the logging made with Slf4J into LogStage router (as well you may route LogStage messages into slf4j but in a typical case you won&rsquo;t need it).</li>
+</ol>
+<h2><a href="#the-essence" name="the-essence" class="anchor"><span class="anchor-link"></span></a>The essence</h2>
+<p>The following snippet:</p>
+<pre class="prettyprint"><code class="language-scala">class ExampleService(logger: IzLogger) {
+    val justAnArg = &quot;example&quot;
+    val justAList = List[Any](10, &quot;green&quot;, &quot;bottles&quot;)
+
+    logger.trace(s&quot;Argument: $justAnArg, another arg: $justAList&quot;)
+    logger.info(s&quot;Named expression: ${Random.nextInt() -&gt; &quot;random number&quot;}&quot;)
+    logger.warn(s&quot;Invisible argument: ${Random.nextInt() -&gt; &quot;random number&quot; -&gt; null}&quot;)
+
+    val ctxLogger = logger(&quot;userId&quot; -&gt; &quot;user@google.com&quot;, &quot;company&quot; -&gt; &quot;acme&quot;)
+    val delta = Random.nextInt(1000)
+
+    ctxLogger.info(s&quot;Processing time: $delta&quot;)
+}
+</code></pre>
+<p>Looks like so with String formatting policy applied:</p>
+<p><img src="media/00-logstage-sample-output-string.png" alt="logstage-sample-output-string" /></p>
+<p>And like so as JSON:</p>
+<p><img src="media/00-logstage-sample-output-json.png" alt="logstage-sample-output-string" /></p>
+<p>Note:</p>
+<ol>
+  <li>JSON formatter is type aware!</li>
+  <li>Each JSON message contains <code>@class</code> field which holds an unique identifier for <em>event class</em>.  So, all the events produced by the same logger line would have the same class despite of argument values.</li>
+</ol>
+<h2><a href="#dependencies" name="dependencies" class="anchor"><span class="anchor-link"></span></a>Dependencies</h2>
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
+// LogStage API, you need it to use the logger
+libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-api-logger&quot; % izumi_version
+
+// LogStage machinery
+libraryDependencies ++= Seq(
+    // console sink
+    &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-sink-console&quot; % izumi_version
+    // file sink
+    , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-sink-file&quot; % izumi_version
+    // json formatting
+    , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-json-json4s&quot; % izumi_version
+    // adapter for Slf4J loggers
+    , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-adapter-slf4j&quot; % izumi_version    
+)
+
+//
+
+</code></pre>
+<h2><a href="#basic-setup" name="basic-setup" class="anchor"><span class="anchor-link"></span></a>Basic setup</h2>
+<pre class="prettyprint"><code class="language-scala">    import com.github.pshirshov.izumi.logstage.api._
+    import com.github.pshirshov.izumi.logstage.api.Log._
+    import com.github.pshirshov.izumi.logstage.api.config._
+    import com.github.pshirshov.izumi.logstage.api.logger._
+    import com.github.pshirshov.izumi.logstage.api.routing._
+    import com.github.pshirshov.izumi.logstage.api.rendering._
+
+    val jsonSink = new ConsoleSink(new JsonRenderingPolicy())
+    val textSink = new ConsoleSink(new StringRenderingPolicy(RenderingOptions(withExceptions = true, withColors = true)))
+
+    val sinks = List(jsonSink, textSink)
+
+    val configService = new LogConfigServiceStaticImpl(Map.empty, LoggerConfig(Log.Level.Trace, sinks))
+    val router = new ConfigurableLogRouter(configService)
+
+    val logger = new IzLogger(router, CustomContext.empty)
+    val contextLogger = logger(Map(&quot;key&quot; -&gt; &quot;value&quot;))
+</code></pre>
 </div>
 <div>
 <a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/00_logstage.md" title="Edit this page" class="md-source-file md-edit">

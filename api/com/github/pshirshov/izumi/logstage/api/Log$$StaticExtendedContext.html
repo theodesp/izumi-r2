@@ -202,6 +202,10 @@
                         <a class="trait" href="Log$$Level.html" title=""></a>
                         <a href="Log$$Level.html" title="">Level</a>
                       </li><li class="current-entities indented7">
+                        <a class="object" href="Log$$LogArg$.html" title=""></a>
+                        <a class="class" href="Log$$LogArg.html" title=""></a>
+                        <a href="Log$$LogArg.html" title="">LogArg</a>
+                      </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="Log$$LoggerId.html" title=""></a>
                         <a href="Log$$LoggerId.html" title="">LoggerId</a>
@@ -240,7 +244,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">StaticExtendedContext</span><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">StaticExtendedContext</span><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="position">position: <a href="../../fundamentals/platform/jvm/SourceFilePosition.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition">SourceFilePosition</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -296,9 +300,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(id:com.github.pshirshov.izumi.logstage.api.Log.LoggerId,file:String,line:Int):com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext"></a><a id="&lt;init&gt;:StaticExtendedContext"></a>
+      <a id="&lt;init&gt;(id:com.github.pshirshov.izumi.logstage.api.Log.LoggerId,position:com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition):com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext"></a><a id="&lt;init&gt;:StaticExtendedContext"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$StaticExtendedContext.html#&lt;init&gt;(id:com.github.pshirshov.izumi.logstage.api.Log.LoggerId,file:String,line:Int):com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$StaticExtendedContext.html#&lt;init&gt;(id:com.github.pshirshov.izumi.logstage.api.Log.LoggerId,position:com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition):com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -307,7 +311,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">StaticExtendedContext</span><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="name">StaticExtendedContext</span><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="position">position: <a href="../../fundamentals/platform/jvm/SourceFilePosition.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition">SourceFilePosition</a></span>)</span>
       </span>
       
       
@@ -427,22 +431,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext#file" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="file:String"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$StaticExtendedContext.html#file:String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">file</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -496,22 +484,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext#line" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="line:Int"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$StaticExtendedContext.html#line:Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">line</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -570,6 +542,22 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.StaticExtendedContext#position" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="position:com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition"></a><a id="position:SourceFilePosition"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$StaticExtendedContext.html#position:com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">position</span><span class="result">: <a href="../../fundamentals/platform/jvm/SourceFilePosition.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition">SourceFilePosition</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

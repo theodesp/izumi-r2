@@ -102,12 +102,9 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
+  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage Dependency Injection Framework</a>
-  <ul>
-    <li><a href="../distage/tutorial.html" class="page">Tutorial: DiStage By Example</a></li>
-  </ul></li>
+  <li><a href="../distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
@@ -115,10 +112,11 @@ Izumi Toolkit
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="active page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">Logstage</a>
+  <li><a href="../logstage/index.html" class="page">LogStage</a>
   <ul>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
-    <li><a href="../logstage/sample.html" class="page">Examples</a></li>
+    <li><a href="../logstage/config.html" class="page">logstage/config.html</a></li>
+    <li><a href="../logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
@@ -356,7 +354,7 @@ Right(Right(AnotherPayload(hi)))
 </code></pre>
 <h4><a href="#identifiers" name="identifiers" class="anchor"><span class="anchor-link"></span></a>Identifiers</h4>
 <p>Identifiers codec just invokes <code>.toString</code> and <code>.parse</code> to serialize/deserialize Identifiers.</p>
-<p>Please check <a href="cogen.md#id-identifier">identifier codegen example</a> for additional details.</p>
+<p>Please check <a href="cogen.html#id-identifier">identifier codegen example</a> for additional details.</p>
 <p>Full example:</p>
 <pre class="prettyprint"><code class="language-scala">final case class CompanyId(value: java.util.UUID) {
   override def toString: String = {
@@ -415,13 +413,13 @@ Code generator reference
 </span>
 </div>
 </a>
-<a href="../logstage/index.html" title="Logstage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../logstage/index.html" title="LogStage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Logstage
+LogStage
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
