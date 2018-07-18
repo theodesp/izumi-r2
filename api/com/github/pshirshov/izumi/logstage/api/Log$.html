@@ -361,7 +361,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Log$$CustomContext.html"><span class="name">CustomContext</span></a><span class="params">(<span name="values">values: <a href="#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="Log$$CustomContext.html"><span class="name">CustomContext</span></a><span class="params">(<span name="values">values: <a href="#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogArg]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -413,10 +413,26 @@
       </span>
       
       
+    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.LogArg" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogArgextendsProductwithSerializable"></a><a id="LogArg:LogArg"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$.html#LogArgextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Log$$LogArg.html"><span class="name">LogArg</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="hidden">hidden: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
     </li><li name="com.github.pshirshov.izumi.logstage.api.Log.LogContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry]"></a><a id="LogContext:LogContext"></a>
+      <a id="LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogArg]"></a><a id="LogContext:LogContext"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$.html#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$.html#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogArg]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -425,23 +441,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">LogContext</span><span class="result alias"> = <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="#LogContextEntry=(String,Any)" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry">LogContextEntry</a>]</span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LogContextEntry=(String,Any)"></a><a id="LogContextEntry:LogContextEntry"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$.html#LogContextEntry=(String,Any)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">LogContextEntry</span><span class="result alias"> = (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Any">Any</span>)</span>
+        <span class="name">LogContext</span><span class="result alias"> = <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="Log$$LogArg.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LogArg">LogArg</a>]</span>
       </span>
       
       
@@ -473,7 +473,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Log$$Message.html"><span class="name">Message</span></a><span class="params">(<span name="template">template: <span class="extype" name="scala.StringContext">StringContext</span></span>, <span name="args">args: <a href="#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogContextEntry]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="Log$$Message.html"><span class="name">Message</span></a><span class="params">(<span name="template">template: <span class="extype" name="scala.StringContext">StringContext</span></span>, <span name="args">args: <a href="#LogContext=Seq[com.github.pshirshov.izumi.logstage.api.Log.LogArg]" class="extmbr" name="com.github.pshirshov.izumi.logstage.api.Log.LogContext">LogContext</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -489,7 +489,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Log$$StaticExtendedContext.html"><span class="name">StaticExtendedContext</span></a><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="file">file: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="line">line: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="Log$$StaticExtendedContext.html"><span class="name">StaticExtendedContext</span></a><span class="params">(<span name="id">id: <a href="Log$$LoggerId.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log.LoggerId">LoggerId</a></span>, <span name="position">position: <a href="../../fundamentals/platform/jvm/SourceFilePosition.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition">SourceFilePosition</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -884,6 +884,22 @@
       </span>
       <span class="symbol">
         <a title="" href="Log$$Level$.html"><span class="name">Level</span></a>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.LogArg" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogArg"></a><a id="LogArg:LogArg"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$.html#LogArg" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Log$$LogArg$.html"><span class="name">LogArg</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
