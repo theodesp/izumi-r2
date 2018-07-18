@@ -203,6 +203,10 @@
                         <a href="PlanMergingPolicyDefaultImpl.html" title="">PlanMergingPolicyDefaultImpl</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
+                        <a class="class" href="PlanResolverDefaultImpl.html" title=""></a>
+                        <a href="PlanResolverDefaultImpl.html" title="">PlanResolverDefaultImpl</a>
+                      </li><li class="current-entities indented6">
+                        <span class="separator"></span>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">PlannerDefaultImpl</a>
                       </li><li class="current-entities indented6">
@@ -300,9 +304,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(forwardingRefResolver:com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver,reflectionProvider:com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime,sanityChecker:com.github.pshirshov.izumi.distage.model.planning.SanityChecker,planningObserver:com.github.pshirshov.izumi.distage.model.planning.PlanningObserver,planMergingPolicy:com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy,planningHooks:Set[com.github.pshirshov.izumi.distage.model.planning.PlanningHook]):com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl"></a><a id="&lt;init&gt;:PlannerDefaultImpl"></a>
+      <a id="&lt;init&gt;(planResolver:com.github.pshirshov.izumi.distage.model.planning.PlanResolver,forwardingRefResolver:com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver,reflectionProvider:com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime,sanityChecker:com.github.pshirshov.izumi.distage.model.planning.SanityChecker,planningObserver:com.github.pshirshov.izumi.distage.model.planning.PlanningObserver,planMergingPolicy:com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy,planningHooks:Set[com.github.pshirshov.izumi.distage.model.planning.PlanningHook]):com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl"></a><a id="&lt;init&gt;:PlannerDefaultImpl"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlannerDefaultImpl.html#&lt;init&gt;(forwardingRefResolver:com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver,reflectionProvider:com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime,sanityChecker:com.github.pshirshov.izumi.distage.model.planning.SanityChecker,planningObserver:com.github.pshirshov.izumi.distage.model.planning.PlanningObserver,planMergingPolicy:com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy,planningHooks:Set[com.github.pshirshov.izumi.distage.model.planning.PlanningHook]):com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlannerDefaultImpl.html#&lt;init&gt;(planResolver:com.github.pshirshov.izumi.distage.model.planning.PlanResolver,forwardingRefResolver:com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver,reflectionProvider:com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime,sanityChecker:com.github.pshirshov.izumi.distage.model.planning.SanityChecker,planningObserver:com.github.pshirshov.izumi.distage.model.planning.PlanningObserver,planMergingPolicy:com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy,planningHooks:Set[com.github.pshirshov.izumi.distage.model.planning.PlanningHook]):com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -311,7 +315,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PlannerDefaultImpl</span><span class="params">(<span name="forwardingRefResolver">forwardingRefResolver: <a href="../model/planning/ForwardingRefResolver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver">ForwardingRefResolver</a></span>, <span name="reflectionProvider">reflectionProvider: <a href="../model/reflection/ReflectionProvider$$Runtime.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime">Runtime</a></span>, <span name="sanityChecker">sanityChecker: <a href="../model/planning/SanityChecker.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.SanityChecker">SanityChecker</a></span>, <span name="planningObserver">planningObserver: <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></span>, <span name="planMergingPolicy">planMergingPolicy: <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></span>, <span name="planningHooks">planningHooks: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../model/planning/PlanningHook.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningHook">PlanningHook</a>]</span>)</span>
+        <span class="name">PlannerDefaultImpl</span><span class="params">(<span name="planResolver">planResolver: <a href="../model/planning/PlanResolver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanResolver">PlanResolver</a></span>, <span name="forwardingRefResolver">forwardingRefResolver: <a href="../model/planning/ForwardingRefResolver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.ForwardingRefResolver">ForwardingRefResolver</a></span>, <span name="reflectionProvider">reflectionProvider: <a href="../model/reflection/ReflectionProvider$$Runtime.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.ReflectionProvider.Runtime">Runtime</a></span>, <span name="sanityChecker">sanityChecker: <a href="../model/planning/SanityChecker.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.SanityChecker">SanityChecker</a></span>, <span name="planningObserver">planningObserver: <a href="../model/planning/PlanningObserver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningObserver">PlanningObserver</a></span>, <span name="planMergingPolicy">planMergingPolicy: <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></span>, <span name="planningHooks">planningHooks: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../model/planning/PlanningHook.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanningHook">PlanningHook</a>]</span>)</span>
       </span>
       
       
@@ -608,6 +612,22 @@
       </span>
       <span class="symbol">
         <span class="name">planMergingPolicy</span><span class="result">: <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlannerDefaultImpl#planResolver" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="planResolver:com.github.pshirshov.izumi.distage.model.planning.PlanResolver"></a><a id="planResolver:PlanResolver"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlannerDefaultImpl.html#planResolver:com.github.pshirshov.izumi.distage.model.planning.PlanResolver" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">planResolver</span><span class="result">: <a href="../model/planning/PlanResolver.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanResolver">PlanResolver</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>

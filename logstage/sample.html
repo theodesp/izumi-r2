@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title> · Izumi Toolkit</title>
+<title>Examples · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,6 +54,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
+Examples
 </span>
 </div>
 </div>
@@ -101,9 +102,12 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="../manifesto/index.html" class="page">Our approach to productivity</a></li>
   <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
+  <li><a href="../distage/index.html" class="page">DiStage Dependency Injection Framework</a>
+  <ul>
+    <li><a href="../distage/tutorial.html" class="page">Tutorial: DiStage By Example</a></li>
+  </ul></li>
   <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
@@ -111,15 +115,24 @@ Izumi Toolkit
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
-  <li><a href="../logstage/index.html" class="page">LogStage</a>
+  <li><a href="../logstage/index.html" class="page">Logstage</a>
   <ul>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
-    <li><a href="../logstage/config.html" class="active page">logstage/config.html</a></li>
-    <li><a href="../logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
+    <li><a href="../logstage/sample.html" class="active page">Examples</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../logstage/sample.html#examples" class="header">Examples</a>
+  <ul>
+    <li><a href="../logstage/sample.html#logstage-config" class="header">Logstage config</a></li>
+    <li><a href="../logstage/sample.html#rendering-policy" class="header">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html#contexts-defintion" class="header">Contexts defintion</a></li>
+    <li><a href="../logstage/sample.html#sinks-configuration" class="header">Sinks configuration</a></li>
+  </ul></li>
+</ul>
 </nav>
 
 <div class="md-nav__title--site md-version" title="Version">
@@ -130,12 +143,65 @@ Izumi Toolkit
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../logstage/sample.html#examples" class="header">Examples</a>
+  <ul>
+    <li><a href="../logstage/sample.html#logstage-config" class="header">Logstage config</a></li>
+    <li><a href="../logstage/sample.html#rendering-policy" class="header">Rendering policy</a></li>
+    <li><a href="../logstage/sample.html#contexts-defintion" class="header">Contexts defintion</a></li>
+    <li><a href="../logstage/sample.html#sinks-configuration" class="header">Sinks configuration</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
+<h1><a href="#examples" name="examples" class="anchor"><span class="anchor-link"></span></a>Examples</h1>
+<h2><a href="#logstage-config" name="logstage-config" class="anchor"><span class="anchor-link"></span></a>Logstage config</h2>
+<h2><a href="#rendering-policy" name="rendering-policy" class="anchor"><span class="anchor-link"></span></a>Rendering policy</h2>
+<p>Input rendering policy (defined in config) is:</p>
+<p><code>policy=&quot;${level}:${ts} ${thread}${location} ${custom-ctx} ${msg}&quot;</code></p>
+<p>Let&rsquo;s send some logs</p>
+<pre class="prettyprint"><code class="language-scala">val loggerWithContext = logger(&quot;userId&quot; -&gt; &quot;xxx&quot;)
+val loggerWithSubcontext = loggerWithContext(&quot;custom&quot; -&gt; &quot;value&quot;)
+
+val arg = &quot;this is an argument&quot;
+
+loggerWithContext.trace(s&quot;This would be automatically extended&quot;)
+logger.debug(s&quot;Service started. argument: $arg, Random value: ${Random.self.nextInt()}&quot;)
+loggerWithSubcontext.info(&quot;Just a string&quot;)
+logger.warn(&quot;Just an integer: &quot; + 1)
+val arg1 = 5
+logger.crit(s&quot;This is an expression: ${2 + 2 == 4} and this is an other one: ${5 * arg1 == 25}&quot;)
+val t = new RuntimeException(&quot;Oy vey!&quot;)
+logger.crit(s&quot;A failure happened: $t&quot;)
+</code></pre>
+<p>The final output will be:</p>
+<p><code>T:2018-05-07T14:31:43.045+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:21) {userId=xxx} This would be automatically extended
+D:2018-05-07T14:31:43.083+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:22)  Service started. argument: arg=this is an argument, Random value: EXPRESSION:scala.util.Random.self.nextInt()=-1725949704
+I:2018-05-07T14:31:43.086+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:23) {userId=xxx, custom=value} Just a string; @type=const
+W:2018-05-07T14:31:43.090+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:24)  Just an integer: 1; @type=expr; @expr=&quot;Just an integer: &quot;.+(1)
+C:2018-05-07T14:31:43.093+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:26)  This is an expression: UNNAMED:true=true and this is an other one: EXPRESSION:5.*(arg1).==(25)=true
+C:2018-05-07T14:31:43.095+03:00 ...leSinkTest:1 (LoggingMacroTest.scala:28)  A failure happened: t=java.lang.RuntimeException: Oy vey!
+java.lang.RuntimeException: Oy vey!
+	at com.github.pshirshov.izumi.logstage.api.routing.ExampleService.start(LoggingMacroTest.scala:27)
+	at com.github.pshirshov.izumi.logstage.sink.console.LoggingConsoleSinkTest.$anonfun$new$3(LoggingConsoleSinkTest.scala:23)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+</code></p>
+<h2><a href="#contexts-defintion" name="contexts-defintion" class="anchor"><span class="anchor-link"></span></a>Contexts defintion</h2>
+<h2><a href="#sinks-configuration" name="sinks-configuration" class="anchor"><span class="anchor-link"></span></a>Sinks configuration</h2>
 </div>
 <div>
-<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/config.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/pshirshov/izumi-r2/tree/master/doc/paradox/logstage/sample.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -164,12 +230,13 @@ Rendering policy
 </span>
 </div>
 </a>
-<a href="../logstage/custom_ctx.html" title="" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../sbt/index.html" title="SBT Toolkit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
+SBT Toolkit
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
