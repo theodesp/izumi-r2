@@ -280,9 +280,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;()(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R],implicitevidence$2:cats.Monad[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s[R]"></a><a id="&lt;init&gt;:RuntimeHttp4s[R]"></a>
+      <a id="&lt;init&gt;(logger:com.github.pshirshov.izumi.logstage.api.IzLogger)(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R],implicitevidence$2:cats.Monad[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s[R]"></a><a id="&lt;init&gt;:RuntimeHttp4s[R]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/RuntimeHttp4s.html#&lt;init&gt;()(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R],implicitevidence$2:cats.Monad[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s[R]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/RuntimeHttp4s.html#&lt;init&gt;(logger:com.github.pshirshov.izumi.logstage.api.IzLogger)(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R],implicitevidence$2:cats.Monad[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -291,7 +291,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RuntimeHttp4s</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../IRTServiceResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult">IRTServiceResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.Monad">Monad</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>)</span>
+        <span class="name">RuntimeHttp4s</span><span class="params">(<span name="logger">logger: <a href="../../../../logstage/api/IzLogger.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.IzLogger">IzLogger</a> = <span class="symbol"><span class="name"><a href="../../../../../../../index.html">IzLogger.NullLogger</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../IRTServiceResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult">IRTServiceResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>, <span name="arg1">arg1: <span class="extype" name="cats.Monad">Monad</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>)</span>
       </span>
       
       
@@ -552,6 +552,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s#loggingMiddle" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="loggingMiddle(service:org.http4s.HttpService[R],logger:com.github.pshirshov.izumi.logstage.api.IzLogger):org.http4s.HttpService[R]"></a><a id="loggingMiddle(HttpService[R],IzLogger):HttpService[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/RuntimeHttp4s.html#loggingMiddle(service:org.http4s.HttpService[R],logger:com.github.pshirshov.izumi.logstage.api.IzLogger):org.http4s.HttpService[R]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loggingMiddle</span><span class="params">(<span name="service">service: <span class="extype" name="org.http4s.HttpService">HttpService</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>, <span name="logger">logger: <a href="../../../../logstage/api/IzLogger.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.IzLogger">IzLogger</a></span>)</span><span class="result">: <span class="extype" name="org.http4s.HttpService">HttpService</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
