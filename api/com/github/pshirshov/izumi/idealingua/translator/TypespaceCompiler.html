@@ -234,10 +234,6 @@
                         <a class="class" href="ExtensionId.html" title=""></a>
                         <a href="ExtensionId.html" title="">ExtensionId</a>
                       </li><li class="current-entities indented6">
-                        <span class="separator"></span>
-                        <a class="trait" href="FinalTranslator.html" title=""></a>
-                        <a href="FinalTranslator.html" title="">FinalTranslator</a>
-                      </li><li class="current-entities indented6">
                         <a class="object" href="IDLCompiler$.html" title=""></a>
                         <a class="class" href="IDLCompiler.html" title=""></a>
                         <a href="IDLCompiler.html" title="">IDLCompiler</a>
@@ -450,9 +446,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler#compile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="compile(target:java.nio.file.Path,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.CompilerOptions)(implicitmanifest:Option[com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest]):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult"></a><a id="compile(Path,CompilerOptions)(Option[BuildManifest]):IDLResult"></a>
+      <a id="compile(target:java.nio.file.Path,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult"></a><a id="compile(Path,UntypedCompilerOptions):IDLResult"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/idealingua/translator/TypespaceCompiler.html#compile(target:java.nio.file.Path,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.CompilerOptions)(implicitmanifest:Option[com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest]):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/idealingua/translator/TypespaceCompiler.html#compile(target:java.nio.file.Path,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -461,10 +457,26 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compile</span><span class="params">(<span name="target">target: <span class="extype" name="java.nio.file.Path">Path</span></span>, <span name="options">options: <a href="TypespaceCompiler$$CompilerOptions.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.CompilerOptions">CompilerOptions</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="manifest">manifest: <span class="extype" name="scala.Option">Option</span>[<a href="../model/publishing/BuildManifest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest">BuildManifest</a>]</span>)</span><span class="result">: <a href="TypespaceCompiler$$IDLResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult">IDLResult</a></span>
+        <span class="name">compile</span><span class="params">(<span name="target">target: <span class="extype" name="java.nio.file.Path">Path</span></span>, <span name="options">options: <a href="TypespaceCompiler$$UntypedCompilerOptions.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions">UntypedCompilerOptions</a></span>)</span><span class="result">: <a href="TypespaceCompiler$$IDLResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.IDLResult">IDLResult</a></span>
       </span>
       
       
+    </li><li name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler#convert" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="convert[E&lt;:com.github.pshirshov.izumi.idealingua.translator.TranslatorExtension,M&lt;:com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest](options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions)(implicitevidence$1:scala.reflect.ClassTag[E],implicitevidence$2:scala.reflect.ClassTag[M]):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.AbstractCompilerOptions[E,M]"></a><a id="convert[E&lt;:TranslatorExtension,M&lt;:BuildManifest](UntypedCompilerOptions)(ClassTag[E],ClassTag[M]):AbstractCompilerOptions[E,M]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/idealingua/translator/TypespaceCompiler.html#convert[E&lt;:com.github.pshirshov.izumi.idealingua.translator.TranslatorExtension,M&lt;:com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest](options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions)(implicitevidence$1:scala.reflect.ClassTag[E],implicitevidence$2:scala.reflect.ClassTag[M]):com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.AbstractCompilerOptions[E,M]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convert</span><span class="tparams">[<span name="E">E &lt;: <a href="TranslatorExtension.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TranslatorExtension">TranslatorExtension</a></span>, <span name="M">M &lt;: <a href="../model/publishing/BuildManifest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest">BuildManifest</a></span>]</span><span class="params">(<span name="options">options: <a href="TypespaceCompiler$$UntypedCompilerOptions.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.UntypedCompilerOptions">UntypedCompilerOptions</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.convert.E">E</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.convert.M">M</span>]</span>)</span><span class="result">: <a href="TypespaceCompiler$$AbstractCompilerOptions.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.AbstractCompilerOptions">AbstractCompilerOptions</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.convert.E">E</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.convert.M">M</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
