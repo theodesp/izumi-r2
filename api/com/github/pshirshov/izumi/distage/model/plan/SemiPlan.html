@@ -182,6 +182,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model">model</a></dd></dl></div>
     </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="AbstractPlan.html" title=""></a>
+                        <a href="AbstractPlan.html" title="">AbstractPlan</a>
+                      </li><li class="current-entities indented7">
                         <a class="object" href="DodgyPlan$.html" title=""></a>
                         <a class="class" href="DodgyPlan.html" title=""></a>
                         <a href="DodgyPlan.html" title="">DodgyPlan</a>
@@ -191,10 +195,6 @@
                         <a href="ExecutableOp.html" title="">ExecutableOp</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">FinalPlan</a>
-                      </li><li class="current-entities indented7">
-                        <span class="separator"></span>
                         <a class="object" href="FormattingUtils$.html" title=""></a>
                         <a href="FormattingUtils$.html" title="">FormattingUtils</a>
                       </li><li class="current-entities indented7">
@@ -202,13 +202,21 @@
                         <a class="class" href="NextOps.html" title=""></a>
                         <a href="NextOps.html" title="">NextOps</a>
                       </li><li class="current-entities indented7">
-                        <a class="object" href="PlanTopology$.html" title=""></a>
-                        <a class="class" href="PlanTopology.html" title=""></a>
-                        <a href="PlanTopology.html" title="">PlanTopology</a>
+                        <span class="separator"></span>
+                        <a class="class" href="OrderedPlan.html" title=""></a>
+                        <a href="OrderedPlan.html" title="">OrderedPlan</a>
                       </li><li class="current-entities indented7">
-                        <a class="object" href="PlanningFailure$.html" title=""></a>
-                        <a class="trait" href="PlanningFailure.html" title=""></a>
-                        <a href="PlanningFailure.html" title="">PlanningFailure</a>
+                        <span class="separator"></span>
+                        <a class="trait" href="PlanTopology.html" title="This class represents direct node dependencies and allows to retrive full transitive dependencies for a node"></a>
+                        <a href="PlanTopology.html" title="This class represents direct node dependencies and allows to retrive full transitive dependencies for a node">PlanTopology</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanTopologyImmutable.html" title=""></a>
+                        <a href="PlanTopologyImmutable.html" title="">PlanTopologyImmutable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">SemiPlan</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="Step.html" title=""></a>
@@ -234,8 +242,8 @@
       <div id="definition">
         <div class="big-circle class">c</div>
         <p id="owner"><a href="../../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi.distage">distage</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model">model</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan">plan</a></p>
-        <h1>FinalPlan<span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html" title="Permalink">
+        <h1>SemiPlan<span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -248,7 +256,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">FinalPlan</span><span class="params">(<span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>, <span name="steps">steps: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">SemiPlan</span><span class="params">(<span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>, <span name="steps">steps: <a href="../../../../../../../scala/index.html#Vector[+A]=scala.collection.immutable.Vector[A]" class="extmbr" name="scala.Vector">Vector</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result"> extends <a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -257,7 +265,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a>, <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -283,7 +291,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan"><span>FinalPlan</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan"><span>SemiPlan</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan"><span>AbstractPlan</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -303,10 +311,10 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,steps:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="&lt;init&gt;:FinalPlan"></a>
+              <ol><li name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,steps:Vector[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.SemiPlan"></a><a id="&lt;init&gt;:SemiPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#&lt;init&gt;(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,steps:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#&lt;init&gt;(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,steps:Vector[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.SemiPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -315,7 +323,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">FinalPlan</span><span class="params">(<span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>, <span name="steps">steps: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span>
+        <span class="name">SemiPlan</span><span class="params">(<span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>, <span name="steps">steps: <a href="../../../../../../../scala/index.html#Vector[+A]=scala.collection.immutable.Vector[A]" class="extmbr" name="scala.Vector">Vector</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span>
       </span>
       
       
@@ -332,7 +340,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -348,7 +356,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html###():Int" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -364,7 +372,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -380,7 +388,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,7 +404,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#clone():Object" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -419,10 +427,10 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#definition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan#definition" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase"></a><a id="definition:ModuleBase"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,7 +446,7 @@
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -451,10 +459,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#flatMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="flatMap(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="flatMap((ExecutableOp)⇒Seq[ExecutableOp]):FinalPlan"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan#flatMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="flatMap(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.SemiPlan"></a><a id="flatMap((ExecutableOp)⇒Seq[ExecutableOp]):SemiPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#flatMap(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#flatMap(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.SemiPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -463,14 +471,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="params">(<span name="f">f: (<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
+        <span class="name">flatMap</span><span class="params">(<span name="f">f: (<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a></span>
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#foldLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan#foldLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foldLeft[T](z:T,f:(T,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp)=&gt;T):T"></a><a id="foldLeft[T](T,(T,ExecutableOp)⇒T):T"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#foldLeft[T](z:T,f:(T,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp)=&gt;T):T" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#foldLeft[T](z:T,f:(T,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp)=&gt;T):T" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -479,14 +487,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">foldLeft</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan.foldLeft.T">T</span></span>, <span name="f">f: (<span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan.foldLeft.T">T</span>, <a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan.foldLeft.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan.foldLeft.T">T</span></span>
+        <span class="name">foldLeft</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="z">z: <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan.foldLeft.T">T</span></span>, <span name="f">f: (<span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan.foldLeft.T">T</span>, <a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan.foldLeft.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan.foldLeft.T">T</span></span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -504,26 +512,26 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#index" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan#index" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="index:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]"></a><a id="index:Map[reflection.universe.RuntimeDIUniverse.DIKey,ExecutableOp]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#index:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#index:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">index</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -536,10 +544,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#map" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="map(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="map((ExecutableOp)⇒ExecutableOp):FinalPlan"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan#map" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="map(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):com.github.pshirshov.izumi.distage.model.plan.SemiPlan"></a><a id="map((ExecutableOp)⇒ExecutableOp):SemiPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#map(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#map(f:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp=&gt;com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):com.github.pshirshov.izumi.distage.model.plan.SemiPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -548,14 +556,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a></span>)</span><span class="result">: <a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
+        <span class="name">map</span><span class="params">(<span name="f">f: (<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>) ⇒ <a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a></span>)</span><span class="result">: <a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a></span>
       </span>
       
       
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -571,7 +579,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#notify():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -592,7 +600,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -610,10 +618,10 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#steps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="steps:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]"></a><a id="steps:Seq[ExecutableOp]"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan#steps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="steps:Vector[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]"></a><a id="steps:Vector[ExecutableOp]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#steps:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#steps:Vector[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,14 +630,14 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">steps</span><span class="result">: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>
+        <span class="name">steps</span><span class="result">: <a href="../../../../../../../scala/index.html#Vector[+A]=scala.collection.immutable.Vector[A]" class="extmbr" name="scala.Vector">Vector</a>[<a href="ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a> → <a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -642,10 +650,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#toString():String" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -657,11 +665,11 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#wait():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -683,7 +691,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -705,7 +713,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -737,7 +745,7 @@
               <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/FinalPlan.html#finalize():Unit" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/SemiPlan.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -773,6 +781,8 @@
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">
+              <h3>Inherited from <a href="AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

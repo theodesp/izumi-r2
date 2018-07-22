@@ -182,6 +182,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.distage.model">model</a></dd></dl></div>
     </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="AbstractPlan.html" title=""></a>
+                        <a href="AbstractPlan.html" title="">AbstractPlan</a>
+                      </li><li class="current-entities indented7">
                         <a class="object" href="DodgyPlan$.html" title=""></a>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">DodgyPlan</a>
@@ -191,10 +195,6 @@
                         <a href="ExecutableOp.html" title="">ExecutableOp</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="FinalPlan.html" title=""></a>
-                        <a href="FinalPlan.html" title="">FinalPlan</a>
-                      </li><li class="current-entities indented7">
-                        <span class="separator"></span>
                         <a class="object" href="FormattingUtils$.html" title=""></a>
                         <a href="FormattingUtils$.html" title="">FormattingUtils</a>
                       </li><li class="current-entities indented7">
@@ -202,13 +202,21 @@
                         <a class="class" href="NextOps.html" title=""></a>
                         <a href="NextOps.html" title="">NextOps</a>
                       </li><li class="current-entities indented7">
-                        <a class="object" href="PlanTopology$.html" title=""></a>
-                        <a class="class" href="PlanTopology.html" title=""></a>
-                        <a href="PlanTopology.html" title="">PlanTopology</a>
+                        <span class="separator"></span>
+                        <a class="class" href="OrderedPlan.html" title=""></a>
+                        <a href="OrderedPlan.html" title="">OrderedPlan</a>
                       </li><li class="current-entities indented7">
-                        <a class="object" href="PlanningFailure$.html" title=""></a>
-                        <a class="trait" href="PlanningFailure.html" title=""></a>
-                        <a href="PlanningFailure.html" title="">PlanningFailure</a>
+                        <span class="separator"></span>
+                        <a class="trait" href="PlanTopology.html" title="This class represents direct node dependencies and allows to retrive full transitive dependencies for a node"></a>
+                        <a href="PlanTopology.html" title="This class represents direct node dependencies and allows to retrive full transitive dependencies for a node">PlanTopology</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="PlanTopologyImmutable.html" title=""></a>
+                        <a href="PlanTopologyImmutable.html" title="">PlanTopologyImmutable</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="SemiPlan.html" title=""></a>
+                        <a href="SemiPlan.html" title="">SemiPlan</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="Step.html" title=""></a>
@@ -250,7 +258,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">DodgyPlan</span><span class="params">(<span name="operations">operations: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>, <span name="topology">topology: <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>, <span name="issues">issues: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="PlanningFailure.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanningFailure">PlanningFailure</a>]</span>, <span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">DodgyPlan</span><span class="params">(<span name="operations">operations: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]withscala.collection.mutable.MultiMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>, <span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -306,9 +314,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(operations:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap,topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,issues:scala.collection.mutable.ArrayBuffer[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure],definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.DodgyPlan"></a><a id="&lt;init&gt;:DodgyPlan"></a>
+      <a id="&lt;init&gt;(operations:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap,definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.DodgyPlan"></a><a id="&lt;init&gt;:DodgyPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/DodgyPlan.html#&lt;init&gt;(operations:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap,topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,issues:scala.collection.mutable.ArrayBuffer[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure],definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.DodgyPlan" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/DodgyPlan.html#&lt;init&gt;(operations:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap,definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.DodgyPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -317,7 +325,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DodgyPlan</span><span class="params">(<span name="operations">operations: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>, <span name="topology">topology: <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>, <span name="issues">issues: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="PlanningFailure.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanningFailure">PlanningFailure</a>]</span>, <span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span>
+        <span class="name">DodgyPlan</span><span class="params">(<span name="operations">operations: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]withscala.collection.mutable.MultiMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>, <span name="definition">definition: <a href="../definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span>
       </span>
       
       
@@ -490,22 +498,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan#issues" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="issues:scala.collection.mutable.ArrayBuffer[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]"></a><a id="issues:ArrayBuffer[PlanningFailure]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/DodgyPlan.html#issues:scala.collection.mutable.ArrayBuffer[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">issues</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="PlanningFailure.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanningFailure">PlanningFailure</a>]</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -576,7 +568,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">operations</span><span class="result">: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>
+        <span class="name">operations</span><span class="result">: <a href="DodgyPlan$.html#OpMap=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]withscala.collection.mutable.MultiMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]" class="extmbr" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan.OpMap">OpMap</a></span>
       </span>
       
       
@@ -596,22 +588,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan#topology" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology"></a><a id="topology:PlanTopology"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/DodgyPlan.html#topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">topology</span><span class="result">: <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

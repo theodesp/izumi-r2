@@ -190,6 +190,10 @@
                         <a class="trait" href="AutoSetHook.html" title=""></a>
                         <a href="AutoSetHook.html" title="">AutoSetHook</a>
                       </li><li class="current-entities indented6">
+                        <a class="object" href="ConflictResolution$.html" title=""></a>
+                        <a class="trait" href="ConflictResolution.html" title=""></a>
+                        <a href="ConflictResolution.html" title="">ConflictResolution</a>
+                      </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="ForwardingRefResolverDefaultImpl.html" title=""></a>
                         <a href="ForwardingRefResolverDefaultImpl.html" title="">ForwardingRefResolverDefaultImpl</a>
@@ -336,38 +340,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl.PostFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PostFilter=((com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]))=&gt;Boolean"></a><a id="PostFilter:PostFilter"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#PostFilter=((com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]))=&gt;Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">PostFilter</span><span class="result alias"> = ((<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>])) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl.RefFilter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RefFilter=PlanAnalyzerDefaultImpl.this.Accumulator=&gt;(com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey=&gt;Boolean)"></a><a id="RefFilter:RefFilter"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#RefFilter=PlanAnalyzerDefaultImpl.this.Accumulator=&gt;(com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey=&gt;Boolean)" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">RefFilter</span><span class="result alias"> = (<a href="#Accumulator=scala.collection.mutable.HashMap[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]" class="extmbr" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl.Accumulator">Accumulator</a>) ⇒ (<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      
-      
     </li></ol>
             </div>
 
@@ -466,38 +438,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#computeFullRefTable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="computeFullRefTable(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.references.RefTable"></a><a id="computeFullRefTable(Iterable[ExecutableOp]):RefTable"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#computeFullRefTable(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.references.RefTable" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">computeFullRefTable</span><span class="params">(<span name="plan">plan: <a href="../../../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="../model/references/RefTable.html" class="extype" name="com.github.pshirshov.izumi.distage.model.references.RefTable">RefTable</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl">PlanAnalyzerDefaultImpl</a> → <a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#computeFwdRefTable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="computeFwdRefTable(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.references.RefTable"></a><a id="computeFwdRefTable(Iterable[ExecutableOp]):RefTable"></a>
-      <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#computeFwdRefTable(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.references.RefTable" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">computeFwdRefTable</span><span class="params">(<span name="plan">plan: <a href="../../../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="../model/references/RefTable.html" class="extype" name="com.github.pshirshov.izumi.distage.model.references.RefTable">RefTable</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl">PlanAnalyzerDefaultImpl</a> → <a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -647,9 +587,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#requirements" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="requirements(op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp):Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]"></a><a id="requirements(InstantiationOp):Set[model.reflection.universe.RuntimeDIUniverse.DIKey]"></a>
+      <a id="requirements(op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]"></a><a id="requirements(ExecutableOp):Set[model.reflection.universe.RuntimeDIUniverse.DIKey]"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#requirements(op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp):Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#requirements(op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp):Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -658,7 +598,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">requirements</span><span class="params">(<span name="op">op: <a href="../model/plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>]</span>
+        <span class="name">requirements</span><span class="params">(<span name="op">op: <a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl">PlanAnalyzerDefaultImpl</a> → <a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
@@ -694,10 +634,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#topoBuild" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="topoBuild(ops:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology"></a><a id="topoBuild(Seq[ExecutableOp]):PlanTopology"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#topology" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="topology(ops:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology"></a><a id="topology(Seq[ExecutableOp]):PlanTopology"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#topoBuild(ops:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#topology(ops:Seq[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -706,14 +646,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">topoBuild</span><span class="params">(<span name="ops">ops: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="../model/plan/PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>
+        <span class="name">topology</span><span class="params">(<span name="ops">ops: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="../model/plan/PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl">PlanAnalyzerDefaultImpl</a> → <a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#topoExtend" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="topoExtend(topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp):Unit"></a><a id="topoExtend(PlanTopology,InstantiationOp):Unit"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl#topologyFwdRefs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="topologyFwdRefs(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology"></a><a id="topologyFwdRefs(Iterable[ExecutableOp]):PlanTopology"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#topoExtend(topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,op:com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp):Unit" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanAnalyzerDefaultImpl.html#topologyFwdRefs(plan:Iterable[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp]):com.github.pshirshov.izumi.distage.model.plan.PlanTopology" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -722,7 +662,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">topoExtend</span><span class="params">(<span name="topology">topology: <a href="../model/plan/PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>, <span name="op">op: <a href="../model/plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">topologyFwdRefs</span><span class="params">(<span name="plan">plan: <a href="../../../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="../model/plan/ExecutableOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp">ExecutableOp</a>]</span>)</span><span class="result">: <a href="../model/plan/PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanAnalyzerDefaultImpl">PlanAnalyzerDefaultImpl</a> → <a href="../model/planning/PlanAnalyzer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanAnalyzer">PlanAnalyzer</a></dd></dl></div>
