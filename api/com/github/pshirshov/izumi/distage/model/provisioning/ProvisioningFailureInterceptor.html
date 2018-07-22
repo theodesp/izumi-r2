@@ -211,6 +211,14 @@
                         <a href="OperationExecutor.html" title="">OperationExecutor</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
+                        <a class="class" href="OperationFailed.html" title=""></a>
+                        <a href="OperationFailed.html" title="">OperationFailed</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="OperationWithResult.html" title=""></a>
+                        <a href="OperationWithResult.html" title="">OperationWithResult</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
                         <a class="trait" href="Provision.html" title=""></a>
                         <a href="Provision.html" title="">Provision</a>
                       </li><li class="current-entities indented7">
@@ -241,6 +249,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="ProvisioningKeyProvider.html" title=""></a>
                         <a href="ProvisioningKeyProvider.html" title="">ProvisioningKeyProvider</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ProvisioningMassFailureContext.html" title=""></a>
+                        <a href="ProvisioningMassFailureContext.html" title="">ProvisioningMassFailureContext</a>
                       </li>
               </ul>
             </div>
@@ -357,6 +369,22 @@
       </span>
       <span class="symbol">
         <span class="name">onExecutionFailed</span><span class="params">(<span name="context">context: <a href="ProvisioningFailureContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext">ProvisioningFailureContext</a></span>)</span><span class="result">: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<a href="../../../../../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>, <span class="extype" name="scala.util.Try">Try</span>[<a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="OpResult.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.OpResult">OpResult</a>]]]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureInterceptor#onImportsFailed" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="onImportsFailed(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningMassFailureContext,failures:Seq[com.github.pshirshov.izumi.distage.model.provisioning.OperationWithResult[scala.util.Failure]],exceptions:Seq[com.github.pshirshov.izumi.distage.model.provisioning.OperationFailed]):Unit"></a><a id="onImportsFailed(ProvisioningMassFailureContext,Seq[OperationWithResult[Failure]],Seq[OperationFailed]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/provisioning/ProvisioningFailureInterceptor.html#onImportsFailed(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningMassFailureContext,failures:Seq[com.github.pshirshov.izumi.distage.model.provisioning.OperationWithResult[scala.util.Failure]],exceptions:Seq[com.github.pshirshov.izumi.distage.model.provisioning.OperationFailed]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onImportsFailed</span><span class="params">(<span name="context">context: <a href="ProvisioningMassFailureContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningMassFailureContext">ProvisioningMassFailureContext</a></span>, <span name="failures">failures: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="OperationWithResult.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.OperationWithResult">OperationWithResult</a>[<span class="extype" name="scala.util.Failure">Failure</span>]]</span>, <span name="exceptions">exceptions: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="OperationFailed.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.OperationFailed">OperationFailed</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       
