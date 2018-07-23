@@ -186,6 +186,26 @@
                         <a class="trait" href="AbstractPlan.html" title=""></a>
                         <a href="AbstractPlan.html" title="">AbstractPlan</a>
                       </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="CircularReference.html" title=""></a>
+                        <a href="CircularReference.html" title="">CircularReference</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DepNode.html" title=""></a>
+                        <a href="DepNode.html" title="">DepNode</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="trait" href="DepTreeNode.html" title=""></a>
+                        <a href="DepTreeNode.html" title="">DepTreeNode</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="DependencyGraph.html" title=""></a>
+                        <a href="DependencyGraph.html" title="">DependencyGraph</a>
+                      </li><li class="current-entities indented7">
+                        <a class="object" href="DependencyKind$.html" title=""></a>
+                        <a class="trait" href="DependencyKind.html" title=""></a>
+                        <a href="DependencyKind.html" title="">DependencyKind</a>
+                      </li><li class="current-entities indented7">
                         <a class="object" href="DodgyPlan$.html" title=""></a>
                         <a class="class" href="DodgyPlan.html" title=""></a>
                         <a href="DodgyPlan.html" title="">DodgyPlan</a>
@@ -223,6 +243,10 @@
                         <a href="Step.html" title="">Step</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
+                        <a class="class" href="Truncated.html" title=""></a>
+                        <a href="Truncated.html" title="">Truncated</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
                         <a class="trait" href="WithDIAssociation.html" title=""></a>
                         <a href="WithDIAssociation.html" title="">WithDIAssociation</a>
                       </li><li class="current-entities indented7">
@@ -256,7 +280,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">PlanTopologyImmutable</span><span class="params">(<span name="dependees">dependees: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>, <span name="dependencies">dependencies: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>)</span><span class="result"> extends <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">PlanTopologyImmutable</span><span class="params">(<span name="dependees">dependees: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>, <span name="dependencies">dependencies: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>)</span><span class="result"> extends <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -312,9 +336,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(dependees:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]],dependencies:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]):com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable"></a><a id="&lt;init&gt;:PlanTopologyImmutable"></a>
+      <a id="&lt;init&gt;(dependees:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph,dependencies:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph):com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable"></a><a id="&lt;init&gt;:PlanTopologyImmutable"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#&lt;init&gt;(dependees:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]],dependencies:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]):com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#&lt;init&gt;(dependees:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph,dependencies:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph):com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -323,7 +347,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PlanTopologyImmutable</span><span class="params">(<span name="dependees">dependees: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>, <span name="dependencies">dependencies: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>)</span>
+        <span class="name">PlanTopologyImmutable</span><span class="params">(<span name="dependees">dependees: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>, <span name="dependencies">dependencies: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>)</span>
       </span>
       
       
@@ -428,9 +452,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable#dependees" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependees:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]"></a><a id="dependees:Map[reflection.universe.RuntimeDIUniverse.DIKey,Set[reflection.universe.RuntimeDIUniverse.DIKey]]"></a>
+      <a id="dependees:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph"></a><a id="dependees:DependencyGraph"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#dependees:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#dependees:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -439,14 +463,14 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dependees</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>
+        <span class="name">dependees</span><span class="result">: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable">PlanTopologyImmutable</a> → <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable#dependencies" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependencies:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]"></a><a id="dependencies:Map[reflection.universe.RuntimeDIUniverse.DIKey,Set[reflection.universe.RuntimeDIUniverse.DIKey]]"></a>
+      <a id="dependencies:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph"></a><a id="dependencies:DependencyGraph"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#dependencies:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/plan/PlanTopologyImmutable.html#dependencies:com.github.pshirshov.izumi.distage.model.plan.DependencyGraph" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -455,7 +479,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>]]</span>
+        <span class="name">dependencies</span><span class="result">: <a href="DependencyGraph.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DependencyGraph">DependencyGraph</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopologyImmutable">PlanTopologyImmutable</a> → <a href="PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></dd></dl></div>
