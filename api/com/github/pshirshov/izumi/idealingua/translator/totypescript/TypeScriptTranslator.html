@@ -247,6 +247,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.totypescript">totypescript</a></dd></dl></div>
     </li><li class="current-entities indented7">
                         <span class="separator"></span>
+                        <a class="class" href="FinalTranslatorTypeScriptImpl.html" title=""></a>
+                        <a href="FinalTranslatorTypeScriptImpl.html" title="">FinalTranslatorTypeScriptImpl</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
                         <a class="class" href="TSTContext.html" title=""></a>
                         <a href="TSTContext.html" title="">TSTContext</a>
                       </li><li class="current-entities indented7">
@@ -346,9 +350,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.TypescriptTranslatorOptions):com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator"></a><a id="&lt;init&gt;:TypeScriptTranslator"></a>
+      <a id="&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace,extensions:Seq[com.github.pshirshov.izumi.idealingua.translator.totypescript.extensions.TypeScriptTranslatorExtension]):com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator"></a><a id="&lt;init&gt;:TypeScriptTranslator"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/TypeScriptTranslator.html#&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace,options:com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.TypescriptTranslatorOptions):com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/TypeScriptTranslator.html#&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace,extensions:Seq[com.github.pshirshov.izumi.idealingua.translator.totypescript.extensions.TypeScriptTranslatorExtension]):com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -357,7 +361,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TypeScriptTranslator</span><span class="params">(<span name="ts">ts: <a href="../../model/typespace/Typespace.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.Typespace">Typespace</a></span>, <span name="options">options: <a href="../TypespaceCompiler$.html#TypescriptTranslatorOptions=com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.CompilerOptions[com.github.pshirshov.izumi.idealingua.translator.totypescript.extensions.TypeScriptTranslatorExtension,com.github.pshirshov.izumi.idealingua.model.publishing.manifests.TypeScriptBuildManifest]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.translator.TypespaceCompiler.TypescriptTranslatorOptions">TypescriptTranslatorOptions</a></span>)</span>
+        <span class="name">TypeScriptTranslator</span><span class="params">(<span name="ts">ts: <a href="../../model/typespace/Typespace.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.Typespace">Typespace</a></span>, <span name="extensions">extensions: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="extensions/TypeScriptTranslatorExtension.html" class="extype" name="com.github.pshirshov.izumi.idealingua.translator.totypescript.extensions.TypeScriptTranslatorExtension">TypeScriptTranslatorExtension</a>]</span>)</span>
       </span>
       
       
@@ -1058,9 +1062,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.TypeScriptTranslator#translate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="translate():Seq[com.github.pshirshov.izumi.idealingua.model.output.Module]"></a><a id="translate():Seq[Module]"></a>
+      <a id="translate()(implicitmanifest:Option[com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest]):Seq[com.github.pshirshov.izumi.idealingua.model.output.Module]"></a><a id="translate()(Option[BuildManifest]):Seq[Module]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/TypeScriptTranslator.html#translate():Seq[com.github.pshirshov.izumi.idealingua.model.output.Module]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/TypeScriptTranslator.html#translate()(implicitmanifest:Option[com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest]):Seq[com.github.pshirshov.izumi.idealingua.model.output.Module]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1069,7 +1073,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">translate</span><span class="params">()</span><span class="result">: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../model/output/Module.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.output.Module">Module</a>]</span>
+        <span class="name">translate</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="manifest">manifest: <span class="extype" name="scala.Option">Option</span>[<a href="../../model/publishing/BuildManifest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.publishing.BuildManifest">BuildManifest</a>]</span>)</span><span class="result">: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../model/output/Module.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.output.Module">Module</a>]</span>
       </span>
       
       

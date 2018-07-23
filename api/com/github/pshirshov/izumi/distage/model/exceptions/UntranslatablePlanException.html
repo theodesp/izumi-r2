@@ -344,9 +344,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(message:String,conflicts:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]):com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException"></a><a id="&lt;init&gt;:UntranslatablePlanException"></a>
+      <a id="&lt;init&gt;(message:String,badSteps:Seq[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]):com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException"></a><a id="&lt;init&gt;:UntranslatablePlanException"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/exceptions/UntranslatablePlanException.html#&lt;init&gt;(message:String,conflicts:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]):com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/exceptions/UntranslatablePlanException.html#&lt;init&gt;(message:String,badSteps:Seq[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]):com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -355,7 +355,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">UntranslatablePlanException</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="conflicts">conflicts: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a>]]</span>)</span>
+        <span class="name">UntranslatablePlanException</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="badSteps">badSteps: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../plan/PlanningFailure.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanningFailure">PlanningFailure</a>]</span>)</span>
       </span>
       
       
@@ -449,6 +449,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException#badSteps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="badSteps:Seq[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]"></a><a id="badSteps:Seq[PlanningFailure]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/exceptions/UntranslatablePlanException.html#badSteps:Seq[com.github.pshirshov.izumi.distage.model.plan.PlanningFailure]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">badSteps</span><span class="result">: <a href="../../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../plan/PlanningFailure.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanningFailure">PlanningFailure</a>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -475,22 +491,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.exceptions.UntranslatablePlanException#conflicts" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="conflicts:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]"></a><a id="conflicts:Map[reflection.universe.RuntimeDIUniverse.DIKey,Set[InstantiationOp]]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/exceptions/UntranslatablePlanException.html#conflicts:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">conflicts</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a>]]</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">

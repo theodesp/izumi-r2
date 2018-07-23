@@ -190,10 +190,6 @@
                         <a class="trait" href="AutoSetHook.html" title=""></a>
                         <a href="AutoSetHook.html" title="">AutoSetHook</a>
                       </li><li class="current-entities indented6">
-                        <a class="object" href="ConflictResolution$.html" title=""></a>
-                        <a class="trait" href="ConflictResolution.html" title=""></a>
-                        <a href="ConflictResolution.html" title="">ConflictResolution</a>
-                      </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="class" href="ForwardingRefResolverDefaultImpl.html" title=""></a>
                         <a href="ForwardingRefResolverDefaultImpl.html" title="">ForwardingRefResolverDefaultImpl</a>
@@ -468,9 +464,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl">PlanMergingPolicyDefaultImpl</a> → <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl#finalizePlan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="finalizePlan(completedPlan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):com.github.pshirshov.izumi.distage.model.plan.SemiPlan"></a><a id="finalizePlan(DodgyPlan):SemiPlan"></a>
+      <a id="finalizePlan(completedPlan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="finalizePlan(DodgyPlan):FinalPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#finalizePlan(completedPlan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):com.github.pshirshov.izumi.distage.model.plan.SemiPlan" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#finalizePlan(completedPlan:com.github.pshirshov.izumi.distage.model.plan.DodgyPlan):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -479,7 +475,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalizePlan</span><span class="params">(<span name="completedPlan">completedPlan: <a href="../model/plan/DodgyPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan">DodgyPlan</a></span>)</span><span class="result">: <a href="../model/plan/SemiPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a></span>
+        <span class="name">finalizePlan</span><span class="params">(<span name="completedPlan">completedPlan: <a href="../model/plan/DodgyPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.DodgyPlan">DodgyPlan</a></span>)</span><span class="result">: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl">PlanMergingPolicyDefaultImpl</a> → <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></dd></dl></div>
@@ -600,9 +596,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl#reorderOperations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reorderOperations(completedPlan:com.github.pshirshov.izumi.distage.model.plan.SemiPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan"></a><a id="reorderOperations(SemiPlan):OrderedPlan"></a>
+      <a id="reorderOperations(completedPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="reorderOperations(FinalPlan):FinalPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#reorderOperations(completedPlan:com.github.pshirshov.izumi.distage.model.plan.SemiPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#reorderOperations(completedPlan:com.github.pshirshov.izumi.distage.model.plan.FinalPlan):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -611,14 +607,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reorderOperations</span><span class="params">(<span name="completedPlan">completedPlan: <a href="../model/plan/SemiPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a></span>)</span><span class="result">: <a href="../model/plan/OrderedPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.OrderedPlan">OrderedPlan</a></span>
+        <span class="name">reorderOperations</span><span class="params">(<span name="completedPlan">completedPlan: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>)</span><span class="result">: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl">PlanMergingPolicyDefaultImpl</a> → <a href="../model/planning/PlanMergingPolicy.html" class="extype" name="com.github.pshirshov.izumi.distage.model.planning.PlanMergingPolicy">PlanMergingPolicy</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl#resolve" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolve(operations:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]):com.github.pshirshov.izumi.distage.planning.ConflictResolution"></a><a id="resolve(Set[InstantiationOp]):ConflictResolution"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.planning.PlanMergingPolicyDefaultImpl#sortPlan" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sortPlan(topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,index:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="sortPlan(PlanTopology,ModuleBase,Map[model.reflection.universe.RuntimeDIUniverse.DIKey,InstantiationOp]):FinalPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#resolve(operations:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]):com.github.pshirshov.izumi.distage.planning.ConflictResolution" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/planning/PlanMergingPolicyDefaultImpl.html#sortPlan(topology:com.github.pshirshov.izumi.distage.model.plan.PlanTopology,definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase,index:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp]):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -627,10 +623,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resolve</span><span class="params">(<span name="operations">operations: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="../model/plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a>]</span>)</span><span class="result">: <a href="ConflictResolution.html" class="extype" name="com.github.pshirshov.izumi.distage.planning.ConflictResolution">ConflictResolution</a></span>
+        <span class="name">sortPlan</span><span class="params">(<span name="topology">topology: <a href="../model/plan/PlanTopology.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.PlanTopology">PlanTopology</a></span>, <span name="definition">definition: <a href="../model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>, <span name="index">index: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">model.reflection.universe.RuntimeDIUniverse.DIKey</a>, <a href="../model/plan/ExecutableOp$$InstantiationOp.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.ExecutableOp.InstantiationOp">InstantiationOp</a>]</span>)</span><span class="result">: <a href="../model/plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
