@@ -202,7 +202,7 @@
                         <a class="trait" href="Log$$Level.html" title=""></a>
                         <a href="Log$$Level.html" title="">Level</a>
                       </li><li class="current-entities indented7">
-                        <a class="object" href="Log$$LogArg$.html" title=""></a>
+                        <span class="separator"></span>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">LogArg</a>
                       </li><li class="current-entities indented7">
@@ -228,16 +228,14 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <a href="Log$$LogArg$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
+        <div class="big-circle class">c</div>
         <p id="owner"><a href="../../../../../index.html" class="extype" name="com">com</a>.<a href="../../../../index.html" class="extype" name="com.github">github</a>.<a href="../../../index.html" class="extype" name="com.github.pshirshov">pshirshov</a>.<a href="../../index.html" class="extype" name="com.github.pshirshov.izumi">izumi</a>.<a href="../index.html" class="extype" name="com.github.pshirshov.izumi.logstage">logstage</a>.<a href="index.html" class="extype" name="com.github.pshirshov.izumi.logstage.api">api</a>.<a href="Log$.html" class="extype" name="com.github.pshirshov.izumi.logstage.api.Log">Log</a></p>
-        <h1><a href="Log$$LogArg$.html" title="See companion object">LogArg</a><span class="permalink">
+        <h1>LogArg<span class="permalink">
       <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$LogArg.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="Log$$LogArg$.html" title="See companion object">object LogArg</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -246,7 +244,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">LogArg</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="hidden">hidden: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">LogArg</span><span class="params">(<span name="path">path: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="hidden">hidden: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -302,9 +300,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.logstage.api.Log.LogArg#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,value:Any,hidden:Boolean):com.github.pshirshov.izumi.logstage.api.Log.LogArg"></a><a id="&lt;init&gt;:LogArg"></a>
+      <a id="&lt;init&gt;(path:Seq[String],value:Any,hidden:Boolean):com.github.pshirshov.izumi.logstage.api.Log.LogArg"></a><a id="&lt;init&gt;:LogArg"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$LogArg.html#&lt;init&gt;(name:String,value:Any,hidden:Boolean):com.github.pshirshov.izumi.logstage.api.Log.LogArg" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$LogArg.html#&lt;init&gt;(path:Seq[String],value:Any,hidden:Boolean):com.github.pshirshov.izumi.logstage.api.Log.LogArg" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -313,7 +311,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">LogArg</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="hidden">hidden: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="name">LogArg</span><span class="params">(<span name="path">path: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>, <span name="hidden">hidden: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
       </span>
       
       
@@ -495,7 +493,7 @@
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
@@ -560,6 +558,22 @@
                 <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.logstage.api.Log.LogArg#path" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="path:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/logstage/api/Log$$LogArg.html#path:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">path</span><span class="result">: <a href="../../../../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">

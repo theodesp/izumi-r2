@@ -203,8 +203,8 @@
                         <a href="ModuleBase.html" title="">ModuleBase</a>
                       </li><li class="current-entities indented7">
                         <a class="object" href="" title=""></a>
-                        <a class="trait" href="ModuleDef.html" title=""></a>
-                        <a href="ModuleDef.html" title="">ModuleDef</a>
+                        <a class="trait" href="ModuleDef.html" title="DSL for defining module Bindings."></a>
+                        <a href="ModuleDef.html" title="DSL for defining module Bindings.">ModuleDef</a>
                       </li><li class="current-entities indented7">
                         <a class="object" href="SimpleModuleDef$.html" title=""></a>
                         <a class="class" href="SimpleModuleDef.html" title=""></a>
@@ -375,6 +375,22 @@
       </span>
       
       
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindingRef" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BindingRefextendsAnyRef"></a><a id="BindingRef:BindingRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$.html#BindingRefextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ModuleDef$$BindingRef.html"><span class="name">BindingRef</span></a><span class="result"> extends <a href="../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.IdentSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IdentSet[+D&lt;:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey]extendsProductwithSerializable"></a><a id="IdentSet[+D&lt;:reflection.universe.RuntimeDIUniverse.DIKey]:IdentSet[D]"></a>
       <span class="permalink">
@@ -387,7 +403,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ModuleDef$$IdentSet.html"><span class="name">IdentSet</span></a><span class="tparams">[<span name="D">+D &lt;: <a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a></span>]</span><span class="params">(<span name="key">key: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.IdentSet.D">D</span></span>, <span name="tags">tags: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="ModuleDef$$IdentSet.html"><span class="name">IdentSet</span></a><span class="tparams">[<span name="D">+D &lt;: <a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a></span>]</span><span class="params">(<span name="key">key: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.IdentSet.D">D</span></span>, <span name="tags">tags: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="pos">pos: <a href="../../../fundamentals/platform/jvm/SourceFilePosition.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.jvm.SourceFilePosition">SourceFilePosition</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -484,6 +500,38 @@
       </span>
       <span class="symbol">
         <a title="" href="ModuleDef$$SetNamedDSL.html"><span class="name">SetNamedDSL</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ModuleDef$$SetDSLMutBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SetDSLMutBase">SetDSLMutBase</a>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SetNamedDSL.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SetRef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetRefextendsModuleDef.BindingRefwithProductwithSerializable"></a><a id="SetRef:SetRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$.html#SetRefextendsModuleDef.BindingRefwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ModuleDef$$SetRef.html"><span class="name">SetRef</span></a><span class="params">(<span name="emptySetBinding">emptySetBinding: <a href="ModuleDef$$SingletonRef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef">SingletonRef</a></span>, <span name="all">all: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="ModuleDef$$SingletonRef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef">SingletonRef</a>]</span>)</span><span class="result"> extends <a href="ModuleDef$$BindingRef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindingRef">BindingRef</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SingletonRefextendsModuleDef.BindingRefwithProductwithSerializable"></a><a id="SingletonRef:SingletonRef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$.html#SingletonRefextendsModuleDef.BindingRefwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ModuleDef$$SingletonRef.html"><span class="name">SingletonRef</span></a><span class="params">(<span name="ref">ref: <a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a></span>)</span><span class="result"> extends <a href="ModuleDef$$BindingRef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindingRef">BindingRef</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       

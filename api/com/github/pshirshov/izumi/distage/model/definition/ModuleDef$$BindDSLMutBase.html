@@ -215,6 +215,10 @@
                         <a href="ModuleDef$$BindNamedDSL.html" title="">BindNamedDSL</a>
                       </li><li class="current-entities indented8">
                         <span class="separator"></span>
+                        <a class="trait" href="ModuleDef$$BindingRef.html" title=""></a>
+                        <a href="ModuleDef$$BindingRef.html" title="">BindingRef</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
                         <a class="class" href="ModuleDef$$IdentSet.html" title=""></a>
                         <a href="ModuleDef$$IdentSet.html" title="">IdentSet</a>
                       </li><li class="current-entities indented8">
@@ -241,6 +245,14 @@
                         <span class="separator"></span>
                         <a class="class" href="ModuleDef$$SetNamedDSL.html" title=""></a>
                         <a href="ModuleDef$$SetNamedDSL.html" title="">SetNamedDSL</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="ModuleDef$$SetRef.html" title=""></a>
+                        <a href="ModuleDef$$SetRef.html" title="">SetRef</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="ModuleDef$$SingletonRef.html" title=""></a>
+                        <a href="ModuleDef$$SingletonRef.html" title="">SingletonRef</a>
                       </li>
               </ul>
             </div>
@@ -345,9 +357,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase#mutableState" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="mutableState:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]"></a><a id="mutableState:Set[Binding]"></a>
+      <a id="mutableState:com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef"></a><a id="mutableState:SingletonRef"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$$BindDSLMutBase.html#mutableState:scala.collection.mutable.Set[com.github.pshirshov.izumi.distage.model.definition.Binding]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$$BindDSLMutBase.html#mutableState:com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -356,23 +368,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mutableState</span><span class="result">: <span class="extype" name="scala.collection.mutable.Set">Set</span>[<a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase#ownBinding" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="ownBinding:Boolean"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$$BindDSLMutBase.html#ownBinding:Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ownBinding</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">mutableState</span><span class="result">: <a href="ModuleDef$$SingletonRef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.SingletonRef">SingletonRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -689,9 +685,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase#replace" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="replace[B&lt;:com.github.pshirshov.izumi.distage.model.definition.Binding,S](newBinding:B)(newState:(B,Boolean)=&gt;S):S"></a><a id="replace[B&lt;:Binding,S](B)((B,Boolean)⇒S):S"></a>
+      <a id="replace[B&lt;:com.github.pshirshov.izumi.distage.model.definition.Binding,S](newBinding:B)(newState:B=&gt;S):S"></a><a id="replace[B&lt;:Binding,S](B)((B)⇒S):S"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$$BindDSLMutBase.html#replace[B&lt;:com.github.pshirshov.izumi.distage.model.definition.Binding,S](newBinding:B)(newState:(B,Boolean)=&gt;S):S" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/definition/ModuleDef$$BindDSLMutBase.html#replace[B&lt;:com.github.pshirshov.izumi.distage.model.definition.Binding,S](newBinding:B)(newState:B=&gt;S):S" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -700,7 +696,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">replace</span><span class="tparams">[<span name="B">B &lt;: <a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a></span>, <span name="S">S</span>]</span><span class="params">(<span name="newBinding">newBinding: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.B">B</span></span>)</span><span class="params">(<span name="newState">newState: (<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.B">B</span>, <span class="extype" name="scala.Boolean">Boolean</span>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.S">S</span></span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.S">S</span></span>
+        <span class="name">replace</span><span class="tparams">[<span name="B">B &lt;: <a href="Binding.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Binding">Binding</a></span>, <span name="S">S</span>]</span><span class="params">(<span name="newBinding">newBinding: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.B">B</span></span>)</span><span class="params">(<span name="newState">newState: (<span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.B">B</span>) ⇒ <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.S">S</span></span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef.BindDSLMutBase.replace.S">S</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>

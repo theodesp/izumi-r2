@@ -18,7 +18,7 @@
 
 <meta name="description" content="izumi-r2">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>DiStage Staged Dependency Injection · Izumi Toolkit</title>
+<title>distage Staged Dependency Injection · Izumi Toolkit</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.7a4cdee3.css">
 <link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
 <link rel="stylesheet" href="../lib/prettify/prettify.css">
@@ -54,7 +54,7 @@ code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
 Izumi Toolkit
 </span>
 <span class="md-header-nav__topic">
-DiStage Staged Dependency Injection
+distage Staged Dependency Injection
 </span>
 </div>
 </div>
@@ -102,16 +102,14 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
-  <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="../distage/index.html" class="active page">DiStage Staged Dependency Injection</a></li>
-  <li><a href="../idealingua/index.html" class="page">Idealingua DML/IDL</a>
+  <li><a href="../idealingua/index.html" class="page">IdeaLingua RPC &amp; Domain Modeling Language</a>
   <ul>
     <li><a href="../idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
     <li><a href="../idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="../idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="../idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
+  <li><a href="../distage/index.html" class="active page">distage Staged Dependency Injection</a></li>
   <li><a href="../logstage/index.html" class="page">LogStage</a>
   <ul>
     <li><a href="../logstage/policy.html" class="page">Rendering policy</a></li>
@@ -119,13 +117,20 @@ Izumi Toolkit
     <li><a href="../logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
   </ul></li>
   <li><a href="../sbt/index.html" class="page">SBT Toolkit</a></li>
+  <li><a href="../manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="../pper/index.html" class="page">PPER Pattern</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../distage/index.html#distage-staged-dependency-injection" class="header">DiStage Staged Dependency Injection</a>
+  <li><a href="../distage/index.html#distage-staged-dependency-injection" class="header">distage Staged Dependency Injection</a>
   <ul>
-    <li><a href="../distage/index.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a></li>
+    <li><a href="../distage/index.html#defining-simple-modules" class="header">Defining simple modules</a></li>
+    <li><a href="../distage/index.html#multibindings-set-bindings" class="header">MultiBindings / Set Bindings</a></li>
+    <li><a href="../distage/index.html#provider-bindings" class="header">Provider Bindings</a></li>
+    <li><a href="../distage/index.html#tagless-final-style-with-distage" class="header">Tagless Final Style with distage</a></li>
+    <li><a href="../distage/index.html#config-files" class="header">Config files</a></li>
+    <li><a href="../distage/index.html#auto-factories-auto-traits" class="header">Auto-Factories &amp; Auto-Traits</a></li>
     <li><a href="../distage/index.html#patterns" class="header">Patterns</a></li>
     <li><a href="../distage/index.html#test-kit" class="header">Test Kit</a></li>
     <li><a href="../distage/index.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
@@ -138,7 +143,7 @@ Izumi Toolkit
 </nav>
 
 <div class="md-nav__title--site md-version" title="Version">
-<i class="md-icon">label_outline</i> 0.5.38*
+<i class="md-icon">label_outline</i> 0.6.0*
 </div>
 </nav>
 
@@ -151,9 +156,14 @@ Izumi Toolkit
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
 <ul>
-  <li><a href="../distage/index.html#distage-staged-dependency-injection" class="header">DiStage Staged Dependency Injection</a>
+  <li><a href="../distage/index.html#distage-staged-dependency-injection" class="header">distage Staged Dependency Injection</a>
   <ul>
-    <li><a href="../distage/index.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a></li>
+    <li><a href="../distage/index.html#defining-simple-modules" class="header">Defining simple modules</a></li>
+    <li><a href="../distage/index.html#multibindings-set-bindings" class="header">MultiBindings / Set Bindings</a></li>
+    <li><a href="../distage/index.html#provider-bindings" class="header">Provider Bindings</a></li>
+    <li><a href="../distage/index.html#tagless-final-style-with-distage" class="header">Tagless Final Style with distage</a></li>
+    <li><a href="../distage/index.html#config-files" class="header">Config files</a></li>
+    <li><a href="../distage/index.html#auto-factories-auto-traits" class="header">Auto-Factories &amp; Auto-Traits</a></li>
     <li><a href="../distage/index.html#patterns" class="header">Patterns</a></li>
     <li><a href="../distage/index.html#test-kit" class="header">Test Kit</a></li>
     <li><a href="../distage/index.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
@@ -171,19 +181,15 @@ Izumi Toolkit
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#distage-staged-dependency-injection" name="distage-staged-dependency-injection" class="anchor"><span class="anchor-link"></span></a>DiStage Staged Dependency Injection</h1>
-<p>DiStage is a modern dependency injection framework for Scala. Like Scala itself, DiStage seeks to combine the best practices of FP with the best practices of OOP.</p>
-<p>Combining type safety, ease composition and separation of declaration from execution from FP, and late binding, modularity and scalability from OOP, DiStage brings together a fusion that retains safety and clarity of pure FP without sacrificing full runtime flexibility and configurability of traditional runtime dependency injection frameworks such as Guice.</p>
-<h2><a href="#tutorial-distage-by-example" name="tutorial-distage-by-example" class="anchor"><span class="anchor-link"></span></a>Tutorial: DiStage By Example</h2>
-<p>This tutorial will teach you how to build applications quickly and efficiently using DiStage!</br> DiStage is <em>staged</em>, meaning that it&rsquo;s split into several distinct <em>stages</em>, like a multi-pass compiler. DiStage lets you add custom functionality between stages should you require it, yet it keeps a simple surface API.</p>
-<p>We&rsquo;ll start off with basic examples and by the end of this tutorial you&rsquo;ll make a fully-fledged Pet Store application, complete with tests and configuration.</p>
+<h1><a href="#distage-staged-dependency-injection" name="distage-staged-dependency-injection" class="anchor"><span class="anchor-link"></span></a>distage Staged Dependency Injection</h1>
+<p>distage is a modern dependency injection framework for Scala.</p>
+<p>Combining type safety, ease composition and separation of declaration from execution from FP, and late binding, modularity and scalability from OOP, distage brings together a fusion that retains safety and clarity of pure FP without sacrificing full runtime flexibility and configurability of traditional runtime dependency injection frameworks such as Guice.</p>
 <h3><a href="#defining-simple-modules" name="defining-simple-modules" class="anchor"><span class="anchor-link"></span></a>Defining simple modules</h3>
-<p>This is what Hello World looks like in DiStage:</p>
-<pre class="prettyprint"><code class="language-scala">import com.github.pshirshov.izumi.distage.Injectors
-import com.github.pshirshov.izumi.distage.model.definition.ModuleDef
+<p>This is what Hello World looks like in distage:</p>
+<pre class="prettyprint"><code class="language-scala">import distage._
 
 class Hello {
-  def helloWorld() = println(&quot;Hello World!&quot;)
+  def hello(name: String) = println(s&quot;Hello $name!&quot;)
 }
 
 object HelloModule extends ModuleDef {
@@ -191,44 +197,186 @@ object HelloModule extends ModuleDef {
 }
 
 object Main extends App {
-  val injector = Injectors.bootstrap()
-  
-  val plan = injector.plan(HelloModule)
-  
-  val classes = injector.produce(plan)
+  val injector = Injector()
 
-  classes.get[Hello].helloWorld()
+  val plan = injector.plan(HelloModule)
+
+  val classes: Locator = injector.produce(plan)
+
+  println(&quot;What&#39;s your name?&quot;)
+  val name = readLine()
+  
+  classes.get[Hello].hello(name)
 }
 </code></pre>
-<p>Let&rsquo;s review the new concepts line by line:</p>
-<pre class="prettyprint"><code class="language-scala">object HelloModules extends ModuleDef {
+<p>Let&rsquo;s take a closer look:</p>
+<pre class="prettyprint"><code class="language-scala">object HelloModule extends ModuleDef {
   make[Hello]
 }
 </code></pre>
 <p>We define a <em>Module</em> for our application. A module specifies <em>what</em> classes to instantiate and <em>how</em> to instantiate them.</p>
-<p>In this case we are using the default instantiation strategy - just calling the constructor, so we don&rsquo;t have to specify anything.</p>
-<p>The default way to instantiate a class is to call its constructor. If the constructor accepts arguments, DiStage will first instantiate the arguments, then call the constructor. All the classes in DiStage are instantiated exactly once,  even if multiple classes depend on them, in other words they are <code>Singletons</code>.</p>
-<p>Modules can be combined using <code>++</code> operator. In DiStage, you&rsquo;ll combine all the modules in your application into one one large module representing your application. Don&rsquo;t worry, you won&rsquo;t have to do that manually, if you don&rsquo;t want to: DiStage comes with a mechanism to discover all the (specially marked) Modules on the classpath at boot-up time. See <a href="#plugins-and-configurations">Plugins</a> for details.</p>
-<p>However, If you choose to combine your modules manually, DiStage can offer compile-time checks to ensure that all the dependencies have been wired and that your app will run. See <a href="#testing-and-using-static-configurations">Static Configurations</a> for details. Whether you prefer the flexibility of runtime DI or the stability of compile-time DI, DiStage lets you mix and match different modes within one application.</p>
-<p>Next line:</p>
+<p>In this case we are using the default instantiation strategy - just calling the constructor.</p>
+<p>If a constructor accepts arguments, distage will first instantiate the arguments, then call the constructor. All the classes in distage are instantiated exactly once, even if multiple different classes depend on them, in other words they are <code>Singletons</code>.</p>
+<p>Modules can be combined using <code>++</code> operator, for example we can join our <code>HelloModule</code> with a <code>ByeModule</code>:</p>
+<pre class="prettyprint"><code class="language-scala">object ByeModule extends ModuleDef {
+  make[Bye]
+}
+
+class Bye {
+  def bye(name: String) = println(s&quot;Bye $name!&quot;)
+}
+
+val helloBye = HelloModule ++ ByeModule
+</code></pre>
+<p>Combining modules with ++ is the main way to assemble your app together! But, if you don&rsquo;t want to list all your modules in one place in your app, you can use <a href="#plugins">Plugins</a> to automatically combine all the (marked) modules in your app.</p>
+<p>If you choose to combine your modules manually, distage offers compile-time checks ensuring that your app will start. See <a href="#static-configurations">Static Configurations</a> for details.</p>
 <pre class="prettyprint"><code class="language-scala">object Main extends App {
-  val injector = Injectors.bootstrap()
+  val injector = Injector()
+  val plan = injector.plan(HelloModule)
 </code></pre>
-<p>Injector is the entity responsible for wiring our app together. We create an <code>injector</code> using default configuration.</p>
-<pre class="prettyprint"><code class="language-scala">  val plan = injector.plan(HelloModule)
-</code></pre>
-<p>We create an instantation <code>plan</code> from the module definition. Remember that DiStage is <em>staged</em>, instead of instantiating our definitions right away, DiStage first builds a pure representation of all the operations it will do and returns it back to us. This allows us to easily implement additional functionality on top of DiStage without modifying the library. In fact, DiStage&rsquo;s built-in functionality such as <a href="#plugins-and-configurations">Plugins</a> and <a href="#plugins-and-configurations">Configurations</a> is not hard-wired, but is built on this framework of manipulating the <code>plan</code>. Plan rewriting also enables the <a href="#import-injection-pattern">Import Injection Pattern</a> that will be especially interesting for the Scalazzi adepts seeking to free their programs of side effects.</p>
-<pre class="prettyprint"><code class="language-scala">  val classes = injector.produce(plan)
+<p>We create an instantation <code>plan</code> from the module definition. distage is <em>staged</em>, so instead of instantiating our definitions right away, distage first builds a pure representation of all the operations it will do and returns it back to us.</p>
+<p>This allows us to easily implement additional functionality on top of distage without modifying the library. In fact, distage&rsquo;s built-in functionality such as <a href="#plugins">Plugins</a> and <a href="#config-files">Configurations</a> is not hard-wired, but is built on this framework of manipulating the <code>plan</code>. Plan rewriting also enables the <a href="#import-injection-pattern">Import Injection Pattern</a> that helps limit side effects during initialization. </p>
+<pre class="prettyprint"><code class="language-scala">  val classes: Locator = injector.produce(plan)
 
   classes.get[Hello].helloWorld()
 </code></pre>
-<p>After we execute the plan we&rsquo;re left a <code>Locator</code> that holds all of our app&rsquo;s classes. We can retrieve the class by type using <code>.get</code></p>
-<p>This concludes the first chapter. Next, we&rsquo;ll learn how to use multiple and named bindings:</p>
-<h3><a href="#multiple-bindings-multibindings-set-bindings-" name="multiple-bindings-multibindings-set-bindings-" class="anchor"><span class="anchor-link"></span></a>Multiple Bindings (Multibindings, Set Bindings)</h3>
-<p>&hellip;</p>
-<h3><a href="#tagless-final-style-with-distage" name="tagless-final-style-with-distage" class="anchor"><span class="anchor-link"></span></a>Tagless Final Style with DiStage</h3>
-<p>&hellip;</p>
-<h3><a href="#plugins-and-configurations" name="plugins-and-configurations" class="anchor"><span class="anchor-link"></span></a>Plugins and Configurations</h3>
+<p>After we execute the plan we&rsquo;re left a <code>Locator</code> that holds all of our app&rsquo;s classes. We can retrieve the instances by type using the <code>.get</code> method</p>
+<h3><a href="#multibindings-set-bindings" name="multibindings-set-bindings" class="anchor"><span class="anchor-link"></span></a>MultiBindings / Set Bindings</h3>
+<p>Multibindings are useful for implementing event listeners, plugins, hooks, http routes, etc.</p>
+<p>To define a multibinding use <code>.many</code> and <code>.add</code> methods in <a href="/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
+<pre class="prettyprint"><code class="language-scala">import cats.effect._, org.http4s._, org.http4s.dsl.io._, scala.concurrent.ExecutionContext.Implicits.global
+import distage._
+
+object HomeRouteModule extends ModuleDef {
+  many[HttpRoutes[IO]].add {
+    HttpRoutes.of[IO] { case GET -&gt; Root / &quot;home&quot; =&gt; Ok(s&quot;Home page!&quot;) }
+  }
+}
+</code></pre>
+<p>Multibindings defined in different modules will be merged together into a single Set. You can summon a multibinding by type <code>Set[_]</code>:</p>
+<pre class="prettyprint"><code class="language-scala">import cats.implicits._, import org.http4s.server.blaze._, import org.http4s.implicits._
+
+object BlogRouteModule extends ModuleDef {
+  many[HttpRoutes[IO]].add {
+    HttpRoutes.of[IO] { case GET -&gt; Root / &quot;blog&quot; / post =&gt; Ok(&quot;Blog post ``$post&#39;&#39;!&quot;) }
+  }
+}
+
+class HttpServer(routes: Set[HttpRoutes[IO]]) {
+  def serve = BlazeBuilder[IO]
+    .bindHttp(8080, &quot;localhost&quot;)
+    .mountService(routes.fold[HttpRoutes[IO]], &quot;/&quot;)
+    .start
+
+  val count = routes.size
+}
+
+val context = Injector().run(HomeRouteModule ++ BlogRouteModule)
+val server = context.get[HttpServer]
+
+server.count // 2
+</code></pre>
+<p>For further detail see <a href="https://github.com/google/guice/wiki/Multibindings">Guice wiki on Multibindings</a>.</p>
+<h3><a href="#provider-bindings" name="provider-bindings" class="anchor"><span class="anchor-link"></span></a>Provider Bindings</h3>
+<p>To bind to a function instead of constructor use <code>.from</code> method in <a href="/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
+<pre class="prettyprint"><code class="language-scala">case class HostPort(host: String, port: Int)
+
+class HttpServer(hostPort: HostPort)
+
+trait HttpServerModule extends ModuleDef {
+  make[HttpServer].from {
+    hostPort: HostPort =&gt; new HttpServer(hostPort.host, hostPort + 1000)
+  }
+}
+</code></pre>
+<p>To inject named instances or config values, add annotations to lambda arguments&rsquo; types:</p>
+<pre class="prettyprint"><code class="language-scala">trait HostPortModule extends ModuleDef {
+  make[HostPort].from {
+    (configHost: String @ConfPath(&quot;http.host&quot;), configPort: Int @ConfPath(&quot;http.port&quot;)) =&gt;
+      HostPort(configHost, configPort)
+  }
+}
+</code></pre>
+<p>For further details, see scaladoc for <a href="/api/com/github/pshirshov/izumi/distage/model/providers/ProviderMagnet.html">ProviderMagnet</a></p>
+<h3><a href="#tagless-final-style-with-distage" name="tagless-final-style-with-distage" class="anchor"><span class="anchor-link"></span></a>Tagless Final Style with distage</h3>
+<p>distage has first-class support for tagless final style. Let&rsquo;s see how <a href="http://frees.io/docs/core/handlers/#tagless-interpretation">freestyle tagless example</a> looks in distage:</p>
+<pre class="prettyprint"><code class="language-scala">class Program[F: TagK: Monad] extends ModuleDef {
+  make[TaglessProgram[F]]
+}
+
+object TryInterpreters extends ModuleDef {
+  make[Validation.Handler[Try]].from(tryValidationHandler)
+  make[Interaction.Handler[Try]].from(tryInteractionHandler)
+}
+
+// Combine modules into a full program
+val TryProgram = new Program[Try] ++ TryInterpreters
+</code></pre>
+<p>where</p>
+<pre class="prettyprint"><code class="language-scala">class TaglessProgram[F[_]: Monad](validation: Validation[F], interaction: Interaction[F]) {
+  def program = for {
+      userInput &lt;- interaction.ask(&quot;Give me something with at least 3 chars and a number on it&quot;)
+      valid     &lt;- (validation.minSize(userInput, 3), validation.hasNumber(userInput)).mapN(_ &amp;&amp; _)
+      _         &lt;- if (valid) interaction.tell(&quot;awesomesauce!&quot;) else interaction.tell(s&quot;$userInput is not valid&quot;)
+  } yield ()
+}
+
+val validationHandler = new Validation.Handler[Try] {
+  override def minSize(s: String, n: Int): Try[Boolean] = Try(s.size &gt;= n)
+  override def hasNumber(s: String): Try[Boolean] = Try(s.exists(c =&gt; &quot;0123456789&quot;.contains(c)))
+}
+
+val interactionHandler = new Interaction.Handler[Try] {
+  override def tell(s: String): Try[Unit] = Try(println(s))
+  override def ask(s: String): Try[String] = Try(&quot;This could have been user input 1&quot;)
+}
+</code></pre>
+<p>Notice how the program module stays completely polymorphic and abstracted from its eventual interpeter or what monad it will run in? Want a program in different Monad? No problem:</p>
+<pre class="prettyprint"><code class="language-scala">val IOProgram = new Program[IO] ++ IOInterpreters
+</code></pre>
+<p>Want a program in the <strong>same</strong> Monad, but with different interpreters? No problem at all:</p>
+<pre class="prettyprint"><code class="language-scala">val DifferentTryProgram = new Program[Try] ++ DifferentTryInterpreters
+</code></pre>
+<p>distage makes tagless final style easier and safer by making your implicit instances explicit and configurable as first-class values. It even enforces typeclass coherence by disallowing multiple instances, so one wrong <code>import</code> can&rsquo;t ruin your day. distage doesn&rsquo;t make you choose between OO and FP, it lets you use both without losing neither ease of configuration and variability of a runtime DI framework, nor parametricity and equational reasoning of pure FP style.</p>
+<h3><a href="#config-files" name="config-files" class="anchor"><span class="anchor-link"></span></a>Config files</h3>
+<p>We provide first-class integration with <code>typesafe-config</code>, rendering a lot of parsing boilerplate unnecessary.</p>
+<p>First, add <code>distage-config</code> library:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_config
+</code></pre>
+<p>or @@@vars</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-config&quot; % &quot;$izumi.version$&quot;
+</code></pre>
+<p>@@@</p>
+<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
+<p>Then just put your config into typesafe-config and in distage you can summon it from any class:</p>
+<pre class="prettyprint"><code class="language-scala">final case class Config(different: Boolean)
+
+class ConfiguredTaglessProgram[F](
+  @ConfPath(&quot;program.config&quot;) config: Config,
+  @Id(&quot;primary&quot;) primaryProgram: TaglessProgram[F],
+  @Id(&quot;different&quot;) differentProgram: TaglessProgram[F]) {
+
+    val program = if (config.different) differentProgram else primaryProgram
+}
+
+class ConfiguredTryProgram[F: TagK: Monad] extends ModuleDef {
+  make[ConfiguredProgram[F]]
+  make[TaglessProgram[F]].named(&quot;primary&quot;)
+  make[TaglessProgram[F]].named(&quot;different&quot;)
+}
+</code></pre>
+<p>Where your config file looks like this:</p>
+<pre class="prettyprint"><code class="language-hocon">program {
+    config {
+        different = true
+    }
+}
+</code></pre>
+<blockquote>
+  <p>If you prefer compile-time check, consider using MacWire</p>
+</blockquote>
+<p>Unfortunately, MacWire is fully static and cannot change dependencies at runtime. It would seem like the only choice is between unsafe, but flexible, runtime dependency injection vs. safe, but rigid, compile-time schemes. That&rsquo;s not true, however. <strong><a href="https://github.com/pshirshov/izumi-r2/issues/51">Why not have both?</a></strong> By giving appropriate types to our modules we can allow runtime variation, while at the same time guaranteeing correct instantiation. The proposed typing scheme is currently a work in progress in distage, but already implementing a basic check is as easy as running the exact same wiring code in compile-time macro instead of at runtime.</p>
+<h3><a href="#auto-factories-auto-traits" name="auto-factories-auto-traits" class="anchor"><span class="anchor-link"></span></a>Auto-Factories &amp; Auto-Traits</h3>
 <p>&hellip;</p>
 <h2><a href="#patterns" name="patterns" class="anchor"><span class="anchor-link"></span></a>Patterns</h2>
 <h3><a href="#import-injection-pattern" name="import-injection-pattern" class="anchor"><span class="anchor-link"></span></a>Import Injection Pattern</h3>
@@ -237,6 +385,36 @@ object Main extends App {
 <p>&hellip;</p>
 <h3><a href="#ensuring-service-boundaries-using-api-modules" name="ensuring-service-boundaries-using-api-modules" class="anchor"><span class="anchor-link"></span></a>Ensuring service boundaries using API modules</h3>
 <p>&hellip;</p>
+<h3><a href="#plugins" name="plugins" class="anchor"><span class="anchor-link"></span></a>Plugins</h3>
+<p>Sometimes, when rapidly prototyping, the additional friction of adding new modules into the system can disrupt developer&rsquo;s flow. Distage plugin system can automatically pickup all modules defined in the program and by doing that reduce friction of adding new modules.</p>
+<p>To define a plugin, first add distage-plugins library:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_plugins
+</code></pre>
+<p>or @@@vars</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-plugins&quot; % &quot;$izumi.version$&quot;
+</code></pre>
+<p>@@@</p>
+<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
+<p>Create a module extending the <code>PluginDef</code> trait instead of <code>ModuleDef</code>:</p>
+<pre class="prettyprint"><code class="language-scala">trait PetStorePlugin extends PluginDef {
+  make[PetRepository]
+  make[PetStoreService]
+  make[PetStoreController]
+}
+</code></pre>
+<p>At your app entry point add a plugin loader:</p>
+<pre class="prettyprint"><code class="language-scala">val pluginLoader = new PluginLoaderDefaultImpl(
+  PluginConfig(debug = false, packagesEnabled = Seq(&quot;com.example&quot;), packagesDisabled = Seq.empty))
+)
+
+val appModules = pluginLoader.load()
+val app = appModules.merge
+</code></pre>
+<p>Launch as normal with the loaded modules:</p>
+<pre class="prettyprint"><code class="language-scala">val injector = Injectors.bootstrap()
+injector.run(app)
+</code></pre>
+<p>Plugins also allow a program to dynamically extend itself by adding new Plugin classes into the classpath which will be picked up at runtime.</p>
 <h3><a href="#roles-not-microservices" name="roles-not-microservices" class="anchor"><span class="anchor-link"></span></a>Roles, not microservices</h3>
 <p>&hellip;</p>
 <h2><a href="#test-kit" name="test-kit" class="anchor"><span class="anchor-link"></span></a>Test Kit</h2>
@@ -256,20 +434,29 @@ object Main extends App {
 <p>&hellip;</p>
 <h4><a href="#automatic-resolution-with-generated-proxies" name="automatic-resolution-with-generated-proxies" class="anchor"><span class="anchor-link"></span></a>Automatic Resolution with generated Proxies</h4>
 <h4><a href="#manual-resolution-with-by-name-parameters" name="manual-resolution-with-by-name-parameters" class="anchor"><span class="anchor-link"></span></a>Manual Resolution with by-name parameters</h4>
-<h3><a href="#auto-traits" name="auto-traits" class="anchor"><span class="anchor-link"></span></a>Auto-Traits</h3>
 <h3><a href="#auto-sets-collecting-bindings-by-predicate" name="auto-sets-collecting-bindings-by-predicate" class="anchor"><span class="anchor-link"></span></a>Auto-Sets: Collecting Bindings By Predicate</h3>
 <p>&hellip;</p>
 <h4><a href="#weak-sets" name="weak-sets" class="anchor"><span class="anchor-link"></span></a>Weak Sets</h4>
 <h3><a href="#provider-function-bindings" name="provider-function-bindings" class="anchor"><span class="anchor-link"></span></a>Provider (Function) Bindings</h3>
 <p>&hellip;</p>
 <h3><a href="#debugging-introspection-diagnostics-and-hooks" name="debugging-introspection-diagnostics-and-hooks" class="anchor"><span class="anchor-link"></span></a>Debugging, Introspection, Diagnostics and Hooks</h3>
-<p>To see macro debug output during compilation, set <code>-Dizumi.distage.debug.macro=true</code> java property:</p>
+<p>You can print a <code>plan</code> to get detailed info on what will happen during instantiation. The printout includes file:line info so your IDE can show you where the binding was defined! </p>
+<pre class="prettyprint"><code class="language-scala">System.err.println(plan: OrderedPlan)
+</code></pre>
+<p><img src="media/print-test-plan.png" alt="print-test-plan" /></p>
+<p>You can also query a plan to see the dependencies and reverse dependencies of a class and their instantiation:</p>
+<pre class="prettyprint"><code class="language-scala">// Print dependencies
+System.err.println(plan.topology.dependees.tree(DIKey.get[Circular1]))
+// Print reverse dependencies
+System.err.println(plan.topology.dependees.tree(DIKey.get[Circular1]))
+</code></pre>
+<p><img src="media/print-dependencies.png" alt="print-dependencies" /></p>
+<p>The printer highlights circular dependencies.</p>
+<p>Distage also uses some macros, macros are currently used to create <code>TagK</code>s and [provider bindings](#provider-(function)-bindings). If you think they&rsquo;ve gone awry, you can turn macro debug output during compilation by setting <code>-Dizumi.distage.debug.macro=true</code> java property:</p>
 <pre class="prettyprint"><code class="language-bash">sbt -Dizumi.distage.debug.macro=true compile
 </code></pre>
-<p>Macros are currently used to create <code>TagK</code>s and [provider bindings](#provider-(function)-bindings).</p>
-<p>They also power <code>distage-static</code> module, an alternative backend that doesn&rsquo;t use JVM runtime reflection. </p>
-<p>TODO &hellip;</p>
-<h3><a href="#extensions-and-plan-rewriting-writing-our-first-distage-extension" name="extensions-and-plan-rewriting-writing-our-first-distage-extension" class="anchor"><span class="anchor-link"></span></a>Extensions and Plan Rewriting – writing our first DiStage extension</h3>
+<p>Macros power <code>distage-static</code> module, an alternative backend that doesn&rsquo;t use JVM runtime reflection.</p>
+<h3><a href="#extensions-and-plan-rewriting-writing-our-first-distage-extension" name="extensions-and-plan-rewriting-writing-our-first-distage-extension" class="anchor"><span class="anchor-link"></span></a>Extensions and Plan Rewriting – writing our first distage extension</h3>
 <p>&hellip;</p>
 <h2><a href="#migrating-from-guice" name="migrating-from-guice" class="anchor"><span class="anchor-link"></span></a>Migrating from Guice</h2>
 <p>&hellip;</p>
@@ -278,6 +465,31 @@ object Main extends App {
 <h2><a href="#integrations" name="integrations" class="anchor"><span class="anchor-link"></span></a>Integrations</h2>
 <p>&hellip;</p>
 <h3><a href="#cats" name="cats" class="anchor"><span class="anchor-link"></span></a>Cats</h3>
+<p>To import cats integration add distage-cats library:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_cats
+</code></pre>
+<p>or @@@vars</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-cats&quot; % &quot;$izumi.version$&quot;
+</code></pre>
+<p>@@@</p>
+<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
+<p>Usage:</p>
+<pre class="prettyprint"><code class="language-scala">import cats.implicits._
+import cats.effect._
+import distage._
+import distage.cats._
+
+object Main extends IOApp {
+  def run(args: List[String]): IO[Unit] = {
+    val myModules = module1 |+| module2 // Monoid instance is available for ModuleDef
+    
+    for { 
+      classes &lt;- Injector().runIO[IO](myModules)
+      _ &lt;- classes.get[AppEntrypoint].run
+    } yield ()
+  }
+}
+</code></pre>
 <h3><a href="#scalaz" name="scalaz" class="anchor"><span class="anchor-link"></span></a>Scalaz</h3>
 <h3><a href="#freestyle" name="freestyle" class="anchor"><span class="anchor-link"></span></a>Freestyle</h3>
 <h3><a href="#eff" name="eff" class="anchor"><span class="anchor-link"></span></a>Eff</h3>
@@ -291,7 +503,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.5.38*
+0.6.0*
 </span>
 </div>
 </article>
@@ -301,7 +513,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../pper/index.html" title="PPER Pattern" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../idealingua/cogen-circe.html" title="Circe serialization reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -310,17 +522,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-PPER Pattern
+Circe serialization reference
 </span>
 </div>
 </a>
-<a href="../idealingua/index.html" title="Idealingua DML/IDL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../logstage/index.html" title="LogStage" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Idealingua DML/IDL
+LogStage
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

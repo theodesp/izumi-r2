@@ -315,8 +315,8 @@
                         <a href="Injector.html" title="">Injector</a>
                       </li><li class="current-entities indented6">
                         <a class="object" href="Locator$.html" title=""></a>
-                        <a class="trait" href="Locator.html" title=""></a>
-                        <a href="Locator.html" title="">Locator</a>
+                        <a class="trait" href="Locator.html" title="Holds the object graph created by executing a plan"></a>
+                        <a href="Locator.html" title="Holds the object graph created by executing a plan">Locator</a>
                       </li><li class="current-entities indented6">
                         <span class="separator"></span>
                         <a class="trait" href="LocatorExtension.html" title=""></a>
@@ -428,10 +428,10 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.distage.model.Planner#plan" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="plan(context:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.FinalPlan"></a><a id="plan(ModuleBase):FinalPlan"></a>
+              <ol><li name="com.github.pshirshov.izumi.distage.model.Planner#merge" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="merge(a:com.github.pshirshov.izumi.distage.model.plan.AbstractPlan,b:com.github.pshirshov.izumi.distage.model.plan.AbstractPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan"></a><a id="merge(AbstractPlan,AbstractPlan):OrderedPlan"></a>
       <span class="permalink">
-      <a href="../../../../../../com/github/pshirshov/izumi/distage/model/Planner.html#plan(context:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.FinalPlan" title="Permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/model/Planner.html#merge(a:com.github.pshirshov.izumi.distage.model.plan.AbstractPlan,b:com.github.pshirshov.izumi.distage.model.plan.AbstractPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -440,7 +440,23 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">plan</span><span class="params">(<span name="context">context: <a href="definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result">: <a href="plan/FinalPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.FinalPlan">FinalPlan</a></span>
+        <span class="name">merge</span><span class="params">(<span name="a">a: <a href="plan/AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></span>, <span name="b">b: <a href="plan/AbstractPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.AbstractPlan">AbstractPlan</a></span>)</span><span class="result">: <a href="plan/OrderedPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.OrderedPlan">OrderedPlan</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.distage.model.Planner#plan" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="plan(context:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan"></a><a id="plan(ModuleBase):OrderedPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../../com/github/pshirshov/izumi/distage/model/Planner.html#plan(context:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plan</span><span class="params">(<span name="context">context: <a href="definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result">: <a href="plan/OrderedPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.OrderedPlan">OrderedPlan</a></span>
       </span>
       
       

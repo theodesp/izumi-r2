@@ -211,6 +211,10 @@
                         <a href="OperationExecutor.html" title="">OperationExecutor</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
+                        <a class="class" href="OperationFailed.html" title=""></a>
+                        <a href="OperationFailed.html" title="">OperationFailed</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
                         <a class="trait" href="Provision.html" title=""></a>
                         <a href="Provision.html" title="">Provision</a>
                       </li><li class="current-entities indented7">
@@ -241,6 +245,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="ProvisioningKeyProvider.html" title=""></a>
                         <a href="ProvisioningKeyProvider.html" title="">ProvisioningKeyProvider</a>
+                      </li><li class="current-entities indented7">
+                        <span class="separator"></span>
+                        <a class="class" href="ProvisioningMassFailureContext.html" title=""></a>
+                        <a href="ProvisioningMassFailureContext.html" title="">ProvisioningMassFailureContext</a>
                       </li>
               </ul>
             </div>
@@ -360,10 +368,10 @@
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureInterceptor#onStepFailure" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="onStepFailure(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext,f:Throwable):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive"></a><a id="onStepFailure(ProvisioningFailureContext,Throwable):ProvisionActive"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureInterceptor#onProvisioningFailed" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="onProvisioningFailed(toImmutable:com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable,plan:com.github.pshirshov.izumi.distage.model.plan.OrderedPlan,parentContext:com.github.pshirshov.izumi.distage.model.Locator,failures:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[Throwable]]):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable"></a><a id="onProvisioningFailed(ProvisionImmutable,OrderedPlan,Locator,Map[reflection.universe.RuntimeDIUniverse.DIKey,Set[Throwable]]):ProvisionImmutable"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/provisioning/ProvisioningFailureInterceptor.html#onStepFailure(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext,f:Throwable):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/provisioning/ProvisioningFailureInterceptor.html#onProvisioningFailed(toImmutable:com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable,plan:com.github.pshirshov.izumi.distage.model.plan.OrderedPlan,parentContext:com.github.pshirshov.izumi.distage.model.Locator,failures:Map[com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey,Set[Throwable]]):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -372,23 +380,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">onStepFailure</span><span class="params">(<span name="context">context: <a href="ProvisioningFailureContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext">ProvisioningFailureContext</a></span>, <span name="f">f: <a href="../../../../../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="ProvisionActive.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive">ProvisionActive</a></span>
-      </span>
-      
-      
-    </li><li name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureInterceptor#onStepOperationFailure" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="onStepOperationFailure(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext,result:com.github.pshirshov.izumi.distage.model.provisioning.OpResult,f:Throwable):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive"></a><a id="onStepOperationFailure(ProvisioningFailureContext,OpResult,Throwable):ProvisionActive"></a>
-      <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/distage/model/provisioning/ProvisioningFailureInterceptor.html#onStepOperationFailure(context:com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext,result:com.github.pshirshov.izumi.distage.model.provisioning.OpResult,f:Throwable):com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">onStepOperationFailure</span><span class="params">(<span name="context">context: <a href="ProvisioningFailureContext.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisioningFailureContext">ProvisioningFailureContext</a></span>, <span name="result">result: <a href="OpResult.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.OpResult">OpResult</a></span>, <span name="f">f: <a href="../../../../../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <a href="ProvisionActive.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisionActive">ProvisionActive</a></span>
+        <span class="name">onProvisioningFailed</span><span class="params">(<span name="toImmutable">toImmutable: <a href="ProvisionImmutable.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable">ProvisionImmutable</a></span>, <span name="plan">plan: <a href="../plan/OrderedPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.OrderedPlan">OrderedPlan</a></span>, <span name="parentContext">parentContext: <a href="../Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">Locator</a></span>, <span name="failures">failures: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">reflection.universe.RuntimeDIUniverse.DIKey</a>, <span class="extype" name="scala.Predef.Set">Set</span>[<a href="../../../../../../../scala/index.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a>]]</span>)</span><span class="result">: <a href="ProvisionImmutable.html" class="extype" name="com.github.pshirshov.izumi.distage.model.provisioning.ProvisionImmutable">ProvisionImmutable</a></span>
       </span>
       
       

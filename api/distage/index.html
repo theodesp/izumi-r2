@@ -1,0 +1,535 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title></title>
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js"></script>
+      <script type="text/javascript" src="../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../lib/index.js"></script>
+      <script type="text/javascript" src="../index.js"></script>
+      <script type="text/javascript" src="../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title"><span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.distage" visbl="pub" class="indented1 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="distage"></a><a id="distage:distage"></a>
+      <span class="permalink">
+      <a href="index.html#distage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">distage</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="distage.cats" visbl="pub" class="indented2 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cats"></a><a id="cats:cats"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#cats" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="cats/index.html"><span class="name">cats</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Injector$.html" title=""></a>
+                        <a href="Injector$.html" title="">Injector</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        
+        <h1>distage<span class="permalink">
+      <a href="../distage/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">distage</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="distage"><span>distage</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="distage.DIKey" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DIKey=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey"></a><a id="DIKey:DIKey"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#DIKey=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DIKey</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#DIKeyextendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Id" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Id=com.github.pshirshov.izumi.distage.model.definition.Id"></a><a id="Id:Id"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Id=com.github.pshirshov.izumi.distage.model.definition.Id" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Id</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/definition/Id.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.Id">com.github.pshirshov.izumi.distage.model.definition.Id</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Injector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Injector=com.github.pshirshov.izumi.distage.model.Injector"></a><a id="Injector:Injector"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Injector=com.github.pshirshov.izumi.distage.model.Injector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Injector</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/Injector.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Injector">com.github.pshirshov.izumi.distage.model.Injector</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Locator" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Locator=com.github.pshirshov.izumi.distage.model.Locator"></a><a id="Locator:Locator"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Locator=com.github.pshirshov.izumi.distage.model.Locator" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Locator</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">com.github.pshirshov.izumi.distage.model.Locator</a></span>
+      </span>
+      
+      
+    </li><li name="distage.ModuleBase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModuleBase=com.github.pshirshov.izumi.distage.model.definition.ModuleBase"></a><a id="ModuleBase:ModuleBase"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#ModuleBase=com.github.pshirshov.izumi.distage.model.definition.ModuleBase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ModuleBase</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">com.github.pshirshov.izumi.distage.model.definition.ModuleBase</a></span>
+      </span>
+      
+      
+    </li><li name="distage.ModuleDef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModuleDef=com.github.pshirshov.izumi.distage.model.definition.ModuleDef"></a><a id="ModuleDef:ModuleDef"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#ModuleDef=com.github.pshirshov.izumi.distage.model.definition.ModuleDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ModuleDef</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef">com.github.pshirshov.izumi.distage.model.definition.ModuleDef</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Planner" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Planner=com.github.pshirshov.izumi.distage.model.Planner"></a><a id="Planner:Planner"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Planner=com.github.pshirshov.izumi.distage.model.Planner" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Planner</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/Planner.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Planner">com.github.pshirshov.izumi.distage.model.Planner</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Producer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Producer=com.github.pshirshov.izumi.distage.model.Producer"></a><a id="Producer:Producer"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Producer=com.github.pshirshov.izumi.distage.model.Producer" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Producer</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/Producer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Producer">com.github.pshirshov.izumi.distage.model.Producer</a></span>
+      </span>
+      
+      
+    </li><li name="distage.SafeType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SafeType=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType"></a><a id="SafeType:SafeType"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#SafeType=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SafeType</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#SafeTypeextendsProductwithSerializable" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISafeType.SafeType">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType</a></span>
+      </span>
+      
+      
+    </li><li name="distage.SimpleModuleDef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleModuleDef=com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef"></a><a id="SimpleModuleDef:SimpleModuleDef"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#SimpleModuleDef=com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SimpleModuleDef</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/definition/SimpleModuleDef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef">com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef</a></span>
+      </span>
+      
+      
+    </li><li name="distage.Tag" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tag[T]=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag[T]"></a><a id="Tag[T]:Tag[T]"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Tag[T]=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tag</span><span class="tparams">[<span name="T">T</span>]</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#Tag[T]extendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag</a>[<span class="extype" name="distage.Tag.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="distage.TagK" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TagK[T[_]]=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK[T]"></a><a id="TagK[T[_]]:TagK[T]"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#TagK[T[_]]=com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TagK</span><span class="tparams">[<span name="T">T<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#TagK[K[_]]extendsAnyRef" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK</a>[<span class="extype" name="distage.TagK.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="distage.With" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="With[T]=com.github.pshirshov.izumi.distage.model.definition.With[T]"></a><a id="With[T]:With[T]"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#With[T]=com.github.pshirshov.izumi.distage.model.definition.With[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">With</span><span class="tparams">[<span name="T">T</span>]</span><span class="result alias"> = <a href="../com/github/pshirshov/izumi/distage/model/definition/With.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.With">com.github.pshirshov.izumi.distage.model.definition.With</a>[<span class="extype" name="distage.With.T">T</span>]</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="distage#DIKey" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DIKey:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey.type"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#DIKey:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DIKey</span><span class="result">: <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#DIKey" class="extmbr" name="com.github.pshirshov.izumi.distage.model.references.WithDIKey.DIKey">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.DIKey</a>.type</span>
+      </span>
+      
+      
+    </li><li name="distage#SafeType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SafeType:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType.type"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#SafeType:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SafeType</span><span class="result">: <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#SafeType" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDISafeType.SafeType">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.SafeType</a>.type</span>
+      </span>
+      
+      
+    </li><li name="distage#SimpleModuleDef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleModuleDef:com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef.type"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#SimpleModuleDef:com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SimpleModuleDef</span><span class="result">: <a href="../com/github/pshirshov/izumi/distage/model/definition/SimpleModuleDef$.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef">com.github.pshirshov.izumi.distage.model.definition.SimpleModuleDef</a>.type</span>
+      </span>
+      
+      
+    </li><li name="distage#Tag" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tag:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag.type"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Tag:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tag</span><span class="result">: <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#Tag" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.Tag</a>.type</span>
+      </span>
+      
+      
+    </li><li name="distage#TagK" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TagK:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK.type"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#TagK:com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TagK</span><span class="result">: <a href="../com/github/pshirshov/izumi/distage/model/reflection/universe/RuntimeDIUniverse$.html#TagK" class="extmbr" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK">com.github.pshirshov.izumi.distage.model.reflection.universe.RuntimeDIUniverse.TagK</a>.type</span>
+      </span>
+      
+      
+    </li><li name="distage.Injector" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Injector"></a><a id="Injector:Injector"></a>
+      <span class="permalink">
+      <a href="../distage/index.html#Injector" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Injector$.html"><span class="name">Injector</span></a>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

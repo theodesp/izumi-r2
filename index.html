@@ -97,16 +97,14 @@ Izumi Toolkit
 </a>
 </label>
 <ul>
-  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
-  <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="distage/index.html" class="page">DiStage Staged Dependency Injection</a></li>
-  <li><a href="idealingua/index.html" class="page">Idealingua DML/IDL</a>
+  <li><a href="idealingua/index.html" class="page">IdeaLingua RPC &amp; Domain Modeling Language</a>
   <ul>
     <li><a href="idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
     <li><a href="idealingua/json.html" class="page">JSON Wire Format</a></li>
     <li><a href="idealingua/cogen.html" class="page">Code generator reference</a></li>
     <li><a href="idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
   </ul></li>
+  <li><a href="distage/index.html" class="page">distage Staged Dependency Injection</a></li>
   <li><a href="logstage/index.html" class="page">LogStage</a>
   <ul>
     <li><a href="logstage/policy.html" class="page">Rendering policy</a></li>
@@ -114,6 +112,8 @@ Izumi Toolkit
     <li><a href="logstage/custom_ctx.html" class="page">logstage/custom_ctx.html</a></li>
   </ul></li>
   <li><a href="sbt/index.html" class="page">SBT Toolkit</a></li>
+  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="toc">Table of contents</label>
@@ -126,7 +126,7 @@ Izumi Toolkit
 </nav>
 
 <div class="md-nav__title--site md-version" title="Version">
-<i class="md-icon">label_outline</i> 0.5.38*
+<i class="md-icon">label_outline</i> 0.6.0*
 </div>
 </nav>
 
@@ -156,7 +156,7 @@ Izumi Toolkit
 <p>Sorry, this page is not ready yet</p></div>
 <h2><a href="#dependencies" name="dependencies" class="anchor"><span class="anchor-link"></span></a>Dependencies</h2>
 <p>To use <a href="sbt/index.html">Izumi SBT Toolkit</a> add the follwing into <code>project/build.sbt</code>:</p>
-<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.5.38-SNAPSHOT&quot;
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
 // sbt toolkit
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi&quot; % izumi_version)
 
@@ -165,16 +165,78 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&qu
 
 // idealingua compiler (optional)
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&quot; % izumi_version)
-</code></pre><div class="callout warning "><div class="callout-title">TODO</div>
-<p>Put list of modules here</p></div>
+</code></pre>
+<p>You can use izumi&rsquo;s <code>BOM</code> definitions to import (it comes with the <code>sbt-izumi-deps plugin</code>). BOM will insert the correct version automatically:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies ++= Seq(
+  
+  // distage
+    Izumi.R.distage_core
+  , Izumi.R.distage_config // Typesafe Config support
+  , Izumi.R.distage_cats // Cats Integration
+  , Izumi.R.distage_static // Compile-time checks &amp; reflection-less mode
+  , Izumi.R.distage_plugins // runtime Plugins support
+  , Izumi.R.distage_app  // DiApp
+  , Izumi.R.logstage_di // LogStage integration
+  
+  // LogStage
+  , Izumi.R.logstage_api_logger
+  , Izumi.R.logstage_adapter_slf4j // Route Slf4J logs to logstage
+  , Izumi.R.logstage_rendering_json4s // dump structured log as JSON
+  , Izumi.R.logstage_sink_console 
+  , Izumi.R.logstage_sink_file // write to files with log rotation support
+  , Izumi.R.logstage_sink_slf4j // write to slf4j
+  
+  // Idealingua Runtime Dependencies (for use with Idealingua compiler)
+  , Izumi.R.idealingua_model
+  , Izumi.R.idealingua_runtime_rpc_http4s
+  , Izumi.R.idealingua_runtime_rpc_circe
+  , Izumi.R.idealingua_runtime_rpc_cats
+)
+</code></pre>
+<p>Alternatively, you can list artifact names and versions manually:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies ++= Seq(
+    &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-core&quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-config &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-cats &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-static &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-plugins &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-app  &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-di &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-api-logger&quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-adapter-slf4j &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-rendering-json4s &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-sink-console &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-sink-file &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;logstage-sink-slf4j &quot; % &quot;0.6.0-SNAPSHOT&quot;
+  
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;idealingua-model&quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;idealingua-runtime-rpc-http4s&quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;idealingua-runtime-rpc-circe&quot; % &quot;0.6.0-SNAPSHOT&quot;
+  , &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;idealingua-runtime-rpc-cats&quot; % &quot;0.6.0-SNAPSHOT&quot;
+)
+</code></pre>
 <p>You may find ScalaDoc API docs <a href="/api/com/github/pshirshov/izumi/index.html">here</a></p>
 <div class="toc ">
 <ul>
-  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
-  <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
-  <li><a href="distage/index.html" class="page">DiStage Staged Dependency Injection</a>
+  <li><a href="idealingua/index.html" class="page">IdeaLingua RPC &amp; Domain Modeling Language</a>
   <ul>
-    <li><a href="distage/index.html#tutorial-distage-by-example" class="header">Tutorial: DiStage By Example</a></li>
+    <li><a href="idealingua/index.html#user-service-example" class="header">User Service Example</a></li>
+    <li><a href="idealingua/index.html#pet-store-example" class="header">Pet Store Example</a></li>
+    <li><a href="idealingua/index.html#installation" class="header">Installation</a></li>
+    <li><a href="idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
+    <li><a href="idealingua/json.html" class="page">JSON Wire Format</a></li>
+    <li><a href="idealingua/cogen.html" class="page">Code generator reference</a></li>
+    <li><a href="idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
+  </ul></li>
+  <li><a href="distage/index.html" class="page">distage Staged Dependency Injection</a>
+  <ul>
+    <li><a href="distage/index.html#defining-simple-modules" class="header">Defining simple modules</a></li>
+    <li><a href="distage/index.html#multibindings-set-bindings" class="header">MultiBindings / Set Bindings</a></li>
+    <li><a href="distage/index.html#provider-bindings" class="header">Provider Bindings</a></li>
+    <li><a href="distage/index.html#tagless-final-style-with-distage" class="header">Tagless Final Style with distage</a></li>
+    <li><a href="distage/index.html#config-files" class="header">Config files</a></li>
+    <li><a href="distage/index.html#auto-factories-auto-traits" class="header">Auto-Factories &amp; Auto-Traits</a></li>
     <li><a href="distage/index.html#patterns" class="header">Patterns</a></li>
     <li><a href="distage/index.html#test-kit" class="header">Test Kit</a></li>
     <li><a href="distage/index.html#detailed-feature-overview" class="header">Detailed Feature Overview</a></li>
@@ -183,19 +245,9 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&qu
     <li><a href="distage/index.html#integrations" class="header">Integrations</a></li>
     <li><a href="distage/index.html#pper" class="header">PPER</a></li>
   </ul></li>
-  <li><a href="idealingua/index.html" class="page">Idealingua DML/IDL</a>
-  <ul>
-    <li><a href="idealingua/index.html#pet-store" class="header">Pet Store</a></li>
-    <li><a href="idealingua/index.html#user-service" class="header">User Service</a></li>
-    <li><a href="idealingua/index.html#installation" class="header">Installation</a></li>
-    <li><a href="idealingua/language-reference.html" class="page">Idealingua Language Reference</a></li>
-    <li><a href="idealingua/json.html" class="page">JSON Wire Format</a></li>
-    <li><a href="idealingua/cogen.html" class="page">Code generator reference</a></li>
-    <li><a href="idealingua/cogen-circe.html" class="page">Circe serialization reference</a></li>
-  </ul></li>
   <li><a href="logstage/index.html" class="page">LogStage</a>
   <ul>
-    <li><a href="logstage/index.html#the-essence" class="header">The essence</a></li>
+    <li><a href="logstage/index.html#overview" class="header">Overview</a></li>
     <li><a href="logstage/index.html#dependencies" class="header">Dependencies</a></li>
     <li><a href="logstage/index.html#basic-setup" class="header">Basic setup</a></li>
     <li><a href="logstage/policy.html" class="page">Rendering policy</a></li>
@@ -215,6 +267,8 @@ addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-idealingua&qu
     <li><a href="sbt/index.html#convenience-helpers" class="header">Convenience Helpers</a></li>
     <li><a href="sbt/index.html#optional-settings" class="header">Optional settings</a></li>
   </ul></li>
+  <li><a href="manifesto/index.html" class="page">Productivity and challenges</a></li>
+  <li><a href="pper/index.html" class="page">PPER Pattern</a></li>
 </ul>
 </div>
 </div>
@@ -225,7 +279,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.5.38*
+0.6.0*
 </span>
 </div>
 </article>
@@ -235,13 +289,13 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="manifesto/index.html" title="Productivity and challenges" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="idealingua/index.html" title="IdeaLingua RPC & Domain Modeling Language" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Productivity and challenges
+IdeaLingua RPC & Domain Modeling Language
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
