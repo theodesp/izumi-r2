@@ -376,14 +376,30 @@ val interactionHandler = new Interaction.Handler[Try] {
 <p>distage makes tagless final style easier and safer by making your implicit instances explicit and configurable as first-class values. It even enforces typeclass coherence by disallowing multiple instances, so one wrong <code>import</code> can&rsquo;t ruin your day. distage doesn&rsquo;t make you choose between OO and FP, it lets you use both without losing neither ease of configuration and variability of a runtime DI framework, nor parametricity and equational reasoning of pure FP style.</p>
 <h3><a href="#config-files" name="config-files" class="anchor"><span class="anchor-link"></span></a>Config files</h3>
 <p>We provide first-class integration with <code>typesafe-config</code>, rendering a lot of parsing boilerplate unnecessary.</p>
-<p>First, add <code>distage-config</code> library:</p>
+<p>To use it, add <code>distage-config</code> library:</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_config
 </code></pre>
 <p>or</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-config&quot; % &quot;0.6.0-SNAPSHOT&quot;
 </code></pre>
-<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
-<p>Then just put your config into typesafe-config and in distage you can summon it from any class:</p>
+<p>If you&rsquo;re not using <a href="sbt/00_sbt.md#bills-of-materials">sbt-izumi-deps</a> plugin.</p>
+<p>Write a config in HOCON format:</p>
+<pre class="prettyprint"><code class="language-hocon"># resources/application.conf
+program {
+    config {
+        different = true
+    }
+}
+</code></pre>
+<p>Add <code>ConfigModule</code> to your injector:</p>
+<pre class="prettyprint"><code class="language-scala">import distage.config._
+import com.typesafe.config.ConfigFactory
+
+val config = ConfigFactory.load()
+
+val injector = Injector(new ConfigModule(AppConfig(config)))
+</code></pre>
+<p>Now you can automatically parse config entries into case classes and can summon them from any class:</p>
 <pre class="prettyprint"><code class="language-scala">final case class Config(different: Boolean)
 
 class ConfiguredTaglessProgram[F](
@@ -398,13 +414,6 @@ class ConfiguredTryProgram[F: TagK: Monad] extends ModuleDef {
   make[ConfiguredProgram[F]]
   make[TaglessProgram[F]].named(&quot;primary&quot;)
   make[TaglessProgram[F]].named(&quot;different&quot;)
-}
-</code></pre>
-<p>Where your config file looks like this:</p>
-<pre class="prettyprint"><code class="language-hocon">program {
-    config {
-        different = true
-    }
 }
 </code></pre>
 <h3><a href="#auto-factories-auto-traits" name="auto-factories-auto-traits" class="anchor"><span class="anchor-link"></span></a>Auto-Factories &amp; Auto-Traits</h3>
@@ -424,7 +433,7 @@ class ConfiguredTryProgram[F: TagK: Monad] extends ModuleDef {
 <p>or</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-plugins&quot; % &quot;0.6.0-SNAPSHOT&quot;
 </code></pre>
-<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
+<p>If you&rsquo;re not using <a href="sbt/00_sbt.md#bills-of-materials">sbt-izumi-deps</a> plugin.</p>
 <p>Create a module extending the <code>PluginDef</code> trait instead of <code>ModuleDef</code>:</p>
 <pre class="prettyprint"><code class="language-scala">trait PetStorePlugin extends PluginDef {
   make[PetRepository]
@@ -441,7 +450,7 @@ val appModules = pluginLoader.load()
 val app = appModules.merge
 </code></pre>
 <p>Launch as normal with the loaded modules:</p>
-<pre class="prettyprint"><code class="language-scala">val injector = Injectors.bootstrap()
+<pre class="prettyprint"><code class="language-scala">val injector = Injector()
 injector.run(app)
 </code></pre>
 <p>Plugins also allow a program to dynamically extend itself by adding new Plugin classes into the classpath which will be picked up at runtime.</p>
@@ -499,7 +508,7 @@ System.err.println(plan.topology.dependees.tree(DIKey.get[Circular1]))
 <p>or</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += &quot;com.github.pshirshov.izumi.r2&quot; %% &quot;distage-cats&quot; % &quot;0.6.0-SNAPSHOT&quot;
 </code></pre>
-<p>If you&rsquo;re not using <code>sbt-izumi</code> plugin.</p>
+<p>If you&rsquo;re not using <a href="sbt/00_sbt.md#bills-of-materials">sbt-izumi-deps</a> plugin.</p>
 <p>Usage:</p>
 <pre class="prettyprint"><code class="language-scala">import cats.implicits._
 import cats.effect._

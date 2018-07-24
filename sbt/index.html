@@ -392,6 +392,15 @@ lazy val todomvcApi = inApi.as.module
 <p>In case module is missing you&rsquo;ll get a warning. This makes it unlikely for you to accidentally forget to aggregate a module in multi-module project.</p>
 <h2><a href="#build-descriptors" name="build-descriptors" class="anchor"><span class="anchor-link"></span></a>Build Descriptors</h2>
 <h3><a href="#bills-of-materials" name="bills-of-materials" class="anchor"><span class="anchor-link"></span></a>Bills of Materials</h3>
+<p>You can import Izumi libraries and transitive dependencies without specifying their version or artifact names. To do that dd <code>sbt-izumi-deps</code> SBT plugin:</p>
+<pre class="prettyprint"><code class="language-scala">val izumi_version = &quot;0.6.0-SNAPSHOT&quot;
+addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&quot; % izumi_version)
+</code></pre>
+<p>You can use it like this:</p>
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_core // Import an izumi library
+libraryDependencies += Izumi.D.cats_effect // Import an izumi dependency
+</code></pre>
+<p>R is for Runtime, D is for Dependencies, T is for Test artifacts</p>
 <h3><a href="#build-manifest-entries" name="build-manifest-entries" class="anchor"><span class="anchor-link"></span></a>Build Manifest entries</h3>
 <h3><a href="#git-manifest-entries" name="git-manifest-entries" class="anchor"><span class="anchor-link"></span></a>Git Manifest entries</h3>
 <p><code>GitStampPlugin</code> adds the following values into <code>MANIFEST.MF</code> of each <code>jar</code> artifact produced:</p>
