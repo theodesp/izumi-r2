@@ -264,7 +264,7 @@ class Bye {
 
 val helloBye = HelloModule ++ ByeModule
 </code></pre>
-<p>Combining modules with ++ is the main way to assemble your app together! But, if you don&rsquo;t want to list all your modules in one place, you can use <a href="#plugins">Plugins</a> to automatically discover all the (marked) modules in your app.</p>
+<p>Combining modules with <code>++</code> is the main way to assemble your app together! But, if you don&rsquo;t want to list all your modules in one place, you can use <a href="#plugins">Plugins</a> to automatically discover all the (marked) modules in your app.</p>
 <p>If you choose to combine your modules manually, distage offers compile-time checks ensuring that your app will start. See <a href="#static-configurations">Static Configurations</a> for details.</p>
 <pre class="prettyprint"><code class="language-scala">object Main extends App {
   val injector = Injector()
@@ -474,7 +474,7 @@ injector.run(app)
 <p><img src="media/print-test-plan.png" alt="print-test-plan" /></p>
 <p>You can also query a plan to see the dependencies and reverse dependencies of a class and their instantiation:</p>
 <pre class="prettyprint"><code class="language-scala">// Print dependencies
-System.err.println(plan.topology.dependees.tree(DIKey.get[Circular1]))
+System.err.println(plan.topology.dependencies.tree(DIKey.get[Circular1]))
 // Print reverse dependencies
 System.err.println(plan.topology.dependees.tree(DIKey.get[Circular1]))
 </code></pre>
