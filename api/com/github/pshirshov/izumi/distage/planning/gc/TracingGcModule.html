@@ -578,7 +578,7 @@ You can summon a multibinding by type <code>Set[_]</code>:</p><p>    <code><code
     .bindHttp(8080, &quot;localhost&quot;)
     .mountService(routes.fold[HttpRoutes[IO]], &quot;/&quot;)
     .start</p><p>    val count = routes.size
-    }</p><p>    val context = Injector().run(HomeRouteModule ++ BlogRouteModule)
+    }</p><p>    val context = Injector().produce(HomeRouteModule ++ BlogRouteModule)
     val server = context.get[HttpServer]</p><p>    server.count // 2
     <code><code><code>
 </code></code></code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../model/definition/ModuleDef.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleDef">ModuleDef</a></dd><dt>See also</dt><dd><span class="cmt"><p>Guice wiki on Multibindings: https://github.com/google/guice/wiki/Multibindings</p></span></dd></dl></div>

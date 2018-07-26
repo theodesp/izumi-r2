@@ -299,10 +299,6 @@
                         <a href="AbstractLocator.html" title="">AbstractLocator</a>
                       </li><li class="current-entities indented5">
                         <span class="separator"></span>
-                        <a class="trait" href="DIStageInstances.html" title=""></a>
-                        <a href="DIStageInstances.html" title="">DIStageInstances</a>
-                      </li><li class="current-entities indented5">
-                        <span class="separator"></span>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">InjectorDefaultImpl</a>
                       </li><li class="current-entities indented5">
@@ -321,6 +317,10 @@
                         <span class="separator"></span>
                         <a class="class" href="LoggerHookDefaultImpl.html" title=""></a>
                         <a href="LoggerHookDefaultImpl.html" title="">LoggerHookDefaultImpl</a>
+                      </li><li class="current-entities indented5">
+                        <span class="separator"></span>
+                        <a class="trait" href="ModuleBaseInstances.html" title=""></a>
+                        <a href="ModuleBaseInstances.html" title="">ModuleBaseInstances</a>
                       </li><li class="current-entities indented5">
                         <a class="object" href="NullLookupInterceptor$.html" title=""></a>
                         <a class="class" href="NullLookupInterceptor.html" title=""></a>
@@ -555,6 +555,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.distage.InjectorDefaultImpl#finish" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finish(semiPlan:com.github.pshirshov.izumi.distage.model.plan.SemiPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan"></a><a id="finish(SemiPlan):OrderedPlan"></a>
+      <span class="permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/distage/InjectorDefaultImpl.html#finish(semiPlan:com.github.pshirshov.izumi.distage.model.plan.SemiPlan):com.github.pshirshov.izumi.distage.model.plan.OrderedPlan" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finish</span><span class="params">(<span name="semiPlan">semiPlan: <a href="model/plan/SemiPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.SemiPlan">SemiPlan</a></span>)</span><span class="result">: <a href="model/plan/OrderedPlan.html" class="extype" name="com.github.pshirshov.izumi.distage.model.plan.OrderedPlan">OrderedPlan</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.InjectorDefaultImpl">InjectorDefaultImpl</a> → <a href="model/Planner.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Planner">Planner</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -719,10 +735,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.github.pshirshov.izumi.distage.InjectorDefaultImpl">InjectorDefaultImpl</a> → <a href="model/Producer.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Producer">Producer</a></dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.distage.model.Injector#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.Locator"></a><a id="run(ModuleBase):Locator"></a>
+    </li><li name="com.github.pshirshov.izumi.distage.model.Injector#produce" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="produce(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.Locator"></a><a id="produce(ModuleBase):Locator"></a>
       <span class="permalink">
-      <a href="../../../../../com/github/pshirshov/izumi/distage/InjectorDefaultImpl.html#run(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.Locator" title="Permalink">
+      <a href="../../../../../com/github/pshirshov/izumi/distage/InjectorDefaultImpl.html#produce(definition:com.github.pshirshov.izumi.distage.model.definition.ModuleBase):com.github.pshirshov.izumi.distage.model.Locator" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -731,7 +747,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="definition">definition: <a href="model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result">: <a href="model/Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">Locator</a></span>
+        <span class="name">produce</span><span class="params">(<span name="definition">definition: <a href="model/definition/ModuleBase.html" class="extype" name="com.github.pshirshov.izumi.distage.model.definition.ModuleBase">ModuleBase</a></span>)</span><span class="result">: <a href="model/Locator.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Locator">Locator</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="model/Injector.html" class="extype" name="com.github.pshirshov.izumi.distage.model.Injector">Injector</a></dd></dl></div>
