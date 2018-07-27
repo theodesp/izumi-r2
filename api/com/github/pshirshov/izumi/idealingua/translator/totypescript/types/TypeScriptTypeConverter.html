@@ -411,6 +411,22 @@
       </span>
       
       
+    </li><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.types.TypeScriptTypeConverter#deserializeField" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="deserializeField(slice:String,field:com.github.pshirshov.izumi.idealingua.model.il.ast.typed.Field,ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace):String"></a><a id="deserializeField(String,Field,Typespace):String"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/types/TypeScriptTypeConverter.html#deserializeField(slice:String,field:com.github.pshirshov.izumi.idealingua.model.il.ast.typed.Field,ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deserializeField</span><span class="params">(<span name="slice">slice: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="field">field: <a href="../../../model/il/ast/typed/Field.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.typed.Field">Field</a></span>, <span name="ts">ts: <a href="../../../model/typespace/Typespace.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.Typespace">Typespace</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
     </li><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.types.TypeScriptTypeConverter#deserializeGenericType" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="deserializeGenericType(variable:String,target:com.github.pshirshov.izumi.idealingua.model.common.Generic,ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace,asAny:Boolean):String"></a><a id="deserializeGenericType(String,Generic,Typespace,Boolean):String"></a>
       <span class="permalink">
@@ -800,9 +816,9 @@
       
       
     </li><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.types.TypeScriptTypeConverter#toDateTimeField" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toDateTimeField(name:String,local:Boolean,optional:Boolean):String"></a><a id="toDateTimeField(String,Boolean,Boolean):String"></a>
+      <a id="toDateTimeField(name:String,local:Boolean,optional:Boolean,utc:Boolean):String"></a><a id="toDateTimeField(String,Boolean,Boolean,Boolean):String"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/types/TypeScriptTypeConverter.html#toDateTimeField(name:String,local:Boolean,optional:Boolean):String" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/types/TypeScriptTypeConverter.html#toDateTimeField(name:String,local:Boolean,optional:Boolean,utc:Boolean):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -811,7 +827,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toDateTimeField</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="local">local: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="optional">optional: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toDateTimeField</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="local">local: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="optional">optional: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="utc">utc: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       
@@ -912,9 +928,9 @@
       
       
     </li><li name="com.github.pshirshov.izumi.idealingua.translator.totypescript.types.TypeScriptTypeConverter#toIntField" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toIntField(name:String,min:Int,max:Int,optional:Boolean):String"></a><a id="toIntField(String,Int,Int,Boolean):String"></a>
+      <a id="toIntField(name:String,min:BigInt,max:BigInt,optional:Boolean):String"></a><a id="toIntField(String,BigInt,BigInt,Boolean):String"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/types/TypeScriptTypeConverter.html#toIntField(name:String,min:Int,max:Int,optional:Boolean):String" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/translator/totypescript/types/TypeScriptTypeConverter.html#toIntField(name:String,min:BigInt,max:BigInt,optional:Boolean):String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -923,7 +939,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toIntField</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="min">min: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="../../../../../../../../scala/index.html">Int.MinValue</a></span></span></span>, <span name="max">max: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="../../../../../../../../scala/index.html">Int.MaxValue</a></span></span></span>, <span name="optional">optional: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">toIntField</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="min">min: <a href="../../../../../../../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a> = <span class="symbol"><span class="name"><a href="../../../../../../../../scala/index.html">Int.MinValue</a></span></span></span>, <span name="max">max: <a href="../../../../../../../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a> = <span class="symbol"><span class="name"><a href="../../../../../../../../scala/index.html">Int.MaxValue</a></span></span></span>, <span name="optional">optional: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       

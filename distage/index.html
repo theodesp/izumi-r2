@@ -136,7 +136,7 @@ Izumi Toolkit
     <li><a href="../distage/index.html#depending-on-future-values-with-by-name-parameters" class="header">Depending on future values with by-name parameters</a></li>
     <li><a href="../distage/index.html#ensuring-service-boundaries-using-api-modules" class="header">Ensuring service boundaries using API modules</a></li>
     <li><a href="../distage/index.html#plugins" class="header">Plugins</a></li>
-    <li><a href="../distage/index.html#roles-instead-of-microservices" class="header">Roles, instead of microservices</a></li>
+    <li><a href="../distage/index.html#roles" class="header">Roles</a></li>
     <li><a href="../distage/index.html#test-kit" class="header">Test Kit</a></li>
     <li><a href="../distage/index.html#fixtures-and-utilities" class="header">Fixtures and utilities</a></li>
     <li><a href="../distage/index.html#static-configurations" class="header">Static Configurations</a></li>
@@ -187,7 +187,7 @@ Izumi Toolkit
     <li><a href="../distage/index.html#depending-on-future-values-with-by-name-parameters" class="header">Depending on future values with by-name parameters</a></li>
     <li><a href="../distage/index.html#ensuring-service-boundaries-using-api-modules" class="header">Ensuring service boundaries using API modules</a></li>
     <li><a href="../distage/index.html#plugins" class="header">Plugins</a></li>
-    <li><a href="../distage/index.html#roles-instead-of-microservices" class="header">Roles, instead of microservices</a></li>
+    <li><a href="../distage/index.html#roles" class="header">Roles</a></li>
     <li><a href="../distage/index.html#test-kit" class="header">Test Kit</a></li>
     <li><a href="../distage/index.html#fixtures-and-utilities" class="header">Fixtures and utilities</a></li>
     <li><a href="../distage/index.html#static-configurations" class="header">Static Configurations</a></li>
@@ -218,7 +218,7 @@ Izumi Toolkit
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#distage-staged-dependency-injection" name="distage-staged-dependency-injection" class="anchor"><span class="anchor-link"></span></a>distage Staged Dependency Injection</h1>
-<p>distage is a flexible module system for Scala that combines safety and clarity of pure FP with late binding, flexibility and malleability of runtime dependency injection frameworks such as Guice.</p>
+<p>distage is a pragmatic module system for Scala that combines safety and clarity of pure FP with late binding, flexibility and malleability of runtime dependency injection frameworks such as Guice.</p>
 <h3><a href="#hello-world" name="hello-world" class="anchor"><span class="anchor-link"></span></a>Hello World</h3>
 <p>This is what Hello World looks like in distage:</p>
 <pre class="prettyprint"><code class="language-scala">import distage._
@@ -310,18 +310,24 @@ object BlogRouteModule extends ModuleDef {
 }
 
 class HttpServer(routes: Set[HttpRoutes[IO]]) {
+  val router = routes.foldK
+
   def serve = BlazeBuilder[IO]
     .bindHttp(8080, &quot;localhost&quot;)
-    .mountService(routes.fold[HttpRoutes[IO]], &quot;/&quot;)
+    .mountService(router, &quot;/&quot;)
     .start
-
-  val count = routes.size
 }
 
 val context = Injector().produce(HomeRouteModule ++ BlogRouteModule)
 val server = context.get[HttpServer]
 
-server.count // 2
+val testRouter = server.router.orNotFound
+
+testRouter.run(Request[IO](uri = uri(&quot;/home&quot;))).flatMap(_.as[String]).unsafeRunSync
+// Home page!
+
+testRouter.run(Request[IO](uri = uri(&quot;/blog/1&quot;))).flatMap(_.as[String]).unsafeRunSync
+// Blog post ``1&#39;&#39;!
 </code></pre>
 <p>For further detail see <a href="https://github.com/google/guice/wiki/Multibindings">Guice wiki on Multibindings</a>.</p>
 <h3><a href="#provider-bindings" name="provider-bindings" class="anchor"><span class="anchor-link"></span></a>Provider Bindings</h3>
@@ -437,7 +443,8 @@ class ConfiguredTryProgram[F: TagK: Monad] extends ModuleDef {
 <h3><a href="#ensuring-service-boundaries-using-api-modules" name="ensuring-service-boundaries-using-api-modules" class="anchor"><span class="anchor-link"></span></a>Ensuring service boundaries using API modules</h3>
 <p>&hellip;</p>
 <h3><a href="#plugins" name="plugins" class="anchor"><span class="anchor-link"></span></a>Plugins</h3>
-<p>Sometimes, when rapidly prototyping, the additional friction of adding new modules into the system can disrupt developer&rsquo;s flow. Distage plugin system can automatically pickup all modules defined in the program and by doing that reduce friction of adding new modules.</p>
+<p>When rapidly prototyping, the friction of adding new modules can become a burden. distage plugin extension can alleviate that by automatically picking up all the <code>Plugin</code> modules defined in the program.</p>
+<p>Note that auto plugins are incompatible with distage <a href="#static-configurations">static checks</a>. Our preferred workflow is to start with plugins, then switch to static configurations after a service has been stabilized.</p>
 <p>To define a plugin, first add distage-plugins library:</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_plugins
 </code></pre>
@@ -446,7 +453,9 @@ class ConfiguredTryProgram[F: TagK: Monad] extends ModuleDef {
 </code></pre>
 <p>If you&rsquo;re not using <a href="sbt/00_sbt.md#bills-of-materials">sbt-izumi-deps</a> plugin.</p>
 <p>Create a module extending the <code>PluginDef</code> trait instead of <code>ModuleDef</code>:</p>
-<pre class="prettyprint"><code class="language-scala">import distage._
+<pre class="prettyprint"><code class="language-scala">package com.example.petstore
+
+import distage._
 import distage.plugins._
 
 trait PetStorePlugin extends PluginDef {
@@ -455,20 +464,23 @@ trait PetStorePlugin extends PluginDef {
   make[PetStoreController]
 }
 </code></pre>
-<p>At your app entry point add a plugin loader:</p>
+<p>At your app entry point use a plugin loader to discover all <code>PluginDefs</code>:</p>
 <pre class="prettyprint"><code class="language-scala">val pluginLoader = new PluginLoaderDefaultImpl(
-  PluginConfig(debug = false, packagesEnabled = Seq(&quot;com.example&quot;), packagesDisabled = Seq.empty))
+  PluginConfig(
+    debug = true
+    , packagesEnabled = Seq(&quot;com.example&quot;) // packages to scan
+    , packagesDisabled = Seq.empty         // packages to ignore
+  )
 )
 
-val appModules = pluginLoader.load()
-val app = appModules.merge
+val appModules: Seq[PluginBase] = pluginLoader.load()
+val app: ModuleBase = appModules.merge
 </code></pre>
 <p>Launch as normal with the loaded modules:</p>
-<pre class="prettyprint"><code class="language-scala">val injector = Injector()
-injector.produce(app)
+<pre class="prettyprint"><code class="language-scala">Injector().produce(app).get[PetStoreController].run
 </code></pre>
-<p>Plugins also allow a program to dynamically extend itself by adding new Plugin classes into the classpath which will be picked up at runtime.</p>
-<h3><a href="#roles-instead-of-microservices" name="roles-instead-of-microservices" class="anchor"><span class="anchor-link"></span></a>Roles, instead of microservices</h3>
+<p>Plugins also allow a program to dynamically extend itself by adding new Plugin classes on the classpath at launch time with <code>java -cp</code></p>
+<h3><a href="#roles" name="roles" class="anchor"><span class="anchor-link"></span></a>Roles</h3>
 <p>&hellip;</p>
 <h3><a href="#test-kit" name="test-kit" class="anchor"><span class="anchor-link"></span></a>Test Kit</h3>
 <h3><a href="#fixtures-and-utilities" name="fixtures-and-utilities" class="anchor"><span class="anchor-link"></span></a>Fixtures and utilities</h3>

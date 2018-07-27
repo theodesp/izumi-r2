@@ -295,7 +295,39 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.ContentIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContentIteratorextendsProductwithSerializable"></a><a id="ContentIterator:ContentIterator"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources.html#ContentIteratorextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IzResources$ContentIterator.html"><span class="name">ContentIterator</span></a><span class="params">(<span name="files">files: <a href="../../../../../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<a href="IzResources$$FileContent.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.FileContent">FileContent</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IzResources.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources">IzResources</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.FileContent" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FileContentextendsProductwithSerializable"></a><a id="FileContent:FileContent"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#FileContentextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IzResources$$FileContent.html"><span class="name">FileContent</span></a><span class="params">(<span name="path">path: <span class="extype" name="java.nio.file.Path">Path</span></span>, <span name="content">content: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.PathReference" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PathReferenceextendsAutoCloseable"></a><a id="PathReference:PathReference"></a>
       <span class="permalink">
       <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#PathReferenceextendsAutoCloseable" title="Permalink">
@@ -454,6 +486,22 @@
       </span>
       <span class="symbol">
         <span class="name">copyFromClasspath</span><span class="params">(<span name="sourcePath">sourcePath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="targetDir">targetDir: <span class="extype" name="java.nio.file.Path">Path</span></span>)</span><span class="result">: <a href="IzResources$$RecursiveCopyOutput.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.RecursiveCopyOutput">RecursiveCopyOutput</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IzResources.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources">IzResources</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources#enumerateClasspath" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="enumerateClasspath(sourcePath:String):IzResources.this.ContentIterator"></a><a id="enumerateClasspath(String):ContentIterator"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/fundamentals/platform/resources/IzResources$.html#enumerateClasspath(sourcePath:String):IzResources.this.ContentIterator" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enumerateClasspath</span><span class="params">(<span name="sourcePath">sourcePath: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="#ContentIteratorextendsProductwithSerializable" class="extmbr" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources.ContentIterator">ContentIterator</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IzResources.html" class="extype" name="com.github.pshirshov.izumi.fundamentals.platform.resources.IzResources">IzResources</a></dd></dl></div>
