@@ -593,25 +593,27 @@
 DSL:</p><p>    <code><code><code>scala
     import cats.effect._, org.http4s._, org.http4s.dsl.io._, scala.concurrent.ExecutionContext.Implicits.global
     import distage._</code></code></code></p><p>    object HomeRouteModule extends ModuleDef {
-    many[HttpRoutes[IO]].add {
+      many[HttpRoutes[IO]].add {
         HttpRoutes.of[IO] { case GET -&gt; Root / &quot;home&quot; =&gt; Ok(s&quot;Home page!&quot;) }
-    }
+      }
     }
     <code><code><code></code></code></code></p><p>Multibindings defined in different modules will be merged together into a single Set.
 You can summon a multibinding by type <code>Set[_]</code>:</p><p>    <code><code><code>scala
     import cats.implicits._, import org.http4s.server.blaze._, import org.http4s.implicits._</code></code></code></p><p>    object BlogRouteModule extends ModuleDef {
-    many[HttpRoutes[IO]].add {
+      many[HttpRoutes[IO]].add {
         HttpRoutes.of[IO] { case GET -&gt; Root / &quot;blog&quot; / post =&gt; Ok(&quot;Blog post <code><code>$post<i>!&quot;) }
-    }
+      }
     }</i></code></code></p><p>    class HttpServer(routes: Set[HttpRoutes[IO]]) {
-    def serve = BlazeBuilder[IO]
-    .bindHttp(8080, &quot;localhost&quot;)
-    .mountService(routes.fold[HttpRoutes[IO]], &quot;/&quot;)
-    .start</p><p>    val count = routes.size
+      val router = routes.foldK</p><p>      def serve = BlazeBuilder[IO]
+        .bindHttp(8080, &quot;localhost&quot;)
+        .mountService(router, &quot;/&quot;)
+        .start
     }</p><p>    val context = Injector().produce(HomeRouteModule ++ BlogRouteModule)
-    val server = context.get[HttpServer]</p><p>    server.count // 2
+    val server = context.get[HttpServer]</p><p>    val testRouter = server.router.orNotFound</p><p>    testRouter.run(Request[IO](uri = uri(&quot;/home&quot;))).flatMap(_.as[String]).unsafeRunSync
+    // Home page!</p><p>    testRouter.run(Request[IO](uri = uri(&quot;/blog/1&quot;))).flatMap(_.as[String]).unsafeRunSync
+    // Blog post <code><code>1<i>!
     <code><code><code>
-</code></code></code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>See also</dt><dd><span class="cmt"><p>Guice wiki on Multibindings: https://github.com/google/guice/wiki/Multibindings</p></span></dd></dl></div>
+</code></code></code></i></code></code></p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>See also</dt><dd><span class="cmt"><p>Guice wiki on Multibindings: https://github.com/google/guice/wiki/Multibindings</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
