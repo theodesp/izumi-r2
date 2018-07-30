@@ -353,10 +353,10 @@
       </span>
       
       
-    </li><li name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.ILDomainId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ILDomainIdextendsIL.ValwithProductwithSerializable"></a><a id="ILDomainId:ILDomainId"></a>
+    </li><li name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.ILImport" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ILImportextendsIL.ValwithProductwithSerializable"></a><a id="ILImport:ILImport"></a>
       <span class="permalink">
-      <a href="../../../../../../../../../com/github/pshirshov/izumi/idealingua/model/il/ast/raw/IL$.html#ILDomainIdextendsIL.ValwithProductwithSerializable" title="Permalink">
+      <a href="../../../../../../../../../com/github/pshirshov/izumi/idealingua/model/il/ast/raw/IL$.html#ILImportextendsIL.ValwithProductwithSerializable" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -365,7 +365,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="IL$$ILDomainId.html"><span class="name">ILDomainId</span></a><span class="params">(<span name="id">id: <a href="../../../common/DomainId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.DomainId">DomainId</a></span>)</span><span class="result"> extends <a href="IL$$Val.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.Val">Val</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a title="" href="IL$$ILImport.html"><span class="name">ILImport</span></a><span class="params">(<span name="domain">domain: <a href="../../../common/DomainId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.DomainId">DomainId</a></span>, <span name="id">id: <a href="IL$$ImportedId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.ImportedId">ImportedId</a></span>)</span><span class="result"> extends <a href="IL$$Val.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.Val">Val</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -414,6 +414,38 @@
       </span>
       <span class="symbol">
         <a title="" href="IL$$ILService.html"><span class="name">ILService</span></a><span class="params">(<span name="v">v: <a href="Service.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.Service">Service</a></span>)</span><span class="result"> extends <a href="IL$$Val.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.Val">Val</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.Import" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ImportextendsProductwithSerializable"></a><a id="Import:Import"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../../com/github/pshirshov/izumi/idealingua/model/il/ast/raw/IL$.html#ImportextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IL$$Import.html"><span class="name">Import</span></a><span class="params">(<span name="id">id: <a href="../../../common/DomainId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.DomainId">DomainId</a></span>, <span name="identifiers">identifiers: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="IL$$ImportedId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.ImportedId">ImportedId</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.model.il.ast.raw.IL.ImportedId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ImportedIdextendsProductwithSerializable"></a><a id="ImportedId:ImportedId"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../../com/github/pshirshov/izumi/idealingua/model/il/ast/raw/IL$.html#ImportedIdextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IL$$ImportedId.html"><span class="name">ImportedId</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="as">as: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
