@@ -290,7 +290,7 @@ val uppercaseHelloBye = helloBye overridenBy uppercaseHello
 <p>After we execute the plan we&rsquo;re left a <code>Locator</code> that holds all of our app&rsquo;s classes. We can retrieve the instances by type using the <code>.get</code> method</p>
 <h3><a href="#multibindings-set-bindings" name="multibindings-set-bindings" class="anchor"><span class="anchor-link"></span></a>Multibindings / Set Bindings</h3>
 <p>Multibindings are useful for implementing event listeners, plugins, hooks, http routes, etc.</p>
-<p>To define a multibinding use <code>.many</code> and <code>.add</code> methods in <a href="/0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
+<p>To define a multibinding use <code>.many</code> and <code>.add</code> methods in <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
 <pre class="prettyprint"><code class="language-scala">import cats.effect._, org.http4s._, org.http4s.dsl.io._, scala.concurrent.ExecutionContext.Implicits.global
 import distage._
 
@@ -331,7 +331,7 @@ testRouter.run(Request[IO](uri = uri(&quot;/blog/1&quot;))).flatMap(_.as[String]
 </code></pre>
 <p>For further detail see <a href="https://github.com/google/guice/wiki/Multibindings">Guice wiki on Multibindings</a>.</p>
 <h3><a href="#provider-bindings" name="provider-bindings" class="anchor"><span class="anchor-link"></span></a>Provider Bindings</h3>
-<p>To bind to a function instead of constructor use <code>.from</code> method in <a href="/0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
+<p>To bind to a function instead of constructor use <code>.from</code> method in <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
 <pre class="prettyprint"><code class="language-scala">case class HostPort(host: String, port: Int)
 
 class HttpServer(hostPort: HostPort)
@@ -350,7 +350,7 @@ trait HttpServerModule extends ModuleDef {
   }
 }
 </code></pre>
-<p>For further details, see scaladoc for <a href="/0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/providers/ProviderMagnet.html">ProviderMagnet</a></p>
+<p>For further details, see scaladoc for <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/providers/ProviderMagnet.html">ProviderMagnet</a></p>
 <h3><a href="#tagless-final-style-with-distage" name="tagless-final-style-with-distage" class="anchor"><span class="anchor-link"></span></a>Tagless Final Style with distage</h3>
 <p>distage has first-class support for tagless final style. Let&rsquo;s see what <a href="http://frees.io/docs/core/handlers/#tagless-interpretation">freestyle tagless example</a> looks like in distage:</p>
 <pre class="prettyprint"><code class="language-scala">class Program[F: TagK: Monad] extends ModuleDef {
