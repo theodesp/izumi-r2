@@ -241,17 +241,17 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from config value at the specified path.</p><p>For example, given a class:</p><p>  class Service(@Conf(&quot;cassandra&quot;) cassandraHost: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  cassandra {
-    HostPort {
-      host = &quot;cassandra&quot;
-      port = 9003
-    }
-  }</p><p>Note that you may also omit the name of the case class:</p><p>  cassandra {
-    host = &quot;cassandra&quot;
-    port = 9003
-  }</p><p>Specifically, this annotation differs from <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> only
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from config value at the specified path.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@Conf(<span class="lit">"cassandra"</span>) cassandraHost: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>cassandra {
+  HostPort {
+    host = <span class="lit">"cassandra"</span>
+    port = <span class="num">9003</span>
+  }
+}</pre><p>Note that you may also omit the name of the case class:</p><pre>cassandra {
+  host = <span class="lit">"cassandra"</span>
+  port = <span class="num">9003</span>
+}</pre><p>Specifically, this annotation differs from <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> only
 in that the binding type and binding id components are replaced
-by explicitly defined path, so that the whole path is defined by segments:</p><p>  {path}.{config_type?}.{parameter_name?}</p><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you want to share one config section between <i>several</i> components</p></div><div class="toggleContainer block">
+by explicitly defined path, so that the whole path is defined by segments:</p><pre>{path}.{config_type?}.{parameter_name?}</pre><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you want to share one config section between <i>several</i> components</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

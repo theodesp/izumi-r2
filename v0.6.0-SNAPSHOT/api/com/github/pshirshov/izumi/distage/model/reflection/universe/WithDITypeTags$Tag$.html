@@ -413,8 +413,8 @@
       
       <p class="shortcomment cmt">Helper for creating your own instances for type shapes that aren't supported by default instances
 (most shapes in <code>cats</code> and <code>stdlib</code> are supported, but you may need this if you use <code>scalaz</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Helper for creating your own instances for type shapes that aren't supported by default instances
-(most shapes in <code>cats</code> and <code>stdlib</code> are supported, but you may need this if you use <code>scalaz</code>)</p><p>Example:</p><p>    implicit def tagFromTagTAKA[T[_, _[_], _], K[_]: TagK, A0: Tag, A1: Tag](implicit t: WeakTypeTag[T[A0, K, A1]): Tag[T[A0, K, A1]] =
-      Tag.appliedTag(t, List(Tag[A0].tag, TagK[K].tag, Tag[A1].tag))</p></div></div>
+(most shapes in <code>cats</code> and <code>stdlib</code> are supported, but you may need this if you use <code>scalaz</code>)</p><p>Example:</p><pre><span class="kw">implicit</span> <span class="kw">def</span> tagFromTagTAKA[T[_, _[_], _], K[_]: TagK, A0: Tag, A1: Tag](<span class="kw">implicit</span> t: <span class="std">WeakTypeTag</span>[T[A0, K, A1]): Tag[T[A0, K, A1]] =
+  Tag.appliedTag(t, <span class="std">List</span>(Tag[A0].tag, TagK[K].tag, Tag[A1].tag))</pre></div></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply[T](t:WithDITypeTags.this.u.TypeTag[T]):WithDITypeTags.this.Tag[T]"></a><a id="apply[T](scala.reflect.api.Universe.TypeTag[T]):(WithDITypeTags.this)#Tag[T]"></a>
       <span class="permalink">

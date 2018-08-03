@@ -588,10 +588,10 @@
       </span>
       
       <p class="shortcomment cmt">Like <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span>, but supports higher-kinded type tags via <code>TagK</code> type class.</p><div class="fullcomment"><div class="comment cmt"><p>Like <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span>, but supports higher-kinded type tags via <code>TagK</code> type class.</p><p>In context of DI this allows you to define a module parameterized by a generic higher-kinded type parameter.
-This is especially helpful when coding in a <a href="https://www.beyondthelines.net/programming/introduction-to-tagless-final/" target="_blank"><code>tagless final</code> style</a></p><p>Example:</p><p>    class MyModule[F[_]: Monad: TagK] {
-      make[MyService[F]]
-      make[F[Unit]].named(&quot;empty&quot;).from(Monad[F].pure())
-    }</p><p>Without a <code>TagK</code> constraint above, this example would fail with <code>no TypeTag available for MyService[F]</code>
+This is especially helpful when coding in a <a href="https://www.beyondthelines.net/programming/introduction-to-tagless-final/" target="_blank"><code>tagless final</code> style</a></p><p>Example:</p><pre><span class="kw">class</span> MyModule[F[_]: Monad: TagK] {
+  make[MyService[F]]
+  make[F[<span class="std">Unit</span>]].named(<span class="lit">"empty"</span>).from(Monad[F].pure())
+}</pre><p>Without a <code>TagK</code> constraint above, this example would fail with <code>no TypeTag available for MyService[F]</code>
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagInstances0" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="TagInstances0extendsWithDITypeTags.this.TagInstances1"></a><a id="TagInstances0:(WithDITypeTags.this)#TagInstances0"></a>
@@ -688,9 +688,8 @@ This is especially helpful when coding in a <a href="https://www.beyondthelines.
         <a title="TagK is a scala.reflect.api.TypeTags#TypeTag for higher-kinded types." href="WithDITypeTags$TagK.html"><span class="name">TagK</span></a><span class="tparams">[<span name="K">K<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt"><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><div class="fullcomment"><div class="comment cmt"><p><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><p>Example:
-    def containersEqual[F[_]: TagK, K[_]: TagK](containerF: F[_], containerK: K[_]): Boolean {</p><p>    }
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a></dd></dl></div>
+      <p class="shortcomment cmt"><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><div class="fullcomment"><div class="comment cmt"><p><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><p>Example:</p><pre><span class="kw">def</span> containerTypesEqual[F[_]: TagK, K[_]: TagK](containerF: F[_], containerK: K[_]): <span class="std">Boolean</span> =
+  TagK[F].tag =:= TagK[K].tag</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a></dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagKInstances" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="TagKInstancesextendsAnyRef"></a><a id="TagKInstances:(WithDITypeTags.this)#TagKInstances"></a>
       <span class="permalink">

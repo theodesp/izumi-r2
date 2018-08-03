@@ -292,10 +292,10 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Like <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span>, but supports higher-kinded type tags via <code>TagK</code> type class.</p><p>In context of DI this allows you to define a module parameterized by a generic higher-kinded type parameter.
-This is especially helpful when coding in a <a href="https://www.beyondthelines.net/programming/introduction-to-tagless-final/" target="_blank"><code>tagless final</code> style</a></p><p>Example:</p><p>    class MyModule[F[_]: Monad: TagK] {
-      make[MyService[F]]
-      make[F[Unit]].named(&quot;empty&quot;).from(Monad[F].pure())
-    }</p><p>Without a <code>TagK</code> constraint above, this example would fail with <code>no TypeTag available for MyService[F]</code>
+This is especially helpful when coding in a <a href="https://www.beyondthelines.net/programming/introduction-to-tagless-final/" target="_blank"><code>tagless final</code> style</a></p><p>Example:</p><pre><span class="kw">class</span> MyModule[F[_]: Monad: TagK] {
+  make[MyService[F]]
+  make[F[<span class="std">Unit</span>]].named(<span class="lit">"empty"</span>).from(Monad[F].pure())
+}</pre><p>Without a <code>TagK</code> constraint above, this example would fail with <code>no TypeTag available for MyService[F]</code>
 </p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes

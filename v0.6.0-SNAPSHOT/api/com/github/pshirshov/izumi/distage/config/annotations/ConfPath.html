@@ -241,19 +241,19 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from config value at the specified fully qualified path.</p><p>For example, given a class:</p><p>  class Service(@ConfPath(&quot;service.conf&quot; hostPort: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  service {
-    conf {
-      host = &quot;example.com&quot;
-      port = 8080
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from config value at the specified fully qualified path.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@ConfPath(<span class="lit">"service.conf"</span> hostPort: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>service {
+  conf {
+    host = <span class="lit">"example.com"</span>
+    port = <span class="num">8080</span>
+  }
+}</pre><p>Note, you will NOT be able to specify the type of the case class:</p><pre>service {
+  conf {
+    HostPort <span class="cmt">/* ILLEGAL */</span> {
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>Note, you will NOT be able to specify the type of the case class:</p><p>   service {
-     conf {
-       HostPort /* ILLEGAL */ {
-         host = &quot;example.com&quot;
-         port = 8080
-       }
-     }
-   }</p><p>Use this annotation if you are too lazy to learn how <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> or <a href="Conf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.Conf">Conf</a> work</p></div><div class="toggleContainer block">
+  }
+}</pre><p>Use this annotation if you are too lazy to learn how <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> or <a href="Conf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.Conf">Conf</a> work</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

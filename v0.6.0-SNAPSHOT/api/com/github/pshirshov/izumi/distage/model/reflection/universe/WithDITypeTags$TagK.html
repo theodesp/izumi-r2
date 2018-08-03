@@ -291,9 +291,8 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><p>Example:
-    def containersEqual[F[_]: TagK, K[_]: TagK](containerF: F[_], containerK: K[_]): Boolean {</p><p>    }
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><code>TagK</code> is a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for higher-kinded types.</p><p>Example:</p><pre><span class="kw">def</span> containerTypesEqual[F[_]: TagK, K[_]: TagK](containerF: F[_], containerK: K[_]): <span class="std">Boolean</span> =
+  TagK[F].tag =:= TagK[K].tag</pre></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -433,9 +432,7 @@
         <span class="name">apply</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="tag">tag: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]</span>)</span><span class="result">: (<a href="WithDITypeTags.html" class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags">WithDITypeTags</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.Tag">Tag</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.K">K</span>[<span class="extype" name="com.github.pshirshov.izumi.distage.model.reflection.universe.WithDITypeTags.TagK.apply.T">T</span>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><div class="fullcomment"><div class="comment cmt"><p>Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><p>Use:
-    TagK[List].apply[Int]</p><p>    &gt; typeTag[List[Int]]
-</p></div></div>
+      <p class="shortcomment cmt">Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><div class="fullcomment"><div class="comment cmt"><p>Create a <span class="extype" name="scala.reflect.api.TypeTags#TypeTag">scala.reflect.api.TypeTags#TypeTag</span> for <code>K[T]</code> by applying <code>K[_]</code> to <code>T</code></p><p>Example:</p><pre>TagK[<span class="std">List</span>].apply[<span class="std">Int</span>]</pre></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

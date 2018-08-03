@@ -223,8 +223,8 @@
                         <a href="IRTWithCirce.html" title="Provides circe codecs for case classes (won't work with sealed traits):">IRTWithCirce</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="trait" href="" title="this will give codecs that cache derivation resolution _within compiler session_ (_NOT between compiler runs_) Can't define it so that it would cache between _compiler runs_ because of a scalac/circe-generic/macro materializers bug preventing definition such as"></a>
-                        <a href="" title="this will give codecs that cache derivation resolution _within compiler session_ (_NOT between compiler runs_) Can't define it so that it would cache between _compiler runs_ because of a scalac/circe-generic/macro materializers bug preventing definition such as">IRTWithCirceGeneric</a>
+                        <a class="trait" href="" title="this will give codecs that cache derivation resolution _within compiler session_ (_NOT between compiler runs_) Can't define it so that it would cache between _compiler runs_ because of a shapeless bug https://github.com/milessabin/shapeless/issues/837 preventing a definition such as"></a>
+                        <a href="" title="this will give codecs that cache derivation resolution _within compiler session_ (_NOT between compiler runs_) Can't define it so that it would cache between _compiler runs_ because of a shapeless bug https://github.com/milessabin/shapeless/issues/837 preventing a definition such as">IRTWithCirceGeneric</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="MaterializeDerivationMacros.html" title=""></a>
@@ -259,13 +259,19 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>this will give codecs that cache derivation resolution _within compiler session_ (_NOT between compiler runs_)
 Can't define it so that it would cache between _compiler runs_
-because of a scalac/circe-generic/macro materializers bug preventing definition such as</p><p>  abstract class WithCirceGeneric[A: DerivedObjectEncoder: DerivedDecoder] {
-    implicit val enc: Encoder[A] = implicitly[DerivedObjectEncoder[A]]
-    implicit val dec: Decoder[A] = implicitly[DerivedDecoder[A]]
-  }</p><p>  final case class X(int: Int)</p><p>  object X extends WithCirceGeneric[X]</p><p>with error</p><p>Error:(26, 19) super constructor cannot be passed a self reference unless parameter is declared by-name
-object X extends WithCirceGeneric[X]</p><p>(if rename object to i.e. XCodecs it will work though)</p><p>This is still useful to derive sealed traits since WithCirce doees not support them:</p><p>  sealed trait Y
-  final case class Ya() extends Y</p><p>  object Ya extends WithCirce[Ya]
-  object Y extends WithCirceGeneric[Y]</p></div><div class="toggleContainer block">
+because of a shapeless bug https://github.com/milessabin/shapeless/issues/837 preventing a definition such as</p><pre><span class="kw">abstract</span> <span class="kw">class</span> WithCirceGeneric[A: DerivedObjectEncoder: DerivedDecoder] {
+  <span class="kw">implicit</span> <span class="kw">val</span> enc: Encoder[A] = implicitly[DerivedObjectEncoder[A]]
+  <span class="kw">implicit</span> <span class="kw">val</span> dec: Decoder[A] = implicitly[DerivedDecoder[A]]
+}
+
+<span class="kw">final</span> <span class="kw">case</span> <span class="kw">class</span> X(int: <span class="std">Int</span>)
+
+<span class="kw">object</span> X <span class="kw">extends</span> WithCirceGeneric[X]</pre><p>with error</p><p>Error:(26, 19) super constructor cannot be passed a self reference unless parameter is declared by-name
+object X extends WithCirceGeneric[X]</p><p>(if you rename object to i.e. XCodecs it will work though)</p><p>This is still useful to derive sealed traits since WithCirce doees not support them:</p><pre><span class="kw">sealed</span> <span class="kw">trait</span> Y
+<span class="kw">final</span> <span class="kw">case</span> <span class="kw">class</span> Ya() <span class="kw">extends</span> Y
+
+<span class="kw">object</span> Ya <span class="kw">extends</span> WithCirce[Ya]
+<span class="kw">object</span> Y <span class="kw">extends</span> WithCirceGeneric[Y]</pre></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

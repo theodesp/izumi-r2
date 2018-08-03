@@ -241,33 +241,35 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from configuration.</p><p>The config path is derived automatically from the context.</p><p>For example, given a class:</p><p>  class Service(@AutoConf hostPort: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  Service {
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Inject parameter from configuration.</p><p>The config path is derived automatically from the context.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@AutoConf hostPort: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>Service {
+  HostPort {
+    host = <span class="lit">"example.com"</span>
+    port = <span class="num">8080</span>
+  }
+}</pre><p>If the requesting class is bound as named binding, you can disambiguate
+the config path to uniquely configure that class:</p><pre><span class="kw">new</span> ModuleDef {
+  make[Service].named(<span class="lit">"namedService"</span>)
+}</pre><p>Config:</p><pre>Service {
+  namedService {
     HostPort {
-      host = &quot;example.com&quot;
-      port = 8080
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>If the requesting class is bound as named binding, you can disambiguate
-the config path to uniquely configure that class:</p><p>  new ModuleDef {
-    make[Service].named(&quot;namedService&quot;)
-  }</p><p>Config:</p><p>  Service {
-    namedService {
-      HostPort {
-        host = &quot;example.com&quot;
-        port = 8080
-      }
+  }
+}</pre><p>If a class requests several values of the same type from config, you can
+disambiguate the config path using parameter names:</p><pre><span class="kw">class</span> Service(@AutoConf param1: HostPort, @AutoConf param2: HostPort)</pre><p>Config:</p><pre>Service {
+  HostPort {
+    param1 {
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>If a class requests several values of the same type from config, you can
-disambiguate the config path using parameter names:</p><p>  class Service(@AutoConf param1: HostPort, @AutoConf param2: HostPort)</p><p>Config:</p><p>  Service {
-    HostPort {
-      param1 {
-        host = &quot;example.com&quot;
-        port = 8080
-      }</p><p>      param2 {
-        host = &quot;google.com&quot;
-        port = 80
-      }
+
+    param2 {
+      host = <span class="lit">"google.com"</span>
+      port = <span class="num">80</span>
     }
-  }</p><p>Specifically, the path is defined by segments:</p><p>  {binding_type}.{binding_id_key?}.{config_type}.{parameter_name?}</p><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you need to inject one config section into <i>one</i> component</p></div><div class="toggleContainer block">
+  }
+}</pre><p>Specifically, the path is defined by segments:</p><pre>{binding_type}.{binding_id_key?}.{config_type}.{parameter_name?}</pre><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you need to inject one config section into <i>one</i> component</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

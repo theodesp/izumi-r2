@@ -315,33 +315,35 @@
         <a title="Inject parameter from configuration." href="AutoConf.html"><span class="name">AutoConf</span></a><span class="result"> extends <span class="extype" name="scala.annotation.Annotation">Annotation</span> with <span class="extype" name="scala.annotation.StaticAnnotation">StaticAnnotation</span></span>
       </span>
       
-      <p class="shortcomment cmt">Inject parameter from configuration.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from configuration.</p><p>The config path is derived automatically from the context.</p><p>For example, given a class:</p><p>  class Service(@AutoConf hostPort: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  Service {
+      <p class="shortcomment cmt">Inject parameter from configuration.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from configuration.</p><p>The config path is derived automatically from the context.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@AutoConf hostPort: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>Service {
+  HostPort {
+    host = <span class="lit">"example.com"</span>
+    port = <span class="num">8080</span>
+  }
+}</pre><p>If the requesting class is bound as named binding, you can disambiguate
+the config path to uniquely configure that class:</p><pre><span class="kw">new</span> ModuleDef {
+  make[Service].named(<span class="lit">"namedService"</span>)
+}</pre><p>Config:</p><pre>Service {
+  namedService {
     HostPort {
-      host = &quot;example.com&quot;
-      port = 8080
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>If the requesting class is bound as named binding, you can disambiguate
-the config path to uniquely configure that class:</p><p>  new ModuleDef {
-    make[Service].named(&quot;namedService&quot;)
-  }</p><p>Config:</p><p>  Service {
-    namedService {
-      HostPort {
-        host = &quot;example.com&quot;
-        port = 8080
-      }
+  }
+}</pre><p>If a class requests several values of the same type from config, you can
+disambiguate the config path using parameter names:</p><pre><span class="kw">class</span> Service(@AutoConf param1: HostPort, @AutoConf param2: HostPort)</pre><p>Config:</p><pre>Service {
+  HostPort {
+    param1 {
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>If a class requests several values of the same type from config, you can
-disambiguate the config path using parameter names:</p><p>  class Service(@AutoConf param1: HostPort, @AutoConf param2: HostPort)</p><p>Config:</p><p>  Service {
-    HostPort {
-      param1 {
-        host = &quot;example.com&quot;
-        port = 8080
-      }</p><p>      param2 {
-        host = &quot;google.com&quot;
-        port = 80
-      }
+
+    param2 {
+      host = <span class="lit">"google.com"</span>
+      port = <span class="num">80</span>
     }
-  }</p><p>Specifically, the path is defined by segments:</p><p>  {binding_type}.{binding_id_key?}.{config_type}.{parameter_name?}</p><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you need to inject one config section into <i>one</i> component</p></div></div>
+  }
+}</pre><p>Specifically, the path is defined by segments:</p><pre>{binding_type}.{binding_id_key?}.{config_type}.{parameter_name?}</pre><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you need to inject one config section into <i>one</i> component</p></div></div>
     </li><li name="com.github.pshirshov.izumi.distage.config.annotations.AutoConfId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AutoConfIdextendsAutomaticConfIdwithProductwithSerializable"></a><a id="AutoConfId:AutoConfId"></a>
       <span class="permalink">
@@ -389,17 +391,17 @@ disambiguate the config path using parameter names:</p><p>  class Service(@AutoC
         <a title="Inject parameter from config value at the specified path." href="Conf.html"><span class="name">Conf</span></a><span class="result"> extends <span class="extype" name="scala.annotation.Annotation">Annotation</span> with <span class="extype" name="scala.annotation.StaticAnnotation">StaticAnnotation</span></span>
       </span>
       
-      <p class="shortcomment cmt">Inject parameter from config value at the specified path.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from config value at the specified path.</p><p>For example, given a class:</p><p>  class Service(@Conf(&quot;cassandra&quot;) cassandraHost: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  cassandra {
-    HostPort {
-      host = &quot;cassandra&quot;
-      port = 9003
-    }
-  }</p><p>Note that you may also omit the name of the case class:</p><p>  cassandra {
-    host = &quot;cassandra&quot;
-    port = 9003
-  }</p><p>Specifically, this annotation differs from <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> only
+      <p class="shortcomment cmt">Inject parameter from config value at the specified path.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from config value at the specified path.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@Conf(<span class="lit">"cassandra"</span>) cassandraHost: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>cassandra {
+  HostPort {
+    host = <span class="lit">"cassandra"</span>
+    port = <span class="num">9003</span>
+  }
+}</pre><p>Note that you may also omit the name of the case class:</p><pre>cassandra {
+  host = <span class="lit">"cassandra"</span>
+  port = <span class="num">9003</span>
+}</pre><p>Specifically, this annotation differs from <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> only
 in that the binding type and binding id components are replaced
-by explicitly defined path, so that the whole path is defined by segments:</p><p>  {path}.{config_type?}.{parameter_name?}</p><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you want to share one config section between <i>several</i> components</p></div></div>
+by explicitly defined path, so that the whole path is defined by segments:</p><pre>{path}.{config_type?}.{parameter_name?}</pre><p>Where segments marked with ? at the end are optional.</p><p>Use this annotation when you want to share one config section between <i>several</i> components</p></div></div>
     </li><li name="com.github.pshirshov.izumi.distage.config.annotations.ConfId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ConfIdextendsAutomaticConfIdwithProductwithSerializable"></a><a id="ConfId:ConfId"></a>
       <span class="permalink">
@@ -431,19 +433,19 @@ by explicitly defined path, so that the whole path is defined by segments:</p><p
         <a title="Inject parameter from config value at the specified fully qualified path." href="ConfPath.html"><span class="name">ConfPath</span></a><span class="result"> extends <span class="extype" name="scala.annotation.Annotation">Annotation</span> with <span class="extype" name="scala.annotation.StaticAnnotation">StaticAnnotation</span></span>
       </span>
       
-      <p class="shortcomment cmt">Inject parameter from config value at the specified fully qualified path.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from config value at the specified fully qualified path.</p><p>For example, given a class:</p><p>  class Service(@ConfPath(&quot;service.conf&quot; hostPort: HostPort)</p><p>where:</p><p>  case class HostPort(host: String, port: Int)</p><p>you'll be able to define configuration like this:</p><p>  service {
-    conf {
-      host = &quot;example.com&quot;
-      port = 8080
+      <p class="shortcomment cmt">Inject parameter from config value at the specified fully qualified path.</p><div class="fullcomment"><div class="comment cmt"><p>Inject parameter from config value at the specified fully qualified path.</p><p>For example, given a class:</p><pre><span class="kw">class</span> Service(@ConfPath(<span class="lit">"service.conf"</span> hostPort: HostPort)</pre><p>where:</p><pre><span class="kw">case</span> <span class="kw">class</span> HostPort(host: <span class="std">String</span>, port: <span class="std">Int</span>)</pre><p>you'll be able to define configuration like this:</p><pre>service {
+  conf {
+    host = <span class="lit">"example.com"</span>
+    port = <span class="num">8080</span>
+  }
+}</pre><p>Note, you will NOT be able to specify the type of the case class:</p><pre>service {
+  conf {
+    HostPort <span class="cmt">/* ILLEGAL */</span> {
+      host = <span class="lit">"example.com"</span>
+      port = <span class="num">8080</span>
     }
-  }</p><p>Note, you will NOT be able to specify the type of the case class:</p><p>   service {
-     conf {
-       HostPort /* ILLEGAL */ {
-         host = &quot;example.com&quot;
-         port = 8080
-       }
-     }
-   }</p><p>Use this annotation if you are too lazy to learn how <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> or <a href="Conf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.Conf">Conf</a> work</p></div></div>
+  }
+}</pre><p>Use this annotation if you are too lazy to learn how <a href="AutoConf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.AutoConf">AutoConf</a> or <a href="Conf.html" class="extype" name="com.github.pshirshov.izumi.distage.config.annotations.Conf">Conf</a> work</p></div></div>
     </li><li name="com.github.pshirshov.izumi.distage.config.annotations.ConfPathId" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ConfPathIdextendsAbstractConfIdwithProductwithSerializable"></a><a id="ConfPathId:ConfPathId"></a>
       <span class="permalink">
