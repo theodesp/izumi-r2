@@ -497,7 +497,6 @@ val main: Future[Unit] = initializers.run {
 }
 
 Await.result(main, Duration.Inf)
-}
 </code></pre>
 <h3><a href="#auto-factories-auto-traits" name="auto-factories-auto-traits" class="anchor"><span class="anchor-link"></span></a>Auto-Factories &amp; Auto-Traits</h3>
 <p>&hellip;</p>
@@ -510,7 +509,7 @@ Await.result(main, Duration.Inf)
 <p>&hellip;</p>
 <h3><a href="#plugins" name="plugins" class="anchor"><span class="anchor-link"></span></a>Plugins</h3>
 <p>When rapidly prototyping, the friction of adding new modules can become a burden. distage plugin extension can alleviate that by automatically picking up all the <code>Plugin</code> modules defined in the program.</p>
-<p>Note that auto plugins are incompatible with distage <a href="#static-configurations">static checks</a>. Our preferred workflow is to start with plugins, then switch to static configurations after a service has been stabilized.</p>
+<p>Note that auto plugins are incompatible with distage <a href="#static-configurations">static checks</a>. Our recommended workflow is to start with plugins, then switch to static configurations after the program has been stabilized.</p>
 <p>To define a plugin, first add distage-plugins library:</p>
 <pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_plugins
 </code></pre>
