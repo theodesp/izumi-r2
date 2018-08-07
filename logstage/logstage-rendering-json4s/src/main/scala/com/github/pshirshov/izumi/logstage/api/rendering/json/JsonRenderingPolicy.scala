@@ -2,6 +2,7 @@ package com.github.pshirshov.izumi.logstage.api.rendering.json
 
 import com.github.pshirshov.izumi.logstage.api.Log
 import com.github.pshirshov.izumi.logstage.api.Log.LogContext
+import com.github.pshirshov.izumi.logstage.api.rendering.RenderingPolicy.PolicyConfig
 import com.github.pshirshov.izumi.logstage.api.rendering.logunits.LogUnit
 import com.github.pshirshov.izumi.logstage.api.rendering.{RenderedParameter, RenderingPolicy}
 import com.github.pshirshov.izumi.logstage.config.codecs.RenderingPolicyCodec.RenderingPolicyMapper
@@ -121,13 +122,13 @@ class JsonRenderingPolicy(prettyPrint: Boolean = false) extends RenderingPolicy 
       }
     customContext
   }
+
 }
 
 object JsonRenderingPolicy {
   val configPolicyMapper: RenderingPolicyMapper[JsonRenderingPolicy] = new RenderingPolicyMapper[JsonRenderingPolicy] {
-    override def instantiate(config: Config): JsonRenderingPolicy = {
-      val withPrettyPrint = Try(config.getBoolean("prettyPrint")).toOption.getOrElse(true)
-      new JsonRenderingPolicy(withPrettyPrint)
+    override def instantiate(policyConfig: RenderingPolicy.PolicyConfig): JsonRenderingPolicy = {
+      new JsonRenderingPolicy(policyConfig.prettyPrint)
     }
   }
 }
