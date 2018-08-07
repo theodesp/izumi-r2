@@ -270,8 +270,6 @@ lazy val logstageDi = inLogStage.as.module
   ).map(_.testOnlyRef))
 
 
-
-
 lazy val logstageAdapterSlf4j = inLogStage.as.module
   .depends(logstageApiLogger)
   .settings(
@@ -289,6 +287,7 @@ lazy val logstageRenderingJson4s = inLogStage.as.module
 
 lazy val logstageSinkConsole = inLogStage.as.module
   .depends(logstageApiBase)
+  .depends(logstageConfig)
   .dependsSeq(Seq(
     logstageApiLogger
   ).map(_.testOnlyRef))
