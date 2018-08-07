@@ -4,11 +4,14 @@ import com.github.pshirshov.izumi.logstage.api.Log
 import com.github.pshirshov.izumi.logstage.api.Log.LogContext
 import com.github.pshirshov.izumi.logstage.api.rendering.logunits.LogUnit
 import com.github.pshirshov.izumi.logstage.api.rendering.{RenderedParameter, RenderingPolicy}
+import com.github.pshirshov.izumi.logstage.config.codecs.RenderingPolicyCodec.RenderingPolicyMapper
+import com.typesafe.config.Config
 import org.json4s.JsonAST._
 import org.json4s.JsonDSL._
 import org.json4s.native.JsonMethods
 
 import scala.runtime.RichInt
+import scala.util.Try
 
 class JsonRenderingPolicy(prettyPrint: Boolean = false) extends RenderingPolicy {
   override def render(entry: Log.Entry): String = {
@@ -118,6 +121,13 @@ class JsonRenderingPolicy(prettyPrint: Boolean = false) extends RenderingPolicy 
       }
     customContext
   }
+}
 
-
+object JsonRenderingPolicy {
+  val configPolicyMapper: RenderingPolicyMapper[JsonRenderingPolicy] = new RenderingPolicyMapper[JsonRenderingPolicy] {
+    override def instantiate(config: Config): JsonRenderingPolicy = {
+      val withPrettyPrint = Try(config.getBoolean("prettyPrint")).toOption.getOrElse(true)
+      new JsonRenderingPolicy(withPrettyPrint)
+    }
+  }
 }

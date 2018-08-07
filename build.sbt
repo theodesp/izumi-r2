@@ -254,8 +254,11 @@ lazy val logstageApiBaseMacro = inLogStage.as.module
     )
   )
 
+lazy val logstageConfig = inLogStage.as.module
+  .depends(distageConfig, distageModel, logstageApiBase)
+
 lazy val logstageApiLogger = inLogStage.as.module
-  .depends(logstageApiBaseMacro)
+  .depends(logstageApiBaseMacro, logstageConfig)
 
 lazy val logstageDi = inLogStage.as.module
   .depends(
@@ -267,9 +270,6 @@ lazy val logstageDi = inLogStage.as.module
   ).map(_.testOnlyRef))
 
 
-
-lazy val logstageConfig = inLogStage.as.module
-  .depends(distageConfig, distageModel)
 
 
 lazy val logstageAdapterSlf4j = inLogStage.as.module
@@ -384,6 +384,7 @@ lazy val logstage: Seq[ProjectReference] = Seq(
   , logstageSinkSlf4j
   , logstageAdapterSlf4j
   , logstageRenderingJson4s
+  , logstageConfig
 )
 lazy val distage: Seq[ProjectReference] = Seq(
   distageApp
