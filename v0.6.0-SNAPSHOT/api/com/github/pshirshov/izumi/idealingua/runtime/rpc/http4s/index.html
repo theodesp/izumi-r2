@@ -199,8 +199,28 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc">rpc</a></dd></dl></div>
     </li><li class="current-entities indented8">
                         <span class="separator"></span>
+                        <a class="trait" href="Http4sContext.html" title=""></a>
+                        <a href="Http4sContext.html" title="">Http4sContext</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
                         <a class="class" href="RuntimeHttp4s.html" title=""></a>
                         <a href="RuntimeHttp4s.html" title="">RuntimeHttp4s</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="trait" href="WithHttp4sClient.html" title=""></a>
+                        <a href="WithHttp4sClient.html" title="">WithHttp4sClient</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="trait" href="WithHttp4sLoggingMiddleware.html" title=""></a>
+                        <a href="WithHttp4sLoggingMiddleware.html" title="">WithHttp4sLoggingMiddleware</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="trait" href="WithHttp4sServer.html" title=""></a>
+                        <a href="WithHttp4sServer.html" title="">WithHttp4sServer</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="trait" href="WithRequestBuilder.html" title=""></a>
+                        <a href="WithRequestBuilder.html" title="">WithRequestBuilder</a>
                       </li>
               </ul>
             </div>
@@ -240,10 +260,26 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RuntimeHttp4s[R[_]]extendsAnyRef"></a><a id="RuntimeHttp4s[R[_]]:RuntimeHttp4s[R]"></a>
+              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Http4sContext[R[_]]extendsAnyRef"></a><a id="Http4sContext[R[_]]:Http4sContext[R]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#RuntimeHttp4s[R[_]]extendsAnyRef" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#Http4sContext[R[_]]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Http4sContext.html"><span class="name">Http4sContext</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RuntimeHttp4s[R[_]]extendsHttp4sContext[R]withWithHttp4sLoggingMiddleware[R]withWithRequestBuilder[R]withWithHttp4sClient[R]withWithHttp4sServer[R]"></a><a id="RuntimeHttp4s[R[_]]:RuntimeHttp4s[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#RuntimeHttp4s[R[_]]extendsHttp4sContext[R]withWithHttp4sLoggingMiddleware[R]withWithRequestBuilder[R]withWithHttp4sClient[R]withWithHttp4sServer[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -252,7 +288,71 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="RuntimeHttp4s.html"><span class="name">RuntimeHttp4s</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="RuntimeHttp4s.html"><span class="name">RuntimeHttp4s</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="Http4sContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext">Http4sContext</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>] with <a href="WithHttp4sLoggingMiddleware.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sLoggingMiddleware">WithHttp4sLoggingMiddleware</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>] with <a href="WithRequestBuilder.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithRequestBuilder">WithRequestBuilder</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>] with <a href="WithHttp4sClient.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sClient">WithHttp4sClient</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>] with <a href="WithHttp4sServer.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer">WithHttp4sServer</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s.R">R</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sClient" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WithHttp4sClient[R[_]]extendsAnyRef"></a><a id="WithHttp4sClient[R[_]]:WithHttp4sClient[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#WithHttp4sClient[R[_]]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="WithHttp4sClient.html"><span class="name">WithHttp4sClient</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sLoggingMiddleware" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WithHttp4sLoggingMiddleware[R[_]]extendsAnyRef"></a><a id="WithHttp4sLoggingMiddleware[R[_]]:WithHttp4sLoggingMiddleware[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#WithHttp4sLoggingMiddleware[R[_]]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="WithHttp4sLoggingMiddleware.html"><span class="name">WithHttp4sLoggingMiddleware</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WithHttp4sServer[R[_]]extendsAnyRef"></a><a id="WithHttp4sServer[R[_]]:WithHttp4sServer[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#WithHttp4sServer[R[_]]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="WithHttp4sServer.html"><span class="name">WithHttp4sServer</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithRequestBuilder" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WithRequestBuilder[R[_]]extendsAnyRef"></a><a id="WithRequestBuilder[R[_]]:WithRequestBuilder[R]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/index.html#WithRequestBuilder[R[_]]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="WithRequestBuilder.html"><span class="name">WithRequestBuilder</span></a><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
