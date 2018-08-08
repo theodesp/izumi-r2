@@ -203,8 +203,12 @@
                         <a href="Http4sContext.html" title="">Http4sContext</a>
                       </li><li class="current-entities indented8">
                         <span class="separator"></span>
-                        <a class="class" href="RuntimeHttp4s.html" title=""></a>
-                        <a href="RuntimeHttp4s.html" title="">RuntimeHttp4s</a>
+                        <a class="class" href="Http4sRuntime.html" title=""></a>
+                        <a href="Http4sRuntime.html" title="">Http4sRuntime</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="IRTHttpFailureException.html" title=""></a>
+                        <a href="IRTHttpFailureException.html" title="">IRTHttpFailureException</a>
                       </li><li class="current-entities indented8">
                         <span class="separator"></span>
                         <a class="trait" href="WithHttp4sClient.html" title=""></a>
@@ -217,10 +221,6 @@
                         <span class="separator"></span>
                         <a class="trait" href="" title=""></a>
                         <a href="" title="">WithHttp4sServer</a>
-                      </li><li class="current-entities indented8">
-                        <span class="separator"></span>
-                        <a class="trait" href="WithRequestBuilder.html" title=""></a>
-                        <a href="WithRequestBuilder.html" title="">WithRequestBuilder</a>
                       </li>
               </ul>
             </div>
@@ -258,7 +258,7 @@
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="RuntimeHttp4s.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.RuntimeHttp4s">RuntimeHttp4s</a></div>
+            <div class="subClasses hiddenContent"><a href="Http4sRuntime.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sRuntime">Http4sRuntime</a></div>
           </div></div>
         
 
@@ -620,9 +620,9 @@
               
         </dd></dl></div>
     </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer#run" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run[Ctx](muxer:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor[R,Ctx],req:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):R[org.http4s.Response[R]]"></a><a id="run[Ctx](IRTServerMultiplexor[R,Ctx],IRTInContext[IRTMuxRequest[Product],Ctx]):R[Response[R]]"></a>
+      <a id="run[Ctx](muxer:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor[R,Ctx],request:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):R[org.http4s.Response[R]]"></a><a id="run[Ctx](IRTServerMultiplexor[R,Ctx],IRTInContext[IRTMuxRequest[Product],Ctx]):R[Response[R]]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/WithHttp4sServer.html#run[Ctx](muxer:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor[R,Ctx],req:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):R[org.http4s.Response[R]]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/WithHttp4sServer.html#run[Ctx](muxer:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor[R,Ctx],request:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):R[org.http4s.Response[R]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -631,7 +631,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="tparams">[<span name="Ctx">Ctx</span>]</span><span class="params">(<span name="muxer">muxer: <a href="../IRTServerMultiplexor.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor">IRTServerMultiplexor</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.run.Ctx">Ctx</span>]</span>, <span name="req">req: <a href="../IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[<a href="../IRTMuxRequest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest">IRTMuxRequest</a>[<span class="extype" name="scala.Product">Product</span>], <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.run.Ctx">Ctx</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>[<span class="extype" name="org.http4s.Response">Response</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>]]</span>
+        <span class="name">run</span><span class="tparams">[<span name="Ctx">Ctx</span>]</span><span class="params">(<span name="muxer">muxer: <a href="../IRTServerMultiplexor.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServerMultiplexor">IRTServerMultiplexor</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.run.Ctx">Ctx</span>]</span>, <span name="request">request: <a href="../IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[<a href="../IRTMuxRequest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest">IRTMuxRequest</a>[<span class="extype" name="scala.Product">Product</span>], <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.run.Ctx">Ctx</span>]</span>)</span><span class="result">: <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>[<span class="extype" name="org.http4s.Response">Response</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.WithHttp4sServer.R">R</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>

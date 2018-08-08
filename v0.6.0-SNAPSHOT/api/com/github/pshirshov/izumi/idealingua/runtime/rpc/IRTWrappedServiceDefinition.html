@@ -198,6 +198,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc">rpc</a></dd></dl></div>
     </li><li class="current-entities indented7">
+                        <a class="object" href="DispatchingFailure$.html" title=""></a>
+                        <a class="trait" href="DispatchingFailure.html" title=""></a>
+                        <a href="DispatchingFailure.html" title="">DispatchingFailure</a>
+                      </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="trait" href="IRTCast.html" title=""></a>
                         <a href="IRTCast.html" title="">IRTCast</a>
@@ -231,10 +235,6 @@
                         <a href="IRTMethodId.html" title="">IRTMethodId</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="IRTMultiplexingException.html" title=""></a>
-                        <a href="IRTMultiplexingException.html" title="">IRTMultiplexingException</a>
-                      </li><li class="current-entities indented7">
-                        <span class="separator"></span>
                         <a class="class" href="IRTMuxRequest.html" title=""></a>
                         <a href="IRTMuxRequest.html" title="">IRTMuxRequest</a>
                       </li><li class="current-entities indented7">
@@ -254,6 +254,10 @@
                         <a class="class" href="IRTResBody.html" title=""></a>
                         <a href="IRTResBody.html" title="">IRTResBody</a>
                       </li><li class="current-entities indented7">
+                        <a class="object" href="IRTResult$.html" title=""></a>
+                        <a class="trait" href="IRTResult.html" title=""></a>
+                        <a href="IRTResult.html" title="">IRTResult</a>
+                      </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="IRTServerMultiplexor.html" title=""></a>
                         <a href="IRTServerMultiplexor.html" title="">IRTServerMultiplexor</a>
@@ -261,10 +265,6 @@
                         <span class="separator"></span>
                         <a class="class" href="IRTServiceId.html" title=""></a>
                         <a href="IRTServiceId.html" title="">IRTServiceId</a>
-                      </li><li class="current-entities indented7">
-                        <a class="object" href="IRTServiceResult$.html" title=""></a>
-                        <a class="trait" href="IRTServiceResult.html" title=""></a>
-                        <a href="IRTServiceResult.html" title="">IRTServiceResult</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="trait" href="IRTTransportException.html" title=""></a>
@@ -456,9 +456,9 @@
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition#client" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="client[R[_]](dispatcher:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[IRTWrappedServiceDefinition.this.Input,IRTWrappedServiceDefinition.this.Output,R])(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R]):IRTWrappedServiceDefinition.this.ServiceClient[R]"></a><a id="client[R[_]](IRTDispatcher[(IRTWrappedServiceDefinition.this)#Input,(IRTWrappedServiceDefinition.this)#Output,R])(IRTServiceResult[R]):(IRTWrappedServiceDefinition.this)#ServiceClient[R]"></a>
+      <a id="client[R[_]](dispatcher:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[IRTWrappedServiceDefinition.this.Input,IRTWrappedServiceDefinition.this.Output,R])(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]):IRTWrappedServiceDefinition.this.ServiceClient[R]"></a><a id="client[R[_]](IRTDispatcher[(IRTWrappedServiceDefinition.this)#Input,(IRTWrappedServiceDefinition.this)#Output,R])(IRTResult[R]):(IRTWrappedServiceDefinition.this)#ServiceClient[R]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTWrappedServiceDefinition.html#client[R[_]](dispatcher:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[IRTWrappedServiceDefinition.this.Input,IRTWrappedServiceDefinition.this.Output,R])(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R]):IRTWrappedServiceDefinition.this.ServiceClient[R]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTWrappedServiceDefinition.html#client[R[_]](dispatcher:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[IRTWrappedServiceDefinition.this.Input,IRTWrappedServiceDefinition.this.Output,R])(implicitevidence$1:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]):IRTWrappedServiceDefinition.this.ServiceClient[R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -467,14 +467,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">client</span><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="dispatcher">dispatcher: <a href="IRTDispatcher.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher">IRTDispatcher</a>[(<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Input">Input</span>, (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Output">Output</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="IRTServiceResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult">IRTServiceResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.ServiceClient">ServiceClient</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>
+        <span class="name">client</span><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="params">(<span name="dispatcher">dispatcher: <a href="IRTDispatcher.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher">IRTDispatcher</a>[(<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Input">Input</span>, (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Output">Output</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="IRTResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult">IRTResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>)</span><span class="result">: (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.ServiceClient">ServiceClient</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.client.R">R</span>]</span>
       </span>
       
       
     </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition#server" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="server[R[_],C](service:IRTWrappedServiceDefinition.this.ServiceServer[R,C])(implicitevidence$2:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[IRTWrappedServiceDefinition.this.Input,C],IRTWrappedServiceDefinition.this.Output,R]"></a><a id="server[R[_],C]((IRTWrappedServiceDefinition.this)#ServiceServer[R,C])(IRTServiceResult[R]):IRTDispatcher[IRTInContext[(IRTWrappedServiceDefinition.this)#Input,C],(IRTWrappedServiceDefinition.this)#Output,R]"></a>
+      <a id="server[R[_],C](service:IRTWrappedServiceDefinition.this.ServiceServer[R,C])(implicitevidence$2:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[IRTWrappedServiceDefinition.this.Input,C],IRTWrappedServiceDefinition.this.Output,R]"></a><a id="server[R[_],C]((IRTWrappedServiceDefinition.this)#ServiceServer[R,C])(IRTResult[R]):IRTDispatcher[IRTInContext[(IRTWrappedServiceDefinition.this)#Input,C],(IRTWrappedServiceDefinition.this)#Output,R]"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTWrappedServiceDefinition.html#server[R[_],C](service:IRTWrappedServiceDefinition.this.ServiceServer[R,C])(implicitevidence$2:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[IRTWrappedServiceDefinition.this.Input,C],IRTWrappedServiceDefinition.this.Output,R]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTWrappedServiceDefinition.html#server[R[_],C](service:IRTWrappedServiceDefinition.this.ServiceServer[R,C])(implicitevidence$2:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]):com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[IRTWrappedServiceDefinition.this.Input,C],IRTWrappedServiceDefinition.this.Output,R]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -483,7 +483,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">server</span><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="C">C</span>]</span><span class="params">(<span name="service">service: (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.ServiceServer">ServiceServer</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.C">C</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="IRTServiceResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTServiceResult">IRTServiceResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>]</span>)</span><span class="result">: <a href="IRTDispatcher.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher">IRTDispatcher</a>[<a href="IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[(<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Input">Input</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.C">C</span>], (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Output">Output</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>]</span>
+        <span class="name">server</span><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>, <span name="C">C</span>]</span><span class="params">(<span name="service">service: (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.ServiceServer">ServiceServer</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.C">C</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="IRTResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult">IRTResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>]</span>)</span><span class="result">: <a href="IRTDispatcher.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTDispatcher">IRTDispatcher</a>[<a href="IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[(<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Input">Input</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.C">C</span>], (<a href="" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition">IRTWrappedServiceDefinition</a>.this)#<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.Output">Output</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWrappedServiceDefinition.server.R">R</span>]</span>
       </span>
       
       

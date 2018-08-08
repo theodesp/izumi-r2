@@ -198,6 +198,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc">rpc</a></dd></dl></div>
     </li><li class="current-entities indented7">
+                        <a class="object" href="DispatchingFailure$.html" title=""></a>
+                        <a class="trait" href="DispatchingFailure.html" title=""></a>
+                        <a href="DispatchingFailure.html" title="">DispatchingFailure</a>
+                      </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="trait" href="IRTCast.html" title=""></a>
                         <a href="IRTCast.html" title="">IRTCast</a>
@@ -231,10 +235,6 @@
                         <a href="IRTMethodId.html" title="">IRTMethodId</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
-                        <a class="class" href="IRTMultiplexingException.html" title=""></a>
-                        <a href="IRTMultiplexingException.html" title="">IRTMultiplexingException</a>
-                      </li><li class="current-entities indented7">
-                        <span class="separator"></span>
                         <a class="class" href="IRTMuxRequest.html" title=""></a>
                         <a href="IRTMuxRequest.html" title="">IRTMuxRequest</a>
                       </li><li class="current-entities indented7">
@@ -254,6 +254,10 @@
                         <a class="class" href="IRTResBody.html" title=""></a>
                         <a href="IRTResBody.html" title="">IRTResBody</a>
                       </li><li class="current-entities indented7">
+                        <a class="object" href="IRTResult$.html" title=""></a>
+                        <a class="trait" href="IRTResult.html" title=""></a>
+                        <a href="IRTResult.html" title="">IRTResult</a>
+                      </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="class" href="IRTServerMultiplexor.html" title=""></a>
                         <a href="IRTServerMultiplexor.html" title="">IRTServerMultiplexor</a>
@@ -261,10 +265,6 @@
                         <span class="separator"></span>
                         <a class="class" href="IRTServiceId.html" title=""></a>
                         <a href="IRTServiceId.html" title="">IRTServiceId</a>
-                      </li><li class="current-entities indented7">
-                        <a class="object" href="IRTServiceResult$.html" title=""></a>
-                        <a class="trait" href="IRTServiceResult.html" title=""></a>
-                        <a href="IRTServiceResult.html" title="">IRTServiceResult</a>
                       </li><li class="current-entities indented7">
                         <span class="separator"></span>
                         <a class="trait" href="IRTTransportException.html" title=""></a>
@@ -386,7 +386,23 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWithResultType.Result" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.MaybeOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaybeOutput=Either[com.github.pshirshov.izumi.idealingua.runtime.rpc.DispatchingFailure,IRTUnsafeDispatcher.this.Result[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse[Product]]]"></a><a id="MaybeOutput:MaybeOutput"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTUnsafeDispatcher.html#MaybeOutput=Either[com.github.pshirshov.izumi.idealingua.runtime.rpc.DispatchingFailure,IRTUnsafeDispatcher.this.Result[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse[Product]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MaybeOutput</span><span class="result alias"> = <span class="extype" name="scala.util.Either">Either</span>[<a href="DispatchingFailure.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.DispatchingFailure">DispatchingFailure</a>, <a href="#Result[T]=R[T]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.Result">Result</a>[<a href="IRTMuxResponse.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse">IRTMuxResponse</a>[<span class="extype" name="scala.Product">Product</span>]]]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWithResultType.Result" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Result[T]=R[T]"></a><a id="Result[T]:Result[T]"></a>
       <span class="permalink">
       <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTUnsafeDispatcher.html#Result[T]=R[T]" title="Permalink">
@@ -402,15 +418,31 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IRTWithResultType.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTWithResultType">IRTWithResultType</a></dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.UnsafeInput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnsafeInput=com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]"></a><a id="UnsafeInput:UnsafeInput"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTUnsafeDispatcher.html#UnsafeInput=com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UnsafeInput</span><span class="result alias"> = <a href="IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[<a href="IRTMuxRequest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest">IRTMuxRequest</a>[<span class="extype" name="scala.Product">Product</span>], <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.Ctx">Ctx</span>]</span>
+      </span>
+      
+      
     </li></ol>
             </div>
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
               <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher#dispatchUnsafe" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="dispatchUnsafe(input:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):Option[IRTUnsafeDispatcher.this.Result[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse[Product]]]"></a><a id="dispatchUnsafe(IRTInContext[IRTMuxRequest[Product],Ctx]):Option[Result[IRTMuxResponse[Product]]]"></a>
+      <a id="dispatchUnsafe(input:IRTUnsafeDispatcher.this.UnsafeInput):IRTUnsafeDispatcher.this.MaybeOutput"></a><a id="dispatchUnsafe(UnsafeInput):MaybeOutput"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTUnsafeDispatcher.html#dispatchUnsafe(input:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]):Option[IRTUnsafeDispatcher.this.Result[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse[Product]]]" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/IRTUnsafeDispatcher.html#dispatchUnsafe(input:IRTUnsafeDispatcher.this.UnsafeInput):IRTUnsafeDispatcher.this.MaybeOutput" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -419,7 +451,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dispatchUnsafe</span><span class="params">(<span name="input">input: <a href="IRTInContext.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext">IRTInContext</a>[<a href="IRTMuxRequest.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest">IRTMuxRequest</a>[<span class="extype" name="scala.Product">Product</span>], <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.Ctx">Ctx</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="#Result[T]=R[T]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.Result">Result</a>[<a href="IRTMuxResponse.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse">IRTMuxResponse</a>[<span class="extype" name="scala.Product">Product</span>]]]</span>
+        <span class="name">dispatchUnsafe</span><span class="params">(<span name="input">input: <a href="#UnsafeInput=com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTInContext[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxRequest[Product],Ctx]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.UnsafeInput">UnsafeInput</a></span>)</span><span class="result">: <a href="#MaybeOutput=Either[com.github.pshirshov.izumi.idealingua.runtime.rpc.DispatchingFailure,IRTUnsafeDispatcher.this.Result[com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTMuxResponse[Product]]]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTUnsafeDispatcher.MaybeOutput">MaybeOutput</a></span>
       </span>
       
       
