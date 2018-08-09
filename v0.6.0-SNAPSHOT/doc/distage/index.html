@@ -293,12 +293,15 @@ val uppercaseHelloBye = helloBye overridenBy uppercaseHello
 <h3><a href="#multibindings-set-bindings" name="multibindings-set-bindings" class="anchor"><span class="anchor-link"></span></a>Multibindings / Set Bindings</h3>
 <p>Multibindings are useful for implementing event listeners, plugins, hooks, http routes, etc.</p>
 <p>To define a multibinding use <code>.many</code> and <code>.add</code> methods in <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/definition/ModuleDef.html">ModuleDef</a> DSL:</p>
-<pre class="prettyprint"><code class="language-scala">import cats.effect._, org.http4s._, org.http4s.dsl.io._, scala.concurrent.ExecutionContext.Implicits.global
+<pre class="prettyprint"><code class="language-scala">import cats.effect._, org.http4s._, org.http4s.dsl.io._
+import scala.concurrent.ExecutionContext.Implicits.global
 import distage._
 
 object HomeRouteModule extends ModuleDef {
   many[HttpRoutes[IO]].add {
-    HttpRoutes.of[IO] { case GET -&gt; Root / &quot;home&quot; =&gt; Ok(s&quot;Home page!&quot;) }
+    HttpRoutes.of[IO] { 
+      case GET -&gt; Root / &quot;home&quot; =&gt; Ok(s&quot;Home page!&quot;) 
+    }
   }
 }
 </code></pre>
@@ -307,7 +310,9 @@ object HomeRouteModule extends ModuleDef {
 
 object BlogRouteModule extends ModuleDef {
   many[HttpRoutes[IO]].add {
-    HttpRoutes.of[IO] { case GET -&gt; Root / &quot;blog&quot; / post =&gt; Ok(&quot;Blog post ``$post&#39;&#39;!&quot;) }
+    HttpRoutes.of[IO] { 
+      case GET -&gt; Root / &quot;blog&quot; / post =&gt; Ok(&quot;Blog post ``$post&#39;&#39;!&quot;) 
+    }
   }
 }
 
@@ -355,7 +360,7 @@ trait HttpServerModule extends ModuleDef {
 <p>For further details, see scaladoc for <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/providers/ProviderMagnet.html">ProviderMagnet</a></p>
 <h3><a href="#tagless-final-style-with-distage" name="tagless-final-style-with-distage" class="anchor"><span class="anchor-link"></span></a>Tagless Final Style with distage</h3>
 <p>distage has first-class support for tagless final style. Let&rsquo;s see what <a href="http://frees.io/docs/core/handlers/#tagless-interpretation">freestyle tagless example</a> looks like in distage:</p>
-<pre class="prettyprint"><code class="language-scala">class Program[F: TagK: Monad] extends ModuleDef {
+<pre class="prettyprint"><code class="language-scala">class Program[F[_]: TagK: Monad] extends ModuleDef {
   make[TaglessProgram[F]]
 }
 
@@ -367,7 +372,8 @@ object TryInterpreters extends ModuleDef {
 // Combine modules into a full program
 val TryProgram = new Program[Try] ++ TryInterpreters
 </code></pre>
-<p>where</p>
+<p><a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags.html#TagK">TagK</a> is distage&rsquo;s analogue of <code>TypeTag</code> or <code>Typeable</code> but for higher-kinded types like <code>F[_]</code>. Don&rsquo;t forget to add a <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags.html#TagK">TagK</a> when you need to create a module parameterized by an abstract <code>F[_]</code>! You don&rsquo;t need it however, when your module refers to concrete monads such as <code>Future</code> or <code>IO</code>. If you want to create a module that&rsquo;s generic in a non-higher kinded parameter, use <a href="/v0.6.0-SNAPSHOT/api/com/github/pshirshov/izumi/distage/model/reflection/universe/WithDITypeTags.html#Tag">Tag</a>.</p>
+<p>The rest of the program:</p>
 <pre class="prettyprint"><code class="language-scala">class TaglessProgram[F[_]: Monad](validation: Validation[F], interaction: Interaction[F]) {
   def program = for {
       userInput &lt;- interaction.ask(&quot;Give me something with at least 3 chars and a number on it&quot;)
