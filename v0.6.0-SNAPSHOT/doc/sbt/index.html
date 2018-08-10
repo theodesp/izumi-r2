@@ -399,7 +399,9 @@ lazy val todomvcApi = inApi.as.module
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&quot; % izumi_version)
 </code></pre>
 <p>You can use it like this:</p>
-<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_core // Import an izumi library
+<pre class="prettyprint"><code class="language-scala">import com.github.pshirshov.izumi.sbt.deps.IzumiDeps.Izumi
+
+libraryDependencies += Izumi.R.distage_core // Import an izumi library
 libraryDependencies += Izumi.D.cats_effect // Import an izumi dependency
 </code></pre>
 <p>R is for Runtime, D is for Dependencies, T is for Test artifacts</p>
