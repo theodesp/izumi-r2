@@ -371,11 +371,11 @@ lazy val myProject = (...).depends(myLibrary)
 <pre><code>lazy val petstoreApp = project.in(&quot;app/petstore-app&quot;)
 </code></pre>
 <p>You can attach settings and dependencies to the <code>In</code> part, that way you can apply common settings to all the projects in a directory:</p>
-<pre class="prettyprint"><code class="language-scala">val ApiSettings: SettingsGroup = new SettingsGroup {
+<pre class="prettyprint"><code class="language-scala">val ApiSettings = new SettingsGroup {
   override val plugins = Set(IdealinguaPlugin)
 }
 
-lazy val inApi = In(&quot;api&quot;)
+lazy val inApi = In(&quot;api&quot;).settings(ApiSettings)
 
 lazy val petstoreApi = inApi.as.module
 lazy val todomvcApi = inApi.as.module
@@ -399,10 +399,8 @@ lazy val todomvcApi = inApi.as.module
 addSbtPlugin(&quot;com.github.pshirshov.izumi.r2&quot; % &quot;sbt-izumi-deps&quot; % izumi_version)
 </code></pre>
 <p>You can use it like this:</p>
-<pre class="prettyprint"><code class="language-scala">import com.github.pshirshov.izumi.sbt.deps.IzumiDeps.Izumi
-
-libraryDependencies += Izumi.R.distage_core // Import an izumi library
-libraryDependencies += Izumi.D.cats_effect // Import an izumi dependency
+<pre class="prettyprint"><code class="language-scala">libraryDependencies += Izumi.R.distage_core // Import an izumi library
+libraryDependencies += IzumiRootDeps.R.cats_effect // Import a dependency of izumi
 </code></pre>
 <p>R is for Runtime, D is for Dependencies, T is for Test artifacts</p>
 <h4><a href="#create-a-bom-for-your-projects" name="create-a-bom-for-your-projects" class="anchor"><span class="anchor-link"></span></a>Create a BOM for your projects</h4>
