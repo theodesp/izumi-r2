@@ -32,6 +32,8 @@ object IzumiDeps {
     val scalacheck = "1.14.0"
     val scalacheck_shapeless = "1.1.6"
 
+    val dsl_scala = "1.0.0-RC14" // https://github.com/ThoughtWorksInc/Dsl.scala/issues/147
+
     // good to drop
     val json4s = "3.6.0"  // 2.13+
     val scopt = "3.7.0" // 2.13+
@@ -80,7 +82,6 @@ object IzumiDeps {
     val json4s_native = "org.json4s" %% "json4s-native" % V.json4s
     val shapeless = "com.chuusai" %% "shapeless" % V.shapeless
 
-
     val circe: Seq[ModuleID] = Seq(
       "io.circe" %% "circe-core"
       , "io.circe" %% "circe-generic"
@@ -88,6 +89,10 @@ object IzumiDeps {
       , "io.circe" %% "circe-parser"
     ).map(_ % V.circe) ++ Seq(
       "io.circe" %% "circe-derivation" % V.circe_derivation)
+
+    val dsl_scala_cats = "com.thoughtworks.dsl" %% "domains-cats" % V.dsl_scala
+    val dsl_scala_bangnotation_plugin = "com.thoughtworks.dsl" %% "compilerplugins-bangnotation" % V.dsl_scala
+    val dsl_scala_reseteverywhere_plugin = "com.thoughtworks.dsl" %% "compilerplugins-reseteverywhere" % V.dsl_scala
 
     val http4s_client: Seq[ModuleID] = Seq(
       "org.http4s" %% "http4s-blaze-client"
@@ -117,6 +122,10 @@ object IzumiDeps {
 
     val circe: Seq[ModuleID] = R.circe.map(_ % "test")
     val cats_all: Seq[ModuleID] = R.cats_all.map(_ % "test")
+
+    val dsl_scala_cats = R.dsl_scala_cats % "test"
+    val dsl_scala_bangnotation_plugin = R.dsl_scala_bangnotation_plugin % "test"
+    val dsl_scala_reseteverywhere_plugin = R.dsl_scala_reseteverywhere_plugin % "test"
   }
 
 }

@@ -20,56 +20,60 @@ import org.http4s.server.blaze._
 import org.scalatest.WordSpec
 
 import scala.language.{higherKinds, reflectiveCalls}
-
+import com.thoughtworks.dsl.keywords.Monadic._
+import com.thoughtworks.dsl.domains.cats._
+import com.thoughtworks.dsl.Dsl.reset
 
 class Http4sTransportTest extends WordSpec {
 
   import Http4sTransportTest.Http4sTestContext._
 
-  "Http4s transport" should {
-    "support direct calls" in {
+  implicit class InIO(s: String) {
+    def inIO(io: IO[Unit]): Unit =
+      s in { io.unsafeRunSync }
+  }
 
+  "Http4s transport" should {
+    "support direct calls" inIO ({
       import scala.concurrent.ExecutionContext.Implicits.global
-      val builder = BlazeBuilder[IO]
+
+      val server = !BlazeBuilder[IO]
         .bindHttp(port, host)
         .mountService(ioService.service, "/")
         .start
 
-      builder.unsafeRunAsync {
-        case Right(server) =>
-          try {
-            performTests()
-          } finally {
-            server.shutdownNow()
-          }
-
-        case Left(error) =>
-          throw error
+      try {
+        !performTests()
+      } finally {
+        server.shutdownNow()
       }
 
-
-    }
+      IO.unit
+    }: @reset)
   }
 
-  private def performTests(): Unit = {
+  private def performTests(): IO[Unit] = {
     clientDispatcher.setupCredentials("user", "pass")
-    assert(greeterClient.greet("John", "Smith").unsafeRunSync() == "Hi, John Smith!")
-    assert(greeterClient.sayhi().unsafeRunSync() == "Hi!")
-    assert(calculatorClient.sum(2, 5).unsafeRunSync() == 7)
+    assert(!greeterClient.greet("John", "Smith") == "Hi, John Smith!")
+    assert(!greeterClient.sayhi() == "Hi!")
+    assert(!calculatorClient.sum(2, 5) == 7)
 
     val missingHandler = intercept[IRTHttpFailureException] {
-      greeterClient.broken(HowBroken.MissingServerHandler).unsafeRunSync()
+      val res = !greeterClient.broken(HowBroken.MissingServerHandler).attempt
+      res.toTry.get
     }
     assert(missingHandler.status == Status.NotFound)
 
     clientDispatcher.cancelCredentials()
 
     val unauthorized = intercept[IRTHttpFailureException] {
-      calculatorClient.sum(403, 0).unsafeRunSync()
+      val res = !calculatorClient.sum(403, 0).attempt
+      res.toTry.get
     }
     assert(unauthorized.status == Status.Forbidden)
-    ()
-  }
+
+    IO.unit
+  }: @reset
 }
 
 object Http4sTransportTest {

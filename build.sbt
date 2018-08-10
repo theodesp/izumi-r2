@@ -322,7 +322,12 @@ lazy val idealinguaRuntimeRpcCats = inIdealingua.as.module
 lazy val idealinguaRuntimeRpcHttp4s = inIdealingua.as.module
   .depends(idealinguaRuntimeRpcCirce, idealinguaRuntimeRpcCats, logstageApiLogger, logstageAdapterSlf4j)
   .dependsSeq(Seq(idealinguaTestDefs).map(_.testOnlyRef))
-  .settings(libraryDependencies ++= R.http4s_all)
+  .settings(
+    libraryDependencies ++= R.http4s_all
+    , libraryDependencies += R.dsl_scala_cats
+    , addCompilerPlugin(T.dsl_scala_bangnotation_plugin)
+    , addCompilerPlugin(T.dsl_scala_reseteverywhere_plugin)
+  )
 
 lazy val idealinguaExtensionRpcFormatCirce = inIdealingua.as.module
   .depends(idealinguaCore, idealinguaRuntimeRpcCirce)
