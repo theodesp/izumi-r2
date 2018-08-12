@@ -207,8 +207,20 @@
                         <a href="Http4sRuntime.html" title="">Http4sRuntime</a>
                       </li><li class="current-entities indented8">
                         <span class="separator"></span>
+                        <a class="class" href="IRTBadCredentialsException.html" title=""></a>
+                        <a href="IRTBadCredentialsException.html" title="">IRTBadCredentialsException</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
                         <a class="class" href="IRTHttpFailureException.html" title=""></a>
                         <a href="IRTHttpFailureException.html" title="">IRTHttpFailureException</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="IRTNoCredentialsException.html" title=""></a>
+                        <a href="IRTNoCredentialsException.html" title="">IRTNoCredentialsException</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="class" href="IRTUnexpectedHttpStatus.html" title=""></a>
+                        <a href="IRTUnexpectedHttpStatus.html" title="">IRTUnexpectedHttpStatus</a>
                       </li><li class="current-entities indented8">
                         <span class="separator"></span>
                         <a class="trait" href="WithHttp4sClient.html" title=""></a>
@@ -221,6 +233,10 @@
                         <span class="separator"></span>
                         <a class="trait" href="WithHttp4sServer.html" title=""></a>
                         <a href="WithHttp4sServer.html" title="">WithHttp4sServer</a>
+                      </li><li class="current-entities indented8">
+                        <span class="separator"></span>
+                        <a class="object" href="ZIOR$.html" title=""></a>
+                        <a href="ZIOR$.html" title="">ZIOR</a>
                       </li>
               </ul>
             </div>
@@ -244,7 +260,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Http4sContext</span><span class="tparams">[<span name="R">R<span class="tparams">[<span name="_">_</span>]</span></span>]</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">Http4sContext</span><span class="result"> extends <a href="../../../../../../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
@@ -306,7 +322,39 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.MaterializedStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.BIO" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BIO[E,V]"></a><a id="BIO[E,V]:BIO[E,V]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#BIO[E,V]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BIO</span><span class="tparams">[<span name="E">E</span>, <span name="V">V</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.CIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CIO[T]=cats.effect.IO[T]"></a><a id="CIO[T]:CIO[T]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#CIO[T]=cats.effect.IO[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CIO</span><span class="tparams">[<span name="T">T</span>]</span><span class="result alias"> = <span class="extype" name="cats.effect.IO">IO</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.CIO.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.MaterializedStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MaterializedStream=String"></a><a id="MaterializedStream:MaterializedStream"></a>
       <span class="permalink">
       <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#MaterializedStream=String" title="Permalink">
@@ -323,9 +371,9 @@
       
       
     </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.StreamDecoder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="StreamDecoder=org.http4s.EntityDecoder[R,Http4sContext.this.MaterializedStream]"></a><a id="StreamDecoder:StreamDecoder"></a>
+      <a id="StreamDecoder=org.http4s.EntityDecoder[Http4sContext.this.CIO,Http4sContext.this.MaterializedStream]"></a><a id="StreamDecoder:StreamDecoder"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#StreamDecoder=org.http4s.EntityDecoder[R,Http4sContext.this.MaterializedStream]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#StreamDecoder=org.http4s.EntityDecoder[Http4sContext.this.CIO,Http4sContext.this.MaterializedStream]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -334,7 +382,23 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">StreamDecoder</span><span class="result alias"> = <span class="extype" name="org.http4s.EntityDecoder">EntityDecoder</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.R">R</span>, <a href="#MaterializedStream=String" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.MaterializedStream">MaterializedStream</a>]</span>
+        <span class="name">StreamDecoder</span><span class="result alias"> = <span class="extype" name="org.http4s.EntityDecoder">EntityDecoder</span>[<a href="#CIO[T]=cats.effect.IO[T]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.CIO">CIO</a>, <a href="#MaterializedStream=String" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.MaterializedStream">MaterializedStream</a>]</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.ZIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZIO[E,V]=scalaz.zio.IO[E,V]"></a><a id="ZIO[E,V]:ZIO[E,V]"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#ZIO[E,V]=scalaz.zio.IO[E,V]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZIO</span><span class="tparams">[<span name="E">E</span>, <span name="V">V</span>]</span><span class="result alias"> = <span class="extype" name="scalaz.zio.IO">IO</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.ZIO.E">E</span>, <span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.ZIO.V">V</span>]</span>
       </span>
       
       
@@ -343,26 +407,10 @@
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#E" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="E:cats.effect.Effect[R]"></a><a id="E:Effect[R]"></a>
+              <ol><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#dsl" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="dsl:org.http4s.dsl.Http4sDsl[Http4sContext.this.CIO]"></a><a id="dsl:Http4sDsl[CIO]"></a>
       <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#E:cats.effect.Effect[R]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">E</span><span class="result">: <span class="extype" name="cats.effect.Effect">Effect</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.R">R</span>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#TM" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="TM:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]"></a><a id="TM:IRTResult[R]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#TM:com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult[R]" title="Permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#dsl:org.http4s.dsl.Http4sDsl[Http4sContext.this.CIO]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -371,23 +419,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">TM</span><span class="result">: <a href="../IRTResult.html" class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.IRTResult">IRTResult</a>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.R">R</span>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#dsl" visbl="prt" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="dsl:org.http4s.dsl.Http4sDsl[R]"></a><a id="dsl:Http4sDsl[R]"></a>
-      <span class="permalink">
-      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#dsl:org.http4s.dsl.Http4sDsl[R]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dsl</span><span class="result">: <span class="extype" name="org.http4s.dsl.Http4sDsl">Http4sDsl</span>[<span class="extype" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.R">R</span>]</span>
+        <span class="name">dsl</span><span class="result">: <span class="extype" name="org.http4s.dsl.Http4sDsl">Http4sDsl</span>[<a href="#CIO[T]=cats.effect.IO[T]" class="extmbr" name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext.CIO">CIO</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -461,6 +493,38 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#CIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CIO:cats.effect.IO.type"></a><a id="CIO:IO.type"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#CIO:cats.effect.IO.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CIO</span><span class="result">: <span class="extype" name="cats.effect.IO">IO</span>.type</span>
+      </span>
+      
+      
+    </li><li name="com.github.pshirshov.izumi.idealingua.runtime.rpc.http4s.Http4sContext#ZIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZIO:scalaz.zio.IO.type"></a><a id="ZIO:IO.type"></a>
+      <span class="permalink">
+      <a href="../../../../../../../../com/github/pshirshov/izumi/idealingua/runtime/rpc/http4s/Http4sContext.html#ZIO:scalaz.zio.IO.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZIO</span><span class="result">: <span class="extype" name="scalaz.zio.IO">IO</span>.type</span>
+      </span>
+      
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
