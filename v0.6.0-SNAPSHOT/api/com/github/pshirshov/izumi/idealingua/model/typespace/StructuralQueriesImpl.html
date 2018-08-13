@@ -336,9 +336,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(types:com.github.pshirshov.izumi.idealingua.model.typespace.TypeCollection,resolver:com.github.pshirshov.izumi.idealingua.model.typespace.TypeResolver,inheritance:com.github.pshirshov.izumi.idealingua.model.typespace.InheritanceQueries,tools:com.github.pshirshov.izumi.idealingua.model.typespace.TypespaceTools):com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl"></a><a id="&lt;init&gt;:StructuralQueriesImpl"></a>
+      <a id="&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace):com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl"></a><a id="&lt;init&gt;:StructuralQueriesImpl"></a>
       <span class="permalink">
-      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/model/typespace/StructuralQueriesImpl.html#&lt;init&gt;(types:com.github.pshirshov.izumi.idealingua.model.typespace.TypeCollection,resolver:com.github.pshirshov.izumi.idealingua.model.typespace.TypeResolver,inheritance:com.github.pshirshov.izumi.idealingua.model.typespace.InheritanceQueries,tools:com.github.pshirshov.izumi.idealingua.model.typespace.TypespaceTools):com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl" title="Permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/model/typespace/StructuralQueriesImpl.html#&lt;init&gt;(ts:com.github.pshirshov.izumi.idealingua.model.typespace.Typespace):com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -347,7 +347,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">StructuralQueriesImpl</span><span class="params">(<span name="types">types: <a href="TypeCollection.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.TypeCollection">TypeCollection</a></span>, <span name="resolver">resolver: <a href="TypeResolver.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.TypeResolver">TypeResolver</a></span>, <span name="inheritance">inheritance: <a href="InheritanceQueries.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.InheritanceQueries">InheritanceQueries</a></span>, <span name="tools">tools: <a href="TypespaceTools.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.TypespaceTools">TypespaceTools</a></span>)</span>
+        <span class="name">StructuralQueriesImpl</span><span class="params">(<span name="ts">ts: <a href="Typespace.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.Typespace">Typespace</a></span>)</span>
       </span>
       
       
@@ -589,6 +589,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.github.pshirshov.izumi.idealingua.model.typespace.StructuralQueriesImpl#mkConverter" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mkConverter(innerFields:List[com.github.pshirshov.izumi.idealingua.model.common.SigParam],outerFields:List[com.github.pshirshov.izumi.idealingua.model.common.SigParam],targetId:com.github.pshirshov.izumi.idealingua.model.common.StructureId):com.github.pshirshov.izumi.idealingua.model.typespace.structures.ConverterDef"></a><a id="mkConverter(List[SigParam],List[SigParam],StructureId):ConverterDef"></a>
+      <span class="permalink">
+      <a href="../../../../../../../com/github/pshirshov/izumi/idealingua/model/typespace/StructuralQueriesImpl.html#mkConverter(innerFields:List[com.github.pshirshov.izumi.idealingua.model.common.SigParam],outerFields:List[com.github.pshirshov.izumi.idealingua.model.common.SigParam],targetId:com.github.pshirshov.izumi.idealingua.model.common.StructureId):com.github.pshirshov.izumi.idealingua.model.typespace.structures.ConverterDef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mkConverter</span><span class="params">(<span name="innerFields">innerFields: <a href="../../../../../../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../common/SigParam.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.SigParam">SigParam</a>]</span>, <span name="outerFields">outerFields: <a href="../../../../../../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../common/SigParam.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.SigParam">SigParam</a>]</span>, <span name="targetId">targetId: <a href="../common/StructureId.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.common.StructureId">StructureId</a></span>)</span><span class="result">: <a href="structures/ConverterDef.html" class="extype" name="com.github.pshirshov.izumi.idealingua.model.typespace.structures.ConverterDef">ConverterDef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
