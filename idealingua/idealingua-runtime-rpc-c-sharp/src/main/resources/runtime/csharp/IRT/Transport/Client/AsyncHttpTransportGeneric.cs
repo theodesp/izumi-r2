@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Collections.Specialized;
 using IRT.Marshaller;
+using IRT.Transport.Authorization;
 
 namespace IRT.Transport.Client {
     public class AsyncHttpTransportGeneric<C>: IClientTransport<C> where C: class, IClientTransportContext {
@@ -22,6 +23,7 @@ namespace IRT.Transport.Client {
         }
 
         private IJsonMarshaller Marshaller;
+        private AuthMethod Auth;
 
         private string endpoint;
         public string Endpoint {
@@ -47,6 +49,10 @@ namespace IRT.Transport.Client {
             ActiveRequests = 0;
         }
 
+        public void SetAuthorization(AuthMethod method) {
+            Auth = method;
+        }
+
         public void Send<I, O>(string service, string method, I payload, ClientTransportCallback<O> callback, C ctx) {
             try {
                 var request = (HttpWebRequest) WebRequest.Create(string.Format("{0}/{1}/{2}", endpoint, service, method));
@@ -58,6 +64,10 @@ namespace IRT.Transport.Client {
                             request.Headers.Add(key, value);
                         }
                     }
+                }
+
+                if (Auth != null) {
+                    request.Headers.Add("Authorization", Auth.ToValue());
                 }
 
                 var state = new RequestState<O>(request, callback, null);

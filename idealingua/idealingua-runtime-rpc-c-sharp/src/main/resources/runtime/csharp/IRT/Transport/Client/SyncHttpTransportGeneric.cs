@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Collections.Specialized;
 using IRT.Marshaller;
+using IRT.Transport.Authorization;
 
 namespace IRT.Transport.Client {
     public class SyncHttpTransportGeneric<C>: IClientTransport<C> where C: class, IClientTransportContext {
@@ -25,11 +26,16 @@ namespace IRT.Transport.Client {
 
         public int Timeout; // In Seconds
         public NameValueCollection HttpHeaders;
+        public AuthMethod Auth;
 
         public SyncHttpTransportGeneric(string endpoint, IJsonMarshaller marshaller, int timeout = 60) {
             Endpoint = endpoint;
             Marshaller = marshaller;
             Timeout = timeout;
+        }
+
+        public void SetAuthorization(AuthMethod method) {
+            Auth = method;
         }
 
         public void Send<I, O>(string service, string method, I payload, ClientTransportCallback<O> callback, C ctx) {
@@ -43,6 +49,10 @@ namespace IRT.Transport.Client {
                             request.Headers.Add(key, value);
                         }
                     }
+                }
+
+                if (Auth != null) {
+                    request.Headers.Add("Authorization", Auth.ToValue());
                 }
 
                 if (payload != null) {
