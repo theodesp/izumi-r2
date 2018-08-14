@@ -9,7 +9,7 @@ using IRT.Transport.Authorization;
 
 namespace IRT.Transport.Client {
     public class SyncHttpTransportGeneric<C>: IClientTransport<C> where C: class, IClientTransportContext {
-        private IJsonMarshaller Marshaller;
+        private IJsonMarshaller marshaller;
 
         private string endpoint;
         public string Endpoint {
@@ -30,7 +30,7 @@ namespace IRT.Transport.Client {
 
         public SyncHttpTransportGeneric(string endpoint, IJsonMarshaller marshaller, int timeout = 60) {
             Endpoint = endpoint;
-            Marshaller = marshaller;
+            this.marshaller = marshaller;
             Timeout = timeout;
         }
 
@@ -56,7 +56,7 @@ namespace IRT.Transport.Client {
                 }
 
                 if (payload != null) {
-                    var data = Marshaller.Marshal<I>(payload);
+                    var data = marshaller.Marshal<I>(payload);
                     if (data == null) {
                         throw new TransportException("HttpTransport only supports Marshallers which return a string.");
                     }
@@ -78,7 +78,7 @@ namespace IRT.Transport.Client {
                                 throw new TransportException("Empty Response");
                             }
 
-                            var data = Marshaller.Unmarshal<O>(jsonString);
+                            var data = marshaller.Unmarshal<O>(jsonString);
                             callback.Success(data);
                         }
                     }

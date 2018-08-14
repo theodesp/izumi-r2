@@ -22,7 +22,7 @@ namespace IRT.Transport.Client {
             }
         }
 
-        private IJsonMarshaller Marshaller;
+        private IJsonMarshaller marshaller;
         private AuthMethod Auth;
 
         private string endpoint;
@@ -44,7 +44,7 @@ namespace IRT.Transport.Client {
 
         public AsyncHttpTransportGeneric(string endpoint, IJsonMarshaller marshaller, int timeout = 60) {
             Endpoint = endpoint;
-            Marshaller = marshaller;
+            this.marshaller = marshaller;
             Timeout = timeout;
             ActiveRequests = 0;
         }
@@ -74,7 +74,7 @@ namespace IRT.Transport.Client {
                 if (payload == null) {
                     request.BeginGetResponse(ProcessResponse<O>, state);
                 } else {
-                    var data = Marshaller.Marshal<I>(payload);
+                    var data = marshaller.Marshal<I>(payload);
                     state.JsonString = data;
                     request.ContentType = "application/json";
                     request.BeginGetRequestStream(ProcessStreamRequest<O>, state);
@@ -122,7 +122,7 @@ namespace IRT.Transport.Client {
                                 throw new TransportException("Empty Response");
                             }
 
-                            var data = Marshaller.Unmarshal<O>(jsonString);
+                            var data = marshaller.Unmarshal<O>(jsonString);
                             state.Response = data;
                             state.Callback.Success(state.Response);
                         }
