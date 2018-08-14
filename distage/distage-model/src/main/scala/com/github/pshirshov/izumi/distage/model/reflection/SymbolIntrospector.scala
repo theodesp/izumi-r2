@@ -13,6 +13,8 @@ trait SymbolIntrospector {
 
   def selectNonImplicitParameters(symb: u.MethodSymb): List[List[u.Symb]]
 
+  def selectPathDependentOwner(tpe: u.SafeType): Any
+
   def isConcrete(tpe: u.SafeType): Boolean
 
   def isWireableAbstract(tpe: u.SafeType): Boolean
