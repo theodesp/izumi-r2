@@ -177,9 +177,8 @@ export class WebSocketClientTransport implements ClientTransport {
             if (ref === this._authID) {
                 if (deserialized.error) {
                     this._logger.logf(LogLevel.Error, 'Authentication failed ' + deserialized.error);
-                } else {
-                    this._authenticated = true;
                 }
+                this._authenticated = true;
                 return;
             }
             console.warn('Unknown reference ID came back: ' + ref, deserialized);

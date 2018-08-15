@@ -53,7 +53,7 @@ namespace IRT.Transport.Client {
             Auth = method;
         }
 
-        public void Send<I, O>(string service, string method, I payload, ClientTransportCallback<O> callback, C ctx) {
+        public virtual void Send<I, O>(string service, string method, I payload, ClientTransportCallback<O> callback, C ctx) {
             try {
                 var request = (HttpWebRequest) WebRequest.Create(string.Format("{0}/{1}/{2}", endpoint, service, method));
                 request.Timeout = Timeout * 1000;

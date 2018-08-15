@@ -21,7 +21,7 @@ namespace IRT.Logger {
         	    Console.WriteLine(prefix + format, args);
         	    Console.WriteLine("\n***********************************************");
         	} else {
-        	    Console.WriteLine("prefix + format, args");
+        	    Console.WriteLine(prefix + format, args);
         	}
         }
     }
